@@ -1,105 +1,104 @@
-# GOAA + CrewAI 集成示例
+# GOAA + CrewAI Integration Example
 
-> GOAA 多角色机制与 CrewAI 多角色协作框架的集成示例。
+> Integration example of GOAA's multi-role mechanism with the CrewAI multi-role collaboration framework.
 
 ---
 
-## 架构图
+## Architecture
 
 ```
 ┌─────────────────────────────┐
-│        人侧（主控/最终裁决）   │
+│         Human side (controller / final adjudication)   │
 └──────────────┬──────────────┘
                │
 ┌──────────────▼──────────────┐
-│    GOAA 治理层（角色规则底座）  │
-│  主控/编辑/执行/审稿 角色规则   │
+│    GOAA governance layer (role-rules substrate)  │
+│  controller/editor/executor/reviewer role rules   │
 └──────────────┬──────────────┘
-               │ 角色规则文件
+               │ role-rule files
 ┌──────────────▼──────────────┐
-│      CrewAI（多角色执行）      │
-│  Agent 角色定义 + 任务分配     │
+│      CrewAI (multi-role execution)      │
+│  Agent role definitions + task assignment     │
 └─────────────────────────────┘
 ```
 
 ---
 
-## 最小运行示例
+## Minimal Runnable Example
 
 ```python
 #!/usr/bin/env python3
 """
-GOAA + CrewAI 最小集成示例
-演示：GOAA 角色规则作为 CrewAI Agent 的系统提示
+GOAA + CrewAI minimal integration example
+Demonstrates: GOAA role rules as CrewAI Agent system prompts
 """
 
+import json
 from pathlib import Path
 
 def load_goaa_role(goaa_root, role_name):
-    """从 GOAA 加载角色规则，作为 CrewAI Agent 的 backstory
-
-    优先读取 mechanisms/multi-role.md；读取失败时使用内置精简版。
-    """
-    multi_role = Path(goaa_root) / "mechanisms" / "multi-role.md"
-    if multi_role.exists():
-        text = multi_role.read_text(encoding="utf-8")
-        if role_name in text:
-            return text
-    # 默认角色规则
+    """Load a GOAA role rule as the Agent's backstory (falls back to a built-in concise version)"""
+    role_file = Path(goaa_root) / "mechanisms" / "multi-role.md"
+    if role_file.exists():
+        text = role_file.read_text(encoding="utf-8")
+        # Extract the role description for the given role (simplified extraction)
+        for line in text.splitlines():
+            if role_name in line and ("：" in line or ":" in line):
+                return line.split("：", 1)[-1].split(":", 1)[-1].strip()
     roles = {
-        "master": "你是主控角色，负责统筹任务、分配工作、最终裁决。",
-        "editor": "你是编辑角色，负责内容质量把控、语言润色、结构优化。",
-        "executor": "你是执行角色，负责具体操作、内容生成、文件写入。",
-        "reviewer": "你是审稿角色，负责终审、合规检查、最终确认。",
+        "master": "You are the controller role: coordinate the task, assign work, and make the final decision.",
+        "editor": "You are the editor role: ensure content quality, polish language, and optimize structure.",
+        "executor": "You are the executor role: perform concrete operations, generate content, and write files.",
+        "reviewer": "You are the reviewer role: final review, compliance check, and final confirmation.",
     }
-    return roles.get(role_name, "你是 GOAA 架构下的 AI 助手。")
+    return roles.get(role_name, "You are an AI assistant under the GOAA architecture.")
 
 def run_crew(goaa_root, task):
-    """使用 GOAA 角色规则的 CrewAI 多角色协作"""
+    """CrewAI multi-role collaboration using GOAA role rules"""
     try:
         from crewai import Agent, Task, Crew, Process
     except ImportError:
-        print("⚠️  请先安装 crewai：pip install crewai")
+        print("Please install crewai first: pip install crewai")
         return
 
-    # 加载 GOAA 角色规则
+    # Load GOAA role rules
     master_rules = load_goaa_role(goaa_root, "master")
     editor_rules = load_goaa_role(goaa_root, "editor")
     executor_rules = load_goaa_role(goaa_root, "executor")
 
-    # 定义 Agent（使用 GOAA 角色规则）
+    # Define Agents (using GOAA role rules)
     master = Agent(
-        role="主控",
-        goal="统筹任务，确保产出符合 GOAA 核心原则",
+        role="Controller",
+        goal="Coordinate the task and ensure the output complies with GOAA core principles",
         backstory=master_rules,
         verbose=True,
     )
     executor = Agent(
-        role="执行",
-        goal="完成具体任务，生成产出",
+        role="Executor",
+        goal="Complete the concrete task and generate the output",
         backstory=executor_rules,
         verbose=True,
     )
     editor = Agent(
-        role="编辑",
-        goal="优化产出质量，确保语言和结构符合要求",
+        role="Editor",
+        goal="Optimize output quality, ensure language and structure meet requirements",
         backstory=editor_rules,
         verbose=True,
     )
 
-    # 定义任务
+    # Define tasks
     task1 = Task(
-        description=f"执行任务：{task}，生成初稿",
+        description=f"Execute the task: {task}, generate the first draft",
         agent=executor,
-        expected_output="任务初稿",
+        expected_output="Task first draft",
     )
     task2 = Task(
-        description="优化初稿的语言和结构，确保质量",
+        description="Optimize the first draft's language and structure, ensure quality",
         agent=editor,
-        expected_output="优化后的定稿",
+        expected_output="Optimized final draft",
     )
 
-    # 组建 Crew（顺序执行）
+    # Assemble the Crew (sequential execution)
     crew = Crew(
         agents=[master, executor, editor],
         tasks=[task1, task2],
@@ -107,32 +106,32 @@ def run_crew(goaa_root, task):
         verbose=True,
     )
 
-    # 执行
+    # Execute
     result = crew.kickoff()
     return result
 
 if __name__ == "__main__":
     goaa_root = Path(__file__).resolve().parent.parent.parent
-    task = "写一篇关于 GOAA 多角色协作的简介"
+    task = "Write a brief introduction to GOAA multi-role collaboration"
     result = run_crew(goaa_root, task)
-    print(f"\n结果：{result}")
+    print(f"\nResult: {result}")
 ```
 
 ---
 
-## 集成要点
+## Integration Points
 
-1. **角色规则复用**：GOAA 的 `mechanisms/multi-role.md` 定义了主控/编辑/执行/审稿四角色，示例直接以角色定义作为 CrewAI Agent 的 backstory（读取失败时使用内置精简版）
-2. **主控裁决**：CrewAI 的顺序执行中，主控 Agent 负责最终确认，符合 GOAA 的 100% 人决断原则
-3. **记忆后置**：Crew 的产出可以保存到 GOAA 的 `_Memory/` 目录，纳入记忆体系
+1. **Role-rule reuse**: GOAA's `mechanisms/multi-role.md` defines the four roles (controller/editor/executor/reviewer); the example directly uses role definitions as CrewAI Agent backstories (falls back to built-in concise versions on read failure)
+2. **Controller adjudication**: in CrewAI sequential execution, the controller Agent handles final confirmation, consistent with GOAA's 100% human-decision principle
+3. **Memory-last**: the Crew's output can be saved into GOAA's `_Memory/` directory, joining the memory system
 
 ---
 
-## 前置条件
+## Prerequisites
 
 - `pip install crewai`
-- 配置 LLM API key（CrewAI 默认使用 OpenAI）
+- Configure an LLM API key (CrewAI uses OpenAI by default)
 
 ---
 
-*GOAA + CrewAI 集成示例 · Core 版 · 2026-08-28*
+*GOAA + CrewAI Integration Example · Core Edition · 2026-08-28*

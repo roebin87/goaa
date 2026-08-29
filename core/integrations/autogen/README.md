@@ -1,113 +1,113 @@
-# GOAA + AutoGen 集成示例
+# GOAA + AutoGen Integration Example
 
-> GOAA 治理底座与微软 AutoGen 多 Agent 对话框架的集成示例。
+> Integration example of the GOAA governance substrate with Microsoft's AutoGen multi-agent dialogue framework.
 
 ---
 
-## 架构图
+## Architecture
 
 ```
 ┌─────────────────────────────┐
-│     人侧（UserProxy 最终决断） │
+│      Human side (UserProxy final decision) │
 └──────────────┬──────────────┘
                │
 ┌──────────────▼──────────────┐
-│    GOAA 治理层（规则+记忆底座） │
-│  宪法/规则/记忆/决断回调       │
+│    GOAA governance layer (rules + memory substrate) │
+│  constitution/rules/memory/decision callback       │
 └──────────────┬──────────────┘
-               │ 文件接口
+               │ file interface
 ┌──────────────▼──────────────┐
-│      AutoGen（多 Agent 对话）  │
+│      AutoGen (multi-agent dialogue)  │
 │  AssistantAgent + UserProxy   │
 └─────────────────────────────┘
 ```
 
 ---
 
-## 最小运行示例
+## Minimal Runnable Example
 
 ```python
 #!/usr/bin/env python3
 """
-GOAA + AutoGen 最小集成示例
-演示：规则前置 + 决断回调 + 记忆后置
+GOAA + AutoGen minimal integration example
+Demonstrates: rules-first + decision callback + memory-last
 """
 
 from pathlib import Path
 
 def load_goaa_system_prompt(goaa_root):
-    """加载 GOAA 规则作为 AssistantAgent 的系统提示"""
+    """Load GOAA rules as the AssistantAgent system prompt"""
     basic_law = Path(goaa_root) / "constitution" / "basic_law.md"
-    system = "你是受 GOAA 治理约束的 AI 助手。\n\n"
+    system = "You are an AI assistant governed by GOAA constraints.\n\n"
     if basic_law.exists():
-        system += "## GOAA 核心原则\n" + basic_law.read_text(encoding="utf-8") + "\n\n"
-    system += "关键决定请提交人侧决断，不要自主决策。"
+        system += "## GOAA Core Principles\n" + basic_law.read_text(encoding="utf-8") + "\n\n"
+    system += "Submit key decisions to the human side; do not decide autonomously."
     return system
 
 def save_to_memory(goaa_root, conversation):
-    """将对话保存到 GOAA 记忆"""
+    """Save the conversation into GOAA memory"""
     from datetime import datetime
     memory_dir = Path(goaa_root) / "_Memory" / "history"
     memory_dir.mkdir(parents=True, exist_ok=True)
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     f = memory_dir / f"{ts}_autogen_conversation.md"
-    f.write_text(f"# AutoGen 对话记录\n\n{conversation}", encoding="utf-8")
-    print(f"✅ 已保存到 GOAA 记忆：{f}")
+    f.write_text(f"# AutoGen conversation record\n\n{conversation}", encoding="utf-8")
+    print(f"Saved to GOAA memory: {f}")
 
 def run_autogen(goaa_root, task):
-    """使用 GOAA 规则的 AutoGen 对话"""
+    """AutoGen dialogue governed by GOAA rules"""
     try:
         import autogen
     except ImportError:
-        print("⚠️  请先安装 pyautogen：pip install pyautogen")
+        print("Please install pyautogen first: pip install pyautogen")
         return
 
     config_list = [{"model": "gpt-4", "api_key": "YOUR_API_KEY"}]
     llm_config = {"config_list": config_list, "timeout": 120}
 
-    # AssistantAgent 使用 GOAA 系统提示
+    # AssistantAgent uses the GOAA system prompt
     assistant = autogen.AssistantAgent(
         name="GOAA_Assistant",
         system_message=load_goaa_system_prompt(goaa_root),
         llm_config=llm_config,
     )
 
-    # UserProxyAgent 代表人侧（100% 人决断）
+    # UserProxyAgent represents the human side (100% human decision)
     user_proxy = autogen.UserProxyAgent(
         name="User",
-        human_input_mode="ALWAYS",  # 关键节点需要人输入
+        human_input_mode="ALWAYS",  # key nodes require human input
         max_consecutive_auto_reply=3,
         code_execution_config=False,
     )
 
-    # 发起对话
+    # Initiate the dialogue
     user_proxy.initiate_chat(assistant, message=task)
 
-    # 保存对话到记忆
+    # Save the conversation to memory
     conversation = str(user_proxy.chat_messages)
     save_to_memory(goaa_root, conversation)
 
 if __name__ == "__main__":
     goaa_root = Path(__file__).resolve().parent.parent.parent
-    run_autogen(goaa_root, "请帮我分析 GOAA 架构的优势和局限")
+    run_autogen(goaa_root, "Please analyze the strengths and limitations of the GOAA architecture")
 ```
 
 ---
 
-## 集成要点
+## Integration Points
 
-1. **规则前置**：GOAA 基本法作为 AssistantAgent 的 system_message
-2. **人侧决断**：UserProxyAgent 的 `human_input_mode="ALWAYS"` 确保关键节点由人决断
-3. **记忆后置**：对话结束后保存到 GOAA `_Memory/` 目录
-4. **治理回调**：可以在 AutoGen 的 hook 中集成 GOAA 规则验证
+1. **Rules-first**: GOAA basic law as the AssistantAgent's `system_message`
+2. **Human-side decision**: `human_input_mode="ALWAYS"` on UserProxyAgent ensures key nodes are decided by the human
+3. **Memory-last**: the conversation is saved into GOAA's `_Memory/` directory after it ends
+4. **Governance callback**: GOAA rule validation can be integrated into AutoGen hooks
 
 ---
 
-## 前置条件
+## Prerequisites
 
 - `pip install pyautogen`
-- 配置 LLM API key
+- Configure an LLM API key
 
 ---
 
-*GOAA + AutoGen 集成示例 · Core 版 · 2026-08-28*
+*GOAA + AutoGen Integration Example · Core Edition · 2026-08-28*
