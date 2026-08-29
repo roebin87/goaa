@@ -281,7 +281,7 @@ GOAA 的定位，是让这条路上"敢落地、可积累、能复用"的那一�
 
 GOAA 由一个**非 AI 工程师、非计算机专业**的设计者创建——治理型架构的理解门槛，属于普通人。本项目的完整理论以学术论文形式发布，**任何观点都可以被质疑和验证**。
 
-- 学术论文 DOI：`10.5281/zenodo.22165301`（总纲）· `10.5281/zenodo.22025298`（概念系列）
+- 学术论文 DOI：`10.5281/zenodo.22165301`（GOAA 架构设计原理）
 - **证伪机制**：GOAA 不求你相信，只求你来证伪——质疑经登记后进入[证伪登记册](docs/falsification-log.md)，由设计者逐条裁决并固化（Core 完整版·五维度自曝见 [known-limits.md](docs/known-limits.md)）
 - **兼容性**：GOAA 是治理底座，不替代任何框架（[compatibility.md](docs/compatibility.md)）
 - 许可证：[Apache-2.0](LICENSE) · 引用：[CITATION.cff](CITATION.cff) · 版本：[VERSION](VERSION)
