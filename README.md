@@ -82,8 +82,8 @@ GOAA ships as three releases, from simple to complete, covering different user n
 | Release | Position | Files | For whom | Core proof action |
 |---|---|---|---|---|
 | 🟢 **[Lite](lite/)** | Beginner | 15 | Complete non-technical beginners | 5-minute verification "your memory belongs to you" |
-| 🟡 **[Personal](personal/)** | Personal productivity | 151 (incl. en mirror) | AI-experienced creators/small teams | Multi-role collaboration + memory plugin + end-to-end evidence |
-| 🔴 **[Core](core/)** | All-outcomes open source | 192 (incl. en mirror) | Developers/architecture researchers/industry | Academic paper + case studies + framework integrations + falsification mechanism |
+| 🟡 **[Personal](personal/)** | Personal productivity | 154 (incl. en mirror) | AI-experienced creators/small teams | Multi-role collaboration + memory plugin + end-to-end evidence |
+| 🔴 **[Core](core/)** | All-outcomes open source | 181 (incl. en mirror) | Developers/architecture researchers/industry | Academic paper + case studies + framework integrations + falsification mechanism |
 
 > All three releases include Chinese-English bilingual content (`en/` mirrors). Core concept documents (constitution/mechanisms/docs/concepts, etc.) all have English versions.
 
