@@ -30,7 +30,7 @@ GOAA's daily operation is not "AI autonomous decision-making" — it is a **two-
 Production Pole (AI) ↔ Inspection Pole (rules/validation · inspect-only) → Adjudication Pole (human-closed-loop)
 ```
 
-![Two-Pole Mechanism Diagram](assets/images/goaa-two-mechanism.svg)
+![Two-Pole Mechanism Diagram](assets/images/goaa-two-mechanism.en.svg)
 
 - **Production Pole**: AI executes production under rule constraints — writing, verifying, persisting, revising;
 - **Inspection Pole**: rules and validators check the output (dead links/residue/consistency) — **inspect-only, no verdict**, never deciding for a human;
