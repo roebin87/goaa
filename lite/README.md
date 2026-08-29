@@ -56,7 +56,7 @@ python3 tools/verify-ownership.py
 
 GOAA 由一个**非 AI 工程师、非计算机专业**的设计者创建——治理型架构的理解门槛，属于普通人。本项目的完整理论以学术论文形式发布，任何观点都可以被质疑和验证。
 
-- 学术论文 DOI：`10.5281/zenodo.22165301`（总纲）· `10.5281/zenodo.22025298`（概念系列）
+- 学术论文 DOI：`10.5281/zenodo.22165301`（GOAA 架构设计原理）
 - 许可证：[Apache-2.0](LICENSE) · 引用：[CITATION.cff](CITATION.cff)
 - 反馈/证伪：GitHub Issues（`github.com/roebin87/goaa`）
 
