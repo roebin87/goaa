@@ -1,6 +1,6 @@
-# Case 02 · Paper Production: Master Paper · Append-Only Augmentation Mechanism
+# Case 02 · Paper Production: Architecture Design Principles · Append-Only Augmentation Mechanism
 
-> This case demonstrates the application of the GOAA governance paradigm to an **academic theoretical carrier** — the production of the *Governance-Oriented Agent Architecture (GOAA)* master paper (V1.0 → V2.5). Core evidence: the **append-only authority-source** anti-entropy mechanism + per-change traceability + the entropy-repositioning principle.
+> This case demonstrates the application of the GOAA governance paradigm to an **academic theoretical carrier** — the production of the *Governance-Oriented Agent Architecture (GOAA)* Architecture Design Principles paper (V1.0 → V2.5). Core evidence: the **append-only authority-source** anti-entropy mechanism + per-change traceability + the entropy-repositioning principle.
 
 ---
 
@@ -38,7 +38,7 @@ Produce GOAA's **academic master manuscript** — a formal, externally verifiabl
 
 ## 4. Verifiable Outputs
 
-- Full paper (open access): Zenodo DOI `10.5281/zenodo.22165301` (version) · `10.5281/zenodo.22025298` (concept);
+- Full paper (open access): Zenodo DOI `10.5281/zenodo.22165301`;
 - In-repository entry: [Academic paper entry](../research/goaa-paper.md) (abstract / core claims / three-boundary declaration);
 - Authority-source change log: at the end of the master manuscript (per-version augmentation records).
 

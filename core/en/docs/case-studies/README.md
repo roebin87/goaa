@@ -9,7 +9,7 @@
 | # | Case | Evidence Point | Status |
 |---|------|----------------|--------|
 | 01 | [Book Production: 450K words · Four-role collaboration](../../examples/end-to-end/01-book-production.md) | Multi-role collaboration + long-cycle governance (30 days) | ✅ Proven |
-| 02 | [Paper Production: Master paper · Append-only augmentation mechanism](02-paper-production.md) | Theoretical-carrier governance + anti-entropy authority source | ✅ Proven |
+| 02 | [Paper Production: Architecture Design Principles · Append-only augmentation mechanism](02-paper-production.md) | Theoretical-carrier governance + anti-entropy authority source | ✅ Proven |
 | 03 | [Open-Source Production: Three editions · Governance-driven public release](03-open-source-production.md) | Full validation + wording discipline + proper-subset consistency | ✅ Proven |
 
 > See also [End-to-End Examples Overview](../../examples/end-to-end/README.md) (including governance stress tests and more).

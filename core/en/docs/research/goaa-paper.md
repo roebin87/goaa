@@ -10,9 +10,9 @@
 |---|---|
 | **Title** | Governance-Oriented Agent Architecture (GOAA): A File-System-Level Entropy Governance Paradigm Centered on Natural-Person Decision Authority, with Full-Hierarchy Deployment Paths |
 | **Author** | Jianlong Yin |
-| **Series** | GOAA master paper (sister paper to *Cognitive Lag*: the former presents the full architecture, the latter focuses on the cognitive-lag dimension and entropy-sink design) |
+| **Series** | GOAA Architecture Design Principles paper (sister paper to *Cognitive Lag*: the former presents the full architecture, the latter focuses on the cognitive-lag dimension and entropy-sink design) |
 | **Version DOI** | `10.5281/zenodo.22165301` |
-| **Concept DOI** | `10.5281/zenodo.22025298` (series-level identifier) |
+| **Sister paper (Cognitive Lag) DOI** | `10.5281/zenodo.22031207` (version) · `10.5281/zenodo.22025298` (concept) |
 | **Archive** | Zenodo, open access |
 
 ---
@@ -70,7 +70,7 @@ GOAA's academic claims welcome falsification rather than blind belief:
 ## Series Position
 
 - ***Cognitive Lag*** (Yin, 2026): sister paper, focusing on the cognitive-lag dimension and entropy-sink design;
-- **This paper**: master paper, presenting the full GOAA picture (axiom system → architecture design → entropy governance → full-hierarchy deployment).
+- **This paper**: Architecture Design Principles paper, presenting the full GOAA picture (axiom system → architecture design → entropy governance → full-hierarchy deployment).
 
 ---
 
