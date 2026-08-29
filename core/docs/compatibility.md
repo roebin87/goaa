@@ -45,7 +45,7 @@ GOAA (governance substrate) + mainstream frameworks (capability plugins) = a coe
 
 | Evidence | Content | Proof Strength |
 |---|---|---|
-| **Integration examples run successfully** | Minimal integrations with LangChain/CrewAI/AutoGen work (see [integrations/](../../integrations/)) | Direct: the governance layer coexists with mainstream frameworks |
+| **Integration examples run successfully** | Minimal integrations with LangChain/CrewAI/AutoGen work (see [integrations/](../integrations/)) | Direct: the governance layer coexists with mainstream frameworks |
 | **Zero-dependency interfaces** | Integration only happens at three file-interface points; no runtime dependencies | Structural: no coupling means no conflict |
 | **Framework neutrality** | The governance layer depends on no specific framework API | Logical: substrate and execution layer are decoupled |
 | **Paper delimitation** | Paper §2 line-by-line delimitation (constitutional routes / machine-governance school / HITL), positioning GOAA as a file-system-level governance paradigm | Theoretical: no conflict with existing approaches |
@@ -65,7 +65,7 @@ GOAA (governance substrate) + mainstream frameworks (capability plugins) = a coe
 
 ## 6. How to Verify (Falsify It Yourself)
 
-- Think "the governance layer and the execution layer inevitably conflict"? → Run the [integration examples](../../integrations/) to verify coexistence;
+- Think "the governance layer and the execution layer inevitably conflict"? → Run the [integration examples](../integrations/) to verify coexistence;
 - Think "a governance substrate is unnecessary"? → Compare the execution-framework blind-spot table; measure rule decay and memory loss in long-running operation;
 - Have a specific objection? → Register it in the [falsification log](falsification-log.md).
 

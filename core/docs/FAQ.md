@@ -224,7 +224,7 @@ Contribution ways include (not limited to):
 - **Templates**: contribute templates for different scenarios (book writing, project management)
 - **Adaptation**: adapt for different AI assistants/platforms
 
-See [CONTRIBUTING.en.md](../CONTRIBUTING.en.md) for process. GOAA uses "core stable + peripheral iteration" dual-track: core design changes require design review, peripheral improvements merged anytime.
+See [CONTRIBUTING.en.md](../CONTRIBUTING.md) for process. GOAA uses "core stable + peripheral iteration" dual-track: core design changes require design review, peripheral improvements merged anytime.
 
 ### Q21: What is GOAA's license? Can I use it commercially?
 

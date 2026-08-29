@@ -1,11 +1,11 @@
-# GOAA · Core Edition · English Mirror
+# GOAA · Core Edition
 
 > A governance-oriented agent architecture — makes AI **reliable**, not just capable. Your AI's memory lives in files that **belong to you**.
 > *Make AI governable. Keep your memory yours.*
 
-> This folder (`en/`) is the **English mirror of the Core edition** (all-outcomes open source) — research the governance-first architecture: academic paper (formal verification vehicle) · full dual-chain navigation (fully open) · framework integration examples · governance case studies · falsification log. Terms follow the [glossary](../docs/glossary.md). The Chinese bootstrap (root of this folder) is fully ready and usable now; English components roll out progressively.
->
-> **Script files note**: Script files (.py/.yaml) are shared with the zh version and not separately translated — the `en/` mirror translates documentation; executable scripts live once in the edition root.
+[中文版](../core-zh/README.md)
+
+> The Core edition (all-outcomes open source) — research the governance-first architecture: academic paper (formal verification vehicle) · full dual-chain navigation (fully open) · framework integration examples · governance case studies · falsification log. Terms follow the [glossary](docs/glossary.md).
 
 ---
 
@@ -85,11 +85,11 @@ Begin the first-activation onboarding **immediately** (do not wait for more inst
 - **Will I lose memory?** Models forget, files don't. As long as the folder exists and you back it up, memory stays.
 - **Can I switch AIs?** Yes. Point the folder at any local-read/write AI and load — memory travels with the folder.
 - **Do I need programming skills?** No. Download → anchor → say "hello". That's it.
-- **Full FAQ & depth**: see [docs/goaa-guide.md](../docs/goaa-guide.md) (Chinese) · Paper (DOI: `10.5281/zenodo.22165301`) for design principles.
+- **Full FAQ & depth**: see [docs/goaa-guide.md](docs/goaa-guide.md) (Chinese) · Paper (DOI: `10.5281/zenodo.22165301`) for design principles.
 
 ## Exit Guide
 
-**Come and go freely** — we live in your folder anyway. Your data, plain-text, in your hands. See [docs/exit-guide.md](../docs/exit-guide.md).
+**Come and go freely** — we live in your folder anyway. Your data, plain-text, in your hands. See [docs/exit-guide.md](docs/exit-guide.md).
 
 ## Core Mechanism Internals
 
@@ -108,7 +108,7 @@ Core proves itself through three complementary evidence chains:
 | Chain | Carrier | What It Proves |
 |-------|---------|----------------|
 | ① Case evidence | [Governance case studies](docs/case-studies/README.md) (book/paper/open-source · author production history) | Governance is reproducible practice, not theory |
-| ② Integration argument | [Framework integrations](../integrations/README.md) (LangChain/CrewAI/AutoGen minimal examples) | The governance substrate coexists with mainstream frameworks |
+| ② Integration argument | [Framework integrations](integrations/README.md) (LangChain/CrewAI/AutoGen minimal examples) | The governance substrate coexists with mainstream frameworks |
 | ③ Theoretical validation | [Academic paper entry](docs/research/goaa-paper.md) (Zenodo DOI formal carrier) | Theory is verifiable; falsification welcome |
 
 Supporting full-open assets:
@@ -139,7 +139,7 @@ GOAA is an open community project. Everyone interested in governance-oriented AI
 | Discord | TBD | International user channel (invite link to be published at official launch) |
 | [GitHub Issues](https://github.com/roebin87/goaa/issues) | Available | Bug reports, feature requests |
 
-**Code of Conduct**: All community participants must follow [CODE_OF_CONDUCT.en.md](CODE_OF_CONDUCT.en.md). We advocate respectful, open, constructive communication.
+**Code of Conduct**: All community participants must follow [CODE_OF_CONDUCT.en.md](CODE_OF_CONDUCT.md). We advocate respectful, open, constructive communication.
 
 **Before asking**: [FAQ.md](docs/FAQ.md) covers 25 common questions — your answer may already be there.
 

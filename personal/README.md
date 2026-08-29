@@ -1,11 +1,11 @@
-# GOAA · Personal Edition · English Mirror
+# GOAA · Personal Edition
 
 > A governance-oriented agent architecture — makes AI **reliable**, not just capable. Your AI's memory lives in files that **belong to you**.
 > *Make AI governable. Keep your memory yours.*
 
-> This folder (`en/`) is the **English mirror of the Personal edition** (productivity version) — use GOAA as a daily productivity tool: 100% human decision rights, lowest total cost. Terms follow the [glossary](../docs/glossary.md). The Chinese bootstrap (root of this folder) is fully ready and usable now; English components roll out progressively.
->
-> **Script files note**: Script files (.py/.yaml) are shared with the zh version and not separately translated — the `en/` mirror translates documentation; executable scripts live once in the edition root.
+[中文版](../personal-zh/README.md)
+
+> The Personal edition (productivity version) — use GOAA as a daily productivity tool: 100% human decision rights, lowest total cost. Terms follow the [glossary](docs/glossary.md).
 
 ---
 
@@ -85,11 +85,11 @@ Begin the first-activation onboarding **immediately** (do not wait for more inst
 - **Will I lose memory?** Models forget, files don't. As long as the folder exists and you back it up, memory stays.
 - **Can I switch AIs?** Yes. Point the folder at any local-read/write AI and load — memory travels with the folder.
 - **Do I need programming skills?** No. Download → anchor → say "hello". That's it.
-- **Full FAQ & depth**: see [docs/goaa-guide.md](../docs/goaa-guide.md) (Chinese) · Paper (DOI: `10.5281/zenodo.22165301`) for design principles.
+- **Full FAQ & depth**: see [docs/goaa-guide.md](docs/goaa-guide.md) (Chinese) · Paper (DOI: `10.5281/zenodo.22165301`) for design principles.
 
 ## Exit Guide
 
-**Come and go freely** — we live in your folder anyway. Your data, plain-text, in your hands. See [docs/exit-guide.md](../docs/exit-guide.md).
+**Come and go freely** — we live in your folder anyway. Your data, plain-text, in your hands. See [docs/exit-guide.md](docs/exit-guide.md).
 
 ## Core Mechanism Internals
 
@@ -121,7 +121,7 @@ GOAA is an open community project. Everyone interested in governance-oriented AI
 | Discord | TBD | International user channel (invite link to be published at official launch) |
 | [GitHub Issues](https://github.com/roebin87/goaa/issues) | Available | Bug reports, feature requests |
 
-**Code of Conduct**: All community participants must follow [CODE_OF_CONDUCT.en.md](CODE_OF_CONDUCT.en.md). We advocate respectful, open, constructive communication.
+**Code of Conduct**: All community participants must follow [CODE_OF_CONDUCT.en.md](CODE_OF_CONDUCT.md). We advocate respectful, open, constructive communication.
 
 **Before asking**: [FAQ.md](docs/FAQ.md) covers 25 common questions — your answer may already be there.
 

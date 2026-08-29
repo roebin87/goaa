@@ -29,7 +29,7 @@
 
 - Comparative experiments depend on homogeneous baselines, while governance effectiveness is highly coupled to the **actual operation of the subject** (human + system + scenario);
 - Author production history is a **natural long-running experiment** (30-day book + 8-month paper + open-source iterations), exposing long-term governance behavior better than short-cycle controls;
-- Cases + academic paper ([paper entry](../research/goaa-paper.md)) + framework integration examples ([integrations/](../../../integrations/)) complement each other: **cases prove practice, the paper proves theory, integrations prove compatibility**.
+- Cases + academic paper ([paper entry](../research/goaa-paper.md)) + framework integration examples ([integrations/](../../integrations/)) complement each other: **cases prove practice, the paper proves theory, integrations prove compatibility**.
 
 ---
 
