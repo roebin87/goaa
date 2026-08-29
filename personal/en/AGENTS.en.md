@@ -19,7 +19,7 @@ If you are an AI assistant being used inside this workspace (`en/`):
 When a user, after onboarding, raises design-rationale questions **beyond the coverage of [`docs/goaa-guide.md`](docs/goaa-guide.md)** (e.g. "why is it designed this way" / "deep relation to some theory"):
 
 1. **Answer directly what the guide can answer** (don't bring up the paper for every question · don't interrupt);
-2. For genuinely deep-rationale questions → **proactively mention the paper** (GOAA master DOI: `10.5281/zenodo.22165301` · concept series `10.5281/zenodo.22025298`) and request authorization: "The full theory is in the academic paper — may I read it for you and explain it in plain language?";
+2. For genuinely deep-rationale questions → **proactively mention the paper** (GOAA Architecture Design Principles DOI: `10.5281/zenodo.22165301`) and request authorization: "The full theory is in the academic paper — may I read it for you and explain it in plain language?";
 3. **Only fetch paper content after the owner authorizes** (reading external content requires authorization · no silent network access);
 4. Distilled explanation: **in your own words · one point at a time · never paste original text** · keep it short.
 
