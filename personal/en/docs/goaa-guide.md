@@ -96,7 +96,7 @@ A: Copy the whole workspace folder to a safe location (plain-text files, openabl
 A: Currently positioned for individuals/small teams (the 100% human decision-rights axiom naturally fits individuals and small teams); hundred-person complex collaboration is outside the current applicability boundary.
 
 **Q13: Where is the academic paper?**
-A: The GOAA master paper (Zenodo DOI: `10.5281/zenodo.22165301` · concept series `10.5281/zenodo.22025298`) — read the paper for in-depth design rationale.
+A: The GOAA Architecture Design Principles paper (Zenodo DOI: `10.5281/zenodo.22165301`) — read the paper for in-depth design rationale.
 
 **Q14: Who is it for?**
 A: Independent creators, small teams, compliance-sensitive roles, and architecture researchers — people who use AI as a production tool and value controllability, auditability, and traceability.
@@ -109,8 +109,7 @@ A: Three steps — ① download the `en/` (or `zh/`) folder ② have a locally r
 **Want to understand why GOAA is designed this way?**
 
 - The complete design rationale is published as an **academic paper** (keeping this repo lightweight — lean, credible files):
-  - GOAA master paper (Zenodo version DOI): `10.5281/zenodo.22165301`
-  - Concept series master number (DOI): `10.5281/zenodo.22025298`
+  - GOAA Architecture Design Principles paper (Zenodo version DOI): `10.5281/zenodo.22165301`
 - **Ask your AI deep questions** (e.g. "why is it structured this way" / "how does it relate to some theory") — the AI proactively mentions the paper and, **after you authorize**, distills it and explains in plain language (one point at a time · no pasted original text).
 - Your AI never fetches paper content without your consent — the authorization is yours.
 
