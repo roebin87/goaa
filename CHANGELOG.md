@@ -21,8 +21,7 @@ GOAA（治理导向型 Agent 架构）v0.1.0 正式发布——治理基座 + �
 #### 文档
 
 - 根 README（仓库总门面·三版导航·决策树·证伪入口）
-- 构建报告：E2 Personal / E3 Core（`docs/build-reports/`）
-- 发布检查清单 RELEASE-CHECKLIST.md
+- 发布公告 RELEASE-NOTES（GitHub Release 正文源）
 
 #### 已知局限
 
