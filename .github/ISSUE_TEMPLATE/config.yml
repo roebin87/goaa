@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 证伪登记册（Falsification Log）
+    url: https://github.com/roebin87/goaa/blob/main/core/docs/falsification-log.md
+    about: 查看已有的质疑与回应记录——我们不求你相信，只求你来证伪。
