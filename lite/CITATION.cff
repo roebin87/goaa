@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "GOAA Lite - Governance-Oriented Agent Architecture (Introductory Edition)"
+abstract: "GOAA (Governance-Oriented Agent Architecture) is a governance layer for human-AI collaboration: make AI controllable and keep your memory yours. Lite is the minimal introductory edition - a 5-minute bootstrap verifying that your AI memory belongs entirely to you."
+authors:
+  - family-names: Yin
+    given-names: Jianlong
+    orcid: ""
+date-released: "2026-08-28"
+version: "0.1.0"
+license: "Apache-2.0"
+keywords:
+  - AI governance
+  - agent architecture
+  - human-AI collaboration
+  - data ownership
+preferred-citation:
+  type: article
+  title: "GOAA Architecture Design Principles"
+  doi: "10.5281/zenodo.22165301"
