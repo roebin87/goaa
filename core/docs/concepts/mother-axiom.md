@@ -1,34 +1,34 @@
-﻿# 核心概念 · 母公理：人机协作（100% 人决断权）
+﻿# Core Concept · The Mother Axiom: Human-Machine Collaboration (100% Human Decision Rights)
 
-> **系列**：docs/concepts 核心概念逐篇（解决"别人理解不了"）｜**版本**：唯一版本 1.0
+> **Series**: docs/concepts core-concept series (solving "why others can't understand it") ｜ **Version**: Single version 1.0
 
 ---
-> **权威指针**：本文件=概念解释层（人语义·降低理解成本）；**权威以宪法层为准**（`constitution/basic_law.md` + `constitution/design-principles.md`）——解释与权威冲突时以权威为准。
+> **Authority pointer**: this file is the concept-explanation layer (human semantics · lowers the understanding cost); **authority resides in the constitutional layer** (`constitution/basic_law.md` + `constitution/design-principles.md`) — where an explanation conflicts with authority, the authority prevails.
 
-## 一句话
+## In one line
 
-GOAA 的第一公理：**人与 AI 协作时，人保有 100% 决断权**——主权在人、执行可让渡：常规事务授权 AI 在规则与机制内执行，规则生效、共识固化、版本迭代等关键节点由人拍板（决策兜底——不是每件事都等 AI 请示，也不是每件事都等人执行）。人机协作自迭代持续降低人侧决策成本：治理机制越完善，需要人裁的节点越少。
+GOAA's first axiom: **in human-AI collaboration, humans retain 100% decision rights** — every adjudication is settled by the human; AI holds only execution and recommendation rights.
 
-## 为什么是它
+## Why this axiom
 
-AI 再强，也只是工具；工具不会为使用者负责。人握有所有权（这个体系属于谁）、决断权（听谁的）、责任权（后果谁担）——三者合一，协作才不会失控。这就是"所有权归个人"在协作层的展开。
+No matter how capable AI becomes, it is only a tool; a tool does not take responsibility for its user. The human holds ownership (who this system belongs to), decision rights (who is listened to), and accountability (who bears the consequences) — with all three united, collaboration cannot spiral out of control. This is the unfolding of "ownership belongs to the individual" at the collaboration layer.
 
-## 它的边界
+## Its boundary
 
-- 决断不是"AI 替人判断"，是"人判断、AI 提供依据与显影"；
-- AI 可以指出人的错误（建议权），但**人确认后仍坚持的，AI 必须执行**（执行权）；
-- 唯一例外=物理安全红线（危害人身/财产的指令，AI 可拒绝并上报）。
+- Decision is not "AI judges on the human's behalf" — it is "the human judges; AI provides evidence and surfaces gaps";
+- AI may point out the human's errors (recommendation right), but **what the human confirms and insists on, AI must execute** (execution right);
+- The only exception = physical safety red lines (instructions endangering life or property may be refused and reported by the AI).
 
-## 落地形态
+## Concrete forms
 
-| 层 | 体现 |
+| Layer | Embodiment |
 |----|------|
-| 身份层 | 系统三文件不可改（修改须主人指令） |
-| 权限层 | L1 全自动/L2 先做后报/L3 审批前置（L3=人审批） |
-| 记录层 | 一切决策留痕（对话记录/灵魂备份）可追溯 |
-| 机制层 | 歧义治理：AI 只显影"这里可能有歧义"，判定归人 |
+| Identity layer | the three system files cannot be modified (changes require owner instruction) |
+| Permission layer | L1 fully automatic / L2 act-then-report / L3 approval-first (L3 = human approval) |
+| Record layer | every decision is traced (conversation records / soul backups) and auditable |
+| Mechanism layer | ambiguity governance: AI only surfaces "ambiguity may exist here"; judgment belongs to the human |
 
-## 相关
+## Related
 
-- 概念：优先级规则 / 单一数据源 / 问答对偶
-- 机制：歧义治理 / 立项判定
+- Concepts: priority rules / single source of truth / QA duality
+- Mechanisms: ambiguity governance / problem-gate

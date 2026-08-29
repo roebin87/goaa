@@ -1,74 +1,74 @@
-# 兼容性证明：GOAA 是底座，不替代任何框架
+# Compatibility Proof: GOAA Is a Substrate, Not a Replacement
 
-> **定位**：GOAA 的底座立论——**GOAA 不替代任何增强型 Agent 框架，而是作为治理底座与它们共存**。本文档证明"治理基座 + 能力外挂"兼容可行，并给出共存接口与论证依据。
+> **Position**: GOAA's substrate thesis — **GOAA does not replace any augmented Agent framework; it coexists with them as a governance substrate**. This document proves that "governance substrate + capability plugin" is compatible and gives the coexistence interfaces and the evidence chain.
 
 ---
 
-## 一、核心论断
+## 1. Core Claim
 
 ```
-GOAA（治理底座） + 主流框架（能力外挂） = 共存的完整体系
+GOAA (governance substrate) + mainstream frameworks (capability plugins) = a coexisting complete system
 ```
 
-- **GOAA 提供**：规则约束、记忆存续、裁决闭环、留痕审计——**治理层**；
-- **主流框架提供**：执行调度、工具调用、多 Agent 编排——**执行层**；
-- **两者不冲突**：治理层管"该不该做、按什么做、做了留痕"；执行层管"怎么做、做多快、用哪些工具"。
+- **GOAA provides**: rule constraints, memory persistence, adjudication loop, traceability audit — the **governance layer**;
+- **Mainstream frameworks provide**: execution orchestration, tool invocation, multi-agent workflows — the **execution layer**;
+- **No conflict**: the governance layer manages "whether to do it, by what rules, with traces"; the execution layer manages "how to do it, how fast, which tools".
 
 ---
 
-## 二、为什么需要治理底座（执行框架的盲区）
+## 2. Why a Governance Substrate Is Needed (Execution-Framework Blind Spots)
 
-| 执行框架盲区 | 表现 | GOAA 补位 |
+| Execution-Framework Blind Spot | Symptom | GOAA Fill-in |
 |---|---|---|
-| 规则衰减 | 规则随交互衰减（73%→33%，SRD 2026 实证） | 规则锚在文件里，启动强制装载 |
-| 记忆易失 | 上下文临时，对话关闭记忆即消失 | 文件化四层记忆（落盘即存续） |
-| 决策无主 | 关键决定由模型自主，无留痕无追责 | 常态化人裁闭环（人侧最终决断） |
-| 熵增失控 | 长周期运行行为漂移、体系膨胀 | 双源熵治理（熵汇+负熵注入） |
+| Rule decay | Rules decay with interaction (73%→33%, SRD 2026 evidence) | Rules anchored in files, mandatory startup loading |
+| Volatile memory | Context is temporary; memory disappears when the dialogue closes | File-based four-layer memory (persist = survive) |
+| Ownerless decisions | Key decisions made autonomously by the model, no trace, no accountability | Regular human-adjudication loop (human-side final decision) |
+| Uncontrolled entropy | Long-run behavior drift, system bloat | Dual-source entropy governance (entropy sink + negentropy injection) |
 
-> 执行框架解决"能力"问题，GOAA 解决"秩序"问题——二者正交，可共存。
+> Execution frameworks solve the "capability" problem; GOAA solves the "order" problem — they are orthogonal and can coexist.
 
 ---
 
-## 三、共存接口（三个接触点）
+## 3. Coexistence Interfaces (Three Contact Points)
 
-| 接口 | 方向 | 机制 |
+| Interface | Direction | Mechanism |
 |---|---|---|
-| **规则前置** | 框架 → GOAA | 执行前读取 `constitution/basic_law.md` + `rules/rules.yaml` |
-| **记忆后置** | 框架 → GOAA | 产出与过程写入 `_Memory/`，纳入四层记忆 |
-| **决断回调** | 框架 ↔ GOAA | 规则未覆盖的关键节点暂停，提交人侧决断 |
+| **Rule front-loading** | Framework → GOAA | Read `constitution/basic_law.md` + `rules/rules.yaml` before execution |
+| **Memory back-write** | Framework → GOAA | Write outputs and processes to `_Memory/`, into the four-layer memory |
+| **Adjudication callback** | Framework ↔ GOAA | Pause at key nodes not covered by rules; submit to human adjudication |
 
-> 三个接口都是"文件级"接触——不改框架代码、不绑定框架版本、不引入运行时依赖。**兼容性是架构属性，不是补丁**。
+> All three interfaces are "file-level" contacts — no framework-code changes, no framework-version binding, no runtime dependencies. **Compatibility is an architectural property, not a patch.**
 
 ---
 
-## 四、兼容性论证（证据链）
+## 4. Compatibility Evidence Chain
 
-| 证据 | 内容 | 证明力 |
+| Evidence | Content | Proof Strength |
 |---|---|---|
-| **集成示例运行成功** | LangChain/CrewAI/AutoGen 三框架最小集成跑通（见 [integrations/](../integrations/)） | 直接证明：治理层可与主流框架共存 |
-| **接口零依赖** | 集成只发生在三个文件接口点，不引入运行时依赖 | 结构性证明：无耦合即无冲突 |
-| **框架中立** | 治理层不依赖任何特定框架 API | 逻辑证明：底座与执行层解耦 |
-| **论文划界** | 论文 §2 逐线划界（宪法路线/机器治理派/HITL），定位 GOAA 为文件系统级治理范式 | 理论证明：与既有方案不冲突 |
+| **Integration examples run successfully** | Minimal integrations with LangChain/CrewAI/AutoGen work (see [integrations/](../../integrations/)) | Direct: the governance layer coexists with mainstream frameworks |
+| **Zero-dependency interfaces** | Integration only happens at three file-interface points; no runtime dependencies | Structural: no coupling means no conflict |
+| **Framework neutrality** | The governance layer depends on no specific framework API | Logical: substrate and execution layer are decoupled |
+| **Paper delimitation** | Paper §2 line-by-line delimitation (constitutional routes / machine-governance school / HITL), positioning GOAA as a file-system-level governance paradigm | Theoretical: no conflict with existing approaches |
 
 ---
 
-## 五、与相关概念的划界（简述）
+## 5. Delimitation with Related Concepts (Brief)
 
-| 概念 | 关系 | 边界 |
+| Concept | Relationship | Boundary |
 |---|---|---|
-| 宪法路线（CAI/Model Spec） | 不替代 | 治理规则存模型内 vs GOAA 存文件系统级（论文 §2.3 划界） |
-| 机器治理派（ArbiterOS/Entropy Principle） | 不替代 | 机器为治理主体 vs GOAA 人裁常态化（论文 §2.2 划界） |
-| HITL（人机回环） | 不替代 | 异常兜底 vs 规则层常态化环节（论文 §2.5 划界） |
-| 执行框架（LangChain/AutoGen/CrewAI） | **共存** | 能力外挂 vs 治理底座（本文档） |
+| Constitutional routes (CAI/Model Spec) | Not a replacement | Rules in-model vs GOAA file-system-level (paper §2.3) |
+| Machine-governance school (ArbiterOS/Entropy Principle) | Not a replacement | Machine as governance subject vs GOAA routine human adjudication (paper §2.2) |
+| HITL (human-in-the-loop) | Not a replacement | Exception fallback vs routine rule-layer stage (paper §2.5) |
+| Execution frameworks (LangChain/AutoGen/CrewAI) | **Coexistence** | Capability plugins vs governance substrate (this document) |
 
 ---
 
-## 六、验证方式（你来证伪）
+## 6. How to Verify (Falsify It Yourself)
 
-- 认为"治理层与执行层必然冲突"？→ 跑 [集成示例](../integrations/) 验证共存；
-- 认为"治理底座没必要"？→ 对照执行框架盲区表，在长周期运行中实测规则衰减与记忆丢失；
-- 有具体质疑？→ 登记 [证伪登记册](falsification-log.md)。
+- Think "the governance layer and the execution layer inevitably conflict"? → Run the [integration examples](../../integrations/) to verify coexistence;
+- Think "a governance substrate is unnecessary"? → Compare the execution-framework blind-spot table; measure rule decay and memory loss in long-running operation;
+- Have a specific objection? → Register it in the [falsification log](falsification-log.md).
 
 ---
 
-*GOAA · 兼容性证明 · 全成果开源版（Core）· 2026-08-28*
+*GOAA · Compatibility Proof · All-Outcomes Open Source Edition (Core) · 2026-08-28*

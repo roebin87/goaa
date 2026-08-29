@@ -1,51 +1,51 @@
-﻿# BENCHMARK.md · 运转基准指标
+﻿# BENCHMARK.md · Running Benchmarks
 
-> **用途**：本文件=架构成立性/运转质量的可测量基准——**架构成立=可测量**（验证生效原则：写出≠生效，生效须可测）。
-> **理论依据**：动态率（结果四率）+ 证伪器（可检测+可判断好坏）。
-> **🔴 口径声明**：本表所列=**基准目标值**（非实测数据）；实测由部署实例按监测节奏回填。指标口径以 GOAA 学术论文（附录 B：一次通过率/返工率/规则膨胀指数/跨会话规则漂移率/待裁决积压率）为权威参考。
-> **版本**：唯一版本 1.0
-
----
-
-## 一、部署基准（架构能否成立）
-
-| 指标 | 基准 | 测量方式 |
-|------|------|---------|
-| 部署成功率 | 100%（0-5 步全过） | DEPLOY 部署核对清单 |
-| 结构自检通过率 | 100% | validator.py 实跑 |
-| 部件齐全率 | 100%（开源母本自包含结构完整度·宪法/身份/规则/机制/方法论） | 结构校验 |
-
-## 二、运转基准（结果四率·动态率落地）
-
-| 率 | 定义 | 目标 |
-|----|------|------|
-| 交付准时性 | 任务按约定时限完成的比例 | ≥90% |
-| 目标完成度 | 任务目标达成程度（主人验收） | ≥85% |
-| 一次通过率 | 提交产物一次验收通过的比例 | ≥70% |
-| 返工复发率 | 同一问题重复返工的比例 | ≤10% |
-
-## 三、治理基准（秩序健康度）
-
-| 指标 | 定义 | 目标 |
-|------|------|------|
-| 歧义澄清率 | 歧义出现后成功澄清的比例 | ≥95% |
-| 权限拦截率 | 越权操作被 validator/机制拦截的比例 | 100% |
-| 史书完整率 | 对话记录/灵魂备份/日志无缺失比例 | 100% |
-| 规则生效率 | 已生效规则（非草案/待校验）比例 | ≥90% |
-
-## 四、监测节奏
-
-| 节奏 | 动作 |
-|------|------|
-| 每次收摊 | 更新当日量化指标（灵魂备份健康状态节） |
-| 每周 | 汇总四率趋势，异常即红灯上报 |
-| 每次部署 | 跑部署基准全套 |
-
-## 五、指标使用纪律
-
-- 指标是**发现问题的仪表盘**，不是考核鞭子——率异常=找根因（认知滞后/机制缺口），不惩罚；
-- 指标异常时按证伪器逻辑走：可检测→可判断→交主人裁决是否修正机制。
+> **Purpose**: measurable baseline for architecture standing / running quality — **architecture standing = measurable** (verification-effective principle: written ≠ effective; effective must be measurable).
+> **Theory basis**: dynamic rates (result four rates) + meta-tool = falsifier (detectable + judgeable).
+> **🔴 Caliber statement**: the values listed below are **baseline target values** (not measured data); actual measurements are backfilled by the deployed instance per the monitoring rhythm. Metric calibers follow the GOAA academic paper (Appendix B: first-pass rate / rework rate / rule-bloat index / cross-session rule-drift rate / pending-adjudication backlog rate) as the authoritative reference.
+> **Version**: Single version 1.0
 
 ---
 
-*GOAA · BENCHMARK.md · 唯一版本 1.0 · 2026-08-19*
+## 1. Deployment Benchmarks (does the architecture stand?)
+
+| Metric | Baseline | Measurement |
+|--------|----------|-------------|
+| Deployment success rate | 100% (steps 0-5 all pass) | DEPLOY checklist |
+| Structure self-check pass rate | 100% | validator.py run |
+| Component completeness rate | 100% (open-source mother template self-contained structure completeness · constitution/identity/rules/mechanisms/methodologies) | structure check |
+
+## 2. Operation Benchmarks (result four rates · dynamic-rates landing)
+
+| Rate | Definition | Target |
+|------|-----------|--------|
+| Delivery timeliness | % of tasks completed on time | ≥90% |
+| Goal completion | task goal achievement (owner acceptance) | ≥85% |
+| First-pass rate | % of deliverables accepted first try | ≥70% |
+| Rework recurrence | % of same problem requiring rework again | ≤10% |
+
+## 3. Governance Benchmarks (order health)
+
+| Metric | Definition | Target |
+|--------|-----------|--------|
+| Ambiguity clarification rate | % of ambiguities successfully clarified | ≥95% |
+| Permission interception rate | % of overreach blocked by validator/mechanisms | 100% |
+| Chronicle completeness rate | % of conversation records/soul backups/logs without loss | 100% |
+| Rule effectiveness rate | % of effective rules (not draft/pending) | ≥90% |
+
+## 4. Monitoring Cadence
+
+| Rhythm | Action |
+|--------|--------|
+| Every wrap-up | update daily quantitative metrics (soul backup health section) |
+| Weekly | aggregate four-rate trends, abnormal = red-light report |
+| Every deployment | run full deployment benchmark suite |
+
+## 5. Metric Usage Discipline
+
+- Metrics are **dashboards for finding problems**, not whips for scoring — abnormal rate = find root cause (cognitive lag/mechanism gap), not punishment;
+- On abnormal metrics, follow the meta-tool logic: detectable → judgeable → owner rules on whether to fix the mechanism.
+
+---
+
+*GOAA · BENCHMARK.md · Single version 1.0 · 2026-08-19*

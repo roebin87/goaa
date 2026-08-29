@@ -1,36 +1,36 @@
-# 核心概念 · 优先级规则与单一数据源（防漂移双法则）
+# Core Concept · Priority Rules & Single Source of Truth (the two anti-drift laws)
 
-> **系列**：docs/concepts 核心概念逐篇｜**版本**：唯一版本 1.0
+> **Series**: docs/concepts core-concept series ｜ **Version**: Single version 1.0
 
 ---
-> **权威指针**：本文件=概念解释层（人语义·降低理解成本）；**权威以宪法层为准**（`constitution/basic_law.md` + `constitution/design-principles.md`）——解释与权威冲突时以权威为准。
+> **Authority pointer**: this file is the concept-explanation layer (human semantics · lowers the understanding cost); **authority resides in the constitutional layer** (`constitution/basic_law.md` + `constitution/design-principles.md`) — where an explanation conflicts with authority, the authority prevails.
 
-## 一句话
+## In one line
 
-多文件共存的体系，必须有两条防漂移法则：**优先级规则**（冲突时听谁的）与**单一数据源**（同一概念唯一出处）——否则规则会在多文件之间悄悄漂移。
+Any system where multiple files coexist needs two anti-drift laws: **priority rules** (who wins when rules conflict) and **single source of truth** (each concept has exactly one origin) — otherwise rules silently drift between files.
 
-## 法则一 · 优先级规则（上位法链）
+## Law One · Priority Rules (the superior-law chain)
 
 ```
-宪法层 > 规则层 > 机制层 > IDENTITY > SOUL > Agent_Profile > USER
+Constitutional layer > Rules layer > Mechanisms layer > IDENTITY > SOUL > Agent_Profile > USER
 ```
 
-- 下位法服从上位法；冲突时以上位法为准；
-- 无法判定时交主人裁决（不得自行取舍）。
+- Lower law defers to higher law; when they conflict, the higher law prevails;
+- When undeterminable, submit to the owner for adjudication (never self-resolve).
 
-## 法则二 · 单一数据源（唯一出处）
+## Law Two · Single Source of Truth (one origin)
 
-- **权限授权**：USER.md 为唯一源；Agent_Profile=岗位级适配，不得超出 USER 授权；
-- **规则定论**：rules/ 为唯一源；蒸馏/论语/索引=引用索引，不得自行新增规则；
-- **修改规矩**：改唯一源，引用处只同步——改引用不改源=漂移源头。
+- **Permission authorization**: USER.md is the only source; Agent_Profile = role-level adaptation, must not exceed USER's authorization;
+- **Rule conclusions**: rules/ is the only source; distillation/sayings/index = reference indices, must not add rules on their own;
+- **Modification discipline**: change the single source; referencing sites only sync — changing references instead of the source is the origin of drift.
 
-## 为什么必须两条一起
+## Why both laws are required together
 
-- 只有优先级：能判冲突，但每个文件里"自己那一份"可能早就跟源头不一致；
-- 只有单一数据源：能防漂移，但真冲突时不知道听谁的；
-- 合起来=治理的自我约束闭环（外部审议二次补的最关键点）。
+- Priority rules alone: conflicts can be adjudicated, but "your own copy" inside each file may already diverge from the source;
+- Single source alone: drift can be prevented, but when a real conflict occurs you don't know who to listen to;
+- Together = governance's self-restraint loop (the most critical point added by second-order external review).
 
-## 相关
+## Related
 
-- 概念：母公理 / 熵治理（认知漂移）
-- 机制：规则生效闸门（validation.md）
+- Concepts: Mother Axiom / entropy governance (cognitive drift)
+- Mechanisms: rule effect gate (validation.md)

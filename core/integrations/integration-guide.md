@@ -1,70 +1,62 @@
-# 框架集成指南（Integration Guide）
+# Framework Integration Guide
 
-> 本指南说明如何将 GOAA 作为**治理底座**与主流增强型 Agent 框架集成。集成示例（`integrations/`）是**最小可运行**的演示——证明"治理基座 + 能力外挂"可以共存共跑。
-
----
-
-## 一、通用集成三步
-
-所有框架集成遵循同一模式（可单独或组合使用）：
-
-| 步骤 | 动作 | 对应模式 |
-|---|---|---|
-| **1. 规则前置** | Agent 执行任务前，读取 GOAA 的 `constitution/basic_law.md` 和 `rules/rules.yaml`，在规则约束下执行 | 模式一 |
-| **2. 记忆后置** | Agent 完成任务后，将产出和过程写入 GOAA 的 `_Memory/` 目录，纳入记忆体系 | 模式二 |
-| **3. 决断回调** | Agent 遇到规则未覆盖的关键节点时，暂停执行，将选项提交给 GOAA 治理层，由人侧决断后继续 | 模式三 |
+> This guide explains how to use GOAA as a **governance base layer** alongside mainstream enhancement agent frameworks. The integration examples (`integrations/`) are **minimal runnable** demos — proving that "governance base + capability plugin" can coexist and run together.
 
 ---
 
-## 二、接口说明
+## 1. Generic integration in three steps
 
-| 接口 | 路径（工作区根相对） | 说明 |
-|---|---|---|
-| 核心原则 | `constitution/basic_law.md` | Agent 系统提示的规则基底 |
-| 规则配置 | `rules/rules.yaml` | 机器可读的规则清单（校验器可检查） |
-| 角色规则 | `mechanisms/multi-role.md` | 多角色分工定义（主控/编辑/执行/审稿） |
-| 记忆写入 | `_Memory/history/` | 任务产出与过程落盘 |
-| 待决断 | `_Memory/unresolved/` | 需要人侧决断的事项（决断回调落点） |
+All framework integrations follow the same pattern (usable individually or in combination):
+
+| Step | Action | Pattern |
+|------|--------|---------|
+| **1. Rules first** | Before executing a task, the agent reads GOAA's `constitution/basic_law.md` and `rules/rules.yaml`, and executes under rule constraints | Pattern 1 |
+| **2. Memory after** | After completing a task, the agent writes outputs and process into GOAA's `_Memory/` directory, incorporating them into the memory system | Pattern 2 |
+| **3. Decision callback** | When the agent hits a critical node not covered by rules, it pauses, presents options to the GOAA governance layer, and continues after human adjudication | Pattern 3 |
 
 ---
 
-## 三、运行与验证
+## 2. Interface reference
+
+| Interface | Path (relative to workspace root) | Description |
+|-----------|----------------------------------|-------------|
+| Core principles | `constitution/basic_law.md` | Rule base for the agent's system prompt |
+| Rule configuration | `rules/rules.yaml` | Machine-readable rule list (checkable by the validator) |
+| Role rules | `mechanisms/multi-role.md` | Multi-role division definitions (controller/editor/executor/reviewer) |
+| Memory write | `_Memory/history/` | Task outputs and process persisted to disk |
+| Pending decisions | `_Memory/unresolved/` | Items awaiting human adjudication (decision callback landing point) |
+
+---
+
+## 3. Running and verifying
 
 ```bash
-# 1. 初始化 GOAA 工作区（首次）
+# 1. Initialize the GOAA workspace (first time)
 python tools/init.py
 
-# 2. 运行集成示例（以 langchain 为例）
+# 2. Run an integration example (langchain as example)
 cd integrations/langchain
 python minimal-example.py
 
-# 3. 验证治理链路
-#    - 规则已装载（Agent 输出遵守基本法/规则）
-#    - 记忆已落盘（_Memory/history/ 下生成任务记录）
-#    - 决断可回调（规则未覆盖处暂停，等待人侧决断）
+# 3. Verify the governance chain
+#    - Rules loaded (agent output complies with basic law/rules)
+#    - Memory persisted (task records generated under _Memory/history/)
+#    - Decision callback works (pauses at points not covered by rules, waits for human adjudication)
 ```
 
-> **最小集成 = 论证**：示例运行成功即证明 GOAA 治理层可与该框架共存——不要求深度耦合，治理底座价值在于**约束、留痕、裁决**，而非替代执行能力。
+> **Minimal integration = argument**: a successfully running example proves the GOAA governance layer can coexist with the framework — deep coupling is not required. The governance base's value lies in **constraint, traceability, and adjudication** — not in replacing execution capability.
 
 ---
 
-## 四、常见问题（FAQ）
+## 4. FAQ
 
-| 问题 | 解答 |
-|---|---|
-| **GOAA 会替代我的框架吗？** | 不会。GOAA 是治理底座，不替代任何增强型框架（详见 [兼容性证明](../docs/compatibility.md)） |
-| **需要改框架代码吗？** | 不需要。集成只发生在"读规则 + 写记忆 + 回调裁决"三个接口点 |
-| **示例为什么这么小？** | 最小集成聚焦证明"能跑通"，业务能力由框架本身提供 |
-| **多角色如何映射？** | GOAA 四角色（主控/编辑/执行/审稿）可映射到框架的多 Agent 定义（如 CrewAI Agent 角色） |
-
----
-
-## 五、扩展建议
-
-- **从规则前置开始**：先让 Agent 读取规则运行，观察行为变化；
-- **再上记忆后置**：让产出落盘，积累可检索、可蒸馏的工作记忆；
-- **最后加决断回调**：在关键节点接入人侧决断，形成完整治理闭环。
+| Question | Answer |
+|----------|--------|
+| **Will GOAA replace my framework?** | No. GOAA is a governance base layer; it does not replace any enhancement framework (see [compatibility proof](../docs/compatibility.md)) |
+| **Do I need to modify framework code?** | No. Integration happens only at three interface points: "read rules + write memory + callback for adjudication" |
+| **Why are the examples so small?** | Minimal integration focuses on proving "it runs"; business capability comes from the framework itself |
+| **How do roles map?** | GOAA's four roles (controller/editor/executor/reviewer) can map to a framework's multi-agent definitions (e.g. CrewAI agent roles) |
 
 ---
 
-*GOAA · 框架集成指南 · 全成果开源版（Core）· 2026-08-28*
+*GOAA · Framework Integration Guide · Genericized translation · 2026-08-29 · v0.1.0*

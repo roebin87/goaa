@@ -1,77 +1,77 @@
-# GOAA 学术论文（正式验证载体）
+# The GOAA Academic Paper (Formal Verification Vehicle)
 
-> 本文档是 GOAA 架构的**学术理论载体入口**——论文全文以开放获取形式存档于 Zenodo，本页提供论文定位、核心主张与三边界声明。本文档为开源仓库中的理论锚点，设计原理与实现细节见 `docs/internals/` 与各机制文档。
+> This document is the **academic theory entry point** of the GOAA architecture — the full paper is archived open-access on Zenodo. This page provides the paper's identity, core claims, and the three-boundary declaration. This document is the theoretical anchor within this repository; design rationale and implementation details live in `docs/internals/` and the mechanism documents.
 
 ---
 
-## 论文信息
+## Paper Information
 
-| 项 | 内容 |
+| Field | Value |
 |---|---|
-| **标题** | 治理导向型智能体架构（GOAA）：以自然人决断权为核心的文件系统级熵治理范式与全层级落地路径 |
-| **作者** | Jianlong Yin |
-| **系列** | GOAA 架构设计原理篇（与《认知滞后》为姊妹篇：前者呈现体系全貌，后者聚焦认知滞后维度与熵汇设计） |
-| **版本 DOI** | `10.5281/zenodo.22165301` |
-| **姊妹篇《认知滞后》DOI** | `10.5281/zenodo.22031207`（版本）· `10.5281/zenodo.22025298`（概念） |
-| **存档** | Zenodo 开放获取（open access） |
+| **Title** | Governance-Oriented Agent Architecture (GOAA): A File-System-Level Entropy Governance Paradigm Centered on Natural-Person Decision Authority, with Full-Hierarchy Deployment Paths |
+| **Author** | Jianlong Yin |
+| **Series** | GOAA Architecture Design Principles paper (sister paper to *Cognitive Lag*: the former presents the full architecture, the latter focuses on the cognitive-lag dimension and entropy-sink design) |
+| **Version DOI** | `10.5281/zenodo.22165301` |
+| **Sister paper (Cognitive Lag) DOI** | `10.5281/zenodo.22031207` (version) · `10.5281/zenodo.22025298` (concept) |
+| **Archive** | Zenodo, open access |
 
 ---
 
-## 摘要
+## Abstract
 
-大语言模型驱动的智能体从原型走向生产的过程中，系统性无序化成为核心瓶颈：规则随交互衰减、行为随运行漂移、体系随演化膨胀。现有治理研究或依附于执行框架而碎片化，或独立为确定性控制面但以机器为治理主体，人类被排除在常态化治理闭环之外。
+As large-language-model-driven agents move from prototype to production, systemic disorder becomes the core bottleneck: rules decay with interaction, behavior drifts with operation, and the system expands with evolution. Existing governance research either fragments by attaching to execution frameworks, or stands as a deterministic control plane but with machines as the governance subject, excluding humans from the routine governance loop.
 
-本文提出治理导向型智能体架构（Governance-Oriented Agent Architecture，GOAA）——以自然人最终决断权为核心、以文件系统级控制权为物理载体的熵治理范式：
+This paper proposes the Governance-Oriented Agent Architecture (GOAA) — an entropy-governance paradigm centered on natural-person final decision authority, carried physically by file-system-level control:
 
-- **四条公理框定治理边界**：决断权（AI 非法律主体，责任归于自然人）、文件本体（文件系统是记忆与规则的权威载体）、固有歧义（人机语义差不可消除，只能显影治理）、熵增（无序化是长周期运行的结构性特征）；
-- **物理文件替代逻辑控制面**作为治理底座，承载权限、历史与熵导出（权限即主权、留痕即证据、落盘即熵汇）；
-- **常态化人工裁决 + 文件化四层记忆**构成认知熵的治理闭环——人裁不是异常兜底，而是规则层与共识层的固定环节；
-- **全层级落地路径**：从个人到企业，治理范式平滑适配（GOAA Lite → Personal → Core 对应不同治理强度）。
+- **Four axioms frame the governance boundary**: Decision Authority (AI is not a legal subject; responsibility rests with the natural person), File Ontology (the file system is the authoritative carrier of memory and rules), Inherent Ambiguity (human-machine semantic divergence cannot be eliminated, only surfaced and governed), Entropy Increase (disorder is a structural feature of long-running operation);
+- **Physical files replace the logical control plane** as the governance substrate, carrying authority, history, and entropy export (authority-as-sovereignty, trace-as-evidence, persistence-as-entropy-sink);
+- **Regular human adjudication + file-based four-layer memory** form the governance loop for cognitive entropy — human adjudication is not exception fallback but a fixed stage of the rule layer and consensus layer;
+- **Full-hierarchy deployment path**: from individual to enterprise, the governance paradigm adapts smoothly (GOAA Lite → Personal → Core corresponding to increasing governance intensity).
 
-据我们所知，截至 2026 年 8 月，公开文献中尚未有研究将自然人裁决作为规则层与共识层的常态化核心环节、以物理文件系统为治理载体、实现单主权权责合一治理的系统化论证。
+To our knowledge, as of August 2026, no published research systematically demonstrates natural-person adjudication as a routine core stage of the rule and consensus layers, the physical file system as the governance carrier, and single-sovereignty authority-responsibility-unified governance.
 
 ---
 
-## 核心主张（四条公理）
+## Core Claims (Four Axioms)
 
-| 公理 | 内容 | 治理含义 |
+| Axiom | Content | Governance Implication |
 |---|---|---|
-| **公理一 · 决断权** | 治理的最终决断权归自然人，不可让渡 | 人侧决断=常态化环节（非异常兜底）；权责对等的法理基础 |
-| **公理二 · 文件本体** | 文件系统是记忆与规则的权威载体 | 规则锚在文件里（可重载、可审计），不依赖模型记忆的保持力 |
-| **公理三 · 固有歧义** | 人机语义差不可消除，只能显影与治理 | 歧义显影→人裁，不自行推定；三语义分层（人/机/编程语义） |
-| **公理四 · 熵增** | 无序化是长周期运行的结构性特征，非可修复的 bug | 持续治理应对；熵汇+负熵注入构成双源熵治理闭环 |
+| **Axiom 1 · Decision Authority** | Final decision authority rests with the natural person and is non-transferable | Human adjudication is a routine stage (not exception fallback); legal basis of authority-responsibility equivalence |
+| **Axiom 2 · File Ontology** | The file system is the authoritative carrier of memory and rules | Rules are anchored in files (reloadable, auditable), independent of model-memory retention |
+| **Axiom 3 · Inherent Ambiguity** | Human-machine semantic divergence cannot be eliminated, only surfaced and governed | Surface ambiguity → human adjudication, no self-assumption; three-layer semantics (human/machine/programming) |
+| **Axiom 4 · Entropy Increase** | Disorder is a structural feature of long-running operation, not a fixable bug | Sustained governance response; entropy-sink + negative-entropy injection form a closed dual-source loop |
 
 ---
 
-## 三边界声明（论文 / 设计原理 / 实现）
+## Three-Boundary Declaration (Paper / Design Principles / Implementation)
 
-| 载体 | 权威层级 | 说明 |
+| Carrier | Authority Level | Description |
 |---|---|---|
-| **学术论文**（Zenodo） | **理论权威** | 公理体系、理论划界、实证方法——**冲突时以论文为准** |
-| **设计原理**（`constitution/design-principles.md`） | 设计解释 | 架构设计的展开说明，与论文对应章节一致 |
-| **实现**（本仓库代码/模板/机制） | 工程落地 | 理论的工程化示例，随实践演化 |
+| **Academic paper** (Zenodo) | **Theoretical authority** | Axiom system, theoretical delimitation, empirical method — **in conflict, the paper prevails** |
+| **Design principles** (`constitution/design-principles.md`) | Design rationale | Expanded explanation of architecture design, consistent with the paper's chapters |
+| **Implementation** (this repository's code/templates/mechanisms) | Engineering realization | Engineering examples of the theory, evolving with practice |
 
-> **边界纪律**：三者各司其职——理论问题查论文、设计问题查设计原理、工程问题查实现；任何改动不得造成三者冲突（若冲突，以论文为准并同步修订）。
-
----
-
-## 证伪机制
-
-GOAA 的学术主张欢迎证伪而非盲信：
-
-- 对论文任何论断有异议 → 请到 [证伪登记册](../falsification-log.md) 登记（格式见该文件）；
-- 对已知局限与未验证主张 → 见[预注册自曝清单](../known-limits.md)（论文发表前已自曝的局限，不事后辩解）；
-- 社区质疑分级处理：有事实依据的质疑优先回应，格式不符者引导补全。
-
-> 延伸阅读：GOAA 的 Popperian 证伪立场与「不求你相信，只求你来证伪」的验证者姿态，见 `../README.md`。
+> **Boundary discipline**: each carrier serves its role — theory questions → paper, design questions → design principles, engineering questions → implementation; no change may create conflict among the three (if conflict arises, the paper prevails and the rest are revised in sync).
 
 ---
 
-## 系列定位
+## Falsification Mechanism
 
-- **《认知滞后》**（Yin, 2026）：姊妹篇，聚焦认知滞后维度与熵汇设计；
-- **本论文**：体系总纲，呈现 GOAA 全貌（公理体系→架构设计→熵治理→全层级落地）。
+GOAA's academic claims welcome falsification rather than blind belief:
+
+- Objection to any claim in the paper → register it in the [falsification log](../falsification-log.md) (format specified there);
+- Known limits and unverified claims → see the [pre-registered disclosure list](../known-limits.md) (limits disclosed before publication, no post-hoc excuses);
+- Community objections are graded: fact-based objections are prioritized; malformed ones are guided to be completed.
+
+> Further reading: GOAA's Popperian falsification stance and the verifier's posture of "we don't ask you to believe, we ask you to falsify" — see `../README.md`.
 
 ---
 
-*GOAA · 学术论文入口 · 全成果开源版（Core）· 2026-08-28*
+## Series Position
+
+- ***Cognitive Lag*** (Yin, 2026): sister paper, focusing on the cognitive-lag dimension and entropy-sink design;
+- **This paper**: Architecture Design Principles paper, presenting the full GOAA picture (axiom system → architecture design → entropy governance → full-hierarchy deployment).
+
+---
+
+*GOAA · Academic Paper Entry · All-Outcomes Open Source Edition (Core) · 2026-08-28*

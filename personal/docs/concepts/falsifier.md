@@ -1,36 +1,36 @@
-﻿# 核心概念 · 证伪器（强的秩序闸门）
+﻿# Core Concept · The Falsifier (a strong order gate)
 
-> **系列**：docs/concepts 核心概念逐篇｜**版本**：唯一版本 1.0
+> **Series**: docs/concepts core-concept series ｜ **Version**: Single version 1.0
 
 ---
-> **权威指针**：本文件=概念解释层（人语义·降低理解成本）；**权威以宪法层为准**（`constitution/basic_law.md` + `constitution/design-principles.md`）——解释与权威冲突时以权威为准。
+> **Authority pointer**: this file is the concept-explanation layer (human semantics · lowers the understanding cost); **authority resides in the constitutional layer** (`constitution/basic_law.md` + `constitution/design-principles.md`) — where an explanation conflicts with authority, the authority prevails.
 
-## 一句话
+## In one line
 
-**证伪器**=让"问题↔答案"持续燃烧、让体系知道"做得好不好"的机制。它不造强、借强、管强——**人机协作无需变强（强是外部变量），只需三件事：知道做什么、可不可检测、检测结果可不可判断好坏。**
+**The falsifier** = the mechanism that keeps "question↔answer" burning and lets the system know "whether it is doing well." It does not build strength, borrow strength, or govern strength — **human-machine collaboration does not need to become stronger (strength is an external variable); it needs only three things: know what to do, know whether it is checkable, and know whether the check result can be judged good or bad.**
 
-## 为什么是它
+## Why this concept
 
-- 理论链：人什么都不缺，缺发现认知滞后 → 认知滞后=没想到 → 没想到只能被照出来（外部对照）→ 证伪=让没想到显影；
-- 学术对照：可验证规划/Agent 校准/评估缺口=学术圈公认未解问题——GOAA 以证伪器对应（检测+判定+率）；
-- 校验层对抗：「标准↔运行」——标准是沉淀的答案，运行是实况；对抗停摆=标准闲置/漂移=失效资产。
+- Theory chain: the human lacks nothing but awareness of cognitive lag → cognitive lag = not having thought of it → what has not been thought of can only be shown by external contrast → falsification = making the un-thought-of visible;
+- Academic parallel: verifiable planning / agent calibration / evaluation gaps = widely recognized open problems in academia — GOAA responds with the falsifier (detection + judgment + rates);
+- Verification-layer confrontation: "standard ↔ runtime" — the standard is a sedimented answer, the runtime is reality; when the confrontation stalls, the standard sits idle / drifts = a failing asset.
 
-## 运转三件事
+## The three operational things
 
-| 事 | 对应 | 落点 |
+| Thing | Correspondence | Landing point |
 |----|------|------|
-| 知道做什么 | 问题（依据） | 人引信·立项判定（真问题闸门） |
-| 可不可检测 | 标准（校验） | 校验器/CI（存在性/体积/YAML/死链） |
-| 可不可判断好坏 | 证伪器（判定端） | 动态率（结果四率·率指标） |
+| Know what to do | problem (basis) | human fuse · problem-gate (genuine problem gate) |
+| Know whether it is checkable | standard (verification) | validator / CI (existence / size / YAML / dead links) |
+| Know whether it can be judged good or bad | falsifier (judgment side) | dynamic rates (four result rates · rate metrics) |
 
-## 落地形态
+## Concrete forms
 
-- `tools/validator.py`：一致性校验（可检测）；
-- `rules/validation.md`：规则生效闸门（写出≠生效）；
-- `mechanisms/dynamic-rates.md`：动态率监测（可判断好坏）；
-- 外部审议/开源社区=把答案丢进全世界的证伪器（二次证伪：我们评判他们的评判）。
+- `tools/validator.py`: consistency verification (checkable);
+- `rules/validation.md`: rule effect gate (written ≠ effective);
+- `mechanisms/dynamic-rates.md`: dynamic-rate monitoring (judging good vs. bad);
+- External review / the open-source community = throwing your answers into the world's falsifier (second-order falsification: we judge their judgment).
 
-## 相关
+## Related
 
-- 概念：问答对偶 / 熵治理 / 三语义
-- 机制：动态率监测 / 立项判定 / 验证生效
+- Concepts: QA duality / entropy governance / three semantics
+- Mechanisms: dynamic-rate monitoring / problem-gate / validation & effect

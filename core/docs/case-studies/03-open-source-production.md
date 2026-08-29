@@ -1,62 +1,62 @@
-# 案例三 · 开源生产：三发行版 · 治理驱动的对外发布
+# Case 03 · Open-Source Production: Three Editions · Governance-Driven Public Release
 
-> 本案例展示 GOAA 治理范式在**开源对外发布**上的应用——本项目（GOAA 三发行版：Lite/Personal/Core）自身的生产与验证过程。核心证据：**全量校验非抽检** + **口径纪律** + **真子集单调性** + **所有权五✅验证**。
-
----
-
-## 一、目标
-
-将 GOAA 体系对外开源（GitHub 公开仓库），三发行版同时发布：
-
-- **Lite（启蒙版）**：最小可用，验证所有权（我的东西我做主）；
-- **Personal（个人生产力版）**：个人生产力实证（多角色协作 + 记忆插件）；
-- **Core（全成果开源版）**：全成果开源（论文/双链导航完整版/集成示例/案例集/证伪册）。
-
-三版关系：**真子集单调性** Lite ⊂ Personal ⊂ Core（升级=开启功能层）。
+> This case demonstrates the application of the GOAA governance paradigm to **open-source public release** — the production and validation of this very project (GOAA three editions: Lite / Personal / Core). Core evidence: **full validation, not sampling** + **wording discipline** + **proper-subset monotonicity** + **five-check ownership verification**.
 
 ---
 
-## 二、治理设计
+## 1. Goal
 
-| 治理点 | 机制 | 效果 |
+Open-source the GOAA system (public GitHub repository), releasing three editions simultaneously:
+
+- **Lite (Enlightenment Edition)**: minimal viable, verifying ownership (my stuff, my call);
+- **Personal (Personal Productivity Edition)**: personal-productivity evidence (multi-role collaboration + memory plugin);
+- **Core (All-Outcomes Open Source Edition)**: full open source (paper / full dual-chain navigation / integration examples / case studies / falsification log).
+
+Relationship: **proper-subset monotonicity** Lite ⊂ Personal ⊂ Core (upgrade = enabling feature layers).
+
+---
+
+## 2. Governance Design
+
+| Governance Point | Mechanism | Effect |
 |---|---|---|
-| **全量校验非抽检** | 所有自检=全量扫描（口径红线/内部残留/死链/脚本语法/所有权五✅） | 不存抽检盲区 |
-| **口径纪律** | 三条口径红线（发布前定义的禁用表述·代号保密）零命中 · zh 道家证明 vs en Popperian 证伪语言 | 对外表述一致、无夸大 |
-| **通用化转译** | 所有对外文件去除内部信息（人名→设计者/路径占位符/内部目录列举→中性描述） | 保护内部资产、可对外阅读 |
-| **真子集一致性** | Lite ⊂ Personal ⊂ Core 单调性校验（任一行"Lite 有→Personal 必有→Core 必有"） | 三版不漂移 |
-| **所有权五✅** | 本地/纯文本/无远程/无绝对路径/无厂商锁定 5 项自动检查 + 2 项人工验证 | 证明"你的东西永远属于你" |
+| **Full validation, not sampling** | All self-checks = full scans (wording red lines / internal residue / dead links / script syntax / ownership five checks) | No sampling blind spots |
+| **Wording discipline** | Zero hits of the three wording red lines (pre-release defined forbidden phrases, codenames confidential) · zh Daoist proof vs en Popperian falsification language | Consistent, non-hyperbolic external messaging |
+| **Generalized translation** | All external files strip internal information (names → designer / path placeholders / internal directory listings → neutral descriptions) | Protects internal assets, readable externally |
+| **Proper-subset consistency** | Lite ⊂ Personal ⊂ Core monotonicity check ("Lite has → Personal must → Core must") | Editions do not drift |
+| **Ownership five checks** | Local / plain-text / no-remote / no-absolute-paths / no-vendor-lock: 5 automated checks + 2 manual verifications | Proves "your stuff always belongs to you" |
 
 ---
 
-## 三、关键节点（执行链 E1-E5）
+## 3. Key Milestones (Execution Chain E1-E5)
 
-| 阶段 | 动作 | 治理动作 |
+| Stage | Action | Governance Action |
 |---|---|---|
-| E1 | Lite 构建（15 件最小集） | 所有权验证 + 死链检查 |
-| E2 | Personal 构建（154 件：zh 主体 + en 镜像） | 通用化脱敏 + 真子集补齐 + 全量自检（全检非抽检） |
-| E3 | Core 构建（全成果：论文/双链导航/集成/案例/证伪） | 超集项生产 + 全开转译 |
-| E4 | 整体测试（三版各自验证 + 一致性 + 口径） | 全量校验 |
-| E4.5 | **作者亲测三版**（未过不发布） | 人侧最终决断 |
-| E5 | 发布（v0.1.0 三版同时 + release notes） | 版本策略 + 证伪入口启用 |
+| E1 | Lite build (15-item minimal set) | Ownership verification + dead-link check |
+| E2 | Personal build (151 items: zh core + en mirror) | Generalized desensitization + proper-subset completion + full validation |
+| E3 | Core build (full outcomes: paper / dual-chain navigation / integrations / cases / falsification) | Superset-item production + full-open translation |
+| E4 | Overall testing (per-edition validation + consistency + wording) | Full validation |
+| E4.5 | **Author hands-on testing of all three editions** (no release without passing) | Human-side final decision |
+| E5 | Release (v0.1.0, three editions simultaneously + release notes) | Version policy + falsification entry enabled |
 
 ---
 
-## 四、可验证产出
+## 4. Verifiable Outputs
 
-- 三发行版仓库（Lite/Personal/Core 同仓发布）；
-- 所有权验证脚本（`tools/verify-ownership.py`·5 项自动 + 2 项人工）；
-- 校验器（`tools/validator.py`·死链/口径/一致性）；
-- 证伪登记册与预注册自曝清单（`docs/falsification-log.md` + `docs/known-limits.md`）。
-
----
-
-## 五、案例启示
-
-1. **开源不是"把文件丢出去"**——是治理驱动的对外发布（脱敏→校验→亲测→发布）；
-2. **全检非抽检**——对外发布的每一份文件都要过检，抽检=对用户的隐瞒；
-3. **真子集是维护策略**——三版共享核心，升级=开功能层，天然防漂移；
-4. **作者亲测关卡不可省**——机器校验全过 ≠ 可以发布，人侧最终决断是兜底不是限制。
+- Three-edition repository (Lite/Personal/Core in one repo);
+- Ownership verification script (`tools/verify-ownership.py` · 5 automated + 2 manual checks);
+- Validator (`tools/validator.py` · dead links / wording / consistency);
+- Falsification log & pre-registered disclosure list (`docs/falsification-log.md` + `docs/known-limits.md`).
 
 ---
 
-*GOAA · 治理产出案例集 · 案例三 开源生产 · 全成果开源版（Core）· 2026-08-28*
+## 5. Case Insights
+
+1. **Open source is not "throwing files out"** — it is governance-driven public release (desensitize → validate → hands-on test → release);
+2. **Full validation, not sampling** — every file in a public release must pass checks; sampling is hiding from users;
+3. **Proper subsets are a maintenance strategy** — editions share the core; upgrade = enabling layers, naturally drift-proof;
+4. **The author hands-on gate is not skippable** — all machine checks passing ≠ ready to release; human-side final decision is a safety net, not a restriction.
+
+---
+
+*GOAA · Governance Case Studies · Case 03 Open-Source Production · All-Outcomes Open Source Edition (Core) · 2026-08-28*

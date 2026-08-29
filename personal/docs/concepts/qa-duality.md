@@ -1,42 +1,42 @@
-﻿# 核心概念 · 问答对偶（问题 ↔ 答案）
+﻿# Core Concept · QA Duality (question ↔ answer)
 
-> **系列**：docs/concepts 核心概念逐篇｜**版本**：唯一版本 1.0
+> **Series**: docs/concepts core-concept series ｜ **Version**: Single version 1.0
 
 ---
-> **权威指针**：本文件=概念解释层（人语义·降低理解成本）；**权威以宪法层为准**（`constitution/basic_law.md` + `constitution/design-principles.md`）——解释与权威冲突时以权威为准。
+> **Authority pointer**: this file is the concept-explanation layer (human semantics · lowers the understanding cost); **authority resides in the constitutional layer** (`constitution/basic_law.md` + `constitution/design-principles.md`) — where an explanation conflicts with authority, the authority prevails.
 
-## 一句话
+## In one line
 
-GOAA 的运转形态是**问题 ↔ 答案**的问答对偶：人提出真问题（生成端），答案被检测证伪（检验端）；对偶循环不停，认知就持续演进。**人机不是对偶的两端——人机是相融的平衡中间态，共同面对"问题↔答案"这对矛盾。**
+GOAA's operating form is the **question ↔ answer** QA duality: the human raises genuine problems (generation side), answers are falsified by detection (verification side); while the duality loop keeps turning, cognition keeps evolving. **Human and machine are not the two ends of the duality — human-machine is a fused, balanced middle state, jointly facing the "question↔answer" contradiction.**
 
-## 为什么是它
+## Why this form
 
-- 熵带来无序，负熵（问题注入）治理秩序；
-- 矛盾的真正落点=我们的答案还没被外部检测过——不是人和人、人和机的意见冲突；
-- 主体间矛盾不可调和（谁对谁错无解），认知间矛盾可无限推进（问题→答案→检验→新问题）。
+- Entropy brings disorder; negative entropy (problem injection) governs order;
+- The real locus of contradiction = our answers have not yet been externally tested — not opinion conflicts between people, or between people and machines;
+- Inter-subject contradictions are irreconcilable (who is right has no solution), while cognition-to-cognition contradictions can advance indefinitely (problem → answer → verification → new problem).
 
-## 运转方式
+## How it operates
 
 ```
-人（引信）→ 提出真问题 → 机显影缺口/提供理论命中 → 人裁决答案 → 检测证伪 → 沉淀或再问
+Human (fuse) → raises a genuine problem → machine surfaces gaps / offers theoretical hits → human adjudicates the answer → detection falsifies → sediment or re-ask
 ```
 
-- 每一次问答=一次小型"认知对抗+缺口检验"=负熵生产动作；
-- 没有"判"的问答=空转=熵增；
-- 答案被证伪（检测不过）≠失败，=新认知空间。
+- Each question-answer cycle = one small "cognitive confrontation + gap check" = a negative-entropy production act;
+- A question-answer cycle with no "adjudication" = idle spinning = entropy growth;
+- An answer being falsified (fails detection) ≠ failure — it is new cognitive space.
 
-> 设计思想来源：问答对偶结构源自人机协作生产模型，其设计思想受传统阴阳哲学启发（与学术论文口径一致）。
+> Design-thought source: the QA duality structure comes from the human-machine collaborative production model; its design thought is inspired by traditional yin-yang philosophy (consistent with the academic paper's position).
 
-## 落地形态
+## Concrete forms
 
-| 层 | 体现 |
+| Layer | Embodiment |
 |----|------|
-| 依据 | 为什么（问题·生成端） |
-| 方法 | 怎么做（人机融合·平衡中间态） |
-| 校验 | 做什么（答案·检验端） |
-| 证伪 | 证伪器=让"问题↔答案"持续燃烧的机制 |
+| Basis | why (problem · generation side) |
+| Method | how (human-machine fusion · balanced middle state) |
+| Verification | what (answer · verification side) |
+| Falsification | the falsifier = the mechanism that keeps "question↔answer" burning |
 
-## 相关
+## Related
 
-- 概念：母公理 / 证伪器 / 非平衡是有序之源
-- 机制：立项判定（真问题闸门）/ 歧义治理 / 动态率（检测好坏）
+- Concepts: Mother Axiom / falsifier / non-equilibrium is the source of order
+- Mechanisms: problem-gate (genuine problem gate) / ambiguity governance / dynamic rates (judging good vs. bad)

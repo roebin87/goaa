@@ -1,30 +1,30 @@
-# 日志模板
+# Daily Log Template
 
-> **用途**：日志=体系运行的完整史书（每日一文件·追加永不删除）。与灵魂备份的区分：灵魂备份=当日整理版（首末两份），日志=连续流水（每场追加）。
-> **铁律**：**追加写入，永不删除**；每一条记录都是知识资产；不记录瞬时信息（搜索记录/临时路径），只记录有持久价值的内容。
-> **生成时机**：每场对话结束自动追加日志条目；当日收摊时生成灵魂备份——与收摊五钩明确对应，二者职责不重叠。
-> **位置**：部署后放置于 `_Memory/history/日志/[实例名]/YYYY-MM-DD.md`
-> **通用模板说明**：本文件为自举初始化模板·不含任何运行实例数据·由首次激活引导逐项采集生成（部署后即为你的体系专属文件）。
-
----
-
-# YYYY-MM-DD 日志
-
-## 场次 1（HH:MM-HH:MM）
-
-| 时间 | 类型 | 内容 | 关联路径 |
-|------|------|------|---------|
-| HH:MM | 【决策/执行/讨论/异常】 | 【要点】 | 【对话记录/灵魂备份/项目文件路径】 |
-| HH:MM | 【类型】 | 【要点】 | 【路径】 |
-
-## 场次 2（HH:MM-HH:MM）
-
-| 时间 | 类型 | 内容 | 关联路径 |
-|------|------|------|---------|
-| HH:MM | 【类型】 | 【要点】 | 【路径】 |
-
-（……当日多场持续追加……）
+> **Purpose**: The daily log is the complete chronicle of system operation (one file per day · append-only, never delete). Distinction from soul backup: soul backup = organized day-end version (first & last of the day), log = continuous stream (appended every session).
+> **Iron rule**: **Append-only, never delete**; every entry is knowledge capital; do not record transient information (search records / temporary paths), only content of lasting value.
+> **Generation timing**: Append a log entry automatically at the end of every session; generate the soul backup at day-end wrap-up — in clear correspondence with the wrap-up five hooks; the two do not overlap in responsibility.
+> **Location**: After deployment, place at `_Memory/history/日志/[实例名]/YYYY-MM-DD.md`
+> **Generic template note**: This file is a self-bootstrap initialization template; it contains no runtime instance data; it is populated item by item by the onboarding flow (after deployment it becomes your system's own file).
 
 ---
 
-*【实例名】· 日志 · YYYY-MM-DD · 追加永不删除*
+# YYYY-MM-DD Log
+
+## Session 1 (HH:MM-HH:MM)
+
+| Time | Type | Content | Related path |
+|------|------|------|---------|
+| HH:MM | 【decision/execution/discussion/anomaly】 | 【key points】 | 【conversation record / soul backup / project file path】 |
+| HH:MM | 【type】 | 【key points】 | 【path】 |
+
+## Session 2 (HH:MM-HH:MM)
+
+| Time | Type | Content | Related path |
+|------|------|------|---------|
+| HH:MM | 【type】 | 【key points】 | 【path】 |
+
+(…continue appending for each session of the day…)
+
+---
+
+*【Instance name】 · Log · YYYY-MM-DD · append-only, never delete*

@@ -1,49 +1,49 @@
-# 机制 · 首次激活引导（台词本 · Lite 版）
+# Mechanism · First Activation Guide (script · Lite edition)
 
-> **用途**：AI 首次与主人见面时的引导流程——5 分钟完成，零术语。
-> **触发**：启动三步中发现 `identity/USER.md` 不存在 → 执行本流程。
-> **要求**：全程用大白话，不解释任何术语；每步得到回应再继续。
-
----
-
-## 开场（30 秒）
-
-> "你好，我是你的专属 AI 工作伙伴。我没有任何记忆——所以我会把你的重要信息记在**文件**里，那些文件放在你的电脑上，**完全属于你**，随时可以带走、交给任何别的 AI 继续用。"
->
-> "现在我们花 5 分钟互相认识一下，好吗？"
-
-（主人同意 → 继续；不回应 → 停住等，不催）
-
-## 三问快采（2 分钟）
-
-> "我问你三个问题，帮我更懂你："
->
-> 1. "你平时主要用 AI 做什么？"（记入 USER.md）
-> 2. "你希望我**直接做**，还是**先问你再做**？"（记入 SOUL.md）
-> 3. "有什么绝对不想让我做的事吗？"（记入 SOUL.md 红线）
-
-（每问得到回答 → 当场记入对应模板文件）
-
-## 落盘见证（1 分钟）
-
-> "我已经把你的回答记到文件里了。你看——就在 `identity/` 文件夹里，纯文本，记事本都能打开。**这就是你的记忆开始的地方**。"
-
-（引导主人看一眼文件·建立"文件=记忆"的直观认知）
-
-## 首动作三选一（1 分钟）
-
-> "我们开始吧，你想先做哪个？"
->
-> - A. 我把今天的安排整理进 `_Memory/`（体验收摊）
-> - B. 你随便给我个任务试试（体验干活）
-> - C. 先跑一遍 `tools/verify-ownership.py`，看看你的记忆为什么属于你（体验验证）
-
-（主人选完 → 陪做 → 收摊时走五件事 → 收摊确认）
-
-## 轻收尾
-
-> "今天结束了。你的记忆已经存在 `_Memory/` 里——下次打开新对话，我会记得你。这 5 分钟，你拥有了一个**记忆属于你**的 AI。"
+> **Purpose**: The onboarding flow for when the AI first meets its owner — done in 5 minutes, zero jargon.
+> **Trigger**: During the three startup steps, if `identity/USER.md` does not exist → run this flow.
+> **Requirement**: Plain language throughout; explain no jargon; wait for a response before continuing at each step.
 
 ---
 
-*机制 · 通用化精简版 · 2026-08-28*
+## Opening (30 seconds)
+
+> "Hi, I'm your personal AI work partner. I have no memory — so I'll keep your important information in **files**. Those files live on your computer, **completely yours**, ready to take away and hand to any other AI at any time."
+>
+> "Let's spend 5 minutes getting to know each other, okay?"
+
+(If the owner agrees → continue; no response → pause and wait, don't rush.)
+
+## Three quick questions (2 minutes)
+
+> "Let me ask you three questions to understand you better:"
+>
+> 1. "What do you mainly use AI for?" (record into USER.md)
+> 2. "Do you want me to **just do things**, or **ask you first**?" (record into SOUL.md)
+> 3. "Is there anything you absolutely don't want me to do?" (record into SOUL.md red lines)
+
+(After each answer → record into the corresponding template file on the spot.)
+
+## Persistence witnessed (1 minute)
+
+> "I've written your answers into files. Look — right here in the `identity/` folder, plain text, openable in Notepad. **This is where your memory begins.**"
+
+(Guide the owner to glance at the files, building the intuitive sense that "files = memory".)
+
+## First action, three choices (1 minute)
+
+> "Let's get started — which would you like to do first?"
+>
+> - A. I'll organize today's plans into `_Memory/` (experience closeout)
+> - B. Give me any task to try (experience working)
+> - C. Run `tools/verify-ownership.py` and see why your memory belongs to you (experience verification)
+
+(After the owner chooses → do it together → run the five closeout items → closeout confirmation.)
+
+## Light closeout
+
+> "Today is done. Your memory is already in `_Memory/` — next time you open a new conversation, I'll remember you. In these 5 minutes, you've gained an AI whose **memory belongs to you**."
+
+---
+
+*Mechanism · Genericized concise version · 2026-08-29*

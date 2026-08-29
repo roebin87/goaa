@@ -1,45 +1,45 @@
-# 对话记录模板（A5 逐字原始记录）
+# Conversation Record Template (A5 Verbatim Raw Transcript)
 
-> **用途**：对话记录=对话框**逐字原始记录（raw transcript）**（顶层存亡级），不得蒸馏、不得省略、不得精简。
-> **铁律**：**逐字呈现**——不得缩水、不得推卸（禁止"以对话平台为准"等表述，责任在 Agent 不在平台）；文件头必须含「逐字原始记录（A5 顶层存亡级）」字样；内容按轮次「主人：原话 / Agent：回复」逐字呈现；**随对话实时分段落盘**，禁止收摊时一次性补写。
-> **完整性**：工具调用、命令执行、文件变更同属全链路核心环节，必须原始落盘（见「工具与文件操作」区块）；异常场景（中断/报错/失败/拦截）必须完整记录。
-> **位置**：部署后放置于 `_Memory/history/对话记录/YYYY-MM-DD_HHMM-HHMM.md`（每次对话独立成文件，不合并不覆盖）。
-> **通用模板说明**：本文件为自举初始化模板·不含任何运行实例数据·由首次激活引导逐项采集生成（部署后即为你的体系专属文件）。
+> **Purpose**: Conversation records are the **verbatim raw transcript** of each session (top-level survival-grade); never distill, never omit, never condense.
+> **Iron rule**: **Verbatim** — no shrinking, no shifting responsibility (expressions like "per the chat platform" are prohibited; responsibility lies with the Agent, not the platform); the file header MUST carry the phrase "Verbatim raw transcript (A5 top-level survival-grade)"; content is presented turn by turn verbatim as "Owner: exact words / Agent: reply"; **write to disk progressively as the conversation happens** — never backfill all at once at wrap-up.
+> **Completeness**: Tool calls, command executions, and file changes are core links of the full chain and must be recorded raw (see "Tools & File Operations" block); anomaly scenarios (interruption/error/failure/block) must be fully recorded.
+> **Location**: After deployment, place at `_Memory/history/对话记录/YYYY-MM-DD_HHMM-HHMM.md` (one file per session; never merge, never overwrite).
+> **Generic template note**: This file is a self-bootstrap initialization template; it contains no runtime instance data; it is populated item by item by the onboarding flow (after deployment it becomes your system's own file).
 
 ---
 
-# 逐字原始记录（A5 顶层存亡级）
+# Verbatim Raw Transcript (A5 Top-Level Survival-Grade)
 
-- **日期**：YYYY-MM-DD
-- **时段**：HH:MM - HH:MM（当日第【N】场）
-- **参与者**：【主人称呼】（人）／【实例名】（Agent）
-- **记录性质**：逐字原始记录·不得修改·不得删除
-- **完整性校验**：文件哈希：【填 SHA-256】｜记录条数：【N】条（对接 validator 防篡改校验）
+- **Date**: YYYY-MM-DD
+- **Time span**: HH:MM - HH:MM (Session 【N】 of the day)
+- **Participants**: 【Owner name】 (human) ／ 【Instance name】 (Agent)
+- **Record nature**: Verbatim raw transcript · never modify · never delete
+- **Completeness check**: File hash: 【fill SHA-256】 ｜ Entries: 【N】 (paired with validator tamper-proof check)
 
-## 对话全文
+## Full Conversation
 
-### 轮次 1
-**主人**：（逐字原话）
+### Turn 1
+**Owner**: (verbatim exact words)
 
-**Agent**：（逐字回复）
+**Agent**: (verbatim reply)
 
-### 轮次 2
-**主人**：（逐字原话）
+### Turn 2
+**Owner**: (verbatim exact words)
 
-**Agent**：（逐字回复）
+**Agent**: (verbatim reply)
 
-（……持续追加，随对话实时分段落盘……）
+(…continue appending, written to disk progressively as the conversation happens…)
 
-## 工具与文件操作（全链路留痕）
+## Tools & File Operations (full-chain trace)
 
-| 时间 | 操作 | 目标 | 结果 |
+| Time | Operation | Target | Result |
 |------|------|------|------|
-| HH:MM | 【命令/工具/文件变更】 | 【路径/对象】 | 【成功/失败/被拦截】 |
+| HH:MM | 【command/tool/file change】 | 【path/object】 | 【success/failure/blocked】 |
 
-## 异常记录
+## Anomaly Record
 
-- 【对话中断/模型报错/执行失败/权限拦截等·时间+描述】
+- 【conversation interruption/model error/execution failure/permission block etc. · time + description】
 
 ---
 
-*【实例名】· 对话记录 · YYYY-MM-DD 第【N】场 · 逐字原始记录（A5 顶层存亡级）· 永不可修改删除*
+*【Instance name】 · Conversation Record · YYYY-MM-DD Session 【N】 · Verbatim raw transcript (A5 top-level survival-grade) · never to be modified or deleted*

@@ -1,29 +1,29 @@
-# GOAA 端到端真实示例
+# GOAA End-to-End Real-World Examples
 
-> 本目录收录 GOAA 架构的真实落地案例，每个案例基于设计者的实际实践整理，展示 GOAA 在真实场景中的使用方式、关键步骤、最终成果和复盘要点。
+> This directory contains real landing cases of GOAA architecture, each based on the designer's actual practice, showing how GOAA is used in real scenarios, key steps, final results, and review points.
 
-## 案例列表
+## Case List
 
-| 编号 | 案例 | 场景 | 关键成果 | 适用人群 |
-|------|------|------|---------|---------|
-| 01 | [用 GOAA 完成 45 万字书稿生产](01-book-production.md) | 多角色协作写书 | 20篇章节/约17.6万字/完整治理体系 | 内容创作者、写作者 |
-| 02 | [GOAA 架构自举开发](02-goaa-self-bootstrap.md) | 架构自身作为治理对象 | 56个核心文件/完整治理体系/架构自洽性验证 | 架构研究者、开发者 |
-| 03 | [治理事故压力测试（8.21 规则冲突事件）](03-governance-incident-stress-test.md) | 真实运行中的治理事故处置 | 事故转化为6项制度补丁/裁决闭环验证/架构进化动力 | 所有 GOAA 用户、治理研究者 |
+| # | Case | Scenario | Key Results | For |
+|---|------|----------|-------------|-----|
+| 01 | [450k-word Book Production with GOAA](01-book-production.md) | Multi-role collaborative writing | 20 chapters/~176k chars/complete governance system | Content creators, writers |
+| 02 | [GOAA Architecture Self-Bootstrapping](02-goaa-self-bootstrap.md) | Architecture itself as governance object | 56 core files/complete system/self-consistency verified | Architecture researchers, developers |
+| 03 | [Governance Incident Stress Test (8.21)](03-governance-incident-stress-test.md) | Real governance incident resolution | Incident converted to 6 institutional patches/adjudication loop verified | All GOAA users, governance researchers |
 
-## 案例说明
+## Notes
 
-- 所有案例基于真实实践整理，数据和时间线与实际一致
-- 每个案例包含：目标、初始状态、关键步骤、文件快照、最终成果、复盘要点
-- 案例不写成"广告"，客观记录"做对了什么、踩过什么坑、如果重来会改什么"
-- 案例中的文件路径和目录结构为示意，实际使用时根据自身工作区调整
+- All cases based on real practice; data and timelines match actual events
+- Each case includes: goal, initial state, key steps, file snapshots, final results, review points
+- Cases are not "advertisements" — objectively record "what worked, what pitfalls, what to change if restarting"
+- File paths and directory structures in cases are illustrative; adjust based on your own workspace
 
-## 如何使用这些案例
+## How to Use These Cases
 
-1. **新手入门**：从案例一入手，了解 GOAA 从 0 到 1 搭建和运行的完整过程
-2. **架构研究**：重点阅读案例二，理解 GOAA 如何用自身治理体系治理自身开发过程
-3. **实践参考**：根据自身场景，参考案例中的关键步骤和文件结构，搭建自己的 GOAA 体系
-4. **问题排查**：参考案例中的"踩坑记录"和"复盘要点"，避免常见问题
+1. **Beginners**: Start with Case 01 to understand GOAA's complete process from 0 to 1
+2. **Architecture researchers**: Focus on Case 02 to understand how GOAA governs its own development process
+3. **Practitioners**: Reference key steps and file structures in cases to build your own GOAA system
+4. **Troubleshooting**: Reference "pitfall records" and "review points" to avoid common problems
 
 ---
 
-*GOAA · 端到端真实示例 · 核心稳定版 1.0 · 2026-08-28*
+*GOAA · End-to-End Real-World Examples · Core stable version 1.0 · 2026-08-28*

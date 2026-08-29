@@ -1,61 +1,61 @@
-# 证伪登记册（Falsification Log）
+# Falsification Log
 
-> **定位**：GOAA 社会验证的证据链——所有对 GOAA 主张的质疑、分析、决断与固化结果，逐条登记于此。**不求你相信，只求你来证伪。**
+> **Position**: GOAA's social-validation evidence chain — every objection to GOAA's claims, its analysis, adjudication, and consolidated result, registered here line by line. **We don't ask you to believe; we ask you to falsify.**
 >
-> 本文件为 **Core 完整版**（Lite/Personal 仅提供指向本册的证伪入口）。
+> This file is the **Core full version** (Lite/Personal only provide an entry pointing here).
 
 ---
 
-## 使用说明
+## How to Use
 
-1. **谁可以登记**：任何人（社区成员/研究者/使用者）——质疑者匿名可；
-2. **如何登记**：在下方按 `## 证伪记录 #NNN` 格式追加（复制模板即可）；
-3. **如何回应**：GOAA 维护者按格式逐项回应（锚定事实 → AI 分析 → 人侧决断 → 固化结果）；
-4. **处理优先级**：有事实依据的质疑优先处理；格式不符者引导补全；无事实依据的噪音质疑登记后待议；
-5. **闭环义务**：每条记录最终必须到"状态"列——已闭环/进行中/待补充，不留悬空质疑。
+1. **Who can register**: anyone (community members / researchers / users) — anonymous registration allowed;
+2. **How to register**: append in the `## Falsification Record #NNN` format below (copy the template);
+3. **How it is answered**: GOAA maintainers respond item by item in the format (anchor facts → AI analysis → human adjudication → consolidated result);
+4. **Priority**: fact-based objections are handled first; malformed ones are guided to be completed; noise objections without factual basis are registered as pending;
+5. **Closure obligation**: every record must reach a status — closed / in progress / to be supplemented; no unresolved objections left hanging.
 
 ---
 
-## 登记模板
+## Registration Template
 
 ```markdown
-## 证伪记录 #NNN
-- 质疑内容 / 质疑者（匿名可）/ 时间
-- 锚定事实 / 公知参照
-- AI 分析（多选项/利弊）
-- 人侧决断（采纳/部分采纳/驳回/待议）
-- 固化结果（规则变更/文档修订/驳回理由）
-- 状态（已闭环/进行中/待补充）
+## Falsification Record #NNN
+- Objection / Objector (anonymous OK) / Date
+- Anchored facts / public references
+- AI analysis (options/trade-offs)
+- Human adjudication (accepted / partially accepted / rejected / pending)
+- Consolidated result (rule change / document revision / rejection reason)
+- Status (closed / in progress / to be supplemented)
 ```
 
 ---
 
-## 证伪记录 #001
+## Falsification Record #001
 
-> **示例记录**：展示一条质疑从登记到闭环的完整流程（本示例为格式示范，非真实社区质疑）。
+> **Example record**: demonstrates the full flow from registration to closure (this example is a format demonstration, not a real community objection).
 
-- **质疑内容**：GOAA 声称"规则锚在文件里就不衰减"，但文件也会被遗忘（没人读）——文件化不等于规则生效。
-- **质疑者**：示例（匿名可）
-- **锚定事实**：文件系统是确定性存储；规则衰减实证来自模型记忆（Liu, 2026 二级学术）；"写出≠生效"是 GOAA 自身的生效闸门主张（constitution/validation.md）。
-- **AI 分析**：
-  - 选项 A：质疑成立——文件只是存储，不读不生效，需补充"启动强制装载"论证（成本：修订文档）；
-  - 选项 B：部分成立——GOAA 已有启动序列强制装载机制（mechanisms/startup.md），质疑点在于装载是否每次执行（成本：补充校验）；
-  - 选项 C：不成立——规则生效链=文件+装载+闸门+人裁，四环节任一缺失都会在一致性校验中暴露（成本：维持现状）。
-  - 利弊：A 最保守但增加文档负担；B 补实装环节最贴合现状；C 依赖既有校验自证。
-- **人侧决断**：部分采纳（选项 B）。
-- **固化结果**：文档修订——启动序列文档补充"强制装载"的执行校验说明；一致性校验加入"规则文件装载率"检查项。
-- **状态**：已闭环。
+- **Objection**: GOAA claims "rules anchored in files do not decay", but files can also be forgotten (nobody reads them) — file-based does not equal rule-effective.
+- **Objector**: Example (anonymous OK)
+- **Anchored facts**: file systems are deterministic storage; rule-decay evidence comes from model memory (Liu, 2026, secondary academic); "written ≠ effective" is GOAA's own effectiveness-gate claim (constitution/validation.md).
+- **AI analysis**:
+  - Option A: objection stands — files are just storage; unread = ineffective; needs "mandatory startup loading" argument (cost: document revision);
+  - Option B: partially stands — GOAA already has a startup-sequence mandatory loading mechanism (mechanisms/startup.md); the point is whether loading executes every time (cost: supplement validation);
+  - Option C: does not stand — the rule-effectiveness chain = files + loading + gate + human adjudication; any missing link is exposed in consistency checks (cost: maintain status quo).
+  - Trade-offs: A is most conservative but adds documentation burden; B most matches the current state; C relies on existing self-validation.
+- **Human adjudication**: partially accepted (Option B).
+- **Consolidated result**: document revision — the startup-sequence document supplements the "mandatory loading" execution-validation note; the consistency check adds a "rule-file loading rate" inspection item.
+- **Status**: closed.
 
 ---
 
-## 记录列表
+## Record List
 
-| # | 质疑主题 | 状态 | 决断 | 登记时间 |
+| # | Objection Topic | Status | Adjudication | Date |
 |---|---|---|---|---|
-| #001 | 文件化≠规则生效 | 已闭环 | 部分采纳 → 补装校验 | （示例） |
+| #001 | File-based ≠ rule-effective | Closed | Partially accepted → loading check added | (example) |
 
-> **当前状态**：等待社区首条真实质疑。维护者承诺：每一条有事实依据的质疑，都会按上述流程闭环回应。
+> **Current status**: awaiting the community's first real objection. The maintainers commit: every fact-based objection will be closed per the above flow.
 
 ---
 
-*GOAA · 证伪登记册 · 全成果开源版（Core）· 2026-08-28*
+*GOAA · Falsification Log · All-Outcomes Open Source Edition (Core) · 2026-08-28*

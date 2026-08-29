@@ -1,47 +1,47 @@
-# 蒸馏模板（distill.md）
+# Distillation Template (distill.md)
 
-> **用途**：蒸馏=跨会话接续的核心（覆盖写入）。对话收摊时，把本场最关键的信息压成"下次启动必读"的浓缩文件。
-> **铁律**：蒸馏≠逐字记录（逐字走对话记录）；蒸馏保"要点与脉络"；机理解不了的留白待主人裁；蒸馏永不替代原文（全量备份=防流失绝对保险）。
-> **安全机制**：覆盖写入前，先备份上一版蒸馏文件（如 `蒸馏_当前.md.bak-YYYYMMDD`），避免覆盖失败导致记忆断层。
-> **位置**：部署后放置于 `_Memory/distill/蒸馏_当前.md`（覆盖写入）。
-> **通用模板说明**：本文件为自举初始化模板·不含任何运行实例数据·由首次激活引导逐项采集生成（部署后即为你的体系专属文件）。
+> **Purpose**: Distillation is the core of cross-conversation continuity (overwrite on write). At wrap-up, compress the most critical information of the session into a condensed file that is "a must-read for the next startup."
+> **Iron rule**: Distillation ≠ verbatim record (verbatim goes to conversation records); distillation keeps "key points and thread"; leave blank what the machine cannot understand for the owner to decide; distillation never replaces the original (full backup = absolute insurance against loss).
+> **Safety mechanism**: Before overwriting, back up the previous distillation file (e.g. `蒸馏_当前.md.bak-YYYYMMDD`) to avoid memory gaps if the write fails.
+> **Location**: After deployment, place at `_Memory/distill/蒸馏_当前.md` (overwrite on write).
+> **Generic template note**: This file is a self-bootstrap initialization template; it contains no runtime instance data; it is populated item by item by the onboarding flow (after deployment it becomes your system's own file).
 
 ---
 
-# 上一次对话事务蒸馏（【日期】第【N】场 · 【起止时间】· 【已收摊/未收摊】）
+# Distillation of the Last Session (【DATE】 Session 【N】 · 【START-END TIME】 · 【Wrapped up / Not wrapped up】)
 
-> 覆盖写入（收摊五钩·蒸馏钩）｜非逐字（逐字见 `_Memory/history/对话记录/`）
+> Overwrite on write (wrap-up five hooks · distillation hook) ｜ Not verbatim (verbatim lives in `_Memory/history/对话记录/`)
 
-## 稳定块（长期核心·跨场有效）
+## Stable Block (long-term core · valid across sessions)
 
-- **身份**：【实例名】；上级【主人称呼】；机修改权限边界=【工作区范围】
-- **核心规则**：【本体系最重要的 3-5 条稳定规则索引】
-- **核心定论索引**（跨场生效的共识/业务规则/决策结论·每次启动必加载）：
+- **Identity**: 【Instance name】; superior 【Owner name】; machine modification boundary = 【Workspace scope】
+- **Core rules**: 【Index of the 3-5 most important stable rules of this system】
+- **Core conclusions index** (consensus/business rules/decision outcomes effective across sessions · loaded at every startup):
 
-| 定论 | 内容 | 状态 |
+| Conclusion | Content | Status |
 |------|------|------|
-| 【定论名】 | 【要点】 | 【已生效/待验证】 |
+| 【Conclusion name】 | 【Key points】 | 【Effective / Pending verification】 |
 
-## 每场块（本场要点）
+## Per-Session Block (key points of this session)
 
-1. 【本场最重要的决策/定论 1】
-2. 【本场最重要的决策/定论 2】
-3. 【本场新认知/新机制】
+1. 【Most important decision/conclusion 1 of this session】
+2. 【Most important decision/conclusion 2 of this session】
+3. 【New insight / new mechanism of this session】
 
-## 风险/红灯记录（下次启动优先提示）
+## Risk / Red-Flag Record (top priority at next startup)
 
-- 【越权/异常/错误/未解决风险 1】
-- 【风险 2】
+- 【Overreach / anomaly / error / unresolved risk 1】
+- 【Risk 2】
 
-## 下次启动优先级
+## Next-Startup Priorities
 
-1. 【待主人裁决/待办 1】
-2. 【待办 2】
+1. 【Awaiting owner decision / to-do 1】
+2. 【To-do 2】
 
-## 留白（机无法裁决·待主人）
+## Blank Space (machine cannot decide · awaits owner)
 
-- 【机理解不了、需人裁的内容】
+- 【Content the machine cannot understand and the owner must decide】
 
 ---
 
-*【体系名】· 蒸馏模板 · 唯一版本 1.0 · 收摊五钩之蒸馏钩*
+*【System name】 · Distillation Template · Single version 1.0 · Wrap-up five hooks: distillation hook*

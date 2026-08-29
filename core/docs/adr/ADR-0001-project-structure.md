@@ -1,44 +1,44 @@
-﻿# ADR-0001 · 项目结构定稿（治理优先·文件驱动）
+# ADR-0001 · Project Structure Finalized (governance-first · file-driven)
 
-> **状态**：已接受｜**日期**：2026-08-19｜**决策者**：作者裁决·AI 执行
-> **系列**：docs/adr/ 架构决策记录（决策留痕·审计追溯起点）
+> **Status**: Accepted ｜ **Date**: 2026-08-19 ｜ **Decision-maker**: author adjudicates · AI executes
+> **Series**: docs/adr/ architecture decision records (decision trace · audit trail origin)
 
 ---
 
-## 背景
+## Background
 
-GOAA 开源项目需要确定目录结构。V1 结构被否（知识诅咒——把内部体系结构当理所当然，忘了开源读者=零上下文的人）；对照 DeepSeek Harness 范式 + 2.0 设计原理重设计后，产生 V2 结构方案，需定稿。
+The GOAA open-source project needed to settle its directory structure. The V1 structure was rejected (curse of knowledge — taking the internal system's structure for granted, forgetting that open-source readers are zero-context people); after cross-checking against the DeepSeek Harness paradigm + 2.0 design principles, a V2 structure was produced and needed finalization.
 
-## 决策选项
+## Decision options
 
-| 选项 | 描述 |
+| Option | Description |
 |------|------|
-| A · V1 结构 | 内部体系结构直接外发（被否） |
-| B · V2 结构 | 锚定 dsh 范式（薄门户厚体系/ADR/模板齐备）+ 2.0 原理（五级分类/三语义/规则机制分置/装载分层/自举）——**采纳** |
-| C · 完全新设计 | 脱离既有体系重新设计（拒绝·浪费既有理论资产） |
+| A · V1 structure | export the internal system structure directly (rejected) |
+| B · V2 structure | anchored to the dsh paradigm (thin portal, thick system / ADR / complete templates) + 2.0 principles (five-tier classification / three semantics / rules-mechanisms separation / loading layers / self-bootstrap) — **adopted** |
+| C · entirely new design | redesign detached from the existing system (rejected · wastes existing theoretical assets) |
 
-## 决策（采用 B）
+## Decision (adopt B)
 
-采用 V2 结构并定稿，核心要点：
-1. **根级**：README（薄门面）+ STRUCTURE.md（厚真相·外部审议唯一入口）+ DEPLOY（自举部署）
-2. **宪法层** constitution/（基本法/设计原理）——先立规矩
-3. **规则↔机制分置**：rules/（写什么）+ mechanisms/（怎么验）
-4. **templates/**（身份/记忆/工作区模板·自举缺口）
-5. **docs/**（concepts 概念逐篇 + comparison 对比 + adr 决策留痕）
-6. **tools/ 最小化**：只留 validator.py（校验器·不造执行能力）
+Adopt the V2 structure and finalize it. Core points:
+1. **Root level**: README (thin facade) + STRUCTURE.md (thick truth · single entry for external review) + DEPLOY (self-bootstrap deployment)
+2. **Constitutional layer** constitution/ (Basic Law / Design Principles) — establish the rules first
+3. **Rules ↔ mechanisms separation**: rules/ (what is written) + mechanisms/ (how to verify)
+4. **templates/** (identity / memory / workspace templates · self-bootstrap gap)
+5. **docs/** (concepts one by one + comparison + adr decision trace)
+6. **tools/ minimized**: only validator.py (the verifier · no fabricated execution capability)
 
-## 后果
+## Consequences
 
-- ✅ 正面：结构=外部审议入口（审议者只读一个文件即可判断）；每个目录有理论依据（无冗余）；可自举（模板齐备）
-- ⚠️ 代价：内容补写需逐文件进行（书稿式一章一节）；新读者仍需时间消化
-- 📌 后续：唯一版本 1.0（不随社区迭代至 5 万星）；英文版对外发布前补
+- ✅ Positive: the structure = the entry point for external review (a reviewer reads one file to judge); every directory has a theoretical basis (no redundancy); self-bootstrappable (templates complete)
+- ⚠️ Cost: content must be written file by file (book-style, chapter by chapter); new readers still need time to digest
+- 📌 Follow-up: core stable version 1.0 (core design changes require review; periphery iterates with community); to be supplemented before the English version's external release
 
-## 关联
+## Related
 
-- 概念：三语义/优先级规则/证伪器
-- 机制：全部（结构承载机制）
-- 文件：STRUCTURE.md（结构真相·本 ADR 的活体呈现）
+- Concepts: three semantics / priority rules / falsifier
+- Mechanisms: all (the structure carries the mechanisms)
+- Files: STRUCTURE.md (structural truth · the living embodiment of this ADR)
 
 ---
 
-*GOAA · ADR-0001 · 唯一版本 1.0 · 2026-08-19*
+*GOAA · ADR-0001 · Single version 1.0 · 2026-08-19*

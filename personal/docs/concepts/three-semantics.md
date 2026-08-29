@@ -1,35 +1,35 @@
-# 核心概念 · 三语义（人 / 机 / 编程）
+# Core Concept · Three Semantics (human / machine / programming)
 
-> **系列**：docs/concepts 核心概念逐篇｜**版本**：唯一版本 1.0
+> **Series**: docs/concepts core-concept series ｜ **Version**: Single version 1.0
 
 ---
-> **权威指针**：本文件=概念解释层（人语义·降低理解成本）；**权威以宪法层为准**（`constitution/basic_law.md` + `constitution/design-principles.md`）——解释与权威冲突时以权威为准。
+> **Authority pointer**: this file is the concept-explanation layer (human semantics · lowers the understanding cost); **authority resides in the constitutional layer** (`constitution/basic_law.md` + `constitution/design-principles.md`) — where an explanation conflicts with authority, the authority prevails.
 
-## 一句话
+## In one line
 
-同一个规则，用三种语义写三遍，各管各的消费者：**人语义**（人能读懂为什么）、**机语义**（AI 能读懂怎么执行）、**编程语义**（机器可校验的强制层）——锚定 AI 的执行飘忽。
+The same rule is written three times, in three semantics, each serving its own consumer: **human semantics** (humans can read why), **machine semantics** (AI can read how to execute), **programming semantics** (a machine-verifiable enforcement layer) — anchoring AI's execution drift.
 
-## 为什么是它
+## Why this design
 
-- 人机语义有结构性鸿沟（思维永远大于物理层表述）；
-- 只用自然语言写规则=AI 靠猜执行（飘忽）；只用代码写规则=人看不懂（无法审议）；
-- 三语义=让规则同时"人能审、机能执行、机器能强制"。
+- Human-machine semantics have a structural gap (thought always exceeds physical-layer expression);
+- Writing rules in natural language only = AI executes by guessing (drift); writing rules in code only = humans cannot understand (un-reviewable);
+- Three semantics = making rules simultaneously "human-reviewable, machine-executable, machine-enforceable."
 
-## 三种语义分工
+## Division of labor among the three semantics
 
-| 语义 | 消费者 | 形态 | 职责 |
+| Semantics | Consumer | Form | Responsibility |
 |------|--------|------|------|
-| 人语义 | 人 | 自然语言（MD） | 意图/为什么（Why·可审议） |
-| 机语义 | AI | 结构化指令 | 执行（How·可装载） |
-| 编程语义 | 校验器/CI | YAML/Schema/代码 | 强制（可校验·写出≠生效） |
+| Human semantics | human | natural language (MD) | intent / why (Why · reviewable) |
+| Machine semantics | AI | structured instructions | execution (How · loadable) |
+| Programming semantics | validator / CI | YAML / Schema / code | enforcement (verifiable · written ≠ effective) |
 
-## 落地形态
+## Concrete forms
 
-- 宪法层两件=人语义（设计原理=Why+How·基本法=底线）；
-- `rules/rules.yaml`=编程语义实例（规则数据化，validator 可校验）；
-- 歧义治理机制=三语义之间的鸿沟处理流程。
+- The two constitutional-layer files = human semantics (Design Principles = Why+How · Basic Law = bottom lines);
+- `rules/rules.yaml` = programming-semantics instance (rules data-ified, verifiable by the validator);
+- The ambiguity-governance mechanism = the gap-handling flow between the three semantics.
 
-## 相关
+## Related
 
-- 概念：母公理 / 证伪器 / 优先级规则
-- 机制：歧义治理 / 规则生效闸门（validation.md）
+- Concepts: Mother Axiom / falsifier / priority rules
+- Mechanisms: ambiguity governance / rule effect gate (validation.md)

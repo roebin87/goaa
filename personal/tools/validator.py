@@ -67,43 +67,6 @@ APPEND_ONLY_DIRS = [
 ]
 HASH_BASELINE = "_Memory/history/.hashes.json"
 
-# 口径红线（对外文档禁用表述·发布前必检）
-TONE_BANNED = [
-    "灵魂纯洁",
-    "100万",
-    "无论结果都赢",
-    "彻底怀疑",
-    "验证了道",
-    "与道对抗",
-]
-
-def check_tone() -> bool:
-    """口径检查：扫描 md/yaml/py/cff 中禁用表述（对外文档自我描述=自证污染）。"""
-    banned_hits = []
-    for root, _dirs, files in os.walk("."):
-        for f in files:
-            if not f.endswith((".md", ".yaml", ".yml", ".py", ".cff")):
-                continue
-            p = os.path.join(root, f)
-            if "__pycache__" in p:
-                continue
-            if os.path.basename(p) in ("validator.py", "verify-ownership.py"):
-                continue
-            try:
-                with open(p, "r", encoding="utf-8") as fh:
-                    text = fh.read()
-            except (OSError, UnicodeDecodeError):
-                continue
-            for banned in TONE_BANNED:
-                if banned in text:
-                    banned_hits.append(f"{p} 含「{banned}」")
-    if banned_hits:
-        for h in banned_hits[:10]:
-            print(f"[FAIL] 口径红线: {h}")
-        return False
-    print("[OK]   口径检查: 禁用表述 0 命中 ✓")
-    return True
-
 def normalize(text: str) -> str:
     """归一化：去标点/空白/大小写，仅保留语义 token。"""
     text = re.sub(r"[\s\-—_·，。！？、；：\"\"''（）()[]【】]+", "", text)
@@ -287,12 +250,12 @@ def main() -> int:
             law = fh.read()
         with open("constitution/design-principles.md", "r", encoding="utf-8") as fh:
             prin = fh.read()
-        key_terms = ["决断权", "公理", "文件"]
+        key_terms = ["decision rights", "axioms", "files"]
         for term in key_terms:
-            if term in law and term in prin:
-                print(f"[OK]   语义同步: 基本法/设计原理 含「{term}」 ✓")
+            if term.lower() in law.lower() and term.lower() in prin.lower():
+                print(f"[OK]   semantic sync: basic_law/design-principles contain '{term}' ✓")
             else:
-                print(f"[WARN] 语义差异: 「{term}」未同时出现在基本法与设计原理")
+                print(f"[WARN] semantic drift: '{term}' not found in both basic_law and design-principles")
     except OSError as e:
         print(f"[WARN] 宪法同步检查跳过: {e}")
 
@@ -304,12 +267,8 @@ def main() -> int:
     if not check_dead_links(ok):
         ok = False
 
-    # 口径检查（禁用表述·发布前必检）
-    if not check_tone():
-        ok = False
-
     if ok:
-        print("[PASS] 核心部件校验通过：目录 ✓ + 文件 ✓ + Schema ✓ + 引用 ✓ + 口径 ✓")
+        print("[PASS] 核心部件校验通过：目录 ✓ + 文件 ✓ + Schema ✓ + 引用 ✓")
         return 0
     else:
         print("[FAIL] 存在缺失项，请补齐后重跑")

@@ -1,36 +1,36 @@
-# 治理产出案例集（Case Studies）
+# Governance Case Studies
 
-> **定位**：GOAA 治理范式的**案例实证**——以作者的**真实生产史**为证据：书稿 → 论文 → 开源三发行版，均为 GOAA 体系自身的产物。案例论证为主（不依赖对比实验），证明治理不是理论而是**可复现的实践**。
-
----
-
-## 案例索引
-
-| # | 案例 | 证据点 | 状态 |
-|---|------|--------|------|
-| 01 | [书稿生产：45 万字 · 四角色协作](../../examples/end-to-end/01-book-production.md) | 多角色协作 + 长周期治理（30 天） | ✅ 已实证 |
-| 02 | [论文生产：架构设计原理 · 只增不删的增补机制](02-paper-production.md) | 理论载体治理 + 权威源防熵增 | ✅ 已实证 |
-| 03 | [开源生产：三发行版 · 治理驱动的对外发布](03-open-source-production.md) | 全量校验 + 口径纪律 + 真子集一致性 | ✅ 已实证 |
-
-> 另见 [端到端示例总览](../../examples/end-to-end/README.md)（含治理压力测试等更多案例）。
+> **Position**: Case-based evidence for the GOAA governance paradigm — using the author's **real production history** as proof: book → paper → open-source three editions, all produced by the GOAA system itself. Case-based argumentation (instead of comparative experiments) demonstrates that governance is not theory but **reproducible practice**.
 
 ---
 
-## 案例方法论（作者生产史 = 实证）
+## Case Index
 
-1. **真实性**：全部案例来自作者（设计者）的真实工作记录，非虚构演示；
-2. **可复现性**：每个案例的治理流程（规则→机制→工具）在 GOAA 仓库内可直接复现；
-3. **证伪姿态**：案例不宣称"完美"，已知局限与未验证主张见 [预注册自曝清单](../known-limits.md)；
-4. **分层披露**：案例中的内部细节（路径、人名、时间线）已通用化，保留可验证的治理结构。
+| # | Case | Evidence Point | Status |
+|---|------|----------------|--------|
+| 01 | [Book Production: 450K words · Four-role collaboration](../../examples/end-to-end/01-book-production.md) | Multi-role collaboration + long-cycle governance (30 days) | ✅ Proven |
+| 02 | [Paper Production: Architecture Design Principles · Append-only augmentation mechanism](02-paper-production.md) | Theoretical-carrier governance + anti-entropy authority source | ✅ Proven |
+| 03 | [Open-Source Production: Three editions · Governance-driven public release](03-open-source-production.md) | Full validation + wording discipline + proper-subset consistency | ✅ Proven |
 
----
-
-## 为什么用案例论证（替代对比实验）
-
-- 对比实验依赖同质基线，而治理效果高度依赖**主体的实际运转**（人+体系+场景三者耦合）；
-- 作者生产史是**长期运转的自然实验**（书稿 30 天 + 论文 8 个月 + 开源迭代），比短周期对照更能暴露治理的长期行为；
-- 案例 + 学术论文（[论文入口](../research/goaa-paper.md)）+ 框架集成示例（[integrations/](../../integrations/)）三者互补：**案例证实践、论文证理论、集成证兼容**。
+> See also [End-to-End Examples Overview](../../examples/end-to-end/README.md) (including governance stress tests and more).
 
 ---
 
-*GOAA · 治理产出案例集 · 全成果开源版（Core）· 2026-08-28*
+## Case Methodology (Author Production History = Evidence)
+
+1. **Authenticity**: all cases come from the author's (designer's) real work records, not fictional demos;
+2. **Reproducibility**: each case's governance flow (rules → mechanisms → tools) is directly reproducible within the GOAA repository;
+3. **Falsification posture**: cases do not claim perfection; known limits and unverified claims are in the [pre-registered disclosure list](../known-limits.md);
+4. **Layered disclosure**: internal details (paths, names, timelines) are generalized; the verifiable governance structure is preserved.
+
+---
+
+## Why Case-Based Argumentation (Instead of Comparative Experiments)
+
+- Comparative experiments depend on homogeneous baselines, while governance effectiveness is highly coupled to the **actual operation of the subject** (human + system + scenario);
+- Author production history is a **natural long-running experiment** (30-day book + 8-month paper + open-source iterations), exposing long-term governance behavior better than short-cycle controls;
+- Cases + academic paper ([paper entry](../research/goaa-paper.md)) + framework integration examples ([integrations/](../../../integrations/)) complement each other: **cases prove practice, the paper proves theory, integrations prove compatibility**.
+
+---
+
+*GOAA · Governance Case Studies · All-Outcomes Open Source Edition (Core) · 2026-08-28*

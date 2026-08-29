@@ -1,40 +1,40 @@
-﻿# 核心概念 · 熵治理（负熵对抗熵增）
+﻿# Core Concept · Entropy Governance (negative entropy against entropy growth)
 
-> **系列**：docs/concepts 核心概念逐篇｜**版本**：唯一版本 1.0
+> **Series**: docs/concepts core-concept series ｜ **Version**: Single version 1.0
 
 ---
-> **权威指针**：本文件=概念解释层（人语义·降低理解成本）；**权威以宪法层为准**（`constitution/basic_law.md` + `constitution/design-principles.md`）——解释与权威冲突时以权威为准。
+> **Authority pointer**: this file is the concept-explanation layer (human semantics · lowers the understanding cost); **authority resides in the constitutional layer** (`constitution/basic_law.md` + `constitution/design-principles.md`) — where an explanation conflicts with authority, the authority prevails.
 
-## 一句话
+## In one line
 
-体系天然走向混乱（熵增），治理就是持续注入负熵（结构化认知）对抗它——**对抗不停则熵减有落点，对抗停摆则体系腐化（乌木剑）。**
+A system naturally trends toward disorder (entropy growth); governance is the sustained injection of negative entropy (structured cognition) against it — **while the confrontation continues, entropy reduction has a landing point; when the confrontation stalls, the system decays (the ebony sword).**
 
-## 底层物理
+## Underlying physics
 
-- 热力学第二定律：孤立系统熵增；
-- 薛定谔：生命以负熵为食（从环境汲取秩序）；
-- 普利高津：非平衡是有序之源——开放系统在远离平衡态处，靠持续能量流维持有序（耗散结构）；
-- GOAA 的人机协作体=一座耗散结构：开放（人注入负熵）+远离平衡（问答对偶对抗不停）+涨落触发（问题被放大→认知跃迁）。
+- Second law of thermodynamics: isolated systems grow in entropy;
+- Schrödinger: life feeds on negative entropy (drawing order from the environment);
+- Prigogine: non-equilibrium is the source of order — open systems far from equilibrium maintain order through sustained energy flow (dissipative structures);
+- GOAA's human-machine collaboration body = a dissipative structure: open (the human injects negative entropy) + far from equilibrium (the QA-duality confrontation never stops) + fluctuation-triggered (problems amplified → cognitive leaps).
 
-## 熵增的三种形态
+## Three forms of entropy growth
 
-| 形态 | 表现 | 解法 |
+| Form | Manifestation | Countermeasure |
 |------|------|------|
-| 规则膨胀 | 每加一条规则，重叠/冲突/解释成本上升 | 非加不可原则 |
-| 蒸馏残留 | 每次沉淀带"上下文残渣"，同案不同判 | 蒸馏铁律（不精简/留白） |
-| 认知漂移 | 人认知演化，新旧规则底层偏差 | 定论生效状态+单一数据源 |
+| Rule bloat | each added rule raises overlap/conflict/interpretation cost | the only-if-necessary principle |
+| Distillation residue | every sedimentation carries "context debris," same case judged differently | distillation iron rule (no condensing / leave blanks) |
+| Cognitive drift | as human cognition evolves, new and old rules diverge underneath | conclusion status + single source of truth |
 
-## 落地形态
+## Concrete forms
 
-| 机制 | 对抗什么熵增 |
+| Mechanism | Which entropy growth it fights |
 |------|------------|
-| 非加不可 | 规则膨胀 |
-| 蒸馏铁律 | 蒸馏残留 |
-| 定论沉淀+单一数据源 | 认知漂移 |
-| 记忆归档（冷归档/索引精简） | 记忆膨胀 |
-| 动态率 | 让熵增可检测（率=治理的仪表盘） |
+| only-if-necessary | rule bloat |
+| distillation iron rule | distillation residue |
+| conclusion sedimentation + single source | cognitive drift |
+| memory archiving (cold archive / index pruning) | memory bloat |
+| dynamic rates | makes entropy growth checkable (rates = governance dashboard) |
 
-## 相关
+## Related
 
-- 概念：母公理 / 问答对偶 / 证伪器
-- 机制：动态率监测 / 记忆装载规则 / 立项判定
+- Concepts: Mother Axiom / QA duality / falsifier
+- Mechanisms: dynamic-rate monitoring / memory-loading rules / problem-gate

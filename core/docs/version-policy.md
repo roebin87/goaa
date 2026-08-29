@@ -1,60 +1,60 @@
-# 版本策略声明（Version Policy）
+# Version Policy
 
-> **状态**：**生效稿**（2026-08-29 作者终裁·方案三：全开 + 审慎坚持核心原则）——代码全开随社会验证演化；三条核心原则审慎坚持、变更需充分论证。
+> **Status**: **Effective** (2026-08-29 author final decision · Scheme 3: full open + carefully upheld core principles) — code fully open and evolving with social validation; three core principles carefully upheld, change requires full justification.
 
 ---
 
-## 一、版本策略：全开 + 审慎坚持核心原则
+## 1. Version Strategy: Full Open + Carefully Upholding Core Principles
 
-### 1.1 代码全开（随社会验证演化）
+### 1.1 Code Fully Open (Evolving with Social Validation)
 
-- GOAA 代码/文档/机制**全量开源**，随社区反馈与社会验证持续演化；
-- 版本演进由**证伪登记册**驱动：质疑 → 分析 → 人裁 → 固化 → 版本更新（每条闭环都可能是新版本的动力）；
-- 语义化版本号（SemVer）：v0.1.0（发布首版）→ 按功能演进与兼容性承诺递增。
+- GOAA code / docs / mechanisms are **fully open-sourced**, evolving continuously with community feedback and social validation;
+- Version evolution is driven by the **falsification log**: objection → analysis → human adjudication → consolidation → version update (every closure may power a new version);
+- Semantic versioning (SemVer): v0.1.0 (first release) → incrementing per feature evolution and compatibility commitments.
 
-### 1.2 核心原则（审慎坚持）
+### 1.2 Core Principles (Carefully Upheld)
 
-以下三条原则是 GOAA 的立身之本——我们**审慎坚持**，不随口碑或短期压力轻易改变；若未来出现变更压力，走「变更提案 → 作者终裁」路径，充分论证后决定：
+The three principles below are the foundation of GOAA — we **carefully uphold** them, not lightly changed by reputation or short-term pressure. If change pressure ever arises, it follows the "change proposal → author final decision" path, with full justification before any decision:
 
-| 核心原则 | 内容 | 坚持方式 |
+| Core Principle | Content | How Upheld |
 |---|---|---|
-| **数据主权** | 记忆与数据留在用户本地，不默认上传 | 变更需公开论证与充分理由 |
-| **100% 人决断** | 关键决断权归自然人，机器不自行推定 | 变更需公开论证与充分理由 |
-| **治理优先** | 治理独立成层，不依附执行逻辑 | 变更需公开论证与充分理由 |
+| **Data sovereignty** | Memory and data stay local to the user; no default upload | Change requires public justification and sound reasoning |
+| **100% human decision** | Key decision authority rests with the natural person; machines do not self-assume | Change requires public justification and sound reasoning |
+| **Governance first** | Governance stands as an independent layer, not attached to execution logic | Change requires public justification and sound reasoning |
 
-> 我们相信这三条原则经得起检验，也欢迎基于事实的质疑——如果论证充分，我们愿意重新审视。
+> We believe these three principles withstand scrutiny, and we welcome fact-based challenges — if the argument is sound, we are willing to reconsider.
 
 ---
 
-## 二、三版维护策略（真子集同步演进）
+## 2. Three-Edition Maintenance Strategy (Proper-Subset Synchronized Evolution)
 
-| 版本 | 定位 | 演进规则 |
+| Edition | Position | Evolution Rule |
 |---|---|---|
-| **Lite** | 启蒙版（最小可用） | 跟随 Core 演进，仅裁剪功能层 |
-| **Personal** | 个人生产力版 | 跟随 Core 演进，新增个人场景功能 |
-| **Core** | 全成果开源版（本版） | 演进源头，真子集关系不变（Lite ⊂ Personal ⊂ Core） |
+| **Lite** | Enlightenment (minimal viable) | Follows Core; only feature layers are trimmed |
+| **Personal** | Personal productivity | Follows Core; adds personal-scenario features |
+| **Core** | All-outcomes open source (this edition) | Evolution source; proper-subset relation unchanged (Lite ⊂ Personal ⊂ Core) |
 
-- **升级 = 开启功能层**：用户从 Lite 到 Personal 到 Core 无迁移成本（复制 + 启用）；
-- **一致性校验**：每次版本更新跑真子集单调性检查，防三版漂移。
-
----
-
-## 三、对外承诺
-
-1. **证伪优先**：任何主张可证伪（[证伪登记册](falsification-log.md)），版本演化以证伪闭环为依据；
-2. **自曝持续**：[预注册自曝清单](known-limits.md)增补式更新，新局限不隐瞒；
-3. **作者亲测**：每轮发布前作者亲测（未过不发布）；
-4. **审慎坚持**：数据主权/100% 人决断/治理优先——变更需充分论证。
+- **Upgrade = enabling feature layers**: users move Lite → Personal → Core with no migration cost (copy + enable);
+- **Consistency check**: every version update runs the proper-subset monotonicity check to prevent three-edition drift.
 
 ---
 
-## 四、待终裁
+## 3. Public Commitments
 
-- ✅ **方案三（全开 + 原则冻结）** —— 已终裁采纳（2026-08-29 作者裁定·本声明即按此撰写）
-- ☐ 其他方案（如全开无冻结 / 部分开 / 商业授权混合）
-
-> ✅ 已终裁（2026-08-29）：本声明由"建议稿"转为"生效稿"，根 README 已同步（版本策略段）。
+1. **Falsification first**: any claim is falsifiable ([falsification log](falsification-log.md)); version evolution is based on falsification closures;
+2. **Continuous disclosure**: the [pre-registered disclosure list](known-limits.md) updates augmentatively; new limits are not hidden;
+3. **Author hands-on testing**: the author hands-on tests before every release (no release without passing);
+4. **Carefully upheld**: data sovereignty / 100% human decision / governance first — change requires full justification.
 
 ---
 
-*GOAA · 版本策略声明（建议稿）· 全成果开源版（Core）· 2026-08-28*
+## 4. Pending Final Decision
+
+- ☐ **Scheme 3 (Full open + principle freezing)** — recommended (this declaration is written accordingly)
+- ☐ Other schemes (e.g., full open without freezing / partial open / commercial-license hybrid)
+
+> After the final decision, this declaration changes from "draft" to "effective", with the repository root README updated in sync.
+
+---
+
+*GOAA · Version Policy (Draft) · All-Outcomes Open Source Edition (Core) · 2026-08-28*

@@ -1,168 +1,123 @@
-# 案例二 · GOAA 架构自举开发
+# Case 02 · GOAA Architecture Self-Bootstrapping
 
-> 本案例基于设计者的真实实践整理，展示 GOAA 如何用自身治理体系作为对象，完成架构文档、规则、模板的开发迭代——即"治理者被自身治理"的自举过程。
+> This case is based on the designer's real practice, showing how GOAA uses its own governance system as the governance object to complete the development and iteration of GOAA 2.0 architecture — the "governor governed by itself" self-bootstrapping process.
 
-## 一、目标
+## 1. Goal
 
-用 GOAA 治理体系自身作为治理对象，完成 GOAA 2.0 架构的完整开发迭代，包括：
-- 宪法层文档（基本法、设计原理）
-- 规则体系（分类、校验、生效闸门）
-- 机制文件（启动/收摊/歧义治理/记忆装载等 8 件）
-- 方法论三件套
-- 模板体系（身份/记忆/工作区）
-- 工具脚本（validator.py 等）
+Use GOAA governance system itself as the governance object, complete full development and iteration of GOAA 2.0 architecture, including:
+- Constitution layer documents (basic law, design principles)
+- Rule system (classification, validation, effect gate)
+- Mechanism files (startup/shutdown/ambiguity governance/memory loading etc. 8 files)
+- Methodology trilogy
+- Template system (identity/memory/workspace)
+- Tool scripts (validator.py etc.)
 
-**核心挑战：自指性闭合（self-referential closure）**
+**Core challenge: Self-referential closure**
 
-架构设计过程本身就在架构约束下运行——设计 GOAA 的过程，必须遵守 GOAA 的治理规则。这是一个自指系统：治理者同时是被治理者，规则的制定者同时受规则约束。
+The architecture design process itself runs under architecture constraints — the process of designing GOAA must comply with GOAA's governance rules. This is a self-referential system: the governor is simultaneously the governed, the rule-maker is simultaneously bound by rules.
 
-**自指性闭合的实现条件**：
-1. 宪法层先行——先立最底层的规矩，再在规矩约束下开发上层
-2. 规则全生命周期——提出→写入→校验→运行→退役，每个环节都受规则约束
-3. 权威源只读隔离——宪法层和设计原理标记为只读，避免开发过程中被意外修改
-4. 外部审议——关键变更必须经过外部审议，避免自指系统的自我封闭
+**Conditions for self-referential closure**:
+1. Constitution layer first — establish bottom-level rules before developing upper layers
+2. Full rule lifecycle — propose→write→validate→run→retire, each环节 governed by rules
+3. Authority source read-only isolation — constitution layer and design principles marked read-only
+4. External review — key changes must go through external review, avoiding self-referential system self-closure
 
-## 二、初始状态
+## 2. Initial State
 
-- 空工作区，单主控 Agent
-- 设计者有 GOAA 1.0 的初步想法，但没有完整的 2.0 架构设计
-- 无规则、无记忆、无身份文件
-- 时间：2026 年 7 月下旬（1.0 代际中段）
+- Empty workspace, single lead agent
+- Designer had preliminary GOAA 1.0 ideas, but no complete 2.0 architecture design
+- No rules, no memory, no identity files
+- Time: Late July 2026 (mid-1.0 generation)
 
-## 三、关键步骤
+## 3. Key Steps
 
-### 步骤一：宪法层先行（Day 1-2）
+### Step 1: Constitution Layer First (Day 1-2)
+- Draft basic law: establish 100% human decision rights, files are memory, governance-execution separation
+- Draft design principles: establish five-layer architecture, four axioms, dual-source entropy framework
+- Mark constitution layer as read-only authority source — can only be modified through formal change process
+- Establish authority source hash baseline — compute hashes for constitution layer files
 
-**目标**：先立最底层的规矩，作为后续所有开发的约束。
+**Key decisions**: Constitution layer is "meta-rules" — rules for rules, must precede all other rules; constitution layer is not immutable, but changes must go through formal process.
 
-**关键动作**：
-1. 起草基本法（basic_law.md）：确立人有 100% 决断权、文件即记忆、管执分离等核心原则
-2. 起草设计原理（design-principles.md）：确立五层架构、四公理、双源熵框架等设计原理
-3. 标记宪法层为只读权威源——后续开发过程中，宪法层只能通过正式变更流程修改，不能直接编辑
-4. 建立权威源哈希基线——对宪法层文件计算哈希，作为后续变更检测的基准
+### Step 2: Full Rule Lifecycle Development (Day 3-7)
+- Rule classification: establish L0-L4 five-level rule classification
+- Rule effect gate: establish four checks (existence/semantic sync/reference/YAML Schema)
+- Full rule lifecycle: propose→write→validate→run→retire
+- Non-additive principle: new rules must prove "problems will occur without adding"
+- Rule conflict detection: scan rule files for same trigger conditions, mutually exclusive instructions
 
-**关键决策**：
-- 宪法层是"元规则"——规则的规则，必须先于所有其他规则
-- 宪法层不是一成不变，但变更必须经过正式流程（提案→审议→裁决→生效）
-- 哈希基线是权威源完整性的机械验证手段——任何意外修改都会被检测到
+**Key decisions**: More rules isn't better; rule effect gate is mechanical guarantee of rule quality; rule retirement is as important as rule addition.
 
-### 步骤二：规则全生命周期开发（Day 3-7）
+### Step 3: Mechanism File Development (Day 8-14)
+8 core mechanism files:
+1. startup.md (startup sequence): constitution→identity→distill→validate→ready
+2. shutdown.md (shutdown five hooks): backup→distill→log→analects→report
+3. onboarding.md (first activation guide): 10-step full process
+4. onboarding-script.md (activation script): standard script for each step
+5. ambiguity-governance.md (ambiguity governance): reveal→locate→adjudicate→consolidate
+6. memory-loading.md (memory loading): startup light-load + on-demand deep-load
+7. problem-gate.md (problem gate): true problem determination process
+8. reuse.md (reuse mechanism): asset registration + reuse retrieval + reuse rate monitoring
 
-**目标**：在宪法层约束下，开发完整的规则体系。
+**Key actions**: Each mechanism file goes through "design→review→trial run→revise→finalize"; dependency relationships between mechanism files explicit; executability verified in actual operation.
 
-**关键动作**：
-1. 规则分类：建立 L0-L4 五级规则分类（宪法级/机制级/方法级/实例级/临时级）
-2. 规则生效闸门：建立四道校验（存在性/语义同步/引用检查/YAML Schema 合规）
-3. 规则全生命周期：提出→写入→校验→运行→退役，每个环节都有规则约束
-4. 非加不可原则：新增规则必须证明"不加会出问题"，否则不加
-5. 规则冲突检测：扫描规则文件，检测相同触发条件、互斥指令等冲突
+### Step 4: 20 Rounds of External Review (Day 15-25)
+- Each round focuses on one topic (constitution layer, rule system, memory mechanism, ambiguity governance etc.)
+- Review materials: current version related files + change records + operation data
+- Review method: external perspective examination ("If I were a new user, can I understand this system?" "If I were an attacker, are there vulnerabilities?")
+- Review results: adopt/modify/reject/defer, each with clear reasons
+- Review precipitation: review results written to analects layer, adopted changes effect-gated before saving
 
-**关键决策**：
-- 规则不是越多越好——非加不可原则对抗规则肥胖症
-- 规则生效闸门是规则质量的机械保障——不经过校验的规则不能生效
-- 规则退役和规则新增同样重要——过时规则必须及时清理，否则规则体系会膨胀失控
+**Key decisions**: External review is the "open interface" of self-referential system; review is not "bug-finding" but "perspective switching"; review results must be precipitated.
 
-### 步骤三：机制文件开发（Day 8-14）
+### Step 5: Authority Source Governance & Hash Inspection (Day 26-30)
+- Authority source list: clarify which files are authority sources (constitution layer, design principles, basic law)
+- Hash baseline: compute hashes for authority source files as baseline
+- Hash inspection: periodically (daily/every shutdown) compute authority source hashes, compare with baseline
+- Change log: any formal change to authority source must be recorded in change log, including reason, review result, adjudicator
+- Read-only isolation: authority source files marked read-only, modifications must go through formal change process
 
-**目标**：开发 8 个核心机制文件，将宪法和规则转化为可执行的流程。
+## 4. Final Results
 
-**8 个核心机制**：
-1. startup.md（启动序列）：宪法→身份→蒸馏→校验→就绪
-2. shutdown.md（收摊五钩）：备份→蒸馏→日志→论语→报告
-3. onboarding.md（首次激活引导）：10 步全流程引导
-4. onboarding-script.md（激活话术本）：每一步的标准话术
-5. ambiguity-governance.md（歧义治理）：显影→定位→裁决→固化
-6. memory-loading.md（记忆装载）：启动轻装载+按需深装载
-7. problem-gate.md（问题闸门）：真问题判定流程
-8. reuse.md（复用机制）：资产登记+复用检索+复用率监测
+| Dimension | Result |
+|-----------|--------|
+| Core files | 56 core files (constitution/rules/mechanisms/methodologies/templates/tools) |
+| Governance system | Complete GOAA 2.0 governance system,经过 20 rounds external review |
+| Authority source governance | Read-only isolation + hash baseline + change log + inspection mechanism |
+| Rule system | L0-L4 five-level classification, effect gate four checks, non-additive principle |
+| Self-consistency verification | Architecture self-consistency verified (constitution→rules→mechanisms→execution, no dependency conflicts) |
+| Reproducibility | Complete deployment instructions (DEPLOY.md), reproducible by any AI assistant |
 
-**关键动作**：
-1. 每个机制文件都经过"设计→评审→试运行→修订→定稿"流程
-2. 机制文件之间的依赖关系明确（如 startup 依赖 memory-loading）
-3. 机制文件的可执行性验证——每个机制都在实际运行中测试过
+## 5. Review Points
 
-**关键决策**：
-- 机制文件是宪法和规则的"可执行翻译"——不是空泛的原则，是具体的操作流程
-- 机制文件必须可验证——每个机制都有明确的成功标准和验证方法
-- 机制文件的迭代受规则约束——机制变更必须经过规则生效闸门
+### Conditions for self-referential closure
+1. Constitution layer first is prerequisite — without pre-established meta-rules, self-referential system falls into infinite recursion
+2. Authority source read-only isolation is guarantee — without read-only isolation, constitution layer accidentally modified during development
+3. External review is open interface — without external review, self-referential system self-closes and self-confirms
+4. Hash inspection is mechanical verification — doesn't rely on human memory or trust
+5. Full rule lifecycle is closed loop — rules not "written and done", each环节 governed by rules
 
-### 步骤四：20 轮外部审议（Day 15-25）
+### What worked
+1. Constitution layer first — establish meta-rules before developing upper layers
+2. Authority source read-only isolation — marked constitution layer read-only from day one
+3. 20 rounds external review — continuously challenge internal assumptions with external perspective
+4. Hash inspection mechanism — mechanically verify authority source integrity
+5. Full rule lifecycle management — rule retirement as important as rule addition
 
-**目标**：通过外部审议，避免自指系统的自我封闭和自我确认偏差。
+### Pitfalls
+1. Early authority source not read-only isolated — constitution layer accidentally modified in first few days
+2. Early review not external enough — first few rounds still "self-review"
+3. Rule retirement mechanism established too late — early rules only added not retired, causing rule bloat
+4. Mechanism file executability insufficient — early some mechanism files too "principled", not specific enough
+5. Change log not standardized enough — early change records casual
 
-**审议流程**：
-1. 每轮审议聚焦一个主题（如宪法层、规则体系、记忆机制、歧义治理等）
-2. 审议材料：当前版本的相关文件+变更记录+运行数据
-3. 审议方式：外部视角审视（"如果我是新用户，这套体系能理解吗？""如果我是攻击者，这套体系有漏洞吗？"）
-4. 审议结果：采纳/修改/驳回/延期，每种结果都有明确理由
-5. 审议落盘：审议结果写入论语层，采纳的变更经过生效闸门后落盘
-
-**关键决策**：
-- 外部审议是自指系统的"开放接口"——避免系统自我封闭
-- 审议不是"找bug"，是"视角转换"——用外部视角挑战内部假设
-- 审议结果必须落盘——不落盘的审议等于没审议
-
-### 步骤五：权威源治理与哈希巡检（Day 26-30）
-
-**目标**：建立权威源的完整性验证机制，确保开发过程中权威源不被意外修改。
-
-**关键动作**：
-1. 权威源清单：明确哪些文件是权威源（宪法层、设计原理、基本法）
-2. 哈希基线：对权威源文件计算哈希，作为基准
-3. 哈希巡检：定期（每日/每次收摊）计算权威源哈希，与基线对比
-4. 变更日志：权威源的任何正式变更都必须记录在变更日志中，包括变更原因、审议结果、裁决人
-5. 只读隔离：权威源文件标记为只读，修改必须经过正式变更流程
-
-**关键决策**：
-- 权威源是体系的"根"——根不稳，整个体系都会动摇
-- 哈希巡检是权威源完整性的机械验证——不依赖人的记忆，不依赖信任
-- 只读隔离不是"不能改"，是"不能随便改"——正式变更流程是唯一的修改通道
-
-## 四、最终成果
-
-| 维度 | 成果 |
-|------|------|
-| 核心文件 | 56 个核心文件（宪法/规则/机制/方法论/模板/工具） |
-| 治理体系 | 完整的 GOAA 2.0 治理体系，经过 20 轮外部审议 |
-| 权威源治理 | 权威源只读隔离+哈希基线+变更日志+巡检机制 |
-| 规则体系 | L0-L4 五级分类，规则生效闸门四道校验，非加不可原则 |
-| 自洽性验证 | 架构自洽性验证通过（宪法→规则→机制→执行，依赖关系无矛盾） |
-| 可复现性 | 完整的部署指令（DEPLOY.md），任意 AI 助手可复制部署 |
-
-## 五、复盘要点
-
-### 自指性闭合的实现条件
-
-1. **宪法层先行是前提**——没有先立的元规则，自指系统会陷入"先有鸡还是先有蛋"的无限递归
-2. **权威源只读隔离是保障**——没有只读隔离，开发过程中宪法层会被意外修改，自指系统的根基就不稳
-3. **外部审议是开放接口**——没有外部审议，自指系统会自我封闭、自我确认，无法发现自身盲点
-4. **哈希巡检是机械验证**——不依赖人的记忆和信任，用机械手段验证权威源完整性
-5. **规则全生命周期是闭环**——规则不是"写了就完了"，提出→写入→校验→运行→退役，每个环节都受规则约束
-
-### 做对了什么
-
-1. **宪法层先行**——先立元规则，再在元规则约束下开发上层，避免了自指系统的无限递归
-2. **权威源只读隔离**——从第一天就标记宪法层为只读，避免了开发过程中的意外修改
-3. **20 轮外部审议**——用外部视角持续挑战内部假设，避免了自指系统的自我封闭
-4. **哈希巡检机制**——用机械手段验证权威源完整性，不依赖人的记忆和信任
-5. **规则全生命周期管理**——规则退役和规则新增同样重视，避免了规则肥胖症
-
-### 踩过什么坑
-
-1. **早期权威源没有只读隔离**——前几天宪法层被意外修改过，后来建立了只读隔离和哈希巡检
-2. **早期审议不够外部**——前几轮审议还是"自己审自己"，后来才真正切换到外部视角
-3. **规则退役机制建立太晚**——早期规则只加不减，导致规则膨胀，后来才建立退役机制
-4. **机制文件可执行性验证不足**——早期有些机制文件写得很"原则"，不够具体，后来在试运行中发现问题才修订
-5. **变更日志不够规范**——早期变更记录比较随意，后来才建立规范的变更日志格式
-
-### 如果重来会改什么
-
-1. **第一天就建立权威源只读隔离和哈希基线**——不要等出了问题再补
-2. **第一轮审议就用真正的外部视角**——不要"自己审自己"
-3. **规则退役机制和规则新增机制同时建立**——不要等规则膨胀了再想退役
-4. **机制文件写完就试运行**——不要等所有机制都写完才试运行，边写边试
-5. **变更日志从第一天就规范化**——不要等变更多了才补日志
+### What to change if restarting
+1. Establish authority source read-only isolation and hash baseline on day one
+2. Use truly external perspective from first review round
+3. Establish rule retirement mechanism simultaneously with rule addition
+4. Trial-run mechanism files as soon as written
+5. Standardize change log from day one
 
 ---
 
-*GOAA · 端到端案例二 · 基于真实实践整理 · 2026-08-28*
+*GOAA · End-to-End Case 02 · Based on real practice · 2026-08-28*

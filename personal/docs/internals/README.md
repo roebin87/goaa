@@ -1,30 +1,30 @@
-# GOAA 核心机制原理（Internals）
+# GOAA Core Mechanism Internals
 
-> 本目录公开 GOAA 架构核心机制的**设计原理与工作流程**。完整实现细节暂未开源，但设计原理完全公开，欢迎基于公开原理做独立实现。
+> This directory publishes the **design principles and workflows** of GOAA's core mechanisms. Full implementation details are not yet open-sourced, but design principles are fully public. Independent implementations based on these principles are welcome.
 
-## 文档索引
+## Document Index
 
-| 编号 | 文档 | 内容 |
-|------|------|------|
-| 01 | [架构核心工作原理](01-architecture-core.md) | 五层架构依赖关系、装载序列、管执分离物理实现 |
-| 02 | [四层记忆体系工作原理](02-memory-system.md) | 史书/快照/索引/蒸馏四层分工、记忆装载策略、记忆治理三功能 |
-| 03 | [常态化裁决闭环工作原理](03-governance-loop.md) | 歧义显影→定位→裁决→固化→退役完整闭环、规则生效闸门、治理强度分级 |
-| 04 | [双源熵治理工作原理](04-entropy-management.md) | 技术熵与认知熵区分、熵汇物理实现、负熵注入流程、对齐资本化 |
-| 05 | [神经流转立体运作图（简化版）](05-neural-flow-overview.md) | 启动序列、运行循环、收摊序列、裁决循环的简化流程图 |
+| # | Document | Content |
+|---|----------|---------|
+| 01 | [Architecture Core](01-architecture-core.md) | Five-layer architecture, loading sequence, governance-execution separation |
+| 02 | [Four-Layer Memory System](02-memory-system.md) | History/snapshot/index/distill layers, memory loading, three governance functions |
+| 03 | [Normalized Adjudication Loop](03-governance-loop.md) | Ambiguity revelation→localization→adjudication→consolidation→retirement |
+| 04 | [Dual-Source Entropy Governance](04-entropy-management.md) | Technical vs cognitive entropy, entropy sink, negentropy injection, alignment capitalization |
+| 05 | [Neural Flow Overview (Simplified)](05-neural-flow-overview.md) | Startup sequence, runtime loop, shutdown sequence, adjudication loop flowcharts |
 
-## 阅读建议
+## Reading Guide
 
-- **首次阅读**：按 01→02→03→04→05 顺序，建立整体认知
-- **架构研究者**：重点阅读 01 和 04，理解架构设计哲学和熵治理框架
-- **实践者**：重点阅读 02 和 03，理解记忆体系和裁决闭环的落地方法
-- **开发者**：重点阅读 05，理解体系运转的完整流程
+- **First read**: 01→02→03→04→05 for overall understanding
+- **Architecture researchers**: Focus on 01 and 04 for design philosophy and entropy framework
+- **Practitioners**: Focus on 02 and 03 for memory system and adjudication loop implementation
+- **Developers**: Focus on 05 for complete system operation flow
 
-## 说明
+## Notes
 
-- 本文档基于 GOAA 学术论文（DOI: 10.5281/zenodo.22165301）和开源仓库中的机制文档整理
-- 部分内部实现细节（如目录只读权限强制、规则语义深度校验）暂未公开，文档中会明确标注
-- 欢迎基于本文档的设计原理做独立实现，并在 Discussion 中交流
+- Documents based on GOAA academic paper (DOI: 10.5281/zenodo.22165301) and open-source mechanism documents
+- Some internal implementation details (directory read-only permission enforcement, deep semantic rule checks) are not yet open-sourced, explicitly noted in documents
+- Independent implementations based on these design principles are welcome; discuss in GitHub Discussions
 
 ---
 
-*GOAA · 核心机制原理 · 核心稳定版 1.0 · 2026-08-28*
+*GOAA · Core Mechanism Internals · Core stable version 1.0 · 2026-08-28*

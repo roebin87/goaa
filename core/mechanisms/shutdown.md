@@ -1,50 +1,51 @@
-﻿# 机制 · 收摊五钩（通用版 · V1.0）
+﻿# Mechanism · Wrap-Up Five Hooks (Generic · V1.1 EN)
 
-> 对话关闭前必须完成的五项保存动作——AI 没有持久记忆，不落盘即消失。
+> The five save-actions that must complete before closing a conversation — AI has no persistent memory; without saving to files, it's gone.
+> **V1.1 EN** (2026-08-26 · includes memory-accumulation visualization).
 
-## 五钩
+## The five hooks
 
-| # | 动作 | 落点 | 说明 |
-|---|------|------|------|
-| 1 | 灵魂备份+对话记录 | `_Memory/history/` | 当日要点整理版 + 逐字原始记录（存亡级·永不删改） |
-| 2 | 蒸馏更新 | `_Memory/distill/` | 覆盖写入——跨对话框接续的核心 |
-| 3 | 每日日志 | `_Memory/history/` | 追加不删——完整史书 |
-| 4 | 论语采集 | `_Memory/index/` | 人的思想/语录，按主题归档 |
-| 5 | 收摊报告 | `_Memory/index/` | 本场产出汇总/待办/健康状态/记忆积累 |
+| # | Action | Where | Note |
+|---|--------|-------|------|
+| 1 | Soul backup + conversation records | `_Memory/history/` | Day's key points (organized) + verbatim transcript (survival-level · never delete/modify) |
+| 2 | Distillation update | `_Memory/distill/` | Overwrite — the core for cross-conversation continuity |
+| 3 | Daily log | `_Memory/history/` | Append-only — the full chronicle |
+| 4 | Sayings collection | `_Memory/index/` | The human's thoughts / quotes, filed by topic |
+| 5 | Wrap-up report | `_Memory/index/` | Session summary / todos / health status / memory accumulation |
 
-## 记忆积累可视化（V1.1 新增 · 收摊报告记忆行）
+## Memory-accumulation visualization (V1.1 · the "memory line" in the wrap-up report)
 
-收摊报告的「健康状态」部分**必须包含记忆积累行**（文件即记忆的体验化）：
+The "health status" section of the wrap-up report **must include the memory line** (making "files are memory" visible):
 
-> 记忆积累：今日新增 N 条 · 累计 M 条（按 `_Memory/` 下文件条数统计）
+> Memory today: +N entries · total M (counted across files under `_Memory/`)
 
-- **统计口径**：蒸馏（覆盖计 1）/日志（当日条数）/对话记录（当日条数）/灵魂备份（当日条数）/论语（主题数）；
-- **作用**：主人每次收摊看到"记忆在积累"——第三幕（复用·记忆连续）的直观体验；
-- 首次收摊时叠加「第一次收摊强化」话术（见 onboarding·价值闭环）。
+- Counting: distillation (1) / log (today's entries) / conversation records (today's) / soul backup (today's) / sayings (topics)
+- Effect: at every wrap-up the owner *sees* memory accumulating — the felt experience of memory continuity
+- The first wrap-up also plays the "first wrap-up reinforcement" line (see onboarding)
 
-## 强制钩子（部署实例须以钩子/脚本落地）
+## Mandatory hooks (deployed instances must land them with platform hooks/scripts)
 
-- **MEMORY 索引更新**：收摊末步更新记忆索引
-- **体积合规闸门**：记忆文件超红线=红灯拦截
-- **对话记录校验**：逐字记录未落盘=红灯拦截不收摊
-- **宪法同步终检**：校验器漂移红灯=不收摊
+- **Index update**: refresh the memory index at the end of wrap-up
+- **Size compliance**: memory file over the red line = red light, blocked
+- **Transcript check**: verbatim records not saved = red light, no wrap-up
+- **Constitution sync final check**: validator drift red light = no wrap-up
 
-> 🔴 声明校准（2026-08-26）：以上强制钩子须**部署实例配置平台钩子/脚本**后方构成运行时拦截——本仓库=通用开源母本，不含平台专属强制实现（`validator.py --memory` 提供史书层只追加哈希基线检测，见 `tools/README.md`）。
+> 🔴 Declaration calibration (2026-08-26): the mandatory hooks above only constitute runtime blocking after a **deployed instance configures platform hooks/scripts** — this repository is a generic open-source mother template and contains no platform-specific enforcement (`validator.py --memory` provides append-only hash baseline detection; see `tools/README.md`).
 
-## 探讨定论入纲（收摊前置钩）
+## Conclusion persistence (pre-wrap-up hook)
 
-探讨产生定论（人裁定"落/收/确认"）时，收摊前必须完成四步落盘：
-1. 落总纲（定论条目·三级结构：公理+物理化定律+下沉机制）
-2. 同步子权威文件（设计原理）
-3. 同步下沉（机制/规则文件）
-4. 校验器全绿
+When a discussion reaches a conclusion (owner rules "land / accept / confirm"), before wrap-up:
+1. Land the conclusion entry (axiom + physical rule + mechanism)
+2. Sync subsidiary authoritative files (design principles)
+3. Sync downstream (mechanisms / rules files)
+4. Validator all green
 
-> 未落盘=红灯拦截不收摊——**不靠记忆，物理化强制**。
+> Not landed = red light, no wrap-up — enforced physically, not by memory.
 
-## 接续验证
+## Continuity verification
 
-收摊后开新对话框 → 启动读蒸馏 → 接续成功 = 身体连续性闭环。
+Wrap up → open a new conversation → startup loads distillation → continuity confirmed = the body loop is closed.
 
 ---
 
-*GOAA 机制件 · 通用转译版 V1.0 · 唯一版本 · 2026-08-19*
+*GOAA mechanism · Generic V1.1 EN · Single version · 2026-08-26*

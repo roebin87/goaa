@@ -1,16 +1,16 @@
-# 方法论 03 · 动态率设计（方法要点）
+# Methodology 03 · Dynamic Rates Design (Method Points)
 
-> **定位**：本方法论=动态率设计的**方法要点**（可复用认知）；**机制权威详述见 `mechanisms/dynamic-rates.md`**（规则面/率项分层/采集/干预的完整定义）——两者同源，机制为权威，本文件提供方法要点与使用场景。
+> **Role**: this methodology provides the reusable **method points** for dynamic-rates design; the **authoritative mechanism detail is in `mechanisms/dynamic-rates.md`** — same source, mechanism is authoritative, this file offers method points and use cases.
 
-## 方法要点（何时用 / 怎么想）
+## Method points (when to use / how to think)
 
-- **适用**：需要判断"体系是否健康运转"时——用"率"让不可直接观测的健康状态可见
-- **五原则速记**：锚定不动层 · 单一职能 · 提前触发 · 防退化 · 双面观测
-- **核心动作**：率采集 → 率趋势 → 异常干预（人终裁）→ 再采集
-- **边界**：率=信息非判断（人终裁）；阈值待校准（以运行代核验）
+- **When**: judging whether the system is running healthily — use "rates" to make the unobservable health state visible
+- **Five principles (quick recall)**: anchor to the immovable layer · single function · early trigger · anti-decay · dual-sided observation
+- **Core loop**: rate collection → rate trend → anomaly intervention (human final ruling) → re-collection
+- **Boundary**: rates are information, not judgments (human final ruling); thresholds are to be calibrated (validation through operation)
 
-## 使用场景
+## Use cases
 
-- 收摊健康状态核对 · 月度治理体检 · 版本退役判据（存量污染指数）
+- Wrap-up health-state check · monthly governance review · version-retirement criteria (stock pollution index)
 
-> 完整定义（率项分层/采集机制/干预流程/双锚）见 `mechanisms/dynamic-rates.md`——以机制件为权威。
+> Full definition (rate-tier breakdown / collection mechanisms / intervention flow / double anchor) see `mechanisms/dynamic-rates.md` — the mechanism file is authoritative.

@@ -1,39 +1,39 @@
-# 论语模板
+# Collected Sayings Template (Sayings)
 
-> **用途**：论语=主人思想/语录的每日提取与归档（主题索引），是"记录和提炼是让 AI 记住人的唯一方式"的落地。从对话中捕捉主人原话与洞察，归入主题文件。
-> **铁律**：主人原话优先逐字保留（不精简不转译）；陈述句当陈述句接（不掰成命题分析）；假问题不硬答。
-> **生效确认机制**：捕捉到的主人观点默认标注「待确认」，由主人确认后改为「已生效」——避免把气话/临时观点当成长期原则（修改权在人）。
-> **位置**：部署后放置于 `_Memory/index/论语/[主题].md`
-> **通用模板说明**：本文件为自举初始化模板·不含任何运行实例数据·由首次激活引导逐项采集生成（部署后即为你的体系专属文件）。
-
----
-
-# 【主题名】
-
-> 采集日期：YYYY-MM-DD 起｜来源：与【主人称呼】对话
-
-## 主人原话（逐字）
-
-> 【原话 1】
-> —— 语境：【当时在讨论什么】｜类型：【工作原则/沟通偏好/专业判断/禁忌红线】｜状态：【待确认/已生效】
-
-> 【原话 2】
-> —— 语境：【……】｜类型：【……】｜状态：【……】
-
-## 提炼要点
-
-- 【要点 1】
-- 【要点 2】
-
-## 应用场景
-
-- 【该原则在哪些场景生效·应用案例 1】
-- 【应用案例 2】
-
-## 关联
-
-- 【关联的定论/机制/方法论】
+> **Purpose**: Collected sayings = daily extraction and archiving of the owner's thoughts/quotes (topic-indexed) — the concrete embodiment of "recording and distilling is the only way to make AI remember a human." Capture the owner's exact words and insights from conversation into topic files.
+> **Iron rule**: Keep the owner's exact words verbatim first (no condensing, no paraphrasing); take statements as statements (do not break them into proposition analyses); do not force answers to rhetorical questions.
+> **Effectiveness-confirmation mechanism**: Captured viewpoints are marked "pending confirmation" by default; after the owner confirms, change to "effective" — to avoid treating offhand remarks/temporary views as long-term principles (the right to modify belongs to the human).
+> **Location**: After deployment, place at `_Memory/index/论语/[topic].md`
+> **Generic template note**: This file is a self-bootstrap initialization template; it contains no runtime instance data; it is populated item by item by the onboarding flow (after deployment it becomes your system's own file).
 
 ---
 
-*【实例名】· 论语 · 主题【主题名】 · 持续追加（新条目默认待确认·主人确认后生效）*
+# 【Topic name】
+
+> Collected since: YYYY-MM-DD ｜ Source: conversations with 【Owner name】
+
+## Owner's Exact Words (verbatim)
+
+> 【Quote 1】
+> — Context: 【what was being discussed】 ｜ Type: 【work principle / communication preference / professional judgment / forbidden red line】 ｜ Status: 【pending confirmation / effective】
+
+> 【Quote 2】
+> — Context: 【……】 ｜ Type: 【……】 ｜ Status: 【……】
+
+## Distilled Key Points
+
+- 【Key point 1】
+- 【Key point 2】
+
+## Application Scenarios
+
+- 【Which scenarios this principle applies to · use case 1】
+- 【Use case 2】
+
+## Related
+
+- 【Related conclusions / mechanisms / methodologies】
+
+---
+
+*【Instance name】 · Sayings · Topic 【Topic name】 · append continuously (new entries default to pending confirmation · effective after owner confirmation)*

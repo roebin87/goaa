@@ -1,56 +1,56 @@
-# 案例二 · 论文生产：架构设计原理 · 只增不删的增补机制
+# Case 02 · Paper Production: Architecture Design Principles · Append-Only Augmentation Mechanism
 
-> 本案例展示 GOAA 治理范式在**学术理论载体**上的应用——《治理导向型智能体架构（GOAA）》架构设计原理（V1.0 → V2.5）的生产过程。核心证据：**权威源只增不删**的防熵增机制 + 变更逐字留痕 + 熵增归位原理。
-
----
-
-## 一、目标
-
-生产 GOAA 架构的**学术理论母稿**——一篇可以对外验证的正式论文（Zenodo DOI 存档），同时保证：
-
-- 理论严谨性（引用分层显性标注、划界清晰）；
-- 权威源稳定（母稿不分版、只增不删、变更可溯）；
-- 长期演化（V1.0 到 V2.5，持续增补不破坏既有结论）。
+> This case demonstrates the application of the GOAA governance paradigm to an **academic theoretical carrier** — the production of the *Governance-Oriented Agent Architecture (GOAA)* Architecture Design Principles paper (V1.0 → V2.5). Core evidence: the **append-only authority-source** anti-entropy mechanism + per-change traceability + the entropy-repositioning principle.
 
 ---
 
-## 二、治理设计
+## 1. Goal
 
-| 治理点 | 机制 | 效果 |
+Produce GOAA's **academic master manuscript** — a formal, externally verifiable paper (archived with a Zenodo DOI), while ensuring:
+
+- Theoretical rigor (explicit citation tiers, clear delimitation);
+- Authority-source stability (single-version master, append-only, traceable changes);
+- Long-term evolution (V1.0 to V2.5, continuous augmentation without breaking established conclusions).
+
+---
+
+## 2. Governance Design
+
+| Governance Point | Mechanism | Effect |
 |---|---|---|
-| **权威源唯一** | 母稿=唯一权威源（不分版），工作版仅作过程副本 | 消除多版本混乱 |
-| **只增不删** | 删减仅两条合法路径：①作者明确指令 ②执行体提案待授权 | 防"重写式熵增"（重写=丢弃历史共识） |
-| **变更留痕** | 任何变更逐字入系统级修改日志 | 可追溯、可审计 |
-| **熵增归位** | 新原理（如熵增归位原理）以**增补小节**入纲，而非改写旧章 | 知识累积式生长，不推翻既有框架 |
+| **Single authority source** | Master manuscript = sole authority (no branching); working copies are process artifacts only | Eliminates multi-version chaos |
+| **Append-only** | Deletion has only two legal paths: ① explicit author instruction ② executor proposal pending authorization | Prevents "rewrite-style entropy" (rewriting = discarding historical consensus) |
+| **Change traceability** | Every change is recorded verbatim in the system-level change log | Auditable, traceable |
+| **Entropy repositioning** | New principles (e.g., entropy-repositioning principle) enter as **appended subsections**, not rewrites of old chapters | Knowledge grows cumulatively without overturning the established framework |
 
 ---
 
-## 三、关键节点（时间线概览）
+## 3. Key Milestones (Timeline Overview)
 
-| 阶段 | 动作 | 治理动作 |
+| Stage | Action | Governance Action |
 |---|---|---|
-| V1.0 奠基 | 建立公理体系 + 架构设计框架 | 锚定四条公理（决断权/文件本体/固有歧义/熵增） |
-| V1.x 划界 | 逐线划界相关工作（宪法路线/机器治理派/HITL） | 引用分层显性标注（一级法规/二级学术/三级工业界） |
-| V2.x 增补 | 持续增补新实证（Liu 熵框架/SRD 重注入/参与式治理等） | 只增不删 + 推导性论断统一标注「延伸性结论」 |
-| V2.5 归位 | 熵增归位原理入纲（桃木剑/乌木剑·双区判据） | 以增补小节入纲，非改写 |
+| V1.0 Foundation | Axiom system + architecture design framework | Anchor the four axioms (decision authority / file ontology / inherent ambiguity / entropy increase) |
+| V1.x Delimitation | Line-by-line delimitation vs related work (constitutional routes / machine-governance school / HITL) | Explicit citation tiers (regulation / academic / industry) |
+| V2.x Augmentation | Continuous augmentation with new evidence (Liu entropy framework / SRD re-injection / participatory governance, etc.) | Append-only + derived claims uniformly marked "extended conclusion" |
+| V2.5 Repositioning | Entropy-repositioning principle enters the outline (dual-region criterion) | Entered as an appended subsection, not a rewrite |
 
 ---
 
-## 四、可验证产出
+## 4. Verifiable Outputs
 
-- 论文全文（开放获取）：Zenodo DOI `10.5281/zenodo.22165301`；
-- 仓库内入口：[学术论文入口](../research/goaa-paper.md)（摘要/核心主张/三边界声明）；
-- 权威源变更日志：母稿文末（每版增补逐条记录）。
-
----
-
-## 五、案例启示
-
-1. **理论载体也需要治理**——论文不是写完就结束的静态物，而是长周期演化的权威源；
-2. **只增不删 > 推倒重写**——重写会丢失历史共识与证据链，增补保留演化轨迹；
-3. **留痕是学术诚信的工程化**——变更逐字记录，让"哪句话从哪来"永远可查；
-4. **增补机制可复现**——任何项目只要建立"权威源+增补铁律+变更日志"三件套，即可获得同样的防熵增效果。
+- Full paper (open access): Zenodo DOI `10.5281/zenodo.22165301`;
+- In-repository entry: [Academic paper entry](../research/goaa-paper.md) (abstract / core claims / three-boundary declaration);
+- Authority-source change log: at the end of the master manuscript (per-version augmentation records).
 
 ---
 
-*GOAA · 治理产出案例集 · 案例二 论文生产 · 全成果开源版（Core）· 2026-08-28*
+## 5. Case Insights
+
+1. **Theoretical carriers also need governance** — a paper is not a static object finished once, but a long-running authority source;
+2. **Append-only > rewrite** — rewriting loses historical consensus and evidence chains; augmentation preserves the evolution trajectory;
+3. **Traceability is engineering for academic integrity** — verbatim change records make "where did this sentence come from" always answerable;
+4. **The augmentation mechanism is reproducible** — any project that establishes the "authority source + append-only rule + change log" trio gets the same anti-entropy effect.
+
+---
+
+*GOAA · Governance Case Studies · Case 02 Paper Production · All-Outcomes Open Source Edition (Core) · 2026-08-28*

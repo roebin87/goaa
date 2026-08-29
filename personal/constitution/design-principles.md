@@ -1,111 +1,111 @@
-# GOSAA 架构设计原理（通用版 · V1.0）
+# GOSAA Design Principles (Generic · V1.0 EN)
 
-> **定位**：本文件回答两个问题——「为什么这样设计」（设计依据 · Why）与「怎么建这个架构」（落地方法 · How）。设计哲学与设计原理合并于此：既有依据，也有方法。
-> **权威对应**：与 GOAA 架构设计原理学术论文（总纲）口径一致——公理体系、文件底座、五层架构、规则治理、常态化裁决、代际演进均对齐论文表述。
-> **本文件为通用转译版（唯一版本 1.0）**：开源发布，脱敏通用化。
-
----
-
-## 一、治理导向 vs 执行导向（为什么必须治理）
-
-- **两种取向**：主流 Agent 框架解决「怎么让 AI 干活」（执行导向——增强任务调度与执行效率）；GOAA 解决「怎么让 AI 干得可控」（治理导向——长期可控、权责一致、可追溯）。
-- **治理导向**=以「长期可控」为第一原则：先框定治理边界，再在其上承载执行能力——**治理是基座，执行是加挂**。
-- **为什么必须治理**：智能体体系的无序化不是可修复的 bug，而是长周期运行下的结构性特征——规则随交互衰减、行为随运行漂移、体系随演化膨胀（技术熵）；规则写出却未共识、决策执行却未对齐（认知熵，即认知滞后）。治理即对抗这两种熵增。
-- **四条设计目标**：
-  1. **主权不丢**：人 100% 决断权物理化执行
-  2. **成本可控**：治理成本有上限，不随体系膨胀失控
-  3. **无存量积压**：启动只背蒸馏+核心文件，存量熵增靠版本退役归档
-  4. **记忆连续**：常驻一个治理体（连续性+质量基线）
-
-## 二、四条公理（治理边界的四维框定）
-
-| # | 公理 | 一句话 |
-|---|------|--------|
-| 一 | **决断权公理**（权责维） | 单主体人机协作场景下，人保有最终决断权——所有权、决断权与责任权三者合一；机仅在人的明确且无歧义的授权范围内执行，不得自主决策 |
-| 二 | **文件本体公理**（载体维） | 物理文件是记忆与规则的权威载体——文件在则体系在，文件失则体系归零 |
-| 三 | **固有歧义公理**（语义维） | 人机语义鸿沟天然存在、不可彻底消除——治理设计的目标是降低与显影歧义，而非追求绝对的语义一致 |
-| 四 | **熵增公理**（时间维） | 任何持续运行的人机协作体系，若无主动治理必然走向无序——熵不可消灭，治理是把熵增速度控制在可承受范围 |
-
-> 公理口径与 GOAA 学术论文（《认知滞后》/总纲）一致；熵、负熵、熵汇等表述均为系统科学语境下的类比，用于描述体系无序度的变化与治理，而非热力学层面的严格物理量。
-
-## 三、文件本体底座与工作区锚定（为什么是文件）
-
-**为什么必须依托文件**：治理需要三重物理属性——**主权需要物理强制**（权限是文件系统的物理属性，不是软件的承诺）、**证据需要物理留存**（审计轨迹是文件系统的持久属性，不随进程终止消失）、**熵需要物理导出**（落盘是持久化操作，是运行时状态的外部化）。文件系统的确定性来自物理属性，而非运行质量——文件在则治理在，启动只是装载，不是重建。
-
-- **权限即主权**：谁可写规则、谁可改记忆，由文件系统强制保证，而非靠模型自觉
-- **历史留痕**：审计轨迹为治理裁决提供可追溯的证据材料
-- **熵汇**：文件落盘提供熵的物理导出通道——每次落盘=一次运行时熵的导出
-- **工作区锚定原则**（文件本体公理的第一落地原则）：所有长期性工作的规则、记忆与协作资产，按项目文件夹分类存放；每次启动锚定目标工作区文件夹，全部规则装载、记忆读取与共识写入严格限定在该目录边界之内
-
-**装载分层（轻装启动）**：
-
-```
-蒸馏=主装载（轻、聚焦、不污染上下文）
-全量备份=过程完整记录（质量兜底）
-索引=全量导航入口
-沙箱=物理冷存储
-```
-
-关键原则：蒸馏+全量=分层不替代；启动只背蒸馏+设计原理；存量熵增靠版本退役归档（不清理，跳过）。
-
-## 四、五层架构总览（怎么组织）
-
-```
-公理层（四条公理·稳定内核）
-  → 物理底座层（文件系统·治理锚点）
-  → 核心机制层（四层记忆/规则治理/常态化裁决）
-  → 执行加挂层（模型/框架·可替换组件）
-  → 场景应用层（个人→微小团队）
-```
-
-- **治理为基座、执行为加挂**：与传统「执行优先、治理后置」相反，GOAA 先建立治理底座，执行能力作为可替换的加挂组件承载其上——治理机制不绑定特定模型与执行框架
-- **层间依赖自底向上**：上层依赖下层的确定性，下层不依赖上层的实现细节——只要文件系统存在，治理闭环即可运转
-- **规则分层**：宪法级→机制级→方法级→实例级——通用规则沉淀复用、单次任务随用随弃，不允许一次性任务污染通用规则
-
-## 五、三语义分层与规则生效闸门（怎么保证规则生效）
-
-| 语义层 | 职责 | 消除的歧义 |
-|--------|------|-----------|
-| 人语义 | 意图表达（人读人写） | 意图歧义 |
-| 机语义 | 中间态执行描述（机读机写） | 翻译歧义 |
-| 编程语义 | 高强制层（YAML/JSON/脚本·可校验） | 执行歧义 |
-
-- **规则↔机制分置**：规则=写什么（YAML+Schema+CI·数据化可检查）；机制=怎么验（流程化可执行）——每条规则必须有对应机制检验其运转（光生不检=空转）
-- **写出≠生效**：规则文本写出来不等于生效——规则生效须过四道校验：平台硬约束（不与上位机制冲突）· 体系自洽（不与宪法层冲突）· 现实可执行（资源与边界内可行）· 强制动作配套（有钩子落地，非依赖自觉）；未过闸门的规则不产生约束力（详见 `rules/validation.md`）
-- **三语义同步校验**：三份语义必须同步一致——校验器做归一化比对（表达差异≠漂移）
-- **复用机制**：方法论/规则被「生产」只是库存，被再次装载调用才是资产——生产侧·资产登记 → 消费侧·复用检索 → 价值侧·复用率监测；内部验证+外部校准+锚定对比三位一体；三出口：可复用→入资产库 / 需修正→回立项判定 / 废弃→版本退役
-
-## 六、常态化裁决与问答对偶（人怎么参与治理）
-
-- **问答对偶（QA 对偶）**：人机问答循环是秩序产出的基本单元——人的提问注入认知（问题），AI 的回应显影素材与缺口（答案），人的裁决完成闭环；每一轮有效问答都在产出秩序。其设计思想受传统阴阳哲学启发，源自人机协作生产模型的问答对偶结构
-- **歧义显影**：AI 不拥有裁决资格，但拥有显影资格——作为认知滞后的「镜子」，将规则冲突、事实矛盾、待裁决积压显影为可处理的问题（显影把歧义从「静默累积」变为「显性裁决」）
-- **常态化裁决**：人的裁决不是异常兜底，而是规则层与共识层的**固定环节**——每条规则生效、每个定论沉淀、每次共识固化均需人拍板；裁决对象限定为规则生效/共识固化/版本迭代三类（低频高价值），而非单次动作执行
-- **循环闭合靠人裁决**：问→答→判→固化或再问——没有「判」的问答=空转
-- **主权与执行权分离**：机制设计、授权与裁决归人（我做）；执行可在人建立的机制下物理化（我执行）——授权机制是主权与执行权之间的合法桥梁
-
-## 七、代际演进（GOAA 整体演进代际）
-
-| 代际 | 缩写 | 英文全称 | 本质 |
-|------|------|---------|------|
-| 1.0 | SCA | Soul Contract Architecture | 静态×静态·所有权·冻结 |
-| 2.0 | GOSAA | Governance-Oriented Solutions Architecture（治理导向解决方案架构） | 动态×动态·机内部工程化·现行主版本 |
-| 3.0 | CSA | Constellation of Sovereign Agents | 多主体对等·群体巅峰 |
-| 4.0 | MOA | Meta-Order Architecture | 治理规则有序迭代·近道 |
-
-- **总架构名**：GOAA=Governance-Oriented Agent Architecture（治理导向型 Agent 架构）；GOSAA=2.0 代际专属代号——两者英文全称不同，正式表述按上表区分
-- **代际=主要矛盾转移**：1.0 所有权 → 2.0 机内部工程化 → 3.0 主体间治理 → 4.0 近道
-- **代际不是升级替换，是形态相容**：1.0 亦可参与 3.0 主体间融合
-
-## 八、自举与验证（怎么确认建对了）
-
-- **设计文件**（宪法+设计原理+蒸馏+索引）=唯一不可再生资产；岗位/工具/看板=可再生生成物
-- **文件在则体系在**：任意电脑+任意本地文件操作应用=体系重建；可复制性已实证（实例诞生=设计文件表达力足够，无需设计者认知在场）
-- **验证方式**：
-  - 判据①：壳+装载能运行（启动自检通过）
-  - 判据②：收摊→新对话框→蒸馏接续成功（跨对话记忆连续）
-  - 判据③：校验器全绿=一致性通过
-- **适用边界**：本架构定位**个人级与微小团队使用场景**——工程化强度受场景制约，属有意选择（追求全自动/零约束/大规模多智能体场景不适用，详见 `docs/applicability.md`）
+> **Role**: this file answers two questions — **why** it is designed this way (rationale · Why) and **how** the architecture is built (method · How). Design Philosophy and Design Principles are merged here: both the rationale and the method.
+> **Authoritative counterpart**: aligned with the GOAA architecture design principles academic paper (the master draft) — axiom system, file foundation, five-layer architecture, rule governance, normalized adjudication, and generation evolution all follow the paper's wording.
+> **Generic translation (single version 1.0)**: open-sourced, sanitized.
 
 ---
 
-*GOSAA 架构设计原理 · 通用转译版 V1.0 · 唯一版本 · 2026-08-19（2026-08-26 设计哲学并入·与学术论文口径对齐）*
+## I. Governance-oriented vs execution-oriented (why governance)
+
+- **Two orientations**: mainstream agent frameworks solve "how to make AI do more work" (execution-oriented — enhancing task scheduling and execution efficiency); GOAA solves "how to make AI reliably governable" (governance-oriented — long-term controllability, aligned rights and responsibilities, traceability).
+- **Governance-oriented** = "long-term controllability" as the first principle: define the governance boundary first, then carry execution capability on top of it — **governance is the foundation, execution is the add-on**.
+- **Why governance is necessary**: the disorder of an agent system is not a fixable bug but a structural feature of long-term operation — rules decay with interaction, behavior drifts with running, the system bloats with evolution (technical entropy); rules are written but not agreed upon, decisions execute but are not aligned (cognitive entropy, i.e., Cognitive Lag). Governance counters both kinds of entropy.
+- **Four design goals**:
+  1. **Sovereignty never lost**: 100% human decision rights, physically enforced
+  2. **Cost bounded**: governance cost has a ceiling, does not spiral with system growth
+  3. **No stock backlog**: startup carries only distillation + core files; stock entropy handled by version retirement
+  4. **Memory continuity**: one resident governed body (continuity + quality baseline)
+
+## II. The four axioms (the four-dimensional governance boundary)
+
+| # | Axiom | In one sentence |
+|---|-------|-----------------|
+| 1 | **Axiom of decision rights** (who governs) | In single-subject human-machine collaboration, the human retains final decision rights — ownership, decision rights, and responsibility are one; the machine executes only within explicit, unambiguous authorization and never decides autonomously |
+| 2 | **Axiom of file ontology** (physical carrier) | Physical files are the authoritative carrier of memory and rules — files exist, the system exists; files lost, the system resets to zero |
+| 3 | **Axiom of inherent ambiguity** (the fundamental difficulty) | The human-machine semantic gap is inherent and cannot be fully eliminated — governance aims to reduce and surface ambiguity, not to pursue absolute semantic consistency |
+| 4 | **Axiom of entropy increase** (why governance must persist) | Any continuously running human-machine system, without active governance, inevitably tends toward disorder — entropy cannot be eliminated; governance keeps its growth within a bearable range |
+
+> The axiom wording follows the GOAA academic papers (Cognitive Lag / master draft). Terms such as entropy, negative entropy, and entropy sink are used as system-science analogies — describing the change and governance of system disorder, not strict thermodynamic quantities.
+
+## III. File-ontology foundation & workspace anchoring (why files)
+
+**Why files are irreplaceable**: governance needs three physical properties — **sovereignty needs physical enforcement** (permissions are a physical property of the file system, not a software promise), **evidence needs physical persistence** (audit trails persist independently of process termination), **entropy needs physical export** (file persistence externalizes runtime state). The file system's determinism comes from physical properties, not runtime quality — files exist, governance exists; startup is loading, not rebuilding.
+
+- **Permissions are sovereignty**: who may write rules, who may change memory, is enforced by the file system, not by model self-discipline
+- **History leaves traces**: audit trails provide traceable evidence for governance rulings
+- **Entropy sink**: file persistence provides the physical export channel for entropy — each landing is one runtime-entropy export
+- **Workspace anchoring** (first implementation principle of the file-ontology axiom): all long-term rules, memory, and collaboration assets are stored classified by project folder; each startup anchors to the target workspace folder, and all rule loading, memory reading, and consensus writing are strictly confined within that directory boundary
+
+**Layered loading (light startup)**:
+
+```
+Distillation = primary load (light, focused, does not pollute context)
+Full backup = complete process record (quality fallback)
+Index = full navigation entry
+Sandbox = physical cold storage
+```
+
+Key principle: distillation + full = layered, not alternative; startup carries distillation + design principles; stock entropy handled by version retirement (not cleaned, skipped).
+
+## IV. Five-layer architecture overview (how it is organized)
+
+```
+Axiom layer (four axioms · stable kernel)
+  → Physical foundation layer (file system · governance anchor)
+  → Core mechanism layer (four-layer memory / rule governance / normalized adjudication)
+  → Execution add-on layer (models/frameworks · replaceable)
+  → Scenario application layer (individual → micro team)
+```
+
+- **Governance as foundation, execution as add-on**: contrary to "execution first, governance later", GOAA builds the governance foundation first, with execution capability carried on top as a replaceable add-on — governance mechanisms are not bound to any specific model or framework
+- **Bottom-up dependency**: upper layers depend on the lower layers' determinism; lower layers do not depend on upper-layer implementation details — as long as the file system exists, the governance loop runs
+- **Rule tiers**: constitutional → mechanism → methodology → instance — generic rules accumulate for reuse, one-off tasks are used and discarded, one-off tasks never pollute generic rules
+
+## V. Three semantic layers & the rule effect gate (how rules take effect)
+
+| Semantic layer | Duty | Ambiguity removed |
+|----------------|------|-------------------|
+| Human semantics | Intent expression (human reads/writes) | Intent ambiguity |
+| Machine semantics | Intermediate execution description (machine reads/writes) | Translation ambiguity |
+| Programming semantics | High-enforcement layer (YAML/JSON/scripts · verifiable) | Execution ambiguity |
+
+- **Rules ↔ mechanisms separation**: rules = what to write (YAML + Schema + CI · data-driven, checkable); mechanisms = how to verify (process-driven, executable) — every rule must have a corresponding mechanism verifying its operation (writing without verification = idle spinning)
+- **Written ≠ effective**: a rule written down is not yet effective — it must pass four checks: platform hard constraints (no conflict with upper mechanisms) · system self-consistency (no conflict with the constitution) · practical executability (feasible within resources and boundaries) · enforcement support (has hooks to land, not dependent on self-discipline); rules that fail the gate have no binding force (see `rules/validation.md`)
+- **Three-semantic sync validation**: all three layers must stay consistent — the validator performs normalized comparison (expression difference ≠ drift)
+- **Reuse mechanism**: methodologies/rules "produced" are inventory; only when loaded and invoked again are they assets — production side · asset registration → consumption side · reuse retrieval → value side · reuse-rate monitoring; three-in-one verification (internal verification + external calibration + anchored comparison); three exits: reusable → asset library / needs revision → problem gate / abandoned → version retirement
+
+## VI. Normalized adjudication & QA duality (how humans participate)
+
+- **QA duality**: the human-machine question-answer loop is the basic unit of order production — the human's question injects cognition (the question), AI's response surfaces material and gaps (the answer), the human's ruling closes the loop; every effective round of Q&A produces order. Its design draws on traditional yin-yang philosophy as inspiration, originating from the question-answer duality of the human-machine production model
+- **Ambiguity surfacing**: AI has no ruling qualification but has surfacing qualification — as the "mirror" of Cognitive Lag, it surfaces rule conflicts, factual contradictions, and pending ruling backlogs into processable problems (surfacing turns ambiguity from "silent accumulation" into "explicit ruling")
+- **Normalized adjudication**: human ruling is not an exception fallback but a **fixed step** in the rule and consensus layers — every rule taking effect, every conclusion settling, every consensus solidifying requires human approval; the ruling objects are limited to rule effect / consensus solidification / version iteration (low-frequency, high-value), not single action executions
+- **The loop closes on human judgment**: ask → answer → judge → solidify or ask again — Q&A without "judge" is idle spinning
+- **Separation of sovereignty and execution**: mechanism design, authorization, and ruling belong to the human (I decide); execution can be mechanized under human-built mechanisms (I execute) — authorization is the legitimate bridge between sovereignty and execution
+
+## VII. Generation evolution (GOAA's overall evolution generations)
+
+| Generation | Abbreviation | Full English name | Essence |
+|------------|--------------|-------------------|---------|
+| 1.0 | SCA | Soul Contract Architecture | static × static · ownership · frozen |
+| 2.0 | GOSAA | Governance-Oriented Solutions Architecture | dynamic × dynamic · machine-side engineering · **current main version** |
+| 3.0 | CSA | Constellation of Sovereign Agents | peer multi-subject · collective peak |
+| 4.0 | MOA | Meta-Order Architecture | ordered iteration of governance rules · nearing the origin |
+
+- **Overall architecture name**: GOAA = Governance-Oriented **Agent** Architecture; GOSAA = the 2.0 generation codename (Governance-Oriented **Solutions** Architecture) — the two full names differ; formal usage follows the table
+- **Generations = shifting main contradiction**: 1.0 ownership → 2.0 machine-side engineering → 3.0 inter-subject governance → 4.0 nearing the origin
+- **Generations are compatible forms, not upgrades/replacements**: 1.0 can participate in 3.0 inter-subject fusion
+
+## VIII. Self-bootstrap & verification (how to confirm it is built right)
+
+- **Design files** (constitution + design principles + distillation + index) = the only non-regenerable asset; posts / tools / dashboards = regenerable products
+- **Files exist, the system exists**: any computer + any local-file application = system rebuild; copyability is proven (an instance is born = the design files carry enough expression, no designer cognition present)
+- **Verification**:
+  - Criterion ①: shell + loading runs (startup self-check passes)
+  - Criterion ②: wrap-up → new conversation → distillation continuity succeeds (cross-conversation memory continuity)
+  - Criterion ③: validator all green = consistency passed
+- **Applicability boundary**: this architecture targets **individual and micro-team use cases** — the degree of engineering sophistication is constrained by the scenario, by design (scenarios pursuing full automation / zero constraints / large-scale multi-agent are not applicable; see `docs/applicability.md`)
+
+---
+
+*GOSAA Design Principles · Generic translation V1.0 EN · Single version · 2026-08-19 (Design Philosophy merged 2026-08-26 · aligned with academic paper wording)*

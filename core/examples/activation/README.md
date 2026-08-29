@@ -1,49 +1,49 @@
-﻿# 示例 · 首次激活引导工具（Onboarding Tool）
+﻿# Example · First Onboarding Tool (Onboarding Tool)
 
-> **权威流程**：首次激活引导的**流程规范见 [mechanisms/onboarding.md](../../mechanisms/onboarding.md)**——本目录仅为该流程的**可执行工具实现**（CLI 执行器），不是流程定义。
-> 本示例供想用命令行方式跑引导的用户；对话式引导直接用 DEPLOY.md 部署指令即可。
+> **Authoritative flow**: The **process spec for first onboarding lives in [mechanisms/onboarding.md](../../mechanisms/onboarding.md)** — this directory is only that flow's **executable tool implementation** (CLI executor), not the flow definition.
+> This example is for users who want to run onboarding from the command line; for conversational onboarding, just follow the deployment instructions in DEPLOY.md.
 
-## 为什么需要首次激活
+## Why first onboarding exists
 
-AI 没有持久记忆，也不知道你是谁。首次激活=让实例"足够了解你"：
-1. **知识传递**：理解体系核心机制（启动/收摊/蒸馏/备份/校验）
-2. **信息采集**：了解主人基本盘（称呼/背景/目标/协作偏好/边界）
-3. **档案冻结**：落盘「主人档案」——**机侧只读，仅主人可改**
+AI has no persistent memory and does not know who you are. First onboarding = letting the instance "know you well enough":
+1. **Knowledge transfer**: understand the system's core mechanisms (startup / wrap-up / distillation / backup / validation)
+2. **Info collection**: learn the owner's basics (name / background / goals / collaboration preferences / boundaries)
+3. **Profile freeze**: write the "owner profile" — **machine read-only, only the owner may change it**
 
-> 首次激活是知识传递，不是填表——引导完的人应该已经理解体系骨架（详见 mechanisms/onboarding.md 的 8 步流程与机侧诚实声明）。
+> First onboarding is knowledge transfer, not form-filling — after it, you should already understand the system skeleton (see the 8-step flow and the machine's honest disclosure in mechanisms/onboarding.md).
 
-## 使用方式
+## How to use
 
-### 方式一：对话式引导（推荐 · 无依赖）
+### Option 1: Conversational onboarding (recommended · no dependencies)
 
-对实例说启动语：
+Say the opening line to the instance:
 
-> "我需要你足够了解我，方便我们一起后面的工作，你可以问我问题，直到你完全了解我为止。"
+> "I need you to get to know me well enough for us to work together — you can ask me questions until you fully understand me."
 
-实例按 [mechanisms/onboarding.md](../../mechanisms/onboarding.md) 的 8 步流程引导（欢迎→机制知识传递→定名→采集→边界→复述→落盘→交回主动权）。
+The instance follows the 8-step flow in [mechanisms/onboarding.md](../../mechanisms/onboarding.md) (welcome → mechanism knowledge transfer → naming → collection → boundaries → recap → save → return initiative).
 
-### 方式二：CLI 执行器（可选 · 需 Python）
+### Option 2: CLI executor (optional · requires Python)
 
 ```bash
 pip install pyyaml
-python3 首次激活引导.py            # 交互式引导（采集 8 必需项）
-python3 首次激活引导.py --dry-run  # 预览流程
+python3 first-activation-guide.py            # interactive onboarding (collects the 8 required items)
+python3 first-activation-guide.py --dry-run  # preview the flow
 ```
 
-> ⚠️ CLI 执行器只覆盖"信息采集"段（流程的③-⑦步）；机制知识传递/交回主动权是对话性步骤，由对话式引导完成。
+> ⚠️ The CLI executor covers only the "info collection" segment (steps ③-⑦ of the flow); mechanism knowledge transfer and returning initiative are conversational steps handled by conversational onboarding.
 
-## 文件
+## Files
 
-| 文件 | 作用 |
+| File | Purpose |
 |------|------|
-| `首次激活引导.yaml` | 采集流程定义（8 必需项） |
-| `首次激活引导.py` | CLI 执行器（读取 yaml→逐项提问→生成主人档案） |
-| `../../mechanisms/onboarding.md` | **权威引导流程**（8 步全流程） |
+| `first-activation-guide.yaml` | Collection flow definition (required items) |
+| `first-activation-guide.py` | CLI executor (reads yaml → asks item by item → generates the owner profile) |
+| `../../mechanisms/onboarding.md` | **Authoritative onboarding flow** (full 8-step process) |
 
-## 落盘产物
+## Output
 
-`identity/主人档案.md`——机侧只读，仅主人可改（守 2.5 非自主公理：档案是主人的自述，机无权改）。
+`identity/owner-profile.md` — machine read-only, only the owner may edit (per the non-autonomy axiom: the profile is the owner's self-description; the machine has no right to change it).
 
 ---
 
-*GOAA 通用示例 · 唯一版本 1.0 · 2026-08-19*
+*GOAA Generic Example · Single version 1.0 · 2026-08-19*

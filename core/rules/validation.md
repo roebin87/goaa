@@ -1,62 +1,29 @@
-﻿# GOAA 规则层 · Rule Effect-Gate（规则生效闸门）
+﻿# Rules · Rule Effect Gate (Generic · V1.0 EN)
 
-> **理论依据**：规则生效前置验证机制——**规则文本被写出 ≠ 规则已生效**。
+> **Written ≠ effective.** A rule takes effect only after passing validation — the effect gate is the mechanism that makes "writing" meaningful.
 
-## 核心原则
+## The gate (three checks)
 
-**写出≠生效**。任何规则进入体系，必须先通过现行验证，否则不产生约束力。
+1. **Structure check**: the rule file is in place, named per naming rules, located in the right layer;
+2. **Semantic sync check**: consistent with the constitution/design-principles wording (no drift);
+3. **Mechanism check**: the rule has a corresponding mechanism that verifies its operation (rules↔mechanisms separation);
 
-## 验证四检
+All three pass → the rule is effective. Any fail → the rule does not take effect (remains draft/pending).
 
-| 检项 | 校验内容 |
-|------|---------|
-| ① 平台硬约束 | 是否与平台/工具链强制要求冲突 |
-| ② 体系自洽 | 是否与基本法/公理冲突 |
-| ③ 现实可执行 | 当前文件系统/工具/能力下能否真正执行 |
-| ④ 强制动作配套 | 须配有可强制执行的动作/钩子（状态戳回流/收摊钩子/CI 校验）——仅有文本无钩子=未通过 |
+## Lifecycle
 
-## 分级校验强度
+```
+draft → pending validation → effective → (outdated) → deprecated record
+```
 
-| 级 | 校验要求 |
-|----|---------|
-| L0/L1 | 四检全过+三点判据全齐（最严） |
-| L2/L3 | 四检全过（三点判据作为自检） |
-| L4 | 记录即可（参考/临时） |
+- Effective rules are the single source of truth;
+- Deprecated rules are preserved as records, never deleted;
+- Modifying an effective rule requires the owner's explicit instruction + trace.
 
-## 三点判据（规则无歧义判定）
+## Validator
 
-| 判据 | 问什么 |
-|------|--------|
-| ① 触发点 | 何时被触发？ |
-| ② 执行动作 | 触发后具体做什么？ |
-| ③ 完成判据 | 做到什么算完成？ |
-
-> 三点全齐=规则天然无歧义；歧义=至少一点没写死。
-
-## 校验不通过处理流程
-
-1. **退回修改**：标注未通过检项，退回起草者补全（不产生约束力）；
-2. **标记待补**：允许临时挂起（不生效），补全后重新过闸门；
-3. **禁止临时生效**：未过闸门的规则一律不产生约束力（防止绕过闸门）。
-
-## 溯及力规则
-
-- 新生效规则**默认不溯及既往任务**（仅对新任务生效）；
-- 须溯及既往时，由主人在生效时明示（写入生效记录）。
-
-## 规则冲突判定流程
-
-1. 发现冲突：任何文件引用处不一致即触发；
-2. 判定：按优先级链（IDENTITY 第零条）下位服从上位；
-3. 无法判定：交主人裁决（裁决结果留痕）；
-4. 修复：改唯一源（rules/），引用处同步。
-
-## 机器校验升级
-
-- 验证从"人审"升级为"**CI 机器校验**"：规则落 YAML+Schema，校验器自动检查——开源通用版实际能力见 `rules.yaml` 的 `validator_对应` 节（**声明=实现**·2026-08-26 校准）；
-- 强制动作配套（检项④）须以可落地的钩子/脚本实现——仅有文本无钩子=未通过（开源通用版为通用母本·不含平台专属强制实现·部署实例须自行配置）；
-- `rules.yaml` 的 `validator_对应` 节=哪些自动校验/哪些人工确认的权威映射。
+Run `python3 tools/validator.py` to verify structure, core files, YAML schema, and rule-reference integrity; `--memory` mode checks memory layers and append-only hashes (in a deployed workspace). The actual capability list is declared in `rules.yaml` → `validator_对应` (declaration = implementation, calibrated 2026-08-26).
 
 ---
 
-*GOAA 规则层 · Rule Effect-Gate · 唯一版本 1.0 · 2026-08-19*
+*GOAA rules · Generic V1.0 EN · Single version · 2026-08-26*

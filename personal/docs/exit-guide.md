@@ -1,40 +1,40 @@
-﻿# 退出指南（Exit Guide）· 你来去自由
+﻿# Exit Guide · Come and Go Freely
 
-> **我们本来就住在你的文件夹里**——这是 GOAA 与云端/闭源产品最根本的区别：你的所有记忆、规则、档案，都是你自己电脑上的纯文本文件，随时可看、可带走、可迁移。
+> **We already live in your folder** — this is the most fundamental difference between GOAA and cloud/proprietary products: all your memories, rules, and profiles are plain-text files on your own computer — viewable, portable, and migratable anytime.
 
 ---
 
-## 一、你的数据在哪
+## 1. Where Your Data Lives
 
-| 内容 | 位置（部署区内） | 格式 |
+| Content | Location (within the deployment area) | Format |
 |------|-----------------|------|
-| 主人档案 | `identity/主人档案.md` | Markdown 纯文本 |
-| 蒸馏（记忆摘要） | `_Memory/distill/` | Markdown 纯文本 |
-| 对话记录 | `_Memory/history/对话记录/` | Markdown 纯文本 |
-| 日志 | `_Memory/history/日志/` | Markdown 纯文本 |
-| 灵魂备份 | `_Memory/history/灵魂备份/` | Markdown 纯文本 |
-| 规则与机制 | `constitution/` `rules/` `mechanisms/` | Markdown/YAML 纯文本 |
+| Owner profile | `identity/owner-profile.md` | Markdown plain text |
+| Distillation (memory digest) | `_Memory/distill/` | Markdown plain text |
+| Conversation records | `_Memory/history/对话记录/` | Markdown plain text |
+| Daily log | `_Memory/history/日志/` | Markdown plain text |
+| Soul backups | `_Memory/history/灵魂备份/` | Markdown plain text |
+| Rules & mechanisms | `constitution/` `rules/` `mechanisms/` | Markdown/YAML plain text |
 
-> **所有文件均为纯文本 Markdown 格式，无需任何专用工具即可打开、读取、迁移——数据完全由你掌控。**
+> **All files are plain-text Markdown — openable, readable, and migratable without any proprietary tool. Your data is fully in your hands.**
 
-## 二、怎么换 AI 基底
+## 2. How to Switch AI Foundations
 
-记忆在文件里，不在模型里——换任何 AI 助手（WorkBuddy / Claude / ChatGPT / 本地模型）都能无缝迁移：
+Memory lives in files, not in the model — switching to any AI assistant (WorkBuddy / Claude / ChatGPT / local models) migrates seamlessly:
 
-1. 把部署区文件夹指给新的 AI 助手（作为工作区）；
-2. 对新的 AI 说："按启动序列装载我的体系"（见 `mechanisms/startup.md`）；
-3. 新实例读取蒸馏+档案，接着记忆继续协作——**记忆无缝续传，不因换基底而丢失**。
+1. Point the new AI assistant at the deployment folder (as its workspace);
+2. Tell the new AI: "Load my system per the startup sequence" (see `mechanisms/startup.md`);
+3. The new instance reads the distillation + profile and continues collaborating from memory — **memory carries over seamlessly; nothing is lost by switching foundations.**
 
-## 三、怎么停用 / 删除
+## 3. How to Pause / Delete
 
-- **暂停**：不对话即可——体系安静存在，随时可回来；
-- **备份后删除**：先复制部署区文件夹到安全位置 → 删除部署区 → 全部结束；
-- **只迁移不删除**：按第二节换基底即可。
+- **Pause**: just stop talking — the system rests quietly; you can come back anytime;
+- **Back up then delete**: copy the deployment folder to a safe location → delete the deployment folder → done;
+- **Migrate only, no deletion**: switch foundations per Section 2.
 
-## 四、一句话承诺
+## 4. The One-Line Promise
 
-> **敢让你走的软件，才值得你留下。** 我们的记忆是你的文件——文件在你手里，你永远保有全部主动权。
+> **Software that dares to let you leave is software worth staying for.** Our memory is your files — the files are in your hands, and you keep full initiative forever.
 
 ---
 
-*GOAA · 退出指南 · 唯一版本 1.0 · 2026-08-26*
+*GOAA · Exit Guide · Single version 1.0 · 2026-08-26*

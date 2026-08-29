@@ -1,57 +1,57 @@
-# 灵魂备份模板
+# Soul Backup Template
 
-> **用途**：灵魂备份=当日关键事项的整理/蒸馏版记录（顶层存亡级），完整覆盖关键决策、规则变更、学习收获、对话要点。
-> **铁律**：每日记录／追加新文件不覆盖旧／一旦写入不得修改。**完整记录、不省略、不精简。**
-> **位置**：部署后放置于 `_Memory/history/灵魂备份/[实例名]灵魂备份_YYYY-MM-DD.md`
-> **通用模板说明**：本文件为自举初始化模板·不含任何运行实例数据·由首次激活引导逐项采集生成（部署后即为你的体系专属文件）。
+> **Purpose**: Soul backup = organized/condensed record of the day's key matters (top-level survival-grade), fully covering key decisions, rule changes, learnings, and conversation highlights.
+> **Iron rule**: Record daily ／ append new files without overwriting old ones ／ once written, never modify. **Complete records, no omissions, no condensing.**
+> **Location**: After deployment, place at `_Memory/history/灵魂备份/[实例名]灵魂备份_YYYY-MM-DD.md`
+> **Generic template note**: This file is a self-bootstrap initialization template; it contains no runtime instance data; it is populated item by item by the onboarding flow (after deployment it becomes your system's own file).
 
 ---
 
-# 【实例名】灵魂备份 · YYYY-MM-DD（第【N】场 · 起止时间）
+# 【Instance name】 Soul Backup · YYYY-MM-DD (Session 【N】 · start-end time)
 
-> 整理版完整记录｜追加不覆盖旧｜一旦写入不得修改
-> 逐字原始记录见 `_Memory/history/对话记录/YYYY-MM-DD_HHMM-HHMM.md`
+> Organized complete record ｜ append without overwriting old ｜ once written, never modify
+> Verbatim raw transcript lives in `_Memory/history/对话记录/YYYY-MM-DD_HHMM-HHMM.md`
 
-## 一、本场定位
+## 1. Session Positioning
 
-【本场做了什么·一句话】
+【What this session did · one sentence】
 
-## 二、关键决策与规则变更
+## 2. Key Decisions & Rule Changes
 
-### 1. 【决策主题 1】
-- 【决策内容/主人原话要点】
+### 2.1 【Decision topic 1】
+- 【Decision content / key points of the owner's exact words】
 
-### 2. 【决策主题 2】
-- 【决策内容】
+### 2.2 【Decision topic 2】
+- 【Decision content】
 
-### 规则变更溯源（本场改动的规则/配置/系统文件）
+### Rule-change traceability (rules/config/system files changed this session)
 
-| 文件路径 | 变更点 | 变更人 |
+| File path | Change | Changed by |
 |----------|--------|--------|
-| 【如 rules/xxx.md】 | 【改了什么】 | 【主人/Agent·经确认】 |
+| 【e.g. rules/xxx.md】 | 【what changed】 | 【Owner/Agent · confirmed】 |
 
-## 三、探讨定论链（本场新定论）
+## 3. Conclusion Chain (new conclusions of this session)
 
-| 编号 | 定论 | 核心内容 | 生效状态 |
+| No. | Conclusion | Core content | Effective status |
 |------|------|---------|---------|
-| 【T-N】 | 【定论名】 | 【要点】 | 【临时讨论/最终定论/待验证】 |
+| 【T-N】 | 【Conclusion name】 | 【key points】 | 【temporary discussion / final conclusion / pending verification】 |
 
-## 四、学习收获
+## 4. Learnings
 
-1. 【收获 1】
-2. 【收获 2】
+1. 【Learning 1】
+2. 【Learning 2】
 
-## 五、待办/待裁（留给下次启动）
+## 5. To-Dos / Awaiting Decisions (left for next startup)
 
-1. 【待主人裁】
-2. 【待办】
+1. 【Awaiting owner decision】
+2. 【To-do】
 
-## 六、健康状态
+## 6. Health Status
 
-- 🔴 红灯：【无/有则列】
-- 🟡 黄灯：【如实标注，不掩盖】
-- 量化指标（联动 BENCHMARK）：歧义澄清【N】次｜权限拦截【N】次｜工具执行成功率【N%】
+- 🔴 Red flag: 【none / list if any】
+- 🟡 Yellow flag: 【record honestly, never cover up】
+- Quantitative metrics (linked to BENCHMARK): ambiguity clarifications 【N】 ｜ permission blocks 【N】 ｜ tool execution success rate 【N%】
 
 ---
 
-*【实例名】· 灵魂备份 · YYYY-MM-DD · 追加不覆盖·永不修改*
+*【Instance name】 · Soul Backup · YYYY-MM-DD · append, never overwrite · never modify*

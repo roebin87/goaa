@@ -1,90 +1,83 @@
-# 记忆装载规则（memory-loading）
+﻿# Mechanism · Memory Loading & Recovery (Generic · V1.1 EN)
 
-> **定位**：机制层·记忆分级加载的完整执行规则——解决"启动加载什么、运行中怎么召回、上下文满了怎么办"。
-> **依据**：IDENTITY 基本法「轻装启动」+ 记忆分层（蒸馏/史书/索引）四层契约。
-> **外部审议**：2026-08-19 第三份审议建议①（三份审议第三次点到记忆加载缺口）。
-> **路径视图**：本文路径=**身体区视图**（本工作区即身体·单轨 2026-08-27）——`constitution/` `identity/` `_Memory/` 均相对身体根（zh/ 或 en/）；仓库内即身体，无需二次部署映射。
-> **版本**：唯一版本 1.0
+> The complete rules for layered memory loading — "what to load at startup, how to recall during work, what happens when context fills up".
+> **V1.1 EN** (2026-08-26 · includes memory recovery flow & layered management).
+
+## 1. Default loading at startup (resident)
+
+| # | Content | Source |
+|---|---------|--------|
+| 1 | Constitution (three documents) | `constitution/` |
+| 2 | Identity (three files + profile) | `identity/` |
+| 3 | Global distillation | `_Memory/distill/蒸馏_当前.md` |
+| 4 | Core mechanisms (startup/wrap-up/onboarding/problem-gate/ambiguity) | `mechanisms/` |
+| 5 | Project distillation (if working inside a project) | `projects/项目名/_蒸馏/` |
+
+## 2. Memory recovery flow (new conversation / new device)
+
+Recovery chain for **any new conversation** (or switching AI / device) — the AI restores "who you are, what we've been doing":
+
+1. **Owner profile** (`identity/owner-profile.md`) → who the owner is / preferences / boundaries
+2. **Distillation** (`_Memory/distill/蒸馏_当前.md`) → what we've been doing / most important recent things
+3. **Recent log** (`_Memory/history/日志/` latest day) → where we left off
+4. **Memory index** (`_Memory/index/`) → locate deeper topic files if needed
+5. Detail only when needed → **conversation records / soul backup** (verbatim / organized — heaviest, read last)
+
+> Recovery complete = the AI can say "who you are + what we've been doing + where we left off" — continuity confirmed.
+
+## 3. Layered memory management (five file types)
+
+| File | Written when | Queried how | Nature |
+|------|-------------|-------------|--------|
+| Distillation (`distill/`) | Every wrap-up, overwrite | Always read at startup | Continuity core |
+| Log (`history/日志/`) | Every session, append | Latest day at recovery; history for tracing | Chronicle · append-only |
+| Conversation records (`history/对话记录/`) | Realtime during conversation | Only for verbatim detail | Survival-level · append-only |
+| Soul backup (`history/灵魂备份/`) | Daily wrap-up | Day review | Survival-level · append-only |
+| Sayings (`index/论语/`) | During conversation, with owner confirmation | Topic index | Thought sediment |
+
+## 4. Triggered recall during work
+
+**When information is insufficient, read in order (concentrated → complete)**:
+```
+index first (_Memory/index/) → locate
+then soul backup (that day) → key points
+finally conversation records (verbatim, heaviest) → full detail
+```
+Light-first: index over backup, backup over transcript.
+
+## 5. Context threshold control
+
+- When total tokens hit the warning line (suggest ~70% of context):
+  1. Keep: constitution + identity + distillation (high-priority memory)
+  2. Unload: low-priority content (old conversations / logs / examples)
+  3. Ensure everything is on disk before unloading — unloading = dropping context, never deleting files
+- Unloaded content is on file and recallable anytime — files exist, the system exists.
+
+## 6. Archiving & decay (fighting memory entropy)
+
+- **Cold archive**: history older than N months moves to `_Memory/history/archive/` (move, never delete);
+- **Conclusion sedimentation**: conclusions that recur across sessions and get cited repeatedly → trigger human confirmation → promote to the rules layer (rules/ is the single source of truth);
+- **Index pruning**: `_Memory/index/` updated periodically (drop dead pointers, merge duplicates).
+
+## 7. Exception fallbacks (auto-fallback · no silent failure)
+
+| Exception | Fallback |
+|-----------|----------|
+| File write fails (disk full / permission) | Stop immediately + red-light report to owner |
+| Integrity check fails (memory file tampered) | Alarm at startup, mark the file, refuse to load it |
+| Distillation overwrite fails | Auto-rollback to previous backup (`蒸馏_当前.md.bak-*`) |
+
+## 8. Tamper resistance (validated via validator)
+
+- Survival-level files (records/backup/log) record hash + count markers on generation;
+- `tools/validator.py --memory` periodically verifies memory structure & file presence; changes = red-light alarm (audit iron rule).
+
+## 9. Global vs project memory priority
+
+- **Global memory = baseline** (constitution/rules/distillation);
+- **Project memory may be stricter, never looser** (cannot break global baseline);
+- Conflicts resolve to global; if undecidable, ask the owner.
 
 ---
 
-## 一、启动默认加载（常驻）
-
-| 顺序 | 内容 | 来源 |
-|------|------|------|
-| 1 | 基本法（宪法三件） | `constitution/` |
-| 2 | 身份（三文件+档案+主人档案） | `identity/` |
-| 3 | 全局蒸馏 | `_Memory/distill/蒸馏_当前.md` |
-| 4 | 本岗核心机制（启动/收摊/立项/歧义） | `mechanisms/` |
-| 5 | 当前项目蒸馏（若在项目内工作） | `projects/项目名/_蒸馏/` |
-
-## 一·二、记忆恢复流程（V1.1 新增 · 新对话/换设备如何恢复）
-
-**任何新对话（或换 AI/换设备）后的恢复链路**——AI 按此顺序恢复"你是谁、我们聊过什么"：
-
-1. **读主人档案**（`identity/主人档案.md`）→ 恢复"主人是谁/偏好/边界"；
-2. **读蒸馏**（`_Memory/distill/蒸馏_当前.md`）→ 恢复"最近在做什么/最重要的事"；
-3. **读最近日志**（`_Memory/history/日志/` 最近一日）→ 恢复"上次聊到哪"；
-4. **读记忆索引**（`_Memory/index/`）→ 定位需要深入的话题档案；
-5. 需要细节时 → 再读**对话记录/灵魂备份**（逐字/整理版·最重最后读）。
-
-> 恢复完成标志：AI 能说出"你是谁 + 最近在做什么 + 上次聊到哪"——即接续成功（收摊后开新对话的接续验证标准）。
-
-## 一·三、记忆分层管理（五类文件 · 写入时机与查询路径）
-
-| 文件 | 写入时机 | 查询路径 | 性质 |
-|------|---------|---------|------|
-| 蒸馏（`distill/蒸馏_当前.md`） | 每次收摊覆盖 | 启动必读·最常用 | 接续核心 |
-| 日志（`history/日志/`） | 每场追加 | 恢复时读最近一日·追溯读历史 | 史书·追加不删 |
-| 对话记录（`history/对话记录/`） | 对话实时落盘 | 需逐字细节时读 | 存亡级·只追加 |
-| 灵魂备份（`history/灵魂备份/`） | 每日收摊 | 当日要点回顾 | 存亡级·只追加 |
-| 论语（`index/论语/`） | 日常捕捉·主人确认 | 主题索引查阅 | 思想沉淀 |
-
-## 二、运行中触发召回
-
-**信息不足时按序取读（从浓缩到完整）**：
-
-```
-先查索引（_Memory/index/ 或项目 _索引/）  →  定位到
-再读灵魂备份（当日/相关日）              →  取要点
-最后加载对话记录（逐字原始·最重）         →  取全量
-```
-
-**取读原则**：能用索引解决不读备份；能用备份解决不读逐字——轻装优先。
-
-## 三、上下文阈值控制
-
-- 总 Token 触达警戒线（【部署时定·建议上下文 70%】）时：
-  1. 优先保留：基本法+身份+蒸馏（高优先级记忆）
-  2. 自动卸载：低优先级内容（历史对话/日志/示例）
-  3. 卸载前确保已落盘（史书层），卸载=只卸上下文不删文件
-- 需要被卸载的内容已在文件层，随时可召回——文件在则体系在。
-
-## 四、记忆归档与衰减（对抗记忆熵增）
-
-- **冷归档**：【N 个月】前的历史对话/日志转冷归档目录（`_Memory/history/archive/`），不删只移；
-- **定论沉淀**：连续多场生效、被反复引用的临时定论 → 触发人工确认 → 确认后沉淀为规则层正式条目（rules/ 为唯一数据源），从记忆层上升为规则层，避免重复占用记忆空间；
-- **索引精简**：`_Memory/index/` 定期更新（删除失效指针/合并重复主题），保留精华。
-
-## 五、异常场景兜底（机制自动兜底·禁静默失败）
-
-| 异常 | 兜底动作 |
-|------|---------|
-| 文件写入失败（磁盘满/权限不足） | 立即终止操作 + 红灯上报主人，禁止静默失败 |
-| 完整性校验不通过（史书文件被篡改） | 启动时自动告警，标记异常文件，禁止直接加载使用 |
-| 蒸馏覆盖失败 | 自动回滚到上一版备份文件（`蒸馏_当前.md.bak-*`），保证记忆连续性不中断 |
-
-## 六、防篡改校验（对接 validator）
-
-- 史书层文件（对话记录/灵魂备份/日志）生成时记哈希+条数标记；
-- validator 定期校验历史文件完整性（哈希比对），发现改动=红灯告警（审计铁律）。
-
-## 七、全局 vs 项目记忆优先级
-
-- **全局记忆=底线**（宪法/规则/蒸馏）；
-- **项目记忆可在全局范围内收紧**（项目规则更严可以），**不可放宽**（不能突破全局底线）；
-- 冲突时以全局为准，无法判定交主人裁决。
-
----
-
-*【体系名】· 记忆装载规则 · 唯一版本 1.0 · 2026-08-19 外部审议落地*
+*GOAA mechanism · Generic V1.1 EN · Single version · 2026-08-26*

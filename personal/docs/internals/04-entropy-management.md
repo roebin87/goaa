@@ -1,164 +1,58 @@
-# 04 · GOAA 双源熵治理工作原理
+# 04 · GOAA Dual-Source Entropy Governance Working Principles
 
-> 本文档公开 GOAA 双源熵治理框架的设计原理与工作流程。完整实现细节暂未开源，但设计原理完全公开。
+> This document publishes the design principles and workflows of GOAA's dual-source entropy governance framework.
 
-## 一、什么是双源熵
+## 1. What is Dual-Source Entropy
 
-GOAA 认为，人机协作体系的无序化（熵增）来自两个独立但相互传导的来源：
+GOAA holds that disorder (entropy increase) in human-machine collaboration systems comes from two independent but mutually transductive sources:
 
-```
-┌──────────────────────┐     传导     ┌──────────────────────┐
-│   技术熵（Technical   │ ──────────→ │   认知熵（Cognitive  │
-│   Entropy）           │             │   Entropy）           │
-│                      │ ←────────── │                      │
-│  AI 执行层的无序化    │   反向放大   │  人机认知差导致的     │
-│  （模型飘忽/规则衰减/  │             │  无序化（人的认知更新 │
-│   技术摩擦/上下文丢失）│             │  跟不上体系演化）     │
-└──────────────────────┘             └──────────────────────┘
-         ↓                                      ↓
-   确定性治理（降速）                    人机协作治理（去根）
-   （PIG 闸门/约束重注入/                （常态化裁决/共识固化/
-    校验器/物理钩子）                     认知更新/对齐资本化）
-```
+- **Technical Entropy**: Disorder at AI execution layer, from technical system uncertainty (model drift/rule decay/technical friction/context loss/execution drift)
+- **Cognitive Entropy**: Disorder from human-machine cognitive gap — human cognition updates can't keep up with system evolution speed (cognitive lag/semantic drift/consensus decay/rule bloat/goal drift)
 
-## 二、技术熵（Technical Entropy）
+**This is GOAA's original concept**: Previous research (e.g., Liu 2026 Entropy Principle) only focused on technical entropy; no one systematically discussed cognitive entropy.
 
-### 2.1 定义
+## 2. Technical Entropy Governance: Deterministic Governance (Speed Reduction)
 
-技术熵是 AI 执行层的无序化，来源于技术系统本身的不确定性。
+Technical entropy governance goal is **reducing growth rate**, not complete elimination (impossible, as LLMs are inherently non-deterministic).
 
-### 2.2 来源
+**Tools**: PIG gates (physical-information-governance three-layer gates), constraint reinjection (periodically reinject core rules in long conversations), validator (structural check/semantic sync/reference check/Schema compliance), physical hooks (HOOKS at startup/shutdown/rule effect), file-based memory (write rules/memory to files, not model context).
 
-| 来源 | 说明 | 示例 |
-|------|------|------|
-| 模型飘忽 | LLM 输出的非确定性 | 同一条指令，两次执行结果不同 |
-| 规则衰减 | 长对话中规则被遗忘 | 对话进行到第 50 轮，第 1 轮设定的规则被遗忘 |
-| 技术摩擦 | 文件系统/索引/API 层的延迟和不一致 | MCP 索引更新延迟，AI 读到旧文件 |
-| 上下文丢失 | 会话切换、模型切换导致的上下文丢失 | 换了一个 AI 平台，之前的对话记录全没了 |
-| 执行漂移 | AI 在执行过程中偏离原始指令 | 指令是"整理文件"，AI 自行决定删除"无用"文件 |
+**Effect**: Technical entropy growth rate reduced, but not to zero. System still needs regular maintenance and calibration.
 
-### 2.3 治理方式：确定性治理（降速）
+## 3. Cognitive Entropy Governance: Human-Machine Collaboration (Root Removal)
 
-技术熵的治理目标是**降低速率**，不是完全消除（完全消除不可能，因为 LLM 本质是非确定性的）。
+Cognitive entropy governance goal is **root removal** — reduce human-machine cognitive gap from the root, not just reduce rate.
 
-**治理工具**：
-- **PIG 闸门**（物理-信息-治理三层闸门）：在关键节点强制校验
-- **约束重注入**：在长对话中周期性重注入核心规则和约束
-- **校验器**（validator.py）：结构校验、语义同步、引用检查、Schema 合规
-- **物理钩子**（HOOKS）：启动/收摊/规则生效时的强制流程
-- **文件化记忆**：将规则和记忆写入文件，不依赖模型上下文
+**Tools**: Normalized adjudication (humans regularly participate in governance, keeping cognition updated — not exception fallback, but fixed环节); consensus consolidation (each adjudication result solidified to distill/analects, ensuring no consensus decay); cognitive update mechanism (analects环节 at shutdown, forcing human review and confirm important decisions); rule slimming (non-additive principle + rule retirement mechanism, against rule bloat); alignment capitalization (turn cognitive alignment from repeated overhead into cumulative assets).
 
-**效果**：技术熵的增长速率被降低，但不会归零。体系仍然需要定期维护和校准。
+**Effect**: Cognitive entropy governed from root — human cognition stays synchronized with system, consensus solidified no decay, rules kept slim and manageable.
 
-## 三、认知熵（Cognitive Entropy）
+## 4. Entropy Sink and Negentropy Injection
 
-### 3.1 定义
+### 4.1 Entropy Sink: File-Based Four-Layer Memory
+GOAA's file-based four-layer memory system is the system's "entropy sink" — all disorder ultimately precipitates into files, governed and digested.
 
-认知熵是人机认知差导致的无序化——人的认知更新跟不上体系的演化速度，导致人与 AI 之间的认知差距越来越大。
+**Why file system is entropy sink**: Files are deterministic (written in, won't change unless explicitly modified); files are auditable (history traceable); files are portable (not dependent on specific model/platform); files are human cognitive extension (humans can review and modify anytime).
 
-**这是 GOAA 的原创概念**：之前的研究（如 Liu 2026 的 Entropy Principle）只关注技术熵，没有人系统论述认知熵。
+### 4.2 Negentropy Injection: Human Adjudication
+Human normalized adjudication is the system's "negentropy injection" — humans inject order, consensus, direction into the system, against entropy increase.
 
-### 3.2 来源
+**Why human adjudication is negentropy injection**: Human decisions are deterministic (once made, become deterministic rules); human consensus is directional (provides goals and boundaries for system); human cognitive updates are adaptive (humans can adjust rules based on new situations).
 
-| 来源 | 说明 | 示例 |
-|------|------|------|
-| 认知滞后 | 体系演化速度 > 人的认知更新速度 | 架构已经迭代到 2.0，人还在用 1.0 的理解做决策 |
-| 语义漂移 | 同一个概念，人和 AI 的理解逐渐偏离 | "重要"这个词，人认为是"影响架构"，AI 理解为"影响当前任务" |
-| 共识衰减 | 之前达成的共识被遗忘或误解 | 上周决定的"不删除任何文件"，这周 AI 自行删除了"临时文件" |
-| 规则膨胀 | 规则越来越多，人无法全部掌握 | 100 条规则，人只记得 20 条，剩下 80 条形同虚设 |
-| 目标偏移 | 体系的实际运行目标偏离人的初始目标 | 初始目标是"帮我写书"，运行 3 个月后变成"维护一个复杂的治理体系" |
+**This is the entropy explanation for "high human-side weight is cornerstone, not cost"**: Human adjudication is not extra cost; it's the only source of system negentropy. Without human adjudication, system only moves toward disorder (entropy increase); self-ordering impossible.
 
-### 3.3 治理方式：人机协作治理（去根）
+## 5. Alignment Capitalization
 
-认知熵的治理目标是**去根**——从根源上减少人机认知差，而不是仅仅降低速率。
+**Definition**: GOAA's original concept — turn cognitive alignment (human-AI reaching consensus) from "overhead repeated every time" into "cumulative, reusable, value-adding asset."
 
-**治理工具**：
-- **常态化裁决**：人定期参与治理，保持对体系的认知更新（不是异常兜底，是固定环节）
-- **共识固化**：每次裁决的结果固化为蒸馏层和论语，确保共识不衰减
-- **认知更新机制**：收摊时的"论语"环节，强制人回顾和确认重要决策
-- **规则瘦身**：非加不可原则+规则退役机制，对抗规则膨胀
-- **对齐资本化**：将认知对齐从重复开销转为可累积资产（见第五节）
+**Traditional vs GOAA**:
+- Traditional: Cognitive alignment must redo every conversation (overhead); consensus lost when conversation ends; rules must re-teach when switching AI; marginal cost constant (linear)
+- GOAA: Alignment results solidified to distill/analects (assets); consensus permanently recorded, append-only; rules are files, directly load when switching AI; longer use → more alignment assets → marginal cost decreasing (compound interest)
 
-**效果**：认知熵被从根源上治理——人的认知保持与体系同步，共识被固化不衰减，规则保持精简可掌握。
+**Economic significance**: Explains GOAA's cost advantage — infrastructure cost approaches zero (file system + consumer computer); alignment assets continuously accumulate (longer use, AI understands you better); marginal cost decreasing (day 1 highest, day 100 lowest); assets portable (switch AI platform, alignment assets go with you).
 
-## 四、熵汇（Entropy Sink）与负熵注入
-
-### 4.1 熵汇：文件化四层记忆
-
-GOAA 的文件化四层记忆体系是体系的"熵汇"——所有的无序化最终都沉淀到文件中，被治理和消化。
-
-```
-技术熵 ──→ 校验器/物理钩子 ──→ 规则层/快照层 ──→ 熵汇（文件系统）
-认知熵 ──→ 常态化裁决/共识固化 ──→ 蒸馏层/论语 ──→ 熵汇（文件系统）
-```
-
-**为什么文件系统是熵汇**：
-- 文件是确定性的（写进去就不会变，除非被显式修改）
-- 文件是可审计的（历史记录可追溯）
-- 文件是可迁移的（不依赖特定模型或平台）
-- 文件是人的认知延伸（人可以随时查阅和修改）
-
-### 4.2 负熵注入：人类裁决
-
-人类的常态化裁决是体系的"负熵注入"——人将秩序、共识、方向注入体系，对抗熵增。
-
-```
-人的判断力/决策/共识 ──→ 常态化裁决 ──→ 规则固化/共识沉淀 ──→ 体系有序度提升（负熵）
-```
-
-**为什么人裁是负熵注入**：
-- 人的决策是确定性的（一旦做出，就是确定的规则）
-- 人的共识是方向性的（为体系提供目标和边界）
-- 人的认知更新是适应性的（人可以根据新情况调整规则）
-
-**这就是"人侧权重高是基石不是成本"的熵学解释**：人裁不是额外成本，是体系负熵的唯一来源。没有人类裁决，体系只会走向无序（熵增），不可能自我有序化。
-
-## 五、对齐资本化（Alignment Capitalization）
-
-### 5.1 定义
-
-对齐资本化是 GOAA 的原创概念：将认知对齐（人和 AI 达成共识）从"每次都要重复的开销"转为"可累积、可复用、可增值的资产"。
-
-### 5.2 传统模式 vs GOAA 模式
-
-| 维度 | 传统模式 | GOAA 模式 |
-|------|---------|----------|
-| 认知对齐 | 每次对话都要重新对齐（开销） | 对齐结果固化为蒸馏层/论语（资产） |
-| 共识衰减 | 对话结束，共识就丢失 | 共识永久记录，只追加不删改 |
-| 规则复用 | 换个 AI 就要重新教 | 规则是文件，换 AI 直接装载 |
-| 边际成本 | 每次使用成本不变（线性） | 用得越久，对齐资产越多，边际成本递减（复利） |
-
-### 5.3 对齐资产的构成
-
-| 资产类型 | 存储位置 | 价值 |
-|---------|---------|------|
-| 主人档案 | identity/主人档案.md | AI 对主人的理解（偏好/习惯/边界） |
-| 规则体系 | rules/ | 人和 AI 达成的行为规则共识 |
-| 蒸馏精华 | _Memory/distill/ | 每次会话的决策共识和关键记忆 |
-| 论语记录 | _Memory/history/论语/ | 重要决策的永久记录（只追加） |
-| 宪法原理 | constitution/ | 体系的底层共识（价值观/设计原理） |
-
-### 5.4 经济意义
-
-对齐资本化解释了 GOAA 的成本优势：
-- **基础设施成本趋近于零**（文件系统+消费级电脑）
-- **对齐资产持续累积**（用得越久，AI 越懂你）
-- **边际成本递减**（第 1 天成本最高，第 100 天成本最低）
-- **资产可迁移**（换 AI 平台，对齐资产跟着走）
-
-这就是"37.9 亿令牌/555.6 元/30 天"的经济学解释——不是令牌便宜，是对齐资产在持续增值，抵消了运行成本。
-
-## 六、设计原理与学术对应
-
-| 熵治理设计 | 学术论文对应 | 核心概念 |
-|-----------|------------|---------|
-| 双源熵区分 | 双源熵增框架（论文 §5） | 技术熵+认知熵，统一治理 |
-| 认知熵定义 | 认知熵（论文 §3.3/§5.1） | GOAA 原创，人机认知差导致的无序化 |
-| 熵汇（文件化记忆） | 熵汇与负熵注入（论文 §5.3） | 文件系统是体系的熵汇 |
-| 负熵注入（人裁） | 负熵注入（论文 §5.3） | 人类裁决是体系负熵的唯一来源 |
-| 对齐资本化 | 对齐资本化（论文 §5.4） | GOAA 原创，认知对齐从开销转为资产 |
-| 确定性治理 | 技术熵治理（论文 §5.2） | PIG 闸门/约束重注入/校验器 |
+This is the economic explanation for "3.79 billion tokens / 555.6 yuan / 30 days" — not that tokens are cheap, but that alignment assets continuously appreciate, offsetting running cost.
 
 ---
 
-*GOAA · 双源熵治理工作原理 · 基于学术论文 DOI:10.5281/zenodo.22165301 整理 · 2026-08-28*
+*GOAA · Dual-Source Entropy Governance · Based on academic paper DOI:10.5281/zenodo.22165301 · 2026-08-28*

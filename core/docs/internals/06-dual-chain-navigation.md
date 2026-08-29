@@ -1,150 +1,150 @@
-# 06 · 双链导航：文件即本体的连接方案（完整版）
+# 06 · Dual-Chain Navigation: The Connection Scheme of File-as-Ontology (Full Version)
 
-> 本文档是 GOAA 神经流转的**导航维度完整版**——与 05 篇（运行循环全景·时间维）互补，本篇聚焦**文件连接空间**（空间维）。核心思想一句话：**文件就是本体，双链就是导航**——本体的认知与共识落在文件里，双链只做导航分内事（指向、可视、可查），不替代任何执行主体。
+> This document is the **navigation-dimension full version** of GOAA's neural flow — complementary to document 05 (runtime-loop panorama, time dimension), this one focuses on the **file-connection space** (space dimension). Core idea in one sentence: **files are the ontology, dual-chains are the navigation** — the system's cognition and consensus live in files; dual-chains only do navigation's proper work (pointing, visualizing, searching), never replacing any execution subject.
 >
-> 05 篇为简化公开版，本篇为完整版：含三层导航模型、六类连接路径、五条核心导航线路、节点清单、导航健康规则（死链=0 唯一强制）。
+> Document 05 is a simplified public version; this document is the full version: three-layer navigation model, six connection-path types, five core navigation routes, node inventory, and navigation-health rules (dead-link = 0 as the sole mandatory check).
 
 ---
 
-## 一、导航模型（三层 · 全部为导航视角）
+## 1. Navigation Model (Three Layers · All Navigation-Perspective)
 
 ```
-┌─ 节点层（导航点 = 文件）───────────────────────┐
-│  按域分类：宪法 / 身份 / 规则 / 机制 / 记忆 / 工具 / 辅助 │
-├─ 连接层（导航路径 = 双链 / 引用）─────────────────┤
-│  6 类路径（见第三节）· 路径 = 关系 ≠ 堆砌          │
-├─ 通路层（导航线路 = 机制运转链）──────────────────┤
-│  启动 → 运转 → 收摊 → 接续 · 检验 / 裁决回路      │
-└──────────────────────────────────────────┘
+┌─ Node Layer (navigation points = files) ───────────────┐
+│  Domains: constitution / identity / rules / mechanisms / memory / tools / auxiliary │
+├─ Connection Layer (navigation paths = dual-chains / references) ─┤
+│  6 path types (Section 3) · path = relation ≠ pile-up   │
+├─ Route Layer (navigation routes = mechanism operation chains) ──┤
+│  Startup → Operation → Shutdown → Continuation · Inspection / Adjudication loops │
+└──────────────────────────────────────────────────────┘
 ```
 
-**导航边界**：导航只做分内事——**指向、可视、可查**；记忆维护、规则执行等由各执行主体按各自机制完成，**双链不代执行**（打开导航 ≠ 代替开车）。
+**Navigation boundary**: navigation only does its proper work — **pointing, visualizing, searching**; memory maintenance, rule execution, etc. are completed by each execution subject under its own mechanism — **dual-chains do not execute** (opening a map ≠ driving the car).
 
 ---
 
-## 二、核心公理：文件 = 本体
+## 2. Core Axiom: File = Ontology
 
-GOAA 的体系基本粒子是文件（文件本体公理，见学术论文 §3.2）：
+The basic particle of the GOAA system is the file (File Ontology axiom, see academic paper §3.2):
 
-- 规则写在文件里 → 可重载、可审计、可版本化；
-- 记忆落在文件里 → 可检索、可蒸馏、可追溯；
-- 共识固化成文件 → 可对照、可校验、可传承。
+- Rules written in files → reloadable, auditable, versionable;
+- Memory persisted in files → searchable, distillable, traceable;
+- Consensus solidified as files → comparable, verifiable, inheritable.
 
-**索引就是体系的神经网络本体**——文件是节点，索引是神经，双链是神经通路。本方案说明本体长什么样、导航怎么走。
+**The index is the system's neural-network ontology** — files are nodes, the index is the neural network, dual-chains are the neural pathways. This scheme explains what the ontology looks like and how navigation works.
 
 ---
 
-## 三、连接设计（导航路径 6 类 · 语义判定归人裁）
+## 3. Connection Design (6 Navigation Path Types · Semantic Judgment by Humans)
 
-| # | 路径类型 | 含义 | 示例 |
+| # | Path Type | Meaning | Example |
 |---|---|---|---|
-| 1 | **权威** | 文件 ↔ 权威清单 | 权威文件索引 ↔ 权威文件（收录路径以结构权威为准） |
-| 2 | **装载** | 启动 ↔ 被装载件 | 启动序列 ↔ 宪法 / 身份 / 蒸馏 |
-| 3 | **校验** | 校验器 ↔ 被校验对象 | 一致性校验 ↔ 全部已生效文件 |
-| 4 | **触发** | 机制间触发 | 写入闸口 → 一致性校验 |
-| 5 | **记忆** | 记忆 ↔ 对应源（导航指向·不代维护） | 蒸馏 ↔ 会话记录 · 项目记忆 ↔ 项目工作区 |
-| 6 | **裁决** | 待裁 ↔ 人裁 | 未闭环事项 ↔ 告警项 |
+| 1 | **Authority** | File ↔ authority list | Authority-file index ↔ authority files (paths follow the structural authority) |
+| 2 | **Loading** | Startup ↔ loaded items | Startup sequence ↔ constitution / identity / distillation |
+| 3 | **Inspection** | Validator ↔ validated objects | Consistency check ↔ all effective files |
+| 4 | **Trigger** | Mechanism-to-mechanism trigger | Write gate → consistency check |
+| 5 | **Memory** | Memory ↔ source (navigation points only, not maintenance) | Distillation ↔ conversation records · project memory ↔ project workspace |
+| 6 | **Adjudication** | Pending ↔ human decision | Unresolved items ↔ alerts |
 
-> **剔除"父子"路径**：目录 ↔ 文件归属是纯物理结构关系，由结构权威的目录树完整承载——双链只承载语义/机制/流程层面的导航关系，不重复建冗余连接（连接非加不可才加）。
+> **"Parent-child" paths excluded**: directory ↔ file ownership is a purely physical structural relationship, fully carried by the structural authority's directory tree — dual-chains only carry semantic/mechanism/process-level navigation relationships, avoiding redundant connections (only add connections when truly needed).
 
-> **路径建立规则**：机器只做**死链 = 0**（导航断点检测·硬指标）；"路径是否有语义 / 是否该建"= **人的判断**——连接建立走 **提案 → 人裁 → 建立** 流程，机器无自动建连权。
-
----
-
-## 四、五条核心导航线路
-
-**线路 A · 装载导航（启动）**
-```
-启动序列 →[[ 宪法 / 身份 / 蒸馏 / 未闭环 ]]（导航指向强制装载件）
-```
-
-**线路 B · 存续导航（收摊）**
-```
-收摊五钩 →[[ 灵魂备份 / 对话记录 / 日志 / 论语 / 蒸馏覆盖 ]]（导航指向存亡级落点）
-```
-
-**线路 C · 检验导航（写入链路）**
-```
-注入物 →[[ 写入校验闸口 ]] →[[ 生效闸门（机械校验 + 人裁）]] → 正式落位 →[[ 权威源注册表 ]] → 一致性周期巡检
-一致性校验 →[[ 已生效文件 ]] →[[ 未闭环 ]]
-```
-> 导航线路完全复现真实运转流程——不为连而连：注入物必须过闸口初检 → 人裁通过 → 生效闸门全量校验 → 正式落位 → 才登记注册表。
-
-**线路 D · 裁决导航（人裁）**
-```
-检出 / 告警 →[[ 未闭环 ]] →（人裁·导航终点）→[[ 生效记录 ]] →[[ 复验 ]]
-```
-
-**线路 E · 权威索引导航（索引权威）**
-```
-权威文件索引（索引权威·权威文件合集清单）
-   →[[ IDENTITY ]]（结构权威·物理路径）
-   →[[ 一级核心强制级 ]] →[[ 二级通用机制级 ]]
-```
-> **双维权威**：结构权威 = 物理位置 / 结构 / 机制逻辑；索引权威 = 权威文件合集清单——维度不同、无矛盾冲突、互为引用（索引收录路径以结构权威为准）。
+> **Path-establishment rule**: machines only do **dead-link = 0** (navigation-break detection, hard metric); "whether a path has semantics / whether it should exist" = **human judgment** — connection establishment follows **proposal → human adjudication → establishment**, machines have no auto-connection authority.
 
 ---
 
-## 五、节点清单（示例 · 按域组织）
+## 4. Five Core Navigation Routes
 
-| 域 | 节点类型 | 代表节点 |
+**Route A · Loading Navigation (Startup)**
+```
+Startup sequence →[[ constitution / identity / distillation / unresolved ]]（points to mandatory loaded items）
+```
+
+**Route B · Continuation Navigation (Shutdown)**
+```
+Shutdown five hooks →[[ soul backup / dialogue records / logs / analects / distillation overlay ]]（points to survival-level destinations）
+```
+
+**Route C · Inspection Navigation (Write Pipeline)**
+```
+Injection →[[ write gate ]] →[[ effectiveness gate (mechanical check + human adjudication) ]] → formal placement →[[ authority-source registry ]] → periodic consistency review
+Consistency check →[[ effective files ]] →[[ unresolved ]]
+```
+> Navigation routes fully reproduce the real operation pipeline — no connections for connection's sake: injections must pass the gate's initial check → human adjudication → full effectiveness-gate validation → formal placement → only then registry registration.
+
+**Route D · Adjudication Navigation (Human Decision)**
+```
+Detection / alert →[[ unresolved ]] →（human adjudication · navigation endpoint）→[[ effect record ]] →[[ re-validation ]]
+```
+
+**Route E · Authority-Index Navigation (Index Authority)**
+```
+Authority-file index (index authority · collection list of authoritative files)
+   →[[ structural authority ]]（physical paths）
+   →[[ tier-1 core mandatory ]] →[[ tier-2 general mechanisms ]]
+```
+> **Dual-dimension authority**: structural authority = physical locations / structure / mechanism logic; index authority = collection list of authoritative files — different dimensions, no conflict, cross-referenced (index paths follow the structural authority).
+
+---
+
+## 5. Node Inventory (Example · Organized by Domain)
+
+| Domain | Node Type | Representative Nodes |
 |---|---|---|
-| 宪法 | 核心原则 | 基本法 / 设计原理 / 设计哲学 / 歧义治理机制 |
-| 身份 | 身份锚定 | 智能体档案 / 用户档案 / 能力边界 |
-| 规则 | 强制规则 | 五级分类 / 生效闸门 / 规则配置 / 系统级强制规则 |
-| 机制 | 执行机制 | 启动序列 / 收摊五钩 / 写入闸口 / 一致性校验 |
-| 记忆 | 记忆载体 | 平台记忆层（四层）/ 项目记忆层 / 未闭环事项 |
-| 工具 | 校验工具 | 校验器 / 权威源注册表 |
-| 辅助 | 导航辅助 | 入口文档 / 结构文档 |
+| Constitution | Core principles | Basic law / design principles / design philosophy / ambiguity-governance mechanism |
+| Identity | Identity anchoring | Agent profile / user profile / capability boundary |
+| Rules | Mandatory rules | Five-level classification / effectiveness gate / rule config / system-level mandatory rules |
+| Mechanisms | Execution mechanisms | Startup sequence / shutdown five hooks / write gate / consistency check |
+| Memory | Memory carriers | Platform memory layer (four layers) / project memory layer / unresolved items |
+| Tools | Validation tools | Validator / authority-source registry |
+| Auxiliary | Navigation aids | Entry documents / structure documents |
 
-> **节点清单不漂移**：结构以结构权威为准、权威以索引权威为准——两份权威不互相越权。
+> **The node inventory does not drift**: structure follows the structural authority, authority follows the index authority — the two authorities do not overstep each other.
 
 ---
 
-## 六、导航健康（校验与维护 · 死链 = 0 唯一强制）
+## 6. Navigation Health (Validation & Maintenance · Dead-Link = 0 Sole Mandatory)
 
-| 项 | 规则 |
+| Item | Rule |
 |---|---|
-| **死链 = 0** | 校验器硬检（红·阻断）——**导航健康度唯一强制校验标准**；图谱可视化仅作辅助展示工具，不纳入强制校验（防形式主义） |
-| 改名全链同步 | 节点改名 = 人裁 + 全链引用同步（结构权威）· 机器仅生成引用更新待办清单 · 人工确认后执行 |
-| 路径语义判定 | **归人裁**（提案 → 人裁 → 建立 · 机器无自动建连权） |
-| 导航零熵增 | 禁绕过写入闸门自建导航点（连接建立 = 文件修改 · 走写入流程） |
-| 机制落地一个、导航补上一个 | 不超前建空链（防死链与无效导航点） |
+| **Dead-link = 0** | Validator hard check (red, blocking) — **the sole mandatory standard for navigation health**; graph visualization is only an auxiliary display tool, not part of mandatory validation (against formalism) |
+| Rename full-chain sync | Node rename = human adjudication + full-chain reference sync (structural authority) · machines only generate a reference-update todo list · executed after human confirmation |
+| Path semantic judgment | **By humans** (proposal → adjudication → establishment · machines have no auto-connection authority) |
+| Navigation zero-entropy | Forbidden to create navigation points bypassing the write gate (connection establishment = file modification · follows the write pipeline) |
+| One mechanism lands, one navigation follows | No premature empty chains (against dead links and invalid navigation points) |
 
 ---
 
-## 七、神经接续（新资产接入导航）
+## 7. Neural Continuation (New Asset Onboarding to Navigation)
 
-新资产接入导航 = 完全嵌入现有资产迁入链路（非独立流程）：
+New assets joining navigation = fully embedded in the existing asset-migration pipeline (not an independent process):
 
 ```
-过写入闸口 → 生效闸门校验 → 人工裁决落位 → 结构权威登记（节点）→ 注册表更新（连接）
-→ 建立对应导航连接（6 类中匹配者 · 提案 → 人裁 → 建立）→ 校验器死链 = 0
+Pass write gate → effectiveness-gate validation → human adjudication & placement → structural-authority registration (node) → registry update (connection)
+→ establish matching navigation connections (among the 6 types · proposal → adjudication → establishment) → validator dead-link = 0
 ```
 
-> 全程复用现有治理闸门，不新增独立审批流程。
+> The existing governance gates are fully reused; no independent approval process is added.
 
 ---
 
-## 八、复用价值（导航资产 · 代际传承）
+## 8. Reuse Value (Navigation Asset · Cross-Generation Inheritance)
 
-1. **导航串联**：机制部件导航指向（主要价值——人看体系怎么转）；
-2. **代际资产**：迁移时导航结构 = 活遗产（节点 / 路径 / 线路可整体继承，文件 = 本体不灭）；
-3. **工程化范本**：理论（宪法层）→ 导航落地（结构权威 + 索引权威）的路径固化；
-4. **接入规范**：新资产迁入按神经接续接入导航（新导航点并入既有网络）。
+1. **Navigation chaining**: mechanism-component navigation pointing (primary value — humans see how the system turns);
+2. **Cross-generation asset**: on migration, the navigation structure = living legacy (nodes/paths/routes wholly inheritable; file = ontology does not die);
+3. **Engineering template**: the path from theory (constitution layer) to navigation implementation (structural authority + index authority);
+4. **Onboarding spec**: new assets join navigation via neural continuation (new points merge into the existing network).
 
 ---
 
-## 九、与简化版（05 篇）的关系
+## 9. Relationship with the Simplified Version (Document 05)
 
-| | 05 篇（运行循环全景） | 本篇 06（双链导航完整版） |
+| | Document 05 (Runtime-Loop Panorama) | This Document 06 (Full Dual-Chain Navigation) |
 |---|---|---|
-| 维度 | 时间维：四循环流程（启动/运行/收摊/裁决） | 空间维：文件连接与导航线路 |
-| 内容 | 简化流程图（总览/启动/运行/收摊/裁决/交织） | 三层模型/6 类路径/五线路/节点清单/健康规则 |
-| 定位 | 快速理解体系怎么转 | 深度理解文件怎么连、导航怎么走 |
+| Dimension | Time: four-loop flow (startup/runtime/shutdown/adjudication) | Space: file connections and navigation routes |
+| Content | Simplified flowcharts (overview/startup/runtime/shutdown/adjudication/interleaving) | Three-layer model / 6 path types / five routes / node inventory / health rules |
+| Position | Quickly understand how the system runs | Deeply understand how files connect and navigation works |
 
-> 两者互补：**05 回答"流程如何运转"，06 回答"文件如何导航"**——合起来构成神经流转立体运作图的全貌（Core 全开）。
+> The two complement each other: **05 answers "how does the flow run", 06 answers "how do files navigate"** — together they form the full picture of the neural-flow stereo operation map (fully open in Core).
 
 ---
 
-*GOAA · 双链导航完整版 · 全成果开源版（Core）· 2026-08-28*
+*GOAA · Full Dual-Chain Navigation · All-Outcomes Open Source Edition (Core) · 2026-08-28*

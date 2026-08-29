@@ -1,77 +1,77 @@
-# 预注册自曝清单（Pre-Registered Disclosure List）
+# Pre-Registered Disclosure List
 
-> **定位**：GOAA 的**已知局限与未验证主张**——在发布前主动自曝（预注册），不事后辩解。五维度诚实披露，与[证伪登记册](falsification-log.md)构成社会验证证据链的完整两件套。
+> **Position**: GOAA's **known limits and unverified claims** — proactively disclosed before release (pre-registered), no post-hoc excuses. Five-dimension honest disclosure, forming the complete two-piece social-validation evidence chain with the [falsification log](falsification-log.md).
 >
-> 本文件为 **Core 完整版**（Lite/Personal 仅提供入口）。
+> This file is the **Core full version** (Lite/Personal only provide an entry).
 
 ---
 
-## ① 理论前提假设
+## ① Theoretical Premise Assumptions
 
-GOAA 的理论建立在一组**第一性假设**（论文 §3.2 详细定性，非数学/逻辑学意义上的绝对公理）：
+GOAA's theory rests on a set of **first-order assumptions** (detailed in paper §3.2; not absolute axioms in the mathematical/logical sense):
 
-| 假设 | 内容 | 若假设不成立的影响 |
+| Assumption | Content | Impact if False |
 |---|---|---|
-| H1 决断权归属 | AI 非法律主体，责任归于自然人 | 若法律/伦理发展出 AI 责任主体，公理一需要修订 |
-| H2 文件确定性 | 文件系统的确定性（持久/权限/审计）高于模型记忆 | 若未来存储层不确定性增加（分布式/软状态），物理门优势减弱 |
-| H3 人裁可用性 | 自然人持续参与规则层裁决是可行的 | 若单主体无法承担裁决负荷，需要多主体治理（=3.0 方向） |
-| H4 熵增公理 | 无序化是长周期运行的结构性特征（S(t)=S₀·e^(αt)） | 熵增速率常数 α 依赖实证校准，不同场景可能不同 |
+| H1 Decision authority | AI is not a legal subject; responsibility rests with the natural person | If law/ethics develop AI responsibility subjects, Axiom 1 needs revision |
+| H2 File determinism | File-system determinism (persistence/permissions/audit) exceeds model memory | If future storage layers become non-deterministic (distributed/soft-state), the physical-gate advantage weakens |
+| H3 Human adjudication availability | Natural-person participation in rule-layer adjudication is feasible | If a single subject cannot bear the adjudication load, multi-subject governance is needed (=3.0 direction) |
+| H4 Entropy axiom | Disorder is a structural feature of long-running operation (S(t)=S₀·e^(αt)) | The rate constant α depends on empirical calibration; may differ across scenarios |
 
-## ② 适用边界
+## ② Applicability Boundary
 
-GOAA **适用于**：
+GOAA **applies to**:
 
-- 单主权场景（一个自然人/一个团队主导的长期智能体协作）；
-- 文本/文件为核心的产出型工作（书稿/报告/代码/研究/运营）；
-- 需要规则约束、记忆存续、决策留痕的长周期运行。
+- Single-sovereignty scenarios (one natural person / one team leading long-running agent collaboration);
+- Text/file-centric production work (books / reports / code / research / operations);
+- Long-running operation requiring rule constraints, memory persistence, and decision traceability.
 
-GOAA **不适用于**（或需演进）：
+GOAA **does not apply to** (or needs evolution):
 
-- 多主体分布式治理（参与式/群体决策 → 3.0 方向，论文已划界）；
-- 低延迟实时决策（文件读写有物理开销，非动作层高频审批设计）；
-- 非文件化载体（纯运行时/模型内治理不在当前覆盖）。
+- Multi-subject distributed governance (participatory / group decision-making → 3.0 direction, delimited in the paper);
+- Low-latency real-time decisions (file I/O has physical overhead; not designed for action-layer high-frequency approvals);
+- Non-file carriers (pure runtime / in-model governance is not in current scope).
 
-## ③ 已知局限性
+## ③ Known Limitations
 
-| 局限 | 说明 | 缓解 |
+| Limitation | Description | Mitigation |
 |---|---|---|
-| 文件规模上限 | 记忆膨胀后检索成本上升（查库成本超重=自废） | 记忆瘦身机制（蒸馏/归档/清理）· 可选向量索引 |
-| 人裁依赖 | 治理强度依赖人的参与频率与质量 | 治理强度可调（五级分类）· 低频高价值设计 |
-| 单写者约束 | 协作场景限定单一写者（工作区锚定） | 多写者场景复用版本控制/CRDT（论文 §4 已回应） |
-| 中文优先 | 体系语料与示例以中文为主（Lite zh-only） | Personal/Core 提供 en 镜像（v0.2.0 起） |
-| 安装门槛 | 初始化依赖 Python 与文件操作基础 | init 脚本 + 引导文档 + onboarding 兜底话术 |
+| File-scale ceiling | Retrieval cost rises as memory grows (overweight lookup = self-defeating) | Memory slimming (distill/archive/clean) · optional vector index |
+| Human-adjudication dependence | Governance intensity depends on human participation frequency and quality | Adjustable governance intensity (five-level classification) · low-frequency high-value design |
+| Single-writer constraint | Collaboration limited to a single writer (workspace anchoring) | Multi-writer scenarios reuse version control/CRDT (paper §4 addresses) |
+| Chinese-first | Corpus and examples primarily Chinese (Lite zh-only) | Personal/Core provide en mirrors (from v0.2.0) |
+| Setup threshold | Initialization depends on Python and file-operation basics | init script + onboarding docs + fallback phrase |
 
-## ④ 未验证主张
+## ④ Unverified Claims
 
-以下主张**尚未经过独立第三方验证**，欢迎证伪（登记于[证伪登记册](falsification-log.md)）：
+The following claims have **not yet been independently validated by third parties**; falsification is welcome (register in the [falsification log](falsification-log.md)):
 
-- 治理强度与产出质量的因果强度（案例实证为作者生产史，非受控对照）；
-- 文件化记忆对长周期运行衰减的抑制幅度（论文实证为作者体系，样本量 n=1）；
-- 双链导航对体系维护效率的提升量化（当前为定性论证）；
-- "治理基座 + 能力外挂 = 最优 Agent 架构方向"的普适性（框架集成示例为最小集成，非基准评测）；
-- **两仪机制（生成/检验/裁决）确实优于"AI 自主+事后审计"**（当前为架构论证，无对照实验数据）；
-- **"非多 Agent、一体系多工作区"的零协调成本主张**（当前为设计论证，未经大规模多工作区压力验证）；
-- **100% 人决断"主权/执行分离"确实不降低产出效率**（执行让渡的收益为定性论证，未量化）；
-- **成本优势的跨场景普适性**（缓存命中 98.6%/零编排开销为作者体系实测，样本量 n=1；不同使用模式（短任务/低复用场景）下优势幅度待第三方复现）。
+- The causal strength between governance intensity and output quality (case evidence is the author's production history, not controlled comparison);
+- The magnitude of file-based memory's suppression of long-run decay (paper evidence is the author's system, sample n=1);
+- Quantified improvement of system maintenance efficiency from dual-chain navigation (currently qualitative argumentation);
+- The universality of "governance substrate + capability plugin = optimal agent architecture direction" (integration examples are minimal integrations, not benchmark evaluations);
+- **Whether the two-mechanism loop (generate/check/adjudicate) genuinely outperforms "AI autonomy + post-hoc audit"** (currently architectural argumentation, no controlled-experiment data);
+- **The zero-coordination-cost claim of "not multi-agent, one system across workspaces"** (currently design argumentation, not stress-validated at scale);
+- **Whether the 100% human decision "sovereignty/execution separation" indeed does not reduce output efficiency** (benefits of execution delegation are qualitative, not quantified);
+- **Cross-scenario universality of the cost advantage** (cache-hit 98.6% / zero orchestration overhead measured on the author's system, n=1; advantage magnitude under different usage patterns (short tasks / low-reuse scenarios) awaits third-party reproduction).
 
-## ⑤ 技术依赖
+## ⑤ Technical Dependencies
 
-| 依赖 | 用途 | 替代方案 |
+| Dependency | Purpose | Alternative |
 |---|---|---|
-| Python 3.8+ | 校验器/初始化脚本/插件 | 无（当前工具链） |
-| 文件系统（本地） | 治理底座（规则/记忆/裁决落盘） | 无（架构核心，不可替代） |
-| LLM API | Agent 执行层 | 任何兼容 API（GOAA 治理层不绑定厂商） |
-| LangChain/CrewAI/AutoGen（可选） | 集成示例 | 仅示例依赖，治理层零依赖 |
-| 本地 embedding 端点（可选） | 向量记忆索引 | 无端点自动降级关键词检索（诚实降级） |
+| Python 3.8+ | Validator / init scripts / plugins | None (current toolchain) |
+| File system (local) | Governance substrate (rules/memory/adjudication persistence) | None (architectural core, non-replaceable) |
+| LLM API | Agent execution layer | Any compatible API (GOAA governance layer is vendor-agnostic) |
+| LangChain/CrewAI/AutoGen (optional) | Integration examples | Example-only dependencies; the governance layer is zero-dependency |
+| Local embedding endpoint (optional) | Vector memory index | Honest fallback to keyword search when no endpoint (no silent cloud use) |
 
 ---
 
-## 自曝承诺
+## Disclosure Commitment
 
-- 上述局限与假设**发布前已公开**，不随 Star/口碑变化而改写（原则冻结）；
-- 新发现的局限**持续追加**到本清单（增补式，不删旧条）；
-- 每一条未验证主张，都是对证伪登记册的**公开邀请**。
+- The above limits and assumptions are **public before release**, not rewritten as stars/reputation change (principle freezing);
+- Newly discovered limits are **continuously appended** to this list (augmentative, old entries never deleted);
+- Every unverified claim is an **open invitation** to the falsification log.
 
 ---
 
-*GOAA · 预注册自曝清单 · 全成果开源版（Core）· 2026-08-28*
+*GOAA · Pre-Registered Disclosure List · All-Outcomes Open Source Edition (Core) · 2026-08-28*

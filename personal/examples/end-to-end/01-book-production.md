@@ -1,195 +1,87 @@
-# 案例一 · 用 GOAA 完成 45 万字书稿生产
+# Case 01 · 450k-word Book Production with GOAA
 
-> 本案例基于设计者的真实实践整理，展示 GOAA 多角色协作体系从 0 到 1 搭建并完成一本 45 万字小白入门书的完整过程。
+> This case is based on the designer's real practice, showing GOAA's multi-role collaboration system from 0 to 1, completing a 450k-word beginner's book on AI agents.
 
-## 一、目标
+## 1. Goal
 
-从 0 到 1 用 GOAA 多角色协作体系，完成一本面向 AI 小白的入门书《让 AI 告诉你怎么用 Agent》，约 45 万字，20 个章节。
+From 0 to 1, use GOAA multi-role collaboration system to complete a beginner's book "Let AI Tell You How to Use Agents", ~450k words, 20 chapters.
 
-**核心挑战**：
-- 设计者零编程能力，非技术背景
-- 需要多角色协作（主控/编辑/执行/审稿）
-- 长周期运行（约 30 天），需要稳定的记忆和规则体系
-- 内容质量要求高，需要持续迭代和治理
+**Core challenges**: Designer has zero programming ability, non-technical background; needs multi-role collaboration (lead/editor/executor/reviewer); long-term operation (~30 days) requiring stable memory and rules; high content quality requiring continuous iteration and governance.
 
-## 二、初始状态
+## 2. Initial State
 
-- 空工作区，单主控 Agent（WorkBuddy）
-- 无规则、无记忆、无身份文件
-- 设计者仅有写书的想法和大纲，没有技术实现能力
-- 时间：2026 年 7 月中旬
+- Empty workspace, single lead agent (WorkBuddy)
+- No rules, no memory, no identity files
+- Designer only had book ideas and outline, no technical implementation ability
+- Time: Mid-July 2026
 
-## 三、关键步骤（按时间线）
+## 3. Key Steps (Timeline)
 
-### 阶段一：架构搭建（Day 1-3）
+### Phase 1: Architecture Setup (Day 1-3)
+- Establish constitution layer: basic_law.md + design-principles.md
+- Establish identity layer: SOUL.md + IDENTITY.md + USER.md + owner profile
+- Establish basic rules: rules.yaml + rule classification files
+- Establish memory layer: _Memory/ four-layer directory structure
+- First activation: generate owner profile via onboarding
 
-**目标**：建立 GOAA 治理体系的基础层。
+**Key decisions**: Rules before execution; files are memory; governance-execution separation.
 
-**关键动作**：
-1. 建立宪法层：创建 `constitution/basic_law.md`（基本法）和 `constitution/design-principles.md`（设计原理）
-2. 建立身份层：创建 `identity/SOUL.md`（灵魂）、`identity/IDENTITY.md`（身份）、`identity/USER.md`（主人档案模板）
-3. 建立基础规则：创建 `rules/rules.yaml` 和规则分类文件
-4. 建立记忆层：创建 `_Memory/` 四层目录结构（distill/history/index/snapshot）
-5. 首次激活：通过 onboarding 引导，生成主人档案
+### Phase 2: Role Expansion (Day 4-7)
+- Define roles: Lead (orchestration), Editor (content quality), Executor (writing), Reviewer (final review)
+- File-as-interface: roles collaborate through file flow in agreed directories
+- Shutdown five hooks: backup→distill→log→analects→report
+- Rule effect gate: new rules must pass four checks before taking effect
 
-**关键决策**：
-- 先立规矩再干活——宪法层先于执行层
-- 文件即记忆——所有规则和记忆都写入文件，不依赖模型上下文
-- 管执分离——治理权归人，执行权可授权给不同角色
+**Key decisions**: Multi-role is "one AI in different rule constraints", not multiple AI instances; file-as-interface is simple and reliable.
 
-### 阶段二：角色扩展（Day 4-7）
+### Phase 3: Book Production (Day 8-20)
+- Daily flow: startup loading (constitution→identity→distill) → chapter production → shutdown five hooks
+- Role collaboration: Lead outlines → Executor writes draft → Editor reviews → Lead finalizes → save
+- Memory reuse: previous day's distill loaded at next day's startup, ensuring context continuity
+- Rule iteration: problems found during production converted to new rules, effect-gated before saving
 
-**目标**：从单主控扩展为多角色协作体系。
+**Production rhythm**: Average 1-2 chapters/day; each chapter goes through draft→review→finalize; global review every 5 days.
 
-**关键动作**：
-1. 定义角色：主控（统筹）、编辑（内容质量）、执行（具体写作）、审稿（终审）
-2. 建立文件即接口：角色之间通过约定目录的文件流转协作，不依赖消息总线
-3. 建立收摊五钩：每次会话结束执行备份→蒸馏→日志→论语→报告
-4. 建立规则生效闸门：新规则必须经过四道校验（存在性/语义/引用/Schema）才能生效
+### Phase 4: Iteration & Optimization (Day 21-30)
+- Global review: read all chapters, unify style and terminology
+- Rule governance: clean obsolete rules (non-additive principle), merge duplicate rules
+- Memory distillation: distill 30 days of production experience into essence, update distill layer
+- Incident handling: handle governance incidents (rule conflicts, memory decay), convert to institutional patches
 
-**关键决策**：
-- 多角色不是"多个 AI 实例"，是"一个 AI 在不同规则约束下扮演不同角色"
-- 文件即接口——角色 A 写文件到约定目录，角色 B 读取该文件执行，简单可靠
-- 收摊五钩是记忆不丢失的关键——每次会话必须沉淀，否则下次启动上下文丢失
+## 4. Final Results
 
-### 阶段三：书稿生产（Day 8-20）
+| Dimension | Result |
+|-----------|--------|
+| Book content | 20 chapters finalized, ~176k chars (450k words including punctuation/formatting) |
+| Governance system | Complete GOAA governance system (constitution/rules/mechanisms/memory/methodologies) |
+| Memory assets | 30 days production experience distilled into essence, complete history layer |
+| Rule system | ~15 rule files, effect-gated and iteratively optimized |
+| Role system | Lead/Editor/Executor/Reviewer four-role collaboration process |
+| Cost | ~500 yuan token fee (30 days, ~2.7 billion tokens) |
 
-**目标**：批量生产 20 个章节。
+## 5. Review Points
 
-**关键动作**：
-1. 每日流程：启动装载（宪法→身份→蒸馏）→ 当日章节生产 → 收摊五钩
-2. 角色协作流程：主控定大纲 → 执行写初稿 → 编辑审改 → 主控定稿 → 落盘
-3. 记忆复用：前一天的蒸馏在第二天启动时装载，确保上下文连续
-4. 规则迭代：生产过程中发现的问题，及时转化为新规则，经生效闸门后落盘
+### What worked
+1. Rules before execution — constitution layer precedes execution layer
+2. Files are memory — all rules/memory written to files, no cross-session decay
+3. Shutdown five hooks — every session must precipitate, ensuring 30 days of experience not lost
+4. Multi-role via file collaboration — simple and reliable
+5. Incidents are assets — each incident handling converted to institutional patch
 
-**生产节奏**：
-- 平均每天 1-2 个章节
-- 每个章节经过初稿→审改→定稿三轮
-- 每 5 天做一次全局回顾，更新蒸馏层和规则
+### Pitfalls
+1. Rule obesity — early rules added too many, later cleaned ~30% with non-additive principle
+2. Dual-write legacy — early rules written in two places, causing inconsistency
+3. Pseudo-external review — early attempt to have AI play "external reviewer" found unreliable
+4. Memory decay — early no shutdown hooks, severe cross-session context loss
+5. Role boundary ambiguity — early role responsibilities unclear, causing duplication and conflicts
 
-**关键成果**：
-- 20 个章节初稿完成
-- 约 17.6 万字（字符数）
-- 完整的记忆体系（蒸馏层持续更新，史书层完整记录）
-
-### 阶段四：迭代优化（Day 21-30）
-
-**目标**：内容打磨和体系治理优化。
-
-**关键动作**：
-1. 全局审稿：逐章审读，统一风格和术语
-2. 规则治理：清理过时规则（非加不可原则），合并重复规则
-3. 记忆蒸馏：将 30 天的生产经验蒸馏为精华，更新蒸馏层
-4. 事故处置：处理生产过程中出现的治理事故（如规则冲突、记忆衰减），转化为制度补丁
-
-**关键决策**：
-- 非加不可原则——规则不是越多越好，新增规则必须证明"不加会出问题"
-- 事故即资产——每次事故都是治理体系优化的机会，处置后转化为制度补丁
-- 蒸馏层是核心资产——30 天的经验蒸馏为几千字的精华，下次启动直接装载
-
-## 四、文件快照（关键节点）
-
-### Day 1（架构搭建后）
-```
-工作区/
-├── constitution/
-│   ├── basic_law.md
-│   └── design-principles.md
-├── identity/
-│   ├── SOUL.md
-│   ├── IDENTITY.md
-│   ├── USER.md
-│   └── 主人档案.md
-├── rules/
-│   ├── rules.yaml
-│   ├── classification.md
-│   └── validation.md
-├── _Memory/
-│   ├── distill/（空）
-│   ├── history/（空）
-│   ├── index/（空）
-│   └── snapshot/（空）
-└── mechanisms/（8个机制文件）
-```
-
-### Day 7（角色扩展后）
-```
-工作区/
-├── constitution/（2文件）
-├── identity/（4文件）
-├── rules/（3文件+分类规则）
-├── mechanisms/（8文件）
-├── _Memory/
-│   ├── distill/（启动蒸馏.md）
-│   ├── history/（日志+论语）
-│   ├── index/（索引文件）
-│   └── snapshot/（每日快照）
-├── _Work/（工作区临时文件）
-│   ├── 主控/
-│   ├── 编辑/
-│   └── 执行/
-└── _Output/（书稿输出）
-    └── 章节初稿/（7个章节）
-```
-
-### Day 30（完成后）
-```
-工作区/
-├── constitution/（2文件）
-├── identity/（4文件）
-├── rules/（规则体系，约15个文件）
-├── mechanisms/（8文件）
-├── methodologies/（3文件）
-├── _Memory/
-│   ├── distill/（30天生产经验蒸馏.md）
-│   ├── history/（完整日志+论语+规则归档）
-│   ├── index/（完整索引）
-│   └── snapshot/（30天快照）
-├── _Work/（工作区）
-├── _Output/（书稿输出）
-│   ├── 章节定稿/（20个章节）
-│   ├── 审稿记录/
-│   └── 术语表/
-└── tools/（validator.py等）
-```
-
-## 五、最终成果
-
-| 维度 | 成果 |
-|------|------|
-| 书稿内容 | 20 个章节定稿，约 17.6 万字符（45 万字含标点和格式） |
-| 治理体系 | 完整的 GOAA 治理体系（宪法/规则/机制/记忆/方法论） |
-| 记忆资产 | 30 天生产经验蒸馏为精华，完整史书层记录 |
-| 规则体系 | 约 15 个规则文件，经过生效闸门校验和迭代优化 |
-| 角色体系 | 主控/编辑/执行/审稿四角色协作流程 |
-| 成本 | 约 500 元令牌费（30 天，约 27 亿令牌） |
-
-## 六、复盘要点
-
-### 做对了什么
-
-1. **先立规矩再干活**——宪法层先于执行层，确保整个生产过程在治理约束下运行
-2. **文件即记忆**——所有规则和记忆写入文件，不依赖模型上下文，跨会话无衰减
-3. **收摊五钩**——每次会话必须沉淀，确保 30 天的经验不丢失
-4. **多角色通过文件协作**——简单可靠，不依赖复杂的消息总线或多实例调度
-5. **事故即资产**——每次事故处置后转化为制度补丁，治理体系持续进化
-
-### 踩过什么坑
-
-1. **规则肥胖症**——早期规则加得太多，后来发现很多规则是冗余的，用非加不可原则清理了约 30%
-2. **双写遗留**——早期规则同时写在两个地方，导致不一致，后来建立单一权威源解决
-3. **伪外部审议**——早期试图让 AI 扮演"外部审议者"，发现 AI 自己审议自己不可靠，后来改为必须人裁
-4. **记忆衰减**——早期没有收摊五钩，跨会话上下文丢失严重，后来建立收摊机制解决
-5. **角色边界模糊**——早期角色之间职责不清，导致重复劳动和冲突，后来明确角色边界和文件接口
-
-### 如果重来会改什么
-
-1. **更早建立权威源只读隔离**——宪法层和设计原理应该从第一天就标记为只读，避免后期被意外修改
-2. **更早做规则冲突检测**——应该在规则体系建立初期就引入冲突检测机制，而不是等到冲突爆发才处理
-3. **更精简的初始规则集**——初始规则应该更精简，只保留最核心的，其余在实践中按需添加
-4. **更早建立术语表**——书稿生产中术语不一致的问题反复出现，应该更早建立统一术语表
-5. **更系统的审稿流程**——早期审稿比较随意，后来建立了结构化的审稿流程，质量提升明显
+### What to change if restarting
+1. Establish authority source read-only isolation earlier
+2. Introduce rule conflict detection earlier
+3. More concise initial rule set
+4. Establish terminology table earlier
+5. More systematic review process
 
 ---
 
-*GOAA · 端到端案例一 · 基于真实实践整理 · 2026-08-28*
+*GOAA · End-to-End Case 01 · Based on real practice · 2026-08-28*

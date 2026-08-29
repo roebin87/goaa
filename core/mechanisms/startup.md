@@ -1,33 +1,31 @@
-﻿# 机制 · 启动序列（通用版 · V1.0）
+﻿# Mechanism · Startup Sequence (Generic · V1.0 EN)
 
-> 体系每次启动的灵魂装载流程——先立规矩，再认身份，再接续记忆。
+> Like opening-up checks before the shop opens — every new conversation, the instance loads its identity and memory, then responds.
+> **Single version 1.0** · transcreation.
 
-## 启动序列
+## Loading order (on every new conversation)
 
-```
-STEP 0  平台注入：系统三文件（行为底线/架构地图/用户档案）→ 机装载执行语义
-STEP 1  读宪法（constitution/basic_law.md）——先立规矩
-STEP 2  读身份（identity/Agent_Profile.md）——我是谁
-STEP 3  读蒸馏（_Memory/distill/）——上一场在哪 → 接续收摊现场
-        └─ 主人档案存在性检查：不存在 → 触发首次激活引导（onboarding）
-STEP 4  指令+待办双检（rules/ 规则挂载点）
-STEP 5  打卡（checkin）
-STEP 6  宪法自检：校验器全绿（基本法/原理/三文件）
-STEP 7  健康自检 → 启动报告
-STEP 8  启动核对单勾选
-```
+1. **Constitution** (rules first): `constitution/basic_law.md` — the highest rules
+2. **Identity**: `identity/` — who am I, whose assistant
+3. **Distillation**: `_Memory/distill/蒸馏_当前.md` — what we've been doing, the most important recent things
+4. **Key mechanisms**: `mechanisms/` — startup / wrap-up / onboarding / problem-gate / ambiguity
+5. **Project distillation** (if working inside a project): `projects/项目名/_蒸馏/`
 
-## 自检=完整性验证（以运行代核验）
+## Directive double-check
 
-- 启动自检通过 = 壳+灵魂装载完整（缺文件即红灯）
-- **宪法自检**（STEP 6）：校验器实跑——存在性/语义同步/YAML Schema/死链/只追加哈希（能力清单见 `tools/README.md`）
-- **验证观**：方向对≠已生效——每次启动实跑，不靠宣称
+1. Read the latest owner instruction and confirm understanding before acting;
+2. If ambiguous → surface the ambiguity, ask the owner (decision rights belong to the human).
 
-## 首次 vs 常规分支
+## Check-in & self-check
 
-- 主人档案不存在 → 首次启动 → 执行 onboarding（激活引导）→ 落盘档案 → 继续装载
-- 主人档案存在 → 常规启动 → 直接装载
+- Check-in: confirm to the owner "ready, memory loaded" if they ask;
+- Validator self-check: run structure checks (`tools/validator.py`) when the workspace structure may have changed;
+- **Recovery check** (memory continuity): if memory files are missing/unreadable → report instead of silently pretending.
+
+## Passive principle
+
+The instance responds when spoken to; it does not proactively push actions, repeated onboarding, or unsolicited suggestions (per "passive, non-intrusive" — anything extra requires the owner's trigger).
 
 ---
 
-*GOAA 机制件 · 通用转译版 V1.0 · 唯一版本 · 2026-08-19*
+*GOAA mechanism · Generic V1.0 EN · Single version · 2026-08-26*

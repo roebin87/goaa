@@ -1,57 +1,57 @@
-# memory-vector · 记忆向量索引插件（可选）
+# memory-vector · Memory Vector Index Plugin (optional)
 
-> **定位**：Personal 版的**可选增强插件**——给记忆检索加"双索引"：默认零依赖的关键词倒排索引 + 可选的本地向量索引。
-> **核心承诺**：索引文件**全部在本地**，不调用任何云端服务、不需要 API key——**不破坏所有权五✅**（运行 `tools/verify-ownership.py` 依然全过）。
-> **不装会怎样**：什么都不影响。GOAA 核心功能（启动/收摊/记忆/多角色）不依赖本插件；它只是让"记忆多了、找得慢"时检索更快更准。
+> **Purpose**: An **optional enhancement plugin** for the Personal edition — adds "dual indexing" to memory retrieval: a zero-dependency keyword inverted index by default, plus an optional local vector index.
+> **Core promise**: Index files **all stay local** — no cloud service calls, no API key needed — **the ownership five checks still pass** (running `tools/verify-ownership.py` remains all-green).
+> **What if I don't install it**: Nothing changes. GOAA core functions (startup/closeout/memory/multi-role) don't depend on this plugin; it only makes retrieval faster and more accurate when "memory has grown and search is slow".
 
 ---
 
-## 一、双索引设计
+## 1. Dual-index design
 
-| 索引 | 实现 | 依赖 | 默认 |
-|------|------|------|------|
-| **倒排索引** | 关键词 → 文件映射（内存+本地 JSON） | Python 标准库（零依赖） | ✅ 开箱即用 |
-| **向量索引** | 语义向量检索（近义/模糊召回） | 本地 embedding（见下） | ⏸ 可选启用 |
+| Index | Implementation | Dependency | Default |
+|-------|----------------|------------|---------|
+| **Inverted index** | keyword → file mapping (memory + local JSON) | Python standard library (zero dependency) | ✅ works out of the box |
+| **Vector index** | semantic vector retrieval (synonym/fuzzy recall) | local embedding (see below) | ⏸ optional |
 
-**为什么双索引**：倒排索引快而准（精确关键词）；向量索引强在语义（"上次聊的关于架构演进的事"能召回"代际矛盾转移"）。二者互补——日常用倒排，模糊回忆用向量。
+**Why dual index**: the inverted index is fast and precise (exact keywords); the vector index excels at semantics ("that thing we talked about on architecture evolution" recalls "generational contradiction shift"). They complement each other — use inverted for daily search, vector for fuzzy recall.
 
-## 二、安装（三步）
+## 2. Installation (three steps)
 
 ```bash
-# 1. 把插件复制到你的工作区（以 personal/ 为例）
-cp -r plugins/memory-vector /你的工作区/plugins/memory-vector
+# 1. Copy the plugin into your workspace (using personal/ as example)
+cp -r plugins/memory-vector /your-workspace/plugins/memory-vector
 
-# 2. 构建索引（扫描记忆目录 _Memory/ 与 templates/memory/）
+# 2. Build the index (scans memory dir _Memory/ and templates/memory/)
 python3 plugins/memory-vector/memory-vector.py --build
 
-# 3. 检索
-python3 plugins/memory-vector/memory-vector.py --search "规则冲突"
+# 3. Search
+python3 plugins/memory-vector/memory-vector.py --search "rule conflict"
 ```
 
-> 索引文件 `memory-index.json` 生成在插件目录内——**在你的本地文件夹里**，可随时删除重建。
+> The index file `memory-index.json` is generated inside the plugin directory — **in your local folder**, deletable and rebuildable at any time.
 
-## 三、启用向量索引（可选·零云端）
+## 3. Enabling the vector index (optional · zero cloud)
 
-默认不启用。若你已有本地 embedding 能力（如 llama.cpp 本地服务、或已安装 sentence-transformers），把向量索引从 `auto` 切换为开启：
+Disabled by default. If you already have local embedding capability (e.g. a llama.cpp local service, or sentence-transformers installed), switch the vector index from `auto` to enabled:
 
 ```bash
 python3 plugins/memory-vector/memory-vector.py --build --vector
 ```
 
-脚本会检测本地 embedding 端点（环境变量 `EMBEDDING_URL`，OpenAI 兼容 `/v1/embeddings`，默认 `http://127.0.0.1:8080/v1`——纯本地地址）。检测不到时**自动降级为关键词索引并明确提示**，绝不静默使用云端。
+The script detects the local embedding endpoint (environment variable `EMBEDDING_URL`, OpenAI-compatible `/v1/embeddings`, default `http://127.0.0.1:8080/v1` — a purely local address). When not detected, it **automatically degrades to the keyword index with an explicit notice** — it never silently uses the cloud.
 
-## 四、与核心机制的关系
+## 4. Relationship with core mechanisms
 
-- **记忆仍是文件**：本插件只建立"索引"，不复制、不改动你的记忆文件本体——记忆的唯一权威源依然是 `_Memory/` 中的纯文本文件；
-- **启动不加载**：插件不进启动序列，按需手动调用（保持轻量启动）；
-- **可随时卸载**：删掉插件目录 + 索引文件即可，记忆文件零影响。
+- **Memory is still files**: this plugin only builds an "index"; it neither copies nor modifies your memory files themselves — the single authoritative source of memory remains the plain-text files in `_Memory/`;
+- **Not loaded at startup**: the plugin is not in the startup sequence; call it manually on demand (keeping startup lightweight);
+- **Removable anytime**: delete the plugin directory + index file and you're done — zero impact on memory files.
 
-## 五、诚实声明
+## 5. Honest declaration
 
-- 关键词索引：100% 本地，零依赖，可离线运行；
-- 向量索引：语义检索质量取决于你本地的 embedding 模型，与 GOAA 体系无关；
-- 本插件**不包含任何云端检索、不收集任何使用数据**——与 GOAA 所有权公理一致。
+- Keyword index: 100% local, zero dependency, works offline;
+- Vector index: semantic retrieval quality depends on your local embedding model, unrelated to the GOAA system;
+- This plugin **includes no cloud retrieval and collects no usage data** — consistent with the GOAA ownership axiom.
 
 ---
 
-*GOAA · memory-vector 插件 · v0.1.0 · 2026-08-28 · 通用化转译版*
+*GOAA · memory-vector plugin · v0.1.0 · 2026-08-29 · Genericized translation*

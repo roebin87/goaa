@@ -1,349 +1,291 @@
-# GOAA 常见问题解答（FAQ）
+# GOAA Frequently Asked Questions (FAQ)
 
-> 本文档收录 GOAA 架构最常见的 25 个问题，按主题分类。如果你的问题不在此列，欢迎在 GitHub Discussions 提问。
+> This document covers the most common questions about GOAA architecture. If your question isn't here, ask in GitHub Discussions.
 
-## 目录
+## Table of Contents
 
-- [一、基础概念](#一基础概念)
-- [二、使用入门](#二使用入门)
-- [三、架构原理](#三架构原理)
-- [四、对比与选择](#四对比与选择)
-- [五、数据与安全](#五数据与安全)
-- [六、贡献与社区](#六贡献与社区)
-- [七、故障排查](#七故障排查)
-
----
-
-## 一、基础概念
-
-### Q1：GOAA 到底是什么？
-
-GOAA（Governance-Oriented Agent Architecture，治理导向型智能体架构）是一个让 AI"干得可控"的架构母本。它解决的核心问题不是"怎么让 AI 干活"（那是增强型框架的事），而是"怎么让 AI 干得可控、可追溯、属于你"。
-
-GOAA 的核心载体是**文件系统**——你的 AI 记忆、规则、身份都存在你自己的文件夹里，不绑定任何平台。
-
-### Q2：GOAA 和主流 Agent 框架（LangChain/AutoGPT/CrewAI）有什么区别？
-
-| 维度 | 主流增强型框架 | GOAA 治理型架构 |
-|------|--------------|----------------|
-| 核心目标 | 让 AI 能力更强（干活） | 让 AI 干得可控（治理） |
-| 记忆载体 | 云端/向量数据库/平台绑定 | 本地纯文本文件（你的文件夹） |
-| 决策权 | AI 自主决策为主 | 人有 100% 最终决断权 |
-| 适用人群 | 开发者/工程师 | 普通人（零编程能力也能用） |
-| 关系 | 底数（能力） | 系数（可控性）——二者相乘 |
-
-简单说：增强型框架让 AI"能做更多事"，GOAA 让 AI"做的事你能信任"。两者不是竞争关系，是互补关系。
-
-### Q3：为什么叫"治理型"而不是"增强型"？
-
-因为 GOAA 的核心设计哲学是**治理优先于执行**。在人机协作中，AI 的执行能力已经足够强（大模型能力持续提升），真正的瓶颈是"AI 干的事能不能信、能不能控、能不能追溯"。
-
-GOAA 通过宪法层、规则体系、裁决闭环、记忆治理等机制，把 AI 的执行行为纳入人类可治理的框架中。这就是"治理型"的含义。
-
-### Q4：GOAA 是一个软件吗？需要安装吗？
-
-GOAA **不是一个需要安装的软件**，它是一套**文件体系+操作规范**。你下载一个文件夹，在 AI 助手中把它设为工作区，就可以使用了。
-
-不需要编程能力，不需要部署服务器，不需要安装依赖。唯一需要的是一个具备本地文件读写能力的 AI 助手（如 WorkBuddy、Claude Code、Cursor 等）。
-
-### Q5：GOAA 支持哪些 AI 助手/模型？
-
-GOAA 的核心治理层是**模型无关**的——它不依赖任何特定的 AI 模型或平台。只要 AI 助手具备本地文件读写能力，就可以使用 GOAA。
-
-目前推荐的 AI 助手包括：WorkBuddy、Claude Code、Cursor、ChatGPT（带代码解释器）等。理论上，任何能读取和写入本地文件的 AI 助手都可以使用 GOAA。
+- [1. Basic Concepts](#1-basic-concepts)
+- [2. Getting Started](#2-getting-started)
+- [3. Architecture Principles](#3-architecture-principles)
+- [4. Comparison & Selection](#4-comparison--selection)
+- [5. Data & Security](#5-data--security)
+- [6. Contribution & Community](#6-contribution--community)
+- [7. Troubleshooting](#7-troubleshooting)
 
 ---
 
-## 二、使用入门
+## 1. Basic Concepts
 
-### Q6：怎么开始使用 GOAA？
+### Q1: What exactly is GOAA?
 
-三步即可：
-1. **下载**：下载 `zh/`（中文）或 `en/`（英文）文件夹到本地
-2. **锚定**：在 AI 助手中把该文件夹设为工作区（注意是含 README.md 的那一层）
-3. **说话**：说一句"你好"，AI 会自动开始首次激活引导，5 分钟创建你的专属 AI 伙伴
+GOAA (Governance-Oriented Agent Architecture) is an architecture template that makes AI "work controllably." Its core problem isn't "how to make AI do things" (that's enhancement frameworks), but "how to make AI do things controllably, traceably, and belonging to you."
 
-详细步骤见 [README.md](../README.md) 的"5 分钟快速上手"。
+GOAA's core carrier is the **file system** — your AI's memory, rules, and identity live in your own folder, not tied to any platform.
 
-### Q7：我完全不懂技术，能用 GOAA 吗？
+### Q2: What's the difference between GOAA and mainstream Agent frameworks (LangChain/AutoGPT/CrewAI)?
 
-**可以。** GOAA 的设计者本人就是零编程能力、非计算机专业的普通人。GOAA 的设计目标之一就是"治理型架构的理解门槛属于普通人"。
+| Dimension | Mainstream enhancement frameworks | GOAA governance architecture |
+|-----------|----------------------------------|------------------------------|
+| Core goal | Make AI more capable (do things) | Make AI controllable (governance) |
+| Memory carrier | Cloud/vector database/platform-bound | Local plain-text files (your folder) |
+| Decision rights | AI autonomous decision-making | Human holds 100% final decision rights |
+| For | Developers/engineers | Ordinary people (zero coding ability) |
+| Relationship | Base (capability) | Coefficient (controllability) — multiply |
 
-首次激活引导是零术语的——AI 会用自然语言和你对话，不需要你理解任何技术概念。你只需要回答 AI 的问题，告诉它你的偏好和习惯即可。
+In short: enhancement frameworks make AI "able to do more," GOAA makes AI "trustworthy in what it does." They're complementary, not competitive.
 
-### Q8：首次激活引导会问我什么？需要准备什么？
+### Q3: Why "governance-oriented" instead of "enhancement-oriented"?
 
-首次激活引导会通过自然对话采集你的基本信息，包括：
-- 你的称呼和偏好
-- 你希望 AI 怎么称呼你
-- 你的工作/生活场景
-- 你对 AI 的期望和边界
-- 一些关键偏好（如回复风格、工作节奏等）
+Because GOAA's core design philosophy is **governance before execution**. In human-AI collaboration, AI's execution capability is already strong enough (large models keep improving). The real bottleneck is "can we trust, control, and trace what AI does."
 
-不需要提前准备任何东西，跟着 AI 的引导回答即可。整个过程约 5-10 分钟。
+GOAA brings AI's execution behavior into a human-governable framework through constitution layer, rule system, adjudication loop, and memory governance. That's what "governance-oriented" means.
 
-### Q9：GOAA 能用来做什么？
+### Q4: Is GOAA a software? Do I need to install it?
 
-GOAA 是一个通用的治理底座，可以用于各种需要 AI 长期协作的场景，例如：
-- **个人知识管理**：AI 帮你整理笔记、构建知识库、持续积累
-- **内容创作**：写书、写文章、多角色协作生产内容
-- **项目管理**：AI 帮你跟踪项目进度、管理待办、沉淀经验
-- **学习助手**：AI 帮你制定学习计划、跟踪进度、复习巩固
-- **个人助理**：日程管理、信息整理、决策辅助
+GOAA is **NOT software to install**. It's a **file system + operation specification**. You download a folder, set it as workspace in an AI assistant, and you're ready.
 
-GOAA 不限制具体用途——它是一个"让 AI 属于你、记住你、听你话"的底座，你可以用它做任何你想做的事。
+No coding ability, no server deployment, no dependency installation. The only requirement is an AI assistant with local file read/write capability (WorkBuddy, Claude Code, Cursor, etc.).
 
-### Q10：GOAA 和普通的 AI 对话有什么不一样？
+### Q5: Which AI assistants/models does GOAA support?
 
-普通 AI 对话的特点是：**每次对话都是新的，AI 不记得你，对话结束记忆就没了**。
+GOAA's core governance layer is **model-agnostic** — it doesn't depend on any specific AI model or platform. Any AI assistant with local file read/write capability can use GOAA.
 
-GOAA 的特点是：
-- **AI 记得你**：你的偏好、习惯、历史对话都存在文件里，每次启动自动装载
-- **AI 听你话**：你制定的规则会持续生效，AI 不会"说了就忘"
-- **AI 属于你**：所有数据都在你自己的文件夹里，不绑定任何平台，随时可以带走
-- **AI 持续演化**：你和 AI 的协作经验会持续沉淀，AI 越用越懂你
-
-简单说：普通 AI 对话是"一次性的"，GOAA 是"持续性的、属于你的"。
+Currently recommended: WorkBuddy, Claude Code, Cursor, ChatGPT (with code interpreter). Theoretically, any AI that can read/write local files works.
 
 ---
 
-## 三、架构原理
+## 2. Getting Started
 
-### Q11：为什么说"文件即记忆"？
+### Q6: How do I start using GOAA?
 
-AI 模型本身没有持久记忆——每次对话结束，上下文就丢失了。GOAA 通过**文件系统**来解决这个问题：把 AI 的记忆、规则、身份、历史都写入纯文本文件，存在你自己的文件夹里。
+Three steps:
+1. **Download**: Download `zh/` (Chinese) or `en/` (English) folder to your computer
+2. **Anchor**: Set the folder as workspace in your AI assistant (the layer containing README.md)
+3. **Speak**: Say "Hello" — AI auto-starts first-activation onboarding, creates your companion in ~5 minutes
 
-每次启动时，AI 会读取这些文件，恢复"记忆"。文件在则体系在——只要你的文件夹还在，你的 AI 伙伴就还在。
+See "5-Minute Quick Start" in [README.md](../README.md).
 
-这就是"文件即记忆"的含义：**文件是 AI 记忆的权威载体**，不依赖模型上下文，不依赖云端服务。
+### Q7: I have no technical background at all. Can I use GOAA?
 
-### Q12："人有 100% 决断权"是什么意思？
+**Yes.** GOAA's designer himself has zero coding ability and is not a computer science professional. One of GOAA's design goals is "the understanding threshold of governance architecture belongs to ordinary people."
 
-这是 GOAA 的**母公理**（最核心的原则）：在人机协作中，人类拥有 100% 的最终决断权，AI 只有执行权和建议权。
+First-activation onboarding is jargon-free — AI talks to you in natural language, no technical concepts needed. Just answer AI's questions about your preferences and habits. Takes 5-10 minutes.
 
-具体表现为：
-- **规则由人制定**：AI 可以建议规则，但规则必须经人确认才能生效
-- **关键决策由人拍板**：涉及方向、边界、重要选择的决策，必须由人最终决定
-- **AI 不能自行修改治理文件**：宪法、规则、身份等治理文件，AI 只能读取，不能自行修改
-- **人可以随时推翻 AI 的建议**：AI 的建议不具有约束力，人可以采纳、修改或驳回
+### Q8: What can GOAA be used for?
 
-这不是"AI 很笨所以要人管"，而是**主权原则**：AI 是你的工具，不是你的主人。工具的决策权永远属于使用者。
+GOAA is a general governance foundation for any scenario requiring long-term AI collaboration:
+- **Personal knowledge management**: organize notes, build knowledge base, accumulate continuously
+- **Content creation**: write books/articles, multi-role collaborative production
+- **Project management**: track progress, manage todos, precipitate experience
+- **Learning assistant**: study plans, progress tracking, review and consolidation
+- **Personal assistant**: schedule management, information organization, decision support
 
-### Q13：GOAA 的记忆是怎么工作的？
+GOAA doesn't limit specific use cases — it's a foundation that "makes AI belong to you, remember you, and listen to you."
 
-GOAA 采用**四层记忆体系**：
+### Q9: How is GOAA different from regular AI chat?
 
-1. **史书层（History）**：完整的对话记录和操作日志，只追加不删改，是"原始档案"
-2. **快照层（Snapshot）**：每次会话结束时的完整状态快照，是"时间胶囊"
-3. **索引层（Index）**：按关键词、主题、时间建立的索引，是"目录"
-4. **蒸馏层（Distill）**：AI 生成、人确认的精华摘要，是"核心记忆"
+Regular AI chat: **each conversation is new, AI doesn't remember you, memory ends when conversation ends.**
 
-启动时只装载蒸馏层（轻装载，几千 token），需要细节时通过索引检索史书层或快照层（深装载，按需读取）。这样既保证了记忆的连续性，又控制了 token 成本。
+GOAA:
+- **AI remembers you**: your preferences, habits, conversation history live in files, auto-loaded each startup
+- **AI listens to you**: rules you make stay effective, AI doesn't "say and forget"
+- **AI belongs to you**: all data in your own folder, not tied to any platform, portable anytime
+- **AI evolves**: collaboration experience continuously precipitates, AI understands you better over time
 
-### Q14：规则是怎么生效的？为什么 AI 不会"说了就忘"？
-
-GOAA 的规则生效有**四道闸门**（生效闸门）：
-
-1. **存在性校验**：规则文件存在，格式正确
-2. **语义同步校验**：规则与宪法、设计原理的核心概念一致，不矛盾
-3. **引用校验**：规则中引用的其他规则/概念都有定义，没有死链
-4. **Schema 合规校验**：规则文件符合 YAML Schema 规范，必填字段完整
-
-只有通过四道闸门的规则才能生效。生效后的规则会在每次启动时装载，AI 必须遵守。规则不是"说了就忘"的口头约定，而是写入文件、经过校验、持续生效的**制度**。
-
-### Q15：什么是"裁决闭环"？
-
-裁决闭环是 GOAA 治理歧义、冲突和滞后的核心机制，包含五步：
-
-1. **显影**：把隐藏的歧义、冲突、滞后暴露出来（不是掩盖）
-2. **定位**：定位问题的根源和层级（人语义/机语义/规则层/治理层）
-3. **人裁**：由人（主人）最终决策，AI 只提供分析和建议
-4. **固化**：把裁决结果写入文件（新规则/共识/版本更新），确保不重复裁决
-5. **退役**：过时的规则/共识及时清理，避免规则肥胖
-
-裁决闭环的关键是：**人裁是规则层的固定环节，不是异常兜底**。AI 不能自行解决歧义，必须提交人裁。这保证了治理权始终在人手中。
+In short: regular AI chat is "one-time," GOAA is "continuous and yours."
 
 ---
 
-## 四、对比与选择
+## 3. Architecture Principles
 
-### Q16：GOAA 和 RAG（检索增强生成）有什么区别？
+### Q10: Why "files are memory"?
 
-RAG 解决的是"AI 怎么获取外部知识"的问题——通过向量检索把相关文档注入上下文，让 AI 回答更准确。
+AI models have no persistent memory — context is lost when each conversation ends. GOAA solves this through the **file system**: write AI's memory, rules, identity, and history into plain-text files in your folder.
 
-GOAA 解决的是"AI 怎么被治理、怎么属于你"的问题——通过文件系统、规则体系、裁决闭环，让 AI 的行为可控、可追溯、属于你。
+Each startup, AI reads these files to restore "memory." Files exist, system exists — as long as your folder is there, your AI companion is there.
 
-两者是不同层面的技术：
-- RAG 是**知识获取层**的技术（增强型）
-- GOAA 是**治理底座层**的架构（治理型）
+That's "files are memory": **files are the authoritative carrier of AI memory**, not dependent on model context or cloud services.
 
-GOAA 可以和 RAG 配合使用：用 GOAA 做治理底座，用 RAG 做知识检索。两者不冲突。
+### Q11: What does "human holds 100% decision rights" mean?
 
-### Q17：GOAA 和 AI 记忆插件（如 Mem0、Zep）有什么区别？
+This is GOAA's **mother axiom** (most core principle): in human-AI collaboration, humans hold 100% final decision rights; AI only has execution and advisory rights.
 
-| 维度 | 记忆插件（Mem0/Zep） | GOAA |
-|------|---------------------|------|
-| 核心功能 | 给 AI 加记忆 | 给 AI 加治理（记忆是其中一部分） |
-| 记忆载体 | 云端数据库/向量库 | 本地纯文本文件 |
-| 数据归属 | 存在插件服务商的服务器 | 存在你自己的文件夹 |
-| 可移植性 | 绑定插件服务 | 纯文本文件，随时带走，任何 AI 可用 |
-| 治理能力 | 无（只管记忆） | 完整的宪法/规则/裁决/记忆治理体系 |
-| 适用人群 | 开发者 | 普通人 |
+Specifically:
+- **Rules made by humans**: AI can suggest rules, but rules must be human-confirmed to take effect
+- **Key decisions by humans**: decisions on direction, boundaries, important choices must be human-final
+- **AI cannot modify governance files**: constitution, rules, identity — AI can only read, not modify
+- **Humans can override AI anytime**: AI's suggestions are not binding
 
-简单说：记忆插件只解决"AI 记不记得"的问题，GOAA 解决"AI 记不记得+听不听话+属不属于你"的完整问题。
+This isn't "AI is dumb so humans must manage" — it's the **sovereignty principle**: AI is your tool, not your master. Decision rights of tools always belong to the user.
 
-### Q18：我已经在用 LangChain/AutoGPT 了，还需要 GOAA 吗？
+### Q12: How does GOAA's memory work?
 
-这取决于你的需求：
-- 如果你只需要 AI"能干活"，不需要长期治理和数据归属，LangChain/AutoGPT 就够了
-- 如果你需要 AI"长期协作、记住你、听你话、数据属于你"，那么 GOAA 可以作为治理底座，和 LangChain/AutoGPT 配合使用
+GOAA uses a **four-layer memory system**:
 
-GOAA 和增强型框架是**互补关系**，不是竞争关系。增强型框架提供能力（底数），GOAA 提供可控性（系数），二者相乘 = 真正可用的 AI 协作。
+1. **History layer**: complete conversation records and operation logs, append-only, "original archives"
+2. **Snapshot layer**: complete state snapshot at each session end, "time capsules"
+3. **Index layer**: indexes by keyword/topic/time, "table of contents"
+4. **Distill layer**: AI-generated, human-confirmed essence summaries, "core memory"
 
-### Q19：GOAA 适合团队使用吗？
+At startup, only distill layer is loaded (light load, a few thousand tokens). When details needed, retrieve history/snapshot via index (deep load, on-demand). This ensures memory continuity while controlling token cost.
 
-GOAA 的核心设计是**个人主权**的——每个 GOAA 实例属于一个主人，人有 100% 决断权。这是 GOAA 的基石。
+### Q13: How do rules take effect? Why doesn't AI "say and forget"?
 
-对于团队协作，GOAA 可以有两种使用方式：
-1. **个人实例+协作**：每个人有自己的 GOAA 实例，通过文件交换/共享目录协作
-2. **共享工作区+多角色**：在一个共享工作区中，通过多角色机制（主控/编辑/执行等）协作，但最终决断权归一个人
+GOAA's rule effect has a **four-gate effect gate**:
 
-GOAA 3.0（CSA，Constellation of Sovereign Agents）规划了多主体对等协作的架构，但目前 2.0 版本主要面向个人使用。
+1. **Existence check**: rule file exists, format correct
+2. **Semantic sync check**: rule consistent with constitution/design principles core concepts
+3. **Reference check**: referenced rules/concepts defined, no dead links
+4. **Schema compliance**: rule file符合 YAML Schema, required fields complete
 
----
+Only rules passing all four gates take effect. Effective rules are loaded every startup, AI must comply. Rules aren't verbal agreements that "say and forget" — they're **institutions** written to files, validated, and continuously effective.
 
-## 五、数据与安全
+### Q14: What is the "adjudication loop"?
 
-### Q20：我的数据安全吗？会被上传到云端吗？
+The adjudication loop is GOAA's core mechanism for governing ambiguity, conflict, and lag, with five steps:
 
-GOAA 的所有数据（记忆、规则、身份、对话记录）都存在**你自己的本地文件夹**里，不会自动上传到任何云端。
+1. **Revelation**: expose hidden ambiguity/conflict/lag (not mask it)
+2. **Localization**: locate root cause and layer (human semantic/machine semantic/rules/governance)
+3. **Human adjudication**: final decision by human (owner), AI only provides analysis
+4. **Consolidation**: write adjudication results to files (new rules/consensus/version updates)
+5. **Retirement**: clean obsolete rules/consensus timely, avoid rule bloat
 
-唯一涉及"外部"的是：你和 AI 助手的对话内容会发送给 AI 模型服务商（如 OpenAI、Anthropic 等），这是使用任何 AI 助手都不可避免的。但 GOAA 的**文件数据**不会自动上传——AI 只会在需要时读取你工作区中的文件，文件本身始终在你的电脑上。
-
-如果你对数据隐私有极高要求，可以使用本地部署的 AI 模型（如 Ollama），这样所有数据都不会离开你的电脑。
-
-### Q21：我想换一个 AI 助手，我的 GOAA 数据还能用吗？
-
-**可以。** 这是 GOAA 的核心优势之一——**数据可移植性**。
-
-GOAA 的所有数据都是纯文本文件，不绑定任何特定的 AI 模型或平台。你换一个 AI 助手，只需要把同一个文件夹设为工作区，新的 AI 助手就能读取你的记忆、规则、身份，继续之前的协作。
-
-你的 AI 伙伴不是"绑定在某个平台上的账号"，而是"存在你文件夹里的文件体系"。文件夹在，伙伴就在。
-
-### Q22：如果我不小心删除了文件，记忆会丢失吗？
-
-会的。GOAA 的记忆存在文件里，文件删除了记忆就没了。这就是为什么 GOAA 有**收摊五钩**机制——每次会话结束时会自动备份关键文件。
-
-建议你：
-1. 定期备份整个 GOAA 工作区（可以用 Git、云盘、移动硬盘等）
-2. 不要手动删除 `_Memory/`、`constitution/`、`rules/`、`identity/` 等关键目录
-3. 如果不确定某个文件能不能删，先问 AI 助手
-
-GOAA 的史书层是只追加不删改的，这意味着即使你修改了某些文件，历史记录仍然保留在史书层中（除非你手动删除史书层）。
+Key: **human adjudication is a fixed环节 of the rules layer, not exception fallback**. AI cannot resolve ambiguity on its own, must submit to human adjudication. This ensures governance rights always in human hands.
 
 ---
 
-## 六、贡献与社区
+## 4. Comparison & Selection
 
-### Q23：我可以为 GOAA 做贡献吗？怎么贡献？
+### Q15: What's the difference between GOAA and RAG (Retrieval-Augmented Generation)?
 
-**欢迎贡献！** GOAA 是开源项目，采用 Apache-2.0 许可证。
+RAG solves "how AI gets external knowledge" — inject relevant documents into context via vector retrieval for more accurate answers.
 
-贡献方式包括（不限于）：
-- **文档贡献**：改进文档、翻译、写教程、写示例
-- **机制贡献**：提出新的机制设计、改进现有机制
-- **工具贡献**：开发辅助工具（如 validator、初始化脚本、迁移工具）
-- **模板贡献**：贡献适用于不同场景的模板（如写书模板、项目管理模板）
-- **适配贡献**：为不同 AI 助手/平台做适配
+GOAA solves "how AI is governed and belongs to you" — through file system, rule system, adjudication loop, make AI's behavior controllable, traceable, and yours.
 
-贡献流程见 [CONTRIBUTING.md](../CONTRIBUTING.md)。GOAA 采用"核心稳定+外围迭代"双轨策略：核心设计变更需经设计评审，外围改进随时合并。
+Different layers:
+- RAG is **knowledge acquisition layer** technology (enhancement)
+- GOAA is **governance foundation layer** architecture (governance)
 
-### Q24：GOAA 的版本策略是什么？
+GOAA can work with RAG: use GOAA as governance foundation, RAG for knowledge retrieval. No conflict.
 
-GOAA 采用**代际版本+核心稳定**策略：
+### Q16: What's the difference between GOAA and AI memory plugins (Mem0, Zep)?
 
-- **代际版本**：1.0（SCA，静态契约）→ 2.0（GOAA，动态治理，现行主版本）→ 3.0（CSA，多主体对等）→ 4.0（MOA，元秩序）
-- **核心稳定**：架构核心（宪法/公理/核心机制）保持大版本稳定，确保治理底座的确定性
-- **外围迭代**：外围生态（示例/模板/工具/文档/教程/适配）快速迭代，欢迎社区贡献
+| Dimension | Memory plugins (Mem0/Zep) | GOAA |
+|-----------|---------------------------|------|
+| Core function | Add memory to AI | Add governance to AI (memory is one part) |
+| Memory carrier | Cloud database/vector DB | Local plain-text files |
+| Data ownership | On plugin provider's servers | In your own folder |
+| Portability | Tied to plugin service | Plain-text, portable anytime, works with any AI |
+| Governance | None (only memory) | Complete constitution/rules/adjudication/memory system |
+| For | Developers | Ordinary people |
 
-核心设计变更需经设计评审，外围改进随时合并。详见 [VERSION](../VERSION) 和 [CONTRIBUTING.md](../CONTRIBUTING.md)。
+In short: memory plugins only solve "does AI remember," GOAA solves the complete problem of "does AI remember + listen + belong to you."
 
-### Q25：GOAA 的许可证是什么？我可以商用吗？
+### Q17: I'm already using LangChain/AutoGPT. Do I still need GOAA?
 
-GOAA 采用 **Apache-2.0** 许可证。这意味着：
+Depends on your needs:
+- If you only need AI to "do things" without long-term governance and data ownership, LangChain/AutoGPT is enough
+- If you need AI for "long-term collaboration, remembers you, listens to you, data belongs to you," GOAA can serve as governance foundation, working with LangChain/AutoGPT
 
-- ✅ 可以免费使用（个人和商业）
-- ✅ 可以修改和分发
-- ✅ 可以用于闭源项目
-- ✅ 可以申请专利
-- ⚠️ 需要保留版权声明和许可证声明
-- ⚠️ 修改过的文件需要标注修改说明
-- ⚠️ 不能使用项目名称做商标宣传
-
-简单说：Apache-2.0 是一个非常宽松的许可证，你几乎可以用它做任何事，只需要保留声明。
+GOAA and enhancement frameworks are **complementary**, not competitive. Enhancement frameworks provide capability (base), GOAA provides controllability (coefficient). Base × coefficient = truly usable AI collaboration.
 
 ---
 
-## 七、故障排查
+## 5. Data & Security
 
-### Q26：AI 没有自动开始首次激活引导，怎么办？
+### Q18: Is my data safe? Will it be uploaded to cloud?
 
-如果 AI 没有自动开始引导，请对它说：**"读取 README.md 并按其中的指示开始"**——这句话可以强制唤醒引导流程。
+All GOAA data (memory, rules, identity, conversation records) lives in **your local folder**, not auto-uploaded to any cloud.
 
-如果还是不行，检查：
-1. 工作区是否锚定正确（应该是含 README.md 的那一层，不是更外层）
-2. AI 助手是否具备本地文件读写能力（有些 AI 助手不支持读取本地文件）
-3. 工作区中是否已经存在 `identity/主人档案.md`（如果已存在，AI 会按常规启动流程，不会再次引导）
+The only "external" involvement: your conversation with AI assistant is sent to AI model provider (OpenAI, Anthropic, etc.) — unavoidable with any AI assistant. But GOAA's **file data** isn't auto-uploaded — AI only reads files in your workspace when needed, files themselves stay on your computer.
 
-### Q27：AI 好像"忘记"了之前的规则/约定，怎么办？
+For extreme privacy requirements, use locally-deployed AI models (e.g., Ollama) — all data stays on your computer.
 
-这通常是因为**记忆没有正确装载**。检查：
+### Q19: I want to switch AI assistants. Can my GOAA data still be used?
 
-1. **收摊是否执行**：上次会话结束时是否执行了收摊五钩？如果没有收摊，上次的经验可能没有沉淀到蒸馏层
-2. **蒸馏层是否更新**：检查 `_Memory/distill/` 目录下是否有最新的蒸馏文件
-3. **启动是否装载**：AI 启动时是否读取了蒸馏层？可以问 AI"你读取了哪些启动文件？"来确认
-4. **规则是否生效**：检查规则文件是否通过了生效闸门四道校验
+**Yes.** This is one of GOAA's core advantages — **data portability**.
 
-如果以上都正常但 AI 仍然"忘记"，可以手动提醒 AI"请重新读取蒸馏层和规则文件"，或者重新执行一次收摊来更新蒸馏层。
+All GOAA data is plain-text files, not tied to any specific AI model or platform. Switch to a new AI assistant, set the same folder as workspace, new AI reads your memory/rules/identity, continues collaboration.
 
-### Q28：规则之间冲突了怎么办？
-
-GOAA 有**规则冲突检测**机制，会扫描规则文件，检测相同触发条件、互斥指令等冲突。
-
-如果发现规则冲突：
-1. AI 会显影冲突（不会自行选择遵守哪条）
-2. 提交裁决循环，由人（主人）最终决策
-3. 裁决结果固化：保留一条、修改一条、或两条都退役
-4. 退役的规则归档到 `_Memory/history/rule-archive/`
-
-规则冲突不是"bug"，而是治理体系正常运作的表现——通过裁决闭环，规则体系会持续优化。
-
-### Q29：我想重置 GOAA，从头开始，怎么做？
-
-如果你想完全重置，从头开始：
-
-1. **备份**：先备份当前的工作区（以防后悔）
-2. **删除实例化文件**：删除 `identity/主人档案.md`、`_Memory/` 目录下的所有内容、`_Work/` 和 `_Output/` 目录
-3. **保留母本文件**：保留 `constitution/`、`rules/`、`mechanisms/`、`methodologies/`、`templates/`、`tools/` 等母本文件
-4. **重新激活**：在 AI 助手中重新锚定工作区，说"你好"，开始新的首次激活引导
-
-如果你想连母本文件也重置（比如想用最新版本），直接重新下载 GOAA 仓库即可。
-
-### Q30：GOAA 运行很慢/很费 token，怎么办？
-
-GOAA 的 token 成本主要来自两个方面：
-1. **启动装载**：每次启动读取宪法、身份、蒸馏层等文件（通常几千 token，可控）
-2. **对话执行**：正常对话的 token 消耗（取决于你的使用频率和对话长度）
-
-如果觉得成本高，可以：
-1. **精简蒸馏层**：蒸馏层不是越大越好，定期清理过时内容，保持精华
-2. **按需深装载**：不要每次都读取全部史书层，只在需要时通过索引检索
-3. **使用更便宜的模型**：GOAA 模型无关，可以选择成本更低的 AI 模型
-4. **减少不必要的对话**：有些任务可以批量处理，减少对话轮次
-
-GOAA 的设计目标之一就是**极致低成本**——基础设施成本趋近于零（文件系统+普通电脑），日常运行成本主要是对话 token，而且随着使用时间增长，对齐资产持续积累，边际成本递减。
+Your AI companion isn't "an account bound to a platform" — it's "a file system in your folder." Folder exists, companion exists.
 
 ---
 
-*GOAA · 常见问题解答 · 核心稳定版 1.0 · 2026-08-28*
-*如果你的问题不在此列，欢迎在 GitHub Discussions 提问（仓库入口见根目录 README）*
+## 6. Contribution & Community
+
+### Q20: Can I contribute to GOAA? How?
+
+**Welcome!** GOAA is open source, Apache-2.0 license.
+
+Contribution ways include (not limited to):
+- **Documentation**: improve docs, translate, write tutorials/examples
+- **Mechanisms**: propose new mechanism designs, improve existing ones
+- **Tools**: develop auxiliary tools (validator, init scripts, migration tools)
+- **Templates**: contribute templates for different scenarios (book writing, project management)
+- **Adaptation**: adapt for different AI assistants/platforms
+
+See [CONTRIBUTING.en.md](../CONTRIBUTING.en.md) for process. GOAA uses "core stable + peripheral iteration" dual-track: core design changes require design review, peripheral improvements merged anytime.
+
+### Q21: What is GOAA's license? Can I use it commercially?
+
+GOAA uses **Apache-2.0** license. This means:
+- ✅ Free use (personal and commercial)
+- ✅ Modify and distribute
+- ✅ Use in closed-source projects
+- ✅ Apply for patents
+- ⚠️ Must retain copyright and license notices
+- ⚠️ Modified files must state modifications
+- ⚠️ Cannot use project name for trademark promotion
+
+In short: Apache-2.0 is very permissive, you can do almost anything, just retain notices.
+
+---
+
+## 7. Troubleshooting
+
+### Q22: AI didn't auto-start first-activation onboarding. What to do?
+
+Say to AI: **"Read README.md and follow its instructions to start"** — this forces onboarding.
+
+If still not working, check:
+1. Workspace anchored correctly (should be layer containing README.md, not outer)
+2. AI assistant has local file read/write capability (some don't support local files)
+3. `identity/owner-profile.md` already exists (if exists, AI follows regular startup, won't onboard again)
+
+### Q23: AI seems to have "forgotten" previous rules/agreements. What to do?
+
+Usually because **memory not loaded correctly**. Check:
+
+1. **Shutdown executed**: Did last session end with shutdown five hooks? If not, experience may not have precipitated to distill layer
+2. **Distill layer updated**: Check `_Memory/distill/` for latest distill files
+3. **Startup loaded**: Did AI read distill layer at startup? Ask AI "what startup files did you read?"
+4. **Rules effective**: Check rule files passed effect gate four checks
+
+If all normal but AI still "forgets," manually remind AI "please re-read distill layer and rule files," or re-execute shutdown to update distill layer.
+
+### Q24: Rules conflict. What to do?
+
+GOAA has **rule conflict detection** — scans rule files for same trigger conditions, mutually exclusive instructions, etc.
+
+If conflict found:
+1. AI reveals conflict (won't自行 choose which to follow)
+2. Submit to adjudication loop, human (owner) final decision
+3. Result consolidated: keep one, modify one, or retire both
+4. Retired rules archived to `_Memory/history/rule-archive/`
+
+Rule conflict isn't a "bug" — it's normal operation of governance system. Through adjudication loop, rule system continuously optimizes.
+
+### Q25: I want to reset GOAA and start over. How?
+
+To completely reset:
+1. **Backup**: backup current workspace first (in case of regret)
+2. **Delete instance files**: delete `identity/owner-profile.md`, all content in `_Memory/`, `_Work/`, `_Output/`
+3. **Keep template files**: keep `constitution/`, `rules/`, `mechanisms/`, `methodologies/`, `templates/`, `tools/`
+4. **Re-activate**: re-anchor workspace in AI assistant, say "Hello," start new onboarding
+
+If you want to reset template files too (e.g., use latest version), just re-download GOAA repository.
+
+---
+
+*GOAA · FAQ · Core stable version 1.0 · 2026-08-28*
+*If your question isn't here, ask in GitHub Discussions (repo entry point in the root README)*

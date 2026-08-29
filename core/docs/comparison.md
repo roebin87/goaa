@@ -1,63 +1,63 @@
-﻿# 对比：GOAA vs LangGraph / AutoGen / dsh（治理层独有性）
+﻿# Comparison: GOAA vs. LangGraph / AutoGen / dsh (governance-layer uniqueness)
 
-> **定位**：GOAA 与主流 Agent 工程框架的对照——**形式同形、对象异层**：它们管"工程正确性"，GOAA 管"所有权/决断权/熵增"。
-> **证据来源**：2026-08-19 GitHub 源文件级核实（LangGraph/AutoGen/dsh）+ 星数实查。
-> **边界**：019 铁律——外部仅作参考/对照证据，不改动本体系表述。
+> **Position**: GOAA versus mainstream agent engineering frameworks — **same form, different object layer**: they manage "engineering correctness," GOAA manages "ownership / decision rights / entropy growth."
+> **Evidence source**: 2026-08-19 GitHub source-file-level verification (LangGraph/AutoGen/dsh) + live star counts.
+> **Boundary**: the 019 iron rule — external material serves only as reference/comparison evidence; it does not alter this system's own statements.
 
 ---
 
-## 一、一句话对照
+## 1. One-line comparison
 
-| 框架 | 解决什么 | 对象层 |
+| Framework | Solves | Object layer |
 |------|---------|--------|
-| LangGraph / AutoGen / dsh | **怎么让 AI 干得顺**（状态/沙箱/编排） | 工程正确性（增强型） |
-| **GOAA** | **怎么让 AI 干得可控**（所有权/决断权/秩序） | 治理（治理型） |
+| LangGraph / AutoGen / dsh | **how to make AI run smoothly** (state/sandbox/orchestration) | engineering correctness (enhancement-oriented) |
+| **GOAA** | **how to make AI reliably governable** (ownership/decision rights/order) | governance (governance-oriented) |
 
-> 二者的关系不是竞争，是分工：外部负责"强"，GOAA 负责"强的秩序"——证伪器不造强、借强、管强。
+> The relationship is not competition but division of labor: the outside provides "strength," GOAA provides "the order of strength" — the falsifier does not build strength, borrow strength, or govern strength.
 
-## 二、逐家对比（源文件级证据）
+## 2. Side-by-side comparison (source-file-level evidence)
 
-### 1. LangGraph（langchain 生态·144k stars）
-| 维度 | LangGraph | GOAA 对应 |
+### 1. LangGraph (langchain ecosystem · 144k stars)
+| Dimension | LangGraph | GOAA counterpart |
 |------|-----------|-----------|
-| 状态持久化 | checkpointer（Checkpoint 快照+thread_id 隔离+pending writes 增量容错） | 记忆物理化（文件=记忆载体·蒸馏/史书/索引） |
-| 流程结构 | 声明式状态图（graph） | 机制层（启动/收摊/立项/歧义…） |
-| 增量容错 | 失败节点不重跑成功节点 | 蒸馏覆盖前备份（防记忆断层） |
-| 缺 | 无所有权/决断权概念 | 母公理（人 100% 决断权） |
+| State persistence | checkpointer (Checkpoint snapshots + thread_id isolation + pending-writes incremental fault tolerance) | memory physicalized (files = memory carriers · distillation/chronicle/index) |
+| Flow structure | declarative state graphs | mechanism layer (startup/wrap-up/problem-gate/ambiguity…) |
+| Incremental fault tolerance | failed nodes do not re-run successful nodes | back up before distillation overwrite (preventing memory gaps) |
+| Missing | no ownership/decision-rights concept | Mother Axiom (100% human decision rights) |
 
-### 2. AutoGen（微软·已转维护模式）
-| 维度 | AutoGen | GOAA 对应 |
+### 2. AutoGen (Microsoft · moved to maintenance mode)
+| Dimension | AutoGen | GOAA counterpart |
 |------|---------|-----------|
-| 状态 | Maintenance Mode（社区维护·转向 Microsoft Agent Framework） | 以运行代核验（本体系自身实证） |
-| 多体对话 | 可组合终止条件（`\|` OR/`&` AND） | 归一化（单主体+资产复用，不需要多体） |
-| 人在回路 | Human-in-the-loop 能力 | 二域划分（是非域机决断/中间态平衡域人垄断） |
-| 缺 | 无主权/秩序治理 | 优先级规则+单一数据源（防漂移双法则） |
+| Status | Maintenance Mode (community-maintained · moving to Microsoft Agent Framework) | verification-through-running (this system self-evidenced) |
+| Multi-agent dialogue | composable termination conditions (`\|` OR / `&` AND) | normalization (single actor + asset reuse, no multi-agent needed) |
+| Human in the loop | human-in-the-loop capability | two-domain division (yes/no domain machine-adjudicated / middle-ground domain human-monopolized) |
+| Missing | no sovereignty/order governance | priority rules + single source of truth (the two anti-drift laws) |
 
-### 3. dsh（DeepSeek Harness）
-| 维度 | dsh | GOAA 对应 |
+### 3. dsh (DeepSeek Harness)
+| Dimension | dsh | GOAA counterpart |
 |------|-----|-----------|
-| 沙箱 | bwrap+Landlock 三档 SandboxMode+fail-closed（无后端不裸放行） | 目录权限映射（🔒只读/📌只追加/✍️可覆盖）+validator 硬拦截 |
-| 会话 | append-only 事件溯源+deriveMessages 派生 | 对话记录逐字+只追加+哈希校验（史书层） |
-| 决策留痕 | AGENTS.md+`.agents/notes/`（implemented/rejected） | 变更记录区块+ADR（决策留痕） |
-| 治理 | 管工程正确性（文件规范 AI） | **管所有权/决断权/熵增（宪法治理）——形式同形、对象异层** |
+| Sandbox | bwrap+Landlock three-tier SandboxMode + fail-closed (no backend → no bare pass-through) | directory permission mapping (🔒read-only/📌append-only/✍️overwritable) + validator hard block |
+| Sessions | append-only event sourcing + deriveMessages derivation | verbatim conversation records + append-only + hash verification (chronicle layer) |
+| Decision trace | AGENTS.md + `.agents/notes/` (implemented/rejected) | change-record blocks + ADR (decision trace) |
+| Governance | manages engineering correctness (file-specified AI) | **manages ownership/decision rights/entropy growth (constitutional governance) — same form, different object layer** |
 
-## 三、治理层独有性锚点（GOAA 独有·三家皆无）
+## 3. Governance-layer uniqueness anchors (unique to GOAA · absent in all three)
 
-| # | GOAA 独有 | 三家对应 |
+| # | GOAA-unique | The three counterparts |
 |---|-----------|---------|
-| 1 | **母公理：人 100% 决断权**（所有权/决断权/责任权三者合一） | 无此概念（工具无人格化主权） |
-| 2 | **宪法层**（基本法/设计原理·不可修改） | AGENTS.md 是工程规范非宪法 |
-| 3 | **熵治理**（负熵对抗熵增·规则膨胀/蒸馏残留/认知漂移） | 无熵视角（配置漂移≈熵·但无治理层对抗） |
-| 4 | **证伪器**（强的秩序闸门：可检测+可判断） | validator 管格式正确性，不管"做得好不好" |
-| 5 | **真问题闸门**（假问题不立项=不消耗资源） | 无问题质量治理 |
-| 6 | **歧义判定权在人**（机只显影·判定归人） | 机自主执行（无决断权分界） |
+| 1 | **Mother Axiom: 100% human decision rights** (ownership/decision rights/accountability united) | no such concept (tools have no personified sovereignty) |
+| 2 | **Constitutional layer** (Basic Law / Design Principles · immutable) | AGENTS.md is an engineering spec, not a constitution |
+| 3 | **Entropy governance** (negative entropy against entropy growth · rule bloat / distillation residue / cognitive drift) | no entropy perspective (config drift ≈ entropy, but no governance-layer counteraction) |
+| 4 | **The falsifier** (order gate for strength: checkable + judgeable) | validators check format correctness, not "whether it does well" |
+| 5 | **The genuine-problem gate** (non-genuine problems are not approved = no resource consumption) | no problem-quality governance |
+| 6 | **Ambiguity judgment belongs to the human** (machine only surfaces · human judges) | machine acts autonomously (no decision-rights division) |
 
-## 四、结论
+## 4. Conclusion
 
-- **互补非竞争**：外部 10 万星赛道全是增强型（怎么强），治理型是空白——GOAA 的独有价值=给任何增强型框架补上"秩序"层；
-- **可挂载**：LangGraph/dsh 的执行能力可作为 GOAA 的"器"（借强），GOAA 的宪法/规则/机制作为"强的秩序"层叠加其上（管强）；
-- **不替代**：GOAA 不替代增强型框架，它定义的是框架之上"谁说了算、怎么证伪、熵从哪来"。
+- **Complementary, not competing**: the 100k-star track is all enhancement-oriented (how to be strong); governance-oriented is a blank — GOAA's unique value = adding the "order" layer to any enhancement-oriented framework;
+- **Mountable**: LangGraph/dsh execution capability can serve as GOAA's "tools" (borrowing strength); GOAA's constitution/rules/mechanisms layer on top as "the order of strength" (governing strength);
+- **Not a replacement**: GOAA does not replace enhancement-oriented frameworks; it defines what sits above frameworks — "who decides, how falsification works, where entropy comes from."
 
 ---
 
-*GOAA · 对比文档 · 唯一版本 1.0 · 2026-08-19 · 证据=GitHub 源文件级核实+星数实查*
+*GOAA · Comparison doc · Single version 1.0 · 2026-08-19 · evidence = GitHub source-file-level verification + live star counts*

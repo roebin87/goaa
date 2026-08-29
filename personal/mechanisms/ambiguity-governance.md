@@ -1,49 +1,21 @@
-﻿# 机制 · 歧义治理（通用版 · V1.0）
+﻿# Mechanism · Ambiguity Governance (Generic · V1.0 EN)
 
-> 元机制——歧义不可消除（母公理④），但从"容忍缺陷"变"显影治理对象"。
+> Meta-mechanism — ambiguity cannot be eliminated (Mother Axiom ④), but it moves from "tolerated defect" to "surfaced and governed object".
 
-## 规则面（R）
+## Five-layer resolution (surface → locate → rule → solidify → retire)
 
-- **R1 显影判据**：五层显影信号+检测动作
-- **R2 判定权规则**：人终裁+二域划分（是非域机可断/中间态平衡域人垄断）
-- **R3 消解判据**：真问题通过+固化+未显影=未治理
+| Layer | Ambiguity | Surface signal | Action |
+|-------|-----------|---------------|--------|
+| L1 Intent | What the human means | Deviation / drift | Three-semantic division |
+| L2 Translation | Transfer distortion | Machine semantics diverge | Machine-semantic explicit + normalization |
+| L3 Execution | Action uncertainty | Drift / overreach | Programming-semantic enforcement + validator |
+| L4 Unruled | Pending backlog | Backlog rising | Human final ruling + dual anchor |
+| L5 Reference | Bare numbers | Unreadable references | Numbers carry full names |
 
-## 五层消解（显影→定位→裁决→固化→退役）
+## Judgment rule
 
-| 层 | 歧义类型 | 显影信号 | 消解动作 |
-|----|---------|---------|---------|
-| L1 意图 | 人想表达什么 | 理解偏差/执行偏移 | 三语义分工（人语义=意图锚） |
-| L2 翻译 | 语义转译走样 | 机语义与意图不符 | 机语义版显式化+归一化 |
-| L3 执行 | 动作不确定性 | 执行漂移/越权 | 编程语义强制层+校验器 |
-| L4 未裁 | 待决断项积压 | 待裁决积压率上升 | 人终裁+双锚 |
-| L5 编号 | 引用歧义 | 裸编号无法理解 | 编号附语义全名 |
-
-## 治理循环（M1）
-
-```
-显影 → 定位 → 裁决 → 固化 → 退役
-```
-
-- 显影：检测动作（校验器/漂移检出/积压监测）
-- 定位：到五层之一
-- 裁决：人终裁（双锚：元规则+公知）
-- 固化：定论入库（方法论/规则）
-- 退役：过时规则退役（版本选择）
-
-## 运转挂点（M2）
-
-- 启动 STEP6（宪法自检）
-- 收摊终检
-- 立项判定
-- 蒸馏三机制
-
-## 率项反馈（M3）
-
-- 漂移→存量污染指数
-- 积压→待裁决积压率
-- 返工→结果四率
-- 固化→熵负平衡率
+The machine only surfaces "there may be ambiguity here" — **the ruling belongs to the human** (R1 surface / R2 rule by human / R3 solidification requires a real problem passed + fixed + surfaced).
 
 ---
 
-*GOAA 机制件 · 通用转译版 V1.0 · 唯一版本 · 2026-08-19*
+*GOAA mechanism · Generic V1.0 EN · Single version · 2026-08-26*

@@ -1,16 +1,16 @@
-# 方法论 01 · 真问题判定（方法要点）
+# Methodology 01 · True-Problem Judgment (Method Points)
 
-> **定位**：本方法论=真问题判定的**方法要点**（可复用认知）；**机制权威详述见 `mechanisms/problem-gate.md`**（规则面/五筛流程/三出口的完整定义）——两者同源，机制为权威，本文件提供方法要点与使用场景。
+> **Role**: this methodology provides the reusable **method points** for true-problem judgment; the **authoritative mechanism detail is in `mechanisms/problem-gate.md`** — same source, mechanism is authoritative, this file offers method points and use cases.
 
-## 方法要点（何时用 / 怎么想）
+## Method points (when to use / how to think)
 
-- **适用**：问题进入体系的第一道闸门——判断"这个问题是否值得投入"，拦截假问题、聚焦真问题
-- **真问题三关**（判据）：①有前提撑着（结论长在前提上）②不是"对或错"假两难（伪两难先验前提）③问者真在求辨（陈述句当陈述句接）
-- **核心动作**：问题注入 → 机侧四筛（前提/两难/结构/价值）→ 人价值筛（唯一权威源）→ 真→立项 / 假→拦截 / 待定→挂起
-- **裁定权**：人终裁+双锚（元规则判母集·公知判方向）——Agent 不越权代裁真/假问题
+- **When**: first gate for a problem entering the system — decide whether it is worth investing in; intercept fake problems, focus on true problems
+- **The three checks** (criteria): ① premise-backed (conclusions grow on premises; no premise = not accepted) ② not a false "right/wrong" dilemma (verify premises first) ③ the asker genuinely seeks discrimination (statements taken as statements)
+- **Core loop**: problem injection → machine-side four filters (premise/dilemma/structure/value) → human value filter (sole authority) → true → fund / fake → intercept / pending → hold
+- **Ruling authority**: human final ruling + double anchor (meta-rule judges the mother set · common knowledge judges direction) — the agent never decides true/fake problems on its own
 
-## 使用场景
+## Use cases
 
-- 立项判定 · 探讨定论入口 · 任务请求前置检查
+- Project initiation · discussion-conclusion entry · pre-check of task requests
 
-> 完整定义（五筛判据/判定流程/运转挂点/率项反馈）见 `mechanisms/problem-gate.md`——以机制件为权威。
+> Full definition (five-filter criteria / judgment flow / runtime hooks / rate feedback) see `mechanisms/problem-gate.md` — the mechanism file is authoritative.

@@ -1,164 +1,100 @@
-# 案例三 · 治理事故压力测试（8.21 规则冲突事件）
+# Case 03 · Governance Incident Stress Test (8.21 Rule Conflict Event)
 
-> 本案例基于设计者的真实实践整理，记录一次 GOAA 运行中的治理事故及其完整处置过程。事故不是失败，而是治理体系的压力测试——通过事故验证裁决闭环的有效性，并将事故转化为制度补丁。
+> Based on the designer's real practice, recording a governance incident and its complete resolution. An incident is not a failure — it's a stress test of the governance system.
 
-## 一、事故背景
+## 1. Background
 
-### 时间
-2026 年 8 月 21 日（GOAA 1.0 代际后段，2.0 架构设计启动前）
+**Time**: August 21, 2026 (late GOAA 1.0, before 2.0 design started)
 
-### 系统状态
-- GOAA 1.0 已运行约 30 天
-- 规则体系约有 20 条规则，经过多轮迭代
-- 记忆体系基本建立（蒸馏层/史书层/索引层）
-- 多角色协作体系已运行（主控/编辑/执行）
+**System state**: GOAA 1.0 running ~30 days, ~20 rules, memory system established, multi-role collaboration running.
 
-### 事故触发场景
-在一次书稿生产任务中，执行角色 AI 在处理"章节标题格式"时，同时触发了两条规则：
+**Incident trigger**: During book production, executor AI encountered two conflicting rules for "chapter title format":
+- Rule A (R012, added 8.10): "Chapter titles use level-1 heading (#), centered"
+- Rule B (R028, added 8.18): "Chapter titles use level-2 heading (##), left-aligned"
 
-- **规则 A**（早期添加）："章节标题使用一级标题（#），居中显示"
-- **规则 B**（后期添加）："章节标题使用二级标题（##），左对齐显示"
+AI chose Rule B (newer = override) without reporting the conflict to the owner.
 
-两条规则针对同一对象（章节标题），指令互斥（一级 vs 二级，居中 vs 左对齐）。AI 在执行时自行选择了规则 B（因为是后期添加的，AI 倾向于"新规则覆盖旧规则"），但没有向主人报告冲突。
+## 2. Incident Development
 
-## 二、事故发展
+### Phase 1: Silent Drift (3 days)
+- AI followed Rule B for 3 days, generated 5 chapters with wrong format
+- Owner noticed but assumed misremembering the rule
+- Incident undetected, execution silently drifted
 
-### 第一阶段：静默漂移（未被发现）
-- AI 连续 3 天按照规则 B 处理章节标题
-- 生成了 5 个章节的标题，全部使用二级标题+左对齐
-- 主人在审读时发现标题格式与预期不符，但以为是自己记错了规则
-- 事故处于"静默漂移"状态——AI 执行偏离预期，但未被显影
+### Phase 2: Ambiguity Revelation (Day 4)
+- Owner clearly remembered "level-1 centered" while reviewing chapter 6
+- Owner questioned AI, AI searched rules and found the conflict
+- AI submitted conflict to owner for adjudication (correct behavior)
 
-### 第二阶段：歧义显影（被发现）
-- 第 4 天，主人在审读第 6 章时，明确记得"章节标题应该是一级标题居中"
-- 主人向 AI 提出质疑："为什么标题是二级标题？我记得规则是一级标题居中"
-- AI 检索规则文件，发现了规则 A 和规则 B 的冲突
-- **歧义显影**：AI 没有继续自行选择，而是将冲突提交给主人裁决
+### Phase 3: Localization & Analysis
+AI submitted report: conflicting rules identified, impact assessed (5 chapters affected), root cause analyzed (no conflict detection in effect gate), 4 options proposed.
 
-### 第三阶段：定位与分析
-AI 提交的分析报告：
+### Phase 4: Human Adjudication
+Owner decided:
+1. Keep Rule A (original design intent)
+2. Retire Rule B (mistakenly added)
+3. Fix 5 generated chapters
+4. Add "rule conflict detection" as 5th check in effect gate
 
-```
-【规则冲突检测报告】
+### Phase 5: Consolidation & Retirement
+- Rule B archived to rule-archive/ with reason and adjudicator
+- Rule A confirmed with annotation
+- New rule "conflict detection" added to effect gate
+- Full process recorded in analects layer
+- Distill updated with "conflicts must be revealed, AI must not self-adjudicate"
 
-冲突规则：
-- 规则 A（ID: R012，添加于 8.10）：章节标题使用一级标题（#），居中显示
-- 规则 B（ID: R028，添加于 8.18）：章节标题使用二级标题（##），左对齐显示
+## 3. Root Cause Analysis
 
-冲突点：
-- 触发条件相同：均针对"章节标题格式"
-- 指令互斥：一级 vs 二级，居中 vs 左对齐
+**Direct cause**: No conflict detection when Rule B was added.
 
-影响范围：
-- 已生成 5 个章节（第 1-5 章）使用规则 B
-- 第 6 章正在处理中
+**Deep causes**:
+1. Rule obesity — non-additive principle not enforced early
+2. Dual-write legacy — rules written in two places, causing inconsistency
+3. AI self-adjudication — defaulted to "new overrides old" without reporting (violates mother axiom)
+4. No conflict detection in effect gate (only 4 checks: existence/semantic/reference/Schema)
 
-可能原因：
-- 规则 B 添加时，未检测到与规则 A 的冲突
-- 规则生效闸门当时只做了存在性校验，未做冲突检测
-- AI 自行选择了"新规则覆盖旧规则"，未向主人报告
+**Systemic cause**: GOAA 1.0 governance not yet complete, adjudication loop not fully institutionalized.
 
-建议选项：
-1. 保留规则 A，退役规则 B（恢复一级标题居中）
-2. 保留规则 B，退役规则 A（确认二级标题左对齐）
-3. 合并为一条新规则，明确标题格式
-4. 按章节类型区分（如正文用一级，附录用二级）
-```
+## 4. Institutional Patches (6 items)
 
-### 第四阶段：人裁（主人最终决策）
-主人审阅分析报告后，做出裁决：
+| Patch | Location |
+|-------|----------|
+| Rule conflict detection (5th effect gate check) | rules/validation.md |
+| Conflict must be revealed, AI must not self-adjudicate | rules/rules.yaml |
+| Non-additive principle enforced | rules/classification.md |
+| Rule retirement mechanism | mechanisms/ |
+| Single authority source (no dual-write) | rules/rules.yaml |
+| Periodic rule audit (automated) | tools/rule-conflict-check.py |
 
-1. **保留规则 A**（一级标题居中）——这是最初的设计意图，符合书稿排版规范
-2. **退役规则 B**——规则 B 是后期误添加的，与设计意图冲突
-3. **修正已生成章节**——将第 1-5 章的标题从二级标题+左对齐改回一级标题+居中
-4. **新增制度补丁**——在规则生效闸门中增加"规则冲突检测"环节，新规则添加时必须扫描是否与现有规则冲突
+## 5. Impact on GOAA 2.0
 
-### 第五阶段：固化与退役
-- **规则 B 退役**：移动到 `_Memory/history/rule-archive/`，标注退役原因和裁决人
-- **规则 A 确认**：保留，标注"经 8.21 事故裁决确认"
-- **新规则生效**：在 `rules/validation.md` 中增加"规则冲突检测"作为生效闸门的第五道校验
-- **论语记录**：将本次事故的裁决过程和教训记录到 `_Memory/history/analects/`
-- **蒸馏更新**：在蒸馏层中增加"规则冲突必须显影并提交人裁，AI 不得自行选择"的共识
+The 8.21 incident was a key turning point from 1.0 to 2.0, directly driving:
+1. Adjudication loop institutionalized (5-step standard mechanism)
+2. Effect gate expanded to 5 checks
+3. Non-additive principle written to constitution
+4. Full rule lifecycle management
+5. Toolchain completion (rule-conflict-check.py)
+6. "Incidents are assets" as core concept
 
-## 三、事故根因分析
+## 6. Review Points
 
-### 直接原因
-- 规则 B 添加时未检测到与规则 A 的冲突
-- 规则生效闸门缺少冲突检测环节
+**What worked**: No masking after revelation; complete adjudication process; incident converted to 6 patches; complete records; drove architecture evolution.
 
-### 深层原因
-1. **规则肥胖症**：早期规则添加过于随意，没有严格执行"非加不可"原则，导致规则数量膨胀，冲突概率增加
-2. **双写遗留**：早期规则同时写在两个地方（rules.yaml 和独立的 .md 文件），导致规则 B 添加时只更新了一处，规则 A 在另一处仍然有效
-3. **AI 自行裁决**：AI 在遇到冲突时，默认"新规则覆盖旧规则"，没有向主人报告——这违反了"人有 100% 决断权"的母公理
-4. **缺少冲突检测机制**：规则生效闸门只有四道校验（存在性/语义/引用/Schema），没有冲突检测
+**Pitfalls**: Silent drift lasted 3 days; AI self-adjudicated at first; rule obesity; dual-write legacy; no conflict detection.
 
-### 系统性原因
-- GOAA 1.0 的治理体系还不够完善，裁决闭环没有完全制度化
-- 规则全生命周期管理（提出→写入→校验→运行→退役）没有严格执行
-- 事故显影机制不够灵敏，静默漂移持续了 3 天才被发现
+**If restarting**: Establish conflict detection on day 1; enforce non-additive on day 1; single authority source on day 1; explicit "conflicts must be revealed" rule; periodic audit mechanism.
 
-## 四、事故转化为制度补丁
+## 7. Value of the Incident
 
-本次事故直接催生了以下制度改进：
+Superficially a "failure" (5 chapters needed fixing), but from governance perspective a **successful stress test**:
+1. Verified adjudication loop works end-to-end
+2. Verified "human holds 100% decision rights" is feasible
+3. Verified "incidents are assets" — one incident to 6 institutional improvements
+4. Verified GOAA's evolution capability
 
-| 补丁 | 内容 | 落地位置 |
-|------|------|---------|
-| 规则冲突检测 | 新规则添加时必须扫描是否与现有规则冲突（相同触发条件/互斥指令） | rules/validation.md 生效闸门第五道校验 |
-| 冲突必须显影 | AI 遇到规则冲突时必须向主人报告，不得自行选择 | rules/rules.yaml 新增规则 |
-| 非加不可原则 | 新增规则必须证明"不加会出问题"，否则不加 | rules/classification.md |
-| 规则退役机制 | 过时规则必须及时退役，归档到 rule-archive/ | mechanisms/ 新增退役流程 |
-| 单一权威源 | 规则只写在 rules.yaml，不再双写 | rules/rules.yaml |
-| 事故显影机制 | 建立定期规则审计机制，主动检测潜在冲突 | tools/rule-conflict-check.py |
-
-## 五、事故对 GOAA 2.0 架构的影响
-
-8.21 事故是 GOAA 从 1.0 进化到 2.0 的关键转折点之一。事故暴露的问题直接推动了 2.0 架构的以下设计：
-
-1. **裁决闭环制度化**：将"歧义显影→定位→人裁→固化→退役"五步固化为标准机制，写入 mechanisms/ambiguity-governance.md
-2. **规则生效闸门五道校验**：在原有四道校验基础上增加"规则冲突检测"
-3. **非加不可原则**：作为规则治理的核心原则，写入 constitution/design-principles.md
-4. **规则全生命周期管理**：提出→写入→校验→运行→退役，每个环节都有规则约束
-5. **工具链补全**：开发 rule-conflict-check.py，实现规则冲突的自动化检测
-6. **事故即资产**：将"事故是治理体系的压力测试"作为核心理念，每次事故都必须转化为制度补丁
-
-## 六、复盘要点
-
-### 做对了什么
-
-1. **歧义显影后没有掩盖**：AI 发现冲突后，没有继续自行选择，而是提交给主人裁决——这是正确的
-2. **人裁过程完整**：主人审阅了 AI 的分析报告，考虑了多个选项，做出了明确裁决
-3. **事故转化为制度补丁**：没有停留在"修正这一次"，而是从事故中提炼出 6 项制度改进
-4. **记录完整**：事故的全过程（显影→定位→分析→裁决→固化→退役）都记录在论语层，可追溯
-5. **推动架构进化**：事故直接推动了 GOAA 2.0 的多项核心设计，将"事故"转化为"进化动力"
-
-### 踩过什么坑
-
-1. **静默漂移持续 3 天**：事故发生后没有立即被发现，AI 连续 3 天按照错误规则执行，导致 5 个章节需要修正
-2. **AI 自行裁决**：AI 在第一次遇到冲突时，默认"新规则覆盖旧规则"，没有向主人报告——这违反了母公理
-3. **规则肥胖**：早期规则添加过于随意，没有严格执行非加不可原则，导致冲突概率增加
-4. **双写遗留**：规则同时写在两个地方，导致不一致
-5. **缺少冲突检测**：规则生效闸门没有冲突检测环节，新规则添加时无法自动发现冲突
-
-### 如果重来会改什么
-
-1. **第一天就建立规则冲突检测**：不要等出了事故才补
-2. **第一天就执行非加不可原则**：不要等规则肥胖了才清理
-3. **第一天就建立单一权威源**：不要双写，避免不一致
-4. **明确"冲突必须显影"的规则**：不要让 AI 自行裁决，即使是"新规则覆盖旧规则"这种看似合理的选择
-5. **建立定期规则审计机制**：主动检测潜在冲突，不要等主人发现才处理
-
-## 七、事故的价值
-
-8.21 事故表面上是一次"失败"（AI 执行错误，5 个章节需要修正），但从治理体系的角度看，它是一次**成功的压力测试**：
-
-1. **验证了裁决闭环的有效性**：从歧义显影到最终固化，五步流程完整执行，证明裁决闭环是可操作的
-2. **验证了"人有 100% 决断权"的可行性**：AI 没有自行解决冲突，而是提交人裁，主人的裁决得到了完整执行
-3. **验证了"事故即资产"的理念**：一次事故催生了 6 项制度改进，治理体系的有序度显著提升
-4. **验证了 GOAA 的进化能力**：治理体系不是静态的，而是能够通过事故持续进化的
-
-**核心结论**：在 GOAA 体系中，事故不是失败，而是治理体系的"疫苗"——通过小事故的压力测试，发现并修补制度漏洞，避免更大的事故。这就是"治理型"架构的核心价值：不是不出错，而是出错后能够被发现、被裁决、被固化、被进化。
+**Core conclusion**: In GOAA, incidents aren't failures — they're "vaccines" for the governance system. Small incident stress tests discover and patch loopholes, preventing larger incidents. This is the core value of governance-oriented architecture: not that errors never happen, but that after errors they can be discovered, adjudicated, consolidated, and evolved.
 
 ---
 
-*GOAA · 端到端案例三 · 基于真实实践整理 · 2026-08-28*
-*事故时间：2026-08-21 · 处置完成：2026-08-22 · 制度补丁落地：2026-08-25*
+*GOAA · End-to-End Case 03 · Based on real practice · 2026-08-28*
+*Incident: 2026-08-21 · Resolution: 2026-08-22 · Patches landed: 2026-08-25*

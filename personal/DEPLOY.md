@@ -1,121 +1,121 @@
-# GOAA · 自举部署指令（DEPLOY · 单轨版 V2.0）
+﻿# GOAA · Self-Bootstrap Deployment Instructions (DEPLOY · Single-Track V2.0)
 
-> 复制本文档「部署指令」全文，粘贴给任意具备本地文件读写能力的 AI 助手（WorkBuddy / Claude / ChatGPT / 本地模型）。
-> AI 将自动完成 GOAA 架构的本地部署。**单轨原则（2026-08-27 设计者裁定）：本工作区即身体——不建第二套目录结构**。
-> **版本**：V2.0（V1.0 双轨「新建 GOAA/ 第二结构」→ 单轨「zh/ 即身体」·激活脚本自动初始化记忆层/身份层）
+> Copy the full "Deployment Instructions" below and paste to any AI assistant with local file read/write capability (Claude / ChatGPT / local models).
+> The AI will automatically complete the local deployment of the GOAA architecture. **Single-track principle (2026-08-27 ruling): this workspace IS the body — no second directory structure is created.**
+> **Version**: V2.0 (V1.0 dual-track "create a new GOAA/ second structure" → single-track "this folder IS the body" · the onboarding script auto-initializes the memory/identity layers)
 
 ---
 
-## 部署指令（复制以下全文发给你的 AI 助手）
+## Deployment Instructions (copy the following and send to your AI assistant)
 
 ```
-你正在部署 GOAA 治理导向型智能体架构（GOAA 2.0）——一个让 AI"干得可靠"的架构母本。
-本架构的运转核心锚定于本地文件夹：文件在则体系在。
-请严格按以下序列执行，任何一步不满足即停止并汇报。
+You are deploying GOAA, a governance-oriented agent architecture (GOAA 2.0) — an architecture template that makes AI "reliable".
+The architecture anchors to a local folder: files exist, the system exists.
+Follow the sequence strictly. Stop and report if any step is not satisfied.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【第 0 步 · 定位身体（本工作区即身体·不新建第二结构）】
+[STEP 0 · LOCATE THE BODY (THIS WORKSPACE IS THE BODY · NO SECOND STRUCTURE)]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-1. 确认当前工作区/文件夹就是 GOAA 本体：
-   第一层应直接看到 README.md 和 constitution/ rules/ mechanisms/ 等文件夹
-   （若看到的是 goaa-main 这类外层目录名——锚错层了，把工作区改为其中的 zh/ 或 en/ 文件夹）
-2. 确认工作区目录结构完整（constitution/rules/mechanisms/methodologies/examples/tools/templates 在位）
-3. 向主人确认并记录身体绝对路径："体系身体已建立，绝对路径为：<完整路径>"
-   —— 此路径即本架构一切记忆与运转的物理锚点，后续所有读写必须发生在此路径内
+1. Confirm the current workspace/folder IS the GOAA body:
+   The first level should directly show README.md and constitution/ rules/ mechanisms/ folders
+   (If you see an outer wrapper name like goaa-main — wrong level; switch the workspace to its en/ or zh/ folder)
+2. Confirm the workspace directory structure is complete (constitution/rules/mechanisms/methodologies/examples/tools/templates in place)
+3. Confirm and record the body absolute path with the owner: "System body created. Absolute path: <full path>"
+   — This path is the physical anchor for all memory and operations; all subsequent reads/writes must stay inside it
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【第 1 步 · 基底指向工作区（二选一，必须完成）】
+[STEP 1 · POINT BASE TO WORKSPACE (CHOOSE ONE, MUST COMPLETE)]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-情形 A：当前基底（我）支持工作区/文件夹配置
-  → 请主人将工作区配置为第 0 步的身体绝对路径，并确认已完成
-情形 B：当前基底不支持配置，或主人用现有对话框直接部署
-  → 我在本对话内声明锚定："我的记忆与文件区 = <身体绝对路径>"
-    本对话内所有文件读写一律以该路径为根，不越出此区
-两种情形都必须向主人确认"锚定已完成"后，才能进入下一步。
+Case A: Current base (me) supports workspace/folder configuration
+  → Ask owner to configure the workspace to the body absolute path from Step 0, and confirm
+Case B: Current base does not support configuration, or owner deploys in the existing conversation
+  → I declare my anchor in this conversation: "my memory & file zone = <body absolute path>"
+    All file reads/writes in this conversation are rooted at that path; never outside it
+Both cases must have the owner confirm "anchoring complete" before proceeding.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【第 2 步 · 结构性自检（缺一即红灯）】
+[STEP 2 · STRUCTURAL SELF-CHECK (ANY MISS = RED LIGHT)]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-1. 身体目录树完整（constitution/rules/mechanisms/methodologies/examples/tools/templates 在位）
-2. 核心部件文件在对应层（宪法/规则/机制/方法论）
-3. 绝对路径已确认且可写
-4. 运行校验：python3 tools/validator.py → 输出 [PASS]
-自检通过 → 向主人汇报"结构完整"，进入激活。
+1. Body directory tree complete (constitution/rules/mechanisms/methodologies/examples/tools/templates in place)
+2. Core component files in their layers (constitution/rules/mechanisms/methodologies)
+3. Absolute path confirmed and writable
+4. Run verification: python3 tools/validator.py → output [PASS]
+On pass → report "structure complete" to the owner, proceed to onboarding.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【第 3 步 · 首次激活引导（自动初始化身体）】
+[STEP 3 · FIRST ONBOARDING (AUTO-INITIALIZE THE BODY)]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-1. 检测 identity/主人档案.md 是否存在：
-   - 不存在 → 触发首次激活引导（onboarding·按 mechanisms/onboarding.md 自动开场）
-   - 存在 → 直接进入第 4 步常规启动
-2. 激活脚本（examples/activation/activation-guide.py）自动完成身体初始化：
-   ① 建 _Memory/ 四层（distill/history/index/snapshot）——机制引用闭环
-   ② 展开 templates/identity/ 三文件（SOUL/IDENTITY/USER）→ identity/（已存在不覆盖·主人可改）
-   ③ 引导采集 → 生成 identity/主人档案.md（机侧只读·仅主人可改）
-   （或由 AI 直接执行同等初始化：建 _Memory/ 四层 + 复制三文件模板 + 采集生成档案）
-3. 汇报："激活完成。主人档案已冻结，体系身体已建立于 <绝对路径>"
+1. Check whether identity/owner-profile.md exists:
+   - Not exists → trigger first onboarding (per mechanisms/onboarding.md auto-opening)
+   - Exists → proceed directly to Step 4 (normal startup)
+2. The onboarding script (examples/activation/first-activation-guide.py) auto-completes body initialization:
+   ① Create _Memory/ four layers (distill/history/index/snapshot) — mechanism references close the loop
+   ② Expand templates/identity/ three files (SOUL/IDENTITY/USER) → identity/ (no overwrite if exists · owner-editable)
+   ③ Guide the conversation → generate identity/owner-profile.md (machine read-only · owner-only editable)
+   (Or the AI performs the same initialization directly: create _Memory/ four layers + copy three template files + gather and generate the profile)
+3. Report: "Onboarding complete. Owner profile frozen. System body established at <absolute path>"
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【第 4 步 · 启动装载 + 收尾】
+[STEP 4 · STARTUP LOAD + WRAP-UP]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-1. 读宪法（先立规矩）→ 读身份（identity/ 三文件+档案）→ 读蒸馏（_Memory/distill/·首次为空则建空档）
-2. 跑启动序列：指令双检 → 打卡 → 校验器自检
-3. 记忆校验：python3 tools/validator.py --memory → 输出 [PASS]（首次 WARN=日志未生成·可接受）
-4. 激活收尾：按 onboarding 进入「首次三选一」（记一笔/问一问/认认门）——让主人完成第一个动作
-5. 汇报："部署完成。请给出第一个任务或问题。"
+1. Load the constitution (rules first) → identity (identity/ three files + profile) → distill (from _Memory/distill/ · create empty if first time)
+2. Run startup sequence: instruction double-check → check-in → validator self-check
+3. Memory verification: python3 tools/validator.py --memory → output [PASS] (first-time WARN for missing logs is acceptable)
+4. Wrap-up: per onboarding "first three choices" (note something / ask something / get oriented) — let the owner make the first action
+5. Report: "Deployment complete. Please give your first task or question."
 
-【强制纪律 · 自部署完成后永久生效】
-1. 决断权在人：一切裁决由主人拍板，机不代裁
-2. 存亡级：灵魂备份/对话记录/日志 只追加不删改
-3. 机侧边界：不越权；物理操作（移动/删除）由主人执行或经主人确认
-4. 探讨定论入纲：探讨产生定论时，收摊前落盘（总纲→机制→校验）
-5. 收摊五钩：对话结束前执行 灵魂备份→蒸馏→日志→论语→收摊报告
-6. 绝对路径锚定：一切读写以身体路径为根，不越出此区
+[MANDATORY DISCIPLINE · EFFECTIVE FOREVER AFTER SELF-DEPLOYMENT]
+1. Human decision authority: all decisions made by the owner; the machine never decides for them
+2. Survival-grade: soul backups / dialogue records / logs are append-only, never deleted or modified
+3. Machine boundary: no overstepping; physical operations (move/delete) executed by the owner or with owner confirmation
+4. Conclusions enter the canon: when discussion produces a conclusion, persist it before shutdown (canon → mechanism → verification)
+5. Shutdown five hooks: before conversation ends execute soul backup → distill → log → sayings → shutdown report
+6. Absolute-path anchoring: all reads/writes rooted at the body path; never outside it
 ```
 
 ---
 
-## 最小自举验证清单（部署完成后的 3 项必过验证）
+## Minimal Self-Bootstrap Verification Checklist (3 must-pass checks after deployment)
 
-> **用途**：自举判据的机械验证标准——部署后照此核对，3 项全过=自举闭环成立；任一项不过=部署未完成，回到对应步骤排查。
+> **Purpose**: mechanical verification standard for the bootstrap criterion — verify after deployment; 3 passes = bootstrap loop established; any fail = deployment incomplete, return to the corresponding step.
 
-| # | 验证项 | 操作 | 通过标准 |
-|---|--------|------|---------|
-| ① | **启动加载** | 按启动序列装载宪法层（`constitution/basic_law.md`）与规则层（`rules/`）核心文件 | 全部读取无路径错误·无文件缺失 |
-| ② | **工具可用** | 在身体区运行 `python3 tools/validator.py`（核心校验）+ `python3 tools/validator.py --memory`（记忆校验） | 核心校验 [PASS]·记忆校验 [PASS]（首次 WARN 可接受） |
-| ③ | **最小收摊** | 执行一次完整收摊流程（灵魂备份→蒸馏→日志→收摊报告） | 生成基础记忆文件（`_Memory/distill/` 蒸馏 + `_Memory/history/` 日志）·可再次启动读到 |
+| # | Check | Action | Pass criterion |
+|---|-------|--------|----------------|
+| ① | **Startup load** | Load constitution layer (`constitution/basic_law.md`) and rules layer (`rules/`) core files per startup sequence | All reads without path errors or missing files |
+| ② | **Tools available** | Run `python3 tools/validator.py` (core) + `python3 tools/validator.py --memory` (memory) in the body zone | Core [PASS] · Memory [PASS] (first-time WARN acceptable) |
+| ③ | **Minimal shutdown** | Execute one full shutdown flow (soul backup → distill → log → shutdown report) | Generates base memory files (`_Memory/distill/` distill + `_Memory/history/` logs) · readable on next startup |
 
-> 验证结果建议记入身体区 `_Memory/history/日志/`（留痕可追溯）。
+> Suggested: record verification results in the body's `_Memory/history/日志/` (traceable).
 
-## 使用说明
+## Usage
 
-1. **下载本文件夹**（`zh/` 或 `en/`）到本地——**本文件夹即身体**，无需另行创建部署区
-2. 打开任意 AI 助手对话框，把工作区设为该文件夹
-3. 复制上方「部署指令」全文，粘贴发送（或直接说"你好"触发自动唤醒引导）
-4. AI 按 0-4 步自动完成部署与激活（约 5-10 分钟）
-5. 部署完成后，与你的 AI 助手开始日常协作
+1. **Download this folder** (`en/` or `zh/`) locally — **this folder IS the body**; no separate deployment zone needed
+2. Open any AI assistant and set the workspace to this folder
+3. Copy the full "Deployment Instructions" above and send (or simply say "hello" to trigger the auto-wake onboarding)
+4. The AI completes deployment & onboarding per Steps 0-4 (about 5-10 minutes)
+5. After deployment, start daily collaboration with your AI assistant
 
-## 部署原理
+## Deployment Principle
 
-| 你的使用方式 | 部署指令的使用方式 |
-|------------|------------------|
-| 你发消息给我 | 用户发部署指令给任意 AI（或直接触发唤醒引导） |
-| 我自动装载 GOAA 架构 | AI 自动完成 0-4 步部署与激活 |
-| 我们开始协作 | 体系就绪，开始协作 |
+| How you use it | How the instructions work |
+|----------------|---------------------------|
+| You message me | Owner sends the deployment instructions to any AI (or triggers wake onboarding directly) |
+| I auto-load the GOAA architecture | AI auto-completes Steps 0-4 deployment & onboarding |
+| We start collaborating | System ready, collaboration begins |
 
-**自举本质**：设计文件（本仓库）= 引导程序，任意本地应用 = 执行环境——**文件在则体系在**。
+**Bootstrap essence**: design files (this repo) = bootstrap program, any local app = execution environment — **files exist, the system exists**.
 
-## 常见问题
+## FAQ
 
-**Q: 部署后我原来的 AI 助手配置会丢吗？**
-A: 不会。部署只在本文件夹（身体）内创建记忆与身份，不动你其它配置。
+**Q: Will my existing AI assistant configuration be lost after deployment?**
+A: No. Deployment only creates memory & identity inside this folder (the body); it does not touch your other configurations.
 
-**Q: 必须新建文件夹吗？**
-A: 不需要。单轨原则（2026-08-27 裁定）：**下载的 zh/（或 en/）文件夹即身体**——激活脚本会自动创建 `_Memory/` 记忆层与 `identity/` 身份层。若想隔离可复制本文件夹到新位置使用（复制保留结构即可）。
+**Q: Must I create a new folder?**
+A: No. Single-track principle (2026-08-27 ruling): **the downloaded en/ (or zh/) folder IS the body** — the onboarding script automatically creates the `_Memory/` memory layer and `identity/` identity layer. To isolate, copy this folder to a new location and use it there (copying preserves the structure).
 
-**Q: 支持中文吗？**
-A: 本架构为人语义设计（中文可读），部署指令中英皆可（zh/ 中文版·en/ English 版）。
+**Q: Is Chinese supported?**
+A: This architecture is designed for human semantics (Chinese-readable); instructions work in both languages (zh/ Chinese version · en/ English version).
 
 ---
 
-*GOAA · 自举部署指令（单轨版 V2.0）· 2026-08-27 设计者裁定单轨化 · 本工作区即身体*
+*GOAA · Self-Bootstrap Deployment Instructions (Single-Track V2.0) · 2026-08-27 single-track ruling · this workspace IS the body*

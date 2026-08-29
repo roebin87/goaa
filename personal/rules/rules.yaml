@@ -1,149 +1,150 @@
-﻿# GOAA 规则 · 机可校验实例（YAML·编程语义）
-# 权威：rules/classification.md（规则层·人语义）；本文件为其数据化实例（编程语义），由 tools/validator.py 校验
-# 对应：rules/validation.md（规则生效闸门：写出≠生效）；docs/concepts/three-semantics.md
-# 修改：以 rules/ 为唯一数据源，本文件=编程语义投影；修改须同步 classification.md 并留痕
-# 版本：唯一版本 1.0
+﻿# GOAA Rules · Machine-verifiable instance (YAML · programming semantics)
+# Authority: rules/classification.md (rule layer · human semantics); this file is its data instance (programming semantics), validated by tools/validator.py
+# Corresponds to: rules/validation.md (rule effect gate: written ≠ effective); docs/concepts/three-semantics.md
+# Modification: rules/ is the single data source, this file is the programming-semantics projection; changes must be synced to classification.md with trace
+# Version: single version 1.0
+# NOTE (pending external review): structure/keys mirror the zh original for validator-schema compatibility; key naming policy under review
 
 schema_version: "1.0"
 
 体系:
   name: GOAA
   full_name: Governance-Oriented Agent Architecture (GOAA 2.0)
-  一句话: 不解决"怎么让 AI 干活"，解决"怎么让 AI 干得可控"
+  一句话: It solves not "how to make AI work" but "how to make AI reliably governable"
 
-# 🔴 编号≠优先级：L0-L4 编号=稳定性/修改门槛分级；效力优先级见下方 priority 链（与 IDENTITY 基本法第零条一致）
+# 🔴 Number ≠ priority: L0-L4 numbering = stability/modification-gate tiering; effective priority follows the priority chain below (consistent with the Basic Law Article Zero)
 规则分级:
   - id: L0
     name: 宪法级
-    说明: 不可突破的元规则（母公理/存亡级/运转级）·修改须修宪程序
-    修改门槛: 最高决断者明令
+    说明: Unbreakable meta-rules (mother axioms / survival-level / operational-level) · change requires constitutional procedure
+    修改门槛: Explicit order of the highest decision-maker
   - id: L1
     name: 身份级
-    说明: 系统三文件（SOUL/IDENTITY/USER）与身份档案
-    修改门槛: 主人审核+三检
+    说明: The three system files (SOUL/IDENTITY/USER) and identity archives
+    修改门槛: Owner review + three checks
   - id: L2
     name: 规则级
-    说明: 规则（写什么）：五级分类/规则生效闸门/编程语义实例
-    修改门槛: 主人审核+三检
+    说明: Rules (what is written): five-tier classification / rule effect gate / programming-semantics instances
+    修改门槛: Owner review + three checks
   - id: L3
     name: 机制级
-    说明: 机制（怎么验）：启动/收摊/激活/立项/歧义/复用/动态率/记忆装载
-    修改门槛: 主人审核+三检
+    说明: Mechanisms (how to verify): startup / wrap-up / onboarding / project approval / ambiguity / reuse / dynamic rates / memory loading
+    修改门槛: Owner review + three checks
   - id: L4
     name: 任务/参考级
-    说明: 具体指令（临时）/参考资料（docs/、examples/）
-    修改门槛: 上级指令/自由
+    说明: Specific instructions (temporary) / reference materials (docs/, examples/)
+    修改门槛: Superior instruction / free
 
 核心规则:
   - id: R001
     级别: L0
     name: 人100%决断权
-    人语义: 人与AI协作时，人保有100%决断权；AI仅有执行权与建议权
-    校验: MANUAL        # 人工·裁决留痕（记录层强制）
-    校验时机: 每次裁决节点
-    留痕位置: 对话记录/灵魂备份
+    人语义: In human-AI collaboration, humans retain 100% decision rights; AI holds only execution and recommendation rights
+    校验: MANUAL        # human adjudication · decision trace (record-layer enforced)
+    校验时机: At every decision node
+    留痕位置: Conversation records / soul backup
     状态: 已生效
     执行机制: [歧义治理, 立项判定]
   - id: R002
     级别: L0
     name: 系统文件不可修改
-    人语义: 宪法层/规则层/机制层/系统三文件不可由机修改；修改须主人指令并留痕
-    校验: VALIDATOR    # 目录只读检测（validator 硬拦截）
-    校验时机: 写入前置/CI 校验
-    留痕位置: 变更记录
+    人语义: Constitutional/rule/mechanism layers and the three system files cannot be modified by the machine; changes require owner instruction with trace
+    校验: VALIDATOR    # read-only directory detection (validator hard block)
+    校验时机: Pre-write / CI check
+    留痕位置: Change records
     状态: 已生效
     执行机制: [validator.py]
   - id: R003
     级别: L0
     name: 记忆不可删除
-    人语义: 史书层（灵魂备份/对话记录/日志）只追加，永不删改
-    校验: VALIDATOR    # 只追加检测（哈希/条数校验）
-    校验时机: 写入时/定期校验
-    留痕位置: 文件哈希
+    人语义: Chronicle layer (soul backups / conversation records / logs) is append-only, never modified or deleted
+    校验: VALIDATOR    # append-only detection (hash/count checks)
+    校验时机: On write / periodic checks
+    留痕位置: File hashes
     状态: 已生效
     执行机制: [记忆装载规则, validator.py]
   - id: R004
     级别: L1
     name: 权限三级分级
-    人语义: L1全自动/L2先做后报/L3审批前置；授权以 USER.md 为唯一源
-    校验: MANUAL        # 人工配置·Agent_Profile 不得超出
-    校验时机: 部署/授权变更时
-    留痕位置: USER.md 变更记录
+    人语义: L1 fully automatic / L2 act-then-report / L3 approval-first; authorization uses USER.md as the only source
+    校验: MANUAL        # human configuration · Agent_Profile must not exceed
+    校验时机: At deployment / authorization changes
+    留痕位置: USER.md change records
     状态: 已生效
     执行机制: [onboarding]
   - id: R005
     级别: L2
     name: 写出≠生效
-    人语义: 规则写入不自动生效，须过规则生效闸门（validation.md）校验
-    校验: VALIDATOR    # 规则存在性/格式/引用校验
-    校验时机: 规则变更时/CI 校验
-    留痕位置: 规则状态字段
+    人语义: Writing a rule does not make it effective; it must pass the rule effect gate (validation.md)
+    校验: VALIDATOR    # rule existence/format/reference checks
+    校验时机: On rule changes / CI check
+    留痕位置: Rule status fields
     状态: 已生效
     执行机制: [validation.md, validator.py]
   - id: R006
     级别: L3
     name: 真问题闸门
-    人语义: 任务先过立项判定（problem-gate）：假问题不立项=不消耗资源
-    校验: MANUAL        # 人裁（真问题三关：有前提/非两难/真求辨）
-    校验时机: 每次立项时
-    留痕位置: 立项记录
+    人语义: Tasks first pass project approval (problem-gate): non-genuine problems are not approved = no resource consumption
+    校验: MANUAL        # human adjudication (three genuine-problem gates: has premise / not a dilemma / truly seeks resolution)
+    校验时机: At every approval
+    留痕位置: Approval records
     状态: 已生效
     执行机制: [problem-gate]
   - id: R007
     级别: L3
     name: 歧义判定权在人
-    人语义: 机只显影"这里可能有歧义"，判定归人（歧义治理机制）
+    人语义: The machine only surfaces "ambiguity may exist here"; judgment belongs to the human (ambiguity governance)
     校验: MANUAL
-    校验时机: 歧义出现时
-    留痕位置: 歧义处理记录
+    校验时机: When ambiguity appears
+    留痕位置: Ambiguity-handling records
     状态: 已生效
     执行机制: [ambiguity-governance]
   - id: R008
     级别: L3
     name: 记忆分级装载
-    人语义: 启动加载/运行召回/阈值控制/归档衰减（memory-loading 机制）
-    校验: VALIDATOR    # 蒸馏存在性/备份存在性
-    校验时机: 启动/收摊时
-    留痕位置: 启动报告
+    人语义: Startup loading / runtime recall / threshold control / archive decay (memory-loading mechanism)
+    校验: VALIDATOR    # distillation existence / backup existence
+    校验时机: At startup / wrap-up
+    留痕位置: Startup report
     状态: 已生效
     执行机制: [memory-loading, startup, shutdown]
   - id: R009
     级别: L2
     name: 单一数据源
-    人语义: 权限以 USER 为唯一源、定论以 rules 为唯一源；引用处只同步
-    校验: MANUAL        # 漂移检测（人工/定期）
-    校验时机: 定期/发现冲突时
-    留痕位置: 冲突处理记录
+    人语义: Permissions use USER as the only source, conclusions use rules as the only source; referencing sites only sync
+    校验: MANUAL        # drift detection (human / periodic)
+    校验时机: Periodic / when conflicts are found
+    留痕位置: Conflict-handling records
     状态: 已生效
     执行机制: [validation.md]
 
-deprecated_rules: []   # 失效规则保留区：{id, name, 失效原因, 替代规则}——不删改，全链路留痕
+deprecated_rules: []   # deprecated-rule retention area: {id, name, reason, replacement} — never delete/modify, full-chain trace
 
-# 🔴 效力优先级链（与 IDENTITY 基本法第零条一致；编号≠优先级）
+# 🔴 Effective priority chain (consistent with Basic Law Article Zero; number ≠ priority)
 优先级:
   chain: [L0宪法级, L2规则级, L3机制级, L1身份级]
-  说明: 身份层虽编号 L1，但效力优先级低于规则级/机制级——编号=稳定性分级，优先级=效力层级，两维度分离
-  冲突处理: 下位服从上位；无法判定时交主人裁决，不得自行取舍
+  说明: Identity layer is numbered L1 but ranks below rule/mechanism layers in effect — number = stability tier, priority = effect hierarchy; the two dimensions are separate
+  冲突处理: Lower tiers defer to higher; if undeterminable, submit to the owner for adjudication, never self-resolve
 
 单一数据源:
   权限: identity/USER.md
   规则定论: rules/
-  修改规则: 改唯一源，引用处只同步，禁止只改引用
+  修改规则: Change the single source; referencing sites only sync; never change only the references
 
-validator_对应（开源通用版实际能力·2026-08-26 校准·声明=实现）:
-  - 校验项: 核心目录/文件存在性（硬检·FAIL 级）
+validator_对应 (open-source generic version actual capabilities · 2026-08-26 calibrated · declaration = implementation):
+  - 校验项: Core directory/file existence (hard check · FAIL level)
     覆盖: R002 R005 R008
-    说明: tools/validator.py 执行（目录 6 项 + 文件 16 项）
-  - 校验项: 语义同步检查（关键词·WARN 级）
+    说明: tools/validator.py executes (6 directories + 16 files)
+  - 校验项: Semantic sync check (keywords · WARN level)
     覆盖: R005
-    说明: 基本法/设计原理关键概念（决断权/公理/文件）对照
-  - 校验项: YAML Schema 合规（必填节/规则 id 唯一性）
-    覆盖: 本文件自身
-    说明: rules.yaml 结构硬检
-  - 校验项: 死链/引用检查（[Rxxx] 标准格式·FAIL 级）
+    说明: Cross-checks key concepts of the Basic Law / Design Principles (decision rights / axioms / files)
+  - 校验项: YAML Schema compliance (required sections / rule id uniqueness)
+    覆盖: this file itself
+    说明: rules.yaml structure hard check
+  - 校验项: Dead-link/reference check ([Rxxx] standard format · FAIL level)
     覆盖: R005 R009
-    说明: 规则引用须在 rules.yaml 已定义
-  - 校验项: 只追加检测（史书层哈希基线·--memory 模式）
+    说明: Rule references must be defined in rules.yaml
+  - 校验项: Append-only detection (chronicle hash baseline · --memory mode)
     覆盖: R003
-    说明: 对话记录/日志/灵魂备份哈希基线比对，防已落盘史书被改
-  - 未覆盖项（人工/部署侧）: 目录只读权限强制（R002 依赖文件系统权限配置）· 规则语义深度校验（内部定制能力·不开源）
+    说明: Hash-baseline comparison of conversation records/logs/soul backups, guarding against post-hoc edits to chronicle files
+  - 未覆盖项 (human/deployment side): read-only directory permission enforcement (R002 relies on filesystem permission config) · deep semantic rule validation (internal custom capability · not open-sourced)

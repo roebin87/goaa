@@ -1,43 +1,39 @@
-# 示例 · 项目体四件套
+﻿# Example · Project Workspace Template (EN)
 
-> 2.0 项目导向：一个项目文件夹=四件套结构。本示例展示如何为一个项目建立项目体（脱敏通用示例）。
+> 2.0 project orientation: one project folder = a four-part structure. This example shows how to set up a project workspace (generic example).
 
-## 目录结构
+## Structure
 
 ```
-projects/项目示例/
-├── README.md           # 项目卡（定位/激活状态/备份/基本法锚定）
-├── _全量备份/          # 备份件（备份由主人物理完成·非机工作项）
-├── _蒸馏/              # 蒸馏本版（保留原话）
-├── _索引/              # 双链索引
-└── _执行/              # 系统执行文件（基本法钩子挂载点）
+projects/ProjectName/
+├── README.md           # project card (positioning / activation / backup / constitution anchor)
+├── _full-backup/       # backups (performed physically by the owner · not a machine task)
+├── _distill/           # project distillation
+├── _index/             # cross-linked index
+└── _execute/           # system execution files
 ```
 
-## 项目卡模板
+## Project card template
 
 ```markdown
-# 项目示例
+# ProjectName
+| Positioning | 【replace with your project's purpose】 |
+| Activation  | 🔴 resident / on-demand |
+| Backup      | owner physical backup (not a machine task) |
+| Structure   | four parts ready · content to fill |
 
-| 项目定位 | 示例项目（替换为你的项目名） |
-| 激活状态 | 🔴 常驻主阵地（默认装载）/ 按需激活 |
-| 备份 | 主人物理备份（非机工作项） |
-| 结构状态 | 四件套就绪·内容待填充 |
-
-## 基本法锚定
-
-- 本项目为无身份副本（模板-实例）——非岗位实体、不独立决策
-- 项目运转受体系基本法约束：决断权在人／存亡级／不越权
-- 细则边界：机制层可项目化／公理层不可项目化
+## Constitution anchor
+- This project is a faceless copy (template-instance) — not an independent entity, no independent decisions
+- Bound by the system's basic law: decision rights in the human / survival-level / no overreach
+- Boundary: mechanism layer may be project-specific; axiom layer may not
 ```
 
-## 激活方式
+## Activation
 
-> 术语：**母体**=运行中的架构主实例（你的体系本体）；**项目体**=母体装载了项目参数后的工作面·非独立实体（无身份副本·不独立决策）。
+> Term: the **host** = the running architecture main instance (your system body); the **project workspace** = the host's work surface after loading the project's parameters — not an independent entity.
 
-母体进入项目时，只装载该项目的参数（蒸馏+索引+执行件），不携带其它项目上下文——污染隔离。
+The host loads only this project's parameters (distillation + index + execution files) — no other project context (pollution isolation).
 
-## 说明
+---
 
-- 项目体=无身份副本——是母体装载了项目参数后的工作面，非独立实体
-- 全局视野=人背；项目体只背项目内
-- 主阵地常驻一个（默认装载），其余按需激活
+*GOAA example · Generic EN · Single version · 2026-08-26*

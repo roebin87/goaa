@@ -1,68 +1,68 @@
-# 所有权说明 · 为什么你的 AI 记忆 100% 属于你
+# Ownership Guide · Why Your AI Memory Is 100% Yours
 
-> **用途**：逐条解释 `verify-ownership.py` 的五条检查 + 人工验证方法 + 退出迁移指引。
-
----
-
-## 五条检查逐条解释
-
-### ✅ 检查①：所有记忆文件位于本地文件夹
-
-你的记忆（蒸馏、对话记录、你的档案）都存放在**你自己电脑上的这个文件夹里**——不是某个公司的服务器上。
-
-**含义**：你不欠任何平台一份"记忆"。删掉账号？不用——文件在本地，谁都扣不住。
-
-### ✅ 检查②：文件格式为纯文本 Markdown
-
-你的记忆是**纯文本**——记事本、任何编辑器都能打开，不是某个软件的私有格式。
-
-**含义**：格式永不淘汰。十年后你还能读今天的记忆。
-
-### ✅ 检查③：无远程路径引用
-
-记忆文件里没有指向云端/远程位置的引用——所有内容都在本地。
-
-**含义**：不存在"某个文件其实存在别人服务器上"的暗门。
-
-### ✅ 检查④：无绝对路径硬编码
-
-文件里没有写死"我的电脑 C 盘某位置"这类路径——全部用相对路径。
-
-**含义**：文件夹复制到任何电脑都能原样工作，不会因为路径不同而坏掉。
-
-### ✅ 检查⑤：无特定 AI 厂商依赖
-
-文件里不包含任何特定 AI 厂商的接口引用。
-
-**含义**：你用 WorkBuddy、Claude、Cursor、还是任何本地 AI 助手——记忆都通用。**换个工具，记忆还在。**
-
-## 两项人工验证（为什么需要人工）
-
-脚本只能验证"文件本身"的属性，有两件事必须真做一次：
-
-1. **断网复跑**：关掉网络再运行脚本——确认不联网时一切正常（= 无云端依赖的实证）
-2. **跨机迁移**：把本文件夹复制到另一台电脑/另一个 AI 助手，重新打开——记忆完整（= 可迁移的实证）
-
-> 这两项做完，你的信任就从"听说的"变成"自己验证过的"。GOAA 不求你相信，只求你来证伪。
-
-## 退出迁移指引（来去自由）
-
-不想用了，或想换工具？三步：
-
-1. **复制**：把整个 `lite/` 文件夹（含 `_Memory/`、`identity/`）复制到新位置；
-2. **打开**：在新电脑/新 AI 助手中把该文件夹设为工作区；
-3. **说话**：说"你好"——AI 读你的档案和蒸馏，接着上次继续。
-
-> 你的全部记忆就是这些文件。**没有它们之外的任何东西**——没有云端账号、没有隐藏存储、没有锁定。
-
-## 常见问题
-
-**Q：AI 厂商会不会偷偷保存我的对话？**
-A：GOAA 无法控制你使用的 AI 工具本身的行为。GOAA 能保证的是：**你的记忆体系完全落在你自己的文件里**——即使某天你不再用任何 AI，这些文件依然属于你、依然可读。
-
-**Q：这个文件夹会不会越来越大？**
-A：会，但这是好事——那是你的积累。记忆文件只有几 KB 到几 MB，纯文本非常轻。
+> **Purpose**: explains the five checks of `verify-ownership.py` one by one + manual verification + exit/migration guide.
 
 ---
 
-*GOAA Lite · 所有权说明 · 通用化精简版 · 2026-08-28*
+## The Five Checks, Explained
+
+### ✅ Check 1: All memory files are in the local folder
+
+Your memory (distillation, dialogue records, your profiles) lives in **this folder on your own computer** — not on some company's server.
+
+**Meaning**: you owe no platform a "memory". Delete your account? No need — the files are local; no one can withhold them.
+
+### ✅ Check 2: Files are plain-text Markdown
+
+Your memory is **plain text** — Notepad or any editor can open it; it's not some software's private format.
+
+**Meaning**: formats never die out. Ten years from now you can still read today's memory.
+
+### ✅ Check 3: No remote path references
+
+Memory files contain no references pointing to cloud/remote locations — everything is local.
+
+**Meaning**: there is no hidden door where "some file actually lives on someone else's server".
+
+### ✅ Check 4: No absolute-path hardcoding
+
+Files contain no hard-coded paths like "drive C of my computer" — all paths are relative.
+
+**Meaning**: copy the folder to any computer and it works as-is; nothing breaks from path differences.
+
+### ✅ Check 5: No vendor-specific AI dependency
+
+Files contain no references to any specific AI vendor's interfaces.
+
+**Meaning**: whether you use WorkBuddy, Claude, Cursor, or any local AI assistant — the memory is universal. **Switch tools, the memory stays.**
+
+## Two Manual Checks (Why Manual Verification Is Needed)
+
+The script can only verify the file properties themselves; two things must be truly done once:
+
+1. **Run offline**: turn off the network and rerun the script — confirm everything works without connectivity (= evidence of no cloud dependency)
+2. **Cross-device migration**: copy this folder to another computer / another AI assistant and reopen — memory intact (= evidence of portability)
+
+> Once these two are done, your trust shifts from "heard it somewhere" to "verified it myself". GOAA doesn't ask you to believe; it asks you to falsify.
+
+## Exit & Migration Guide (Come and Go Freely)
+
+Done with it, or switching tools? Three steps:
+
+1. **Copy**: copy the entire `lite/` folder (including `_Memory/`, `identity/`) to a new location;
+2. **Open**: set that folder as the workspace in your new computer / AI assistant;
+3. **Speak**: say "hello" — the AI reads your profiles and distillation and continues where you left off.
+
+> Your entire memory is these files. **Nothing exists beyond them** — no cloud accounts, no hidden storage, no lock-in.
+
+## FAQ
+
+**Q: Could an AI vendor secretly save my conversations?**
+A: GOAA cannot control the behavior of the AI tool you happen to use. What GOAA guarantees is: **your memory system lives entirely in your own files** — even if you stop using any AI someday, these files still belong to you and remain readable.
+
+**Q: Will this folder keep growing?**
+A: Yes, and that's a good thing — that's your accumulation. Memory files are only a few KB to a few MB; plain text is very light.
+
+---
+
+*GOAA Lite · Ownership Guide · Generic concise · 2026-08-28*

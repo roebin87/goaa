@@ -1,37 +1,37 @@
-﻿# 适用边界说明（作者声明）
+﻿# Applicability Boundary (author's statement)
 
-> **定位**：本文件=作者对使用者的**负责任边界说明**——GOAA 不是什么都能做，作者有义务告诉使用者"它适合什么、不适合什么"。
-> **版本**：唯一版本 1.0｜**日期**：2026-08-19
+> **Position**: this file is the author's **responsible boundary statement** to users — GOAA cannot do everything, and the author is obliged to tell users "what it fits and what it does not."
+> **Version**: Single version 1.0 ｜ **Date**: 2026-08-19
 
 ---
 
-## 一、一句话边界
+## 1. The one-line boundary
 
-**GOAA 是"治理底座的广谱适配"，不是"全能框架的全场景覆盖"。** 它不解决"AI 执行效率"，解决"AI 干得可控"——凡是把 AI 当生产工具、重视可控/可审/可追溯的使用者，适配价值高；追求全自动、零约束的使用者，适配价值低。
+**GOAA is "broad-spectrum adaptation of a governance base," not "all-scenario coverage of an all-capable framework."** It does not solve "AI execution efficiency" — it solves "AI you can rely on": whoever uses AI as a production tool and values controllability, auditability, and traceability gets high adaptation value; whoever wants full automation and zero constraints gets low adaptation value.
 
-## 二、适合什么人（作者判断）
+## 2. Who it fits (author's judgment)
 
-| 人群 | 建议档位 | 适合原因 |
+| Audience | Suggested tier | Why it fits |
 |------|---------|---------|
-| **独立创作者 / 个人开发者** | 标准档/极简档 | 解决 AI 记忆断层+越权操作，最精准的直接受众 |
-| **10 人内小团队 / 工作室** | 标准档 | 统一规则底座+知识资产沉淀+权责审计闭环 |
-| **中小企业 / 合规敏感岗位** | 完整档 | 权责清晰+全链路审计+零成本+可定制 |
-| **架构研究者 / 开源爱好者** | 完整档+文档 | 治理型 Agent 研究的参考范式与素材 |
+| **Independent creators / solo developers** | standard / minimal tier | solving AI memory gaps + overreach — the most precise direct audience |
+| **Small teams / studios within 10 people** | standard tier | unified rule base + knowledge-asset sedimentation + accountability-audit loop |
+| **SMEs / compliance-sensitive roles** | full tier | clear rights & responsibilities + full-chain audit + zero cost + customizable |
+| **Architecture researchers / open-source enthusiasts** | full tier + docs | reference paradigm and material for governance-oriented agent research |
 
-## 三、不适合什么（作者明确边界）
+## 3. What it does not fit (author's explicit boundary)
 
-1. **纯执行效率优先场景**（大规模自动化/高并发/无人值守）——治理流程增加操作成本，直接用 LangGraph/dsh 等执行框架；
-2. **无授权机制的全自动多智能体协作场景**——GOAA 核心原则=人 100% 决断权，不支持无授权机制下完全自主多体自动运行（理念天然冲突）；
-3. **娱乐/闲聊/轻创意场景**——规则体系显厚重，体验不如普通聊天机器人；
-4. **超大规模企业级复杂协作**（百人级跨部门/复杂权限映射/多层审批）——当前版本适配单主体/小团队治理，多组织多层级的复杂治理待扩展。
+1. **Execution-efficiency-first scenarios** (large-scale automation / high concurrency / unattended operation) — governance processes add operational cost; use execution frameworks like LangGraph/dsh directly;
+2. **Fully autonomous multi-agent collaboration scenarios** — GOAA's core principle = 100% human decision rights; it does not support fully autonomous multi-agent auto-running (an inherent philosophical conflict);
+3. **Entertainment / chat / light-creativity scenarios** — the rule system feels heavy; the experience is worse than an ordinary chatbot;
+4. **Very large enterprise-grade complex collaboration** (hundred-person cross-department / complex permission mapping / multi-level approval) — the current version adapts to single-actor/small-team governance; multi-organization, multi-level complex governance awaits expansion.
 
-## 四、使用承诺（作者对使用者）
+## 4. Commitments (author to users)
 
-- **不夸大**：不承诺"全自动解放人力"，只承诺"干得可控、可审、可追溯"；
-- **不锁死**：纯文件规范，不绑定模型/语言/平台——任何时候可迁移、可退出；
-- **可生长**：从极简档起步，随规模逐步升级（见 `docs/lightweight-guide.md` 三档配置）；
-- **可审计**：一切规则、决策、变更留痕，使用者任何时候可回溯。
+- **No exaggeration**: does not promise "fully automated, hands-free labor" — only "reliably governable, auditable, traceable";
+- **No lock-in**: pure file specification, not bound to any model/language/platform — migratable and exitable anytime;
+- **Growable**: start from the minimal tier and upgrade as scale grows (see the three-tier config in `docs/lightweight-guide.md`);
+- **Auditable**: all rules, decisions, and changes are traced; users can go back at any time.
 
 ---
 
-*GOAA · 适用边界说明（作者声明）· 唯一版本 1.0 · 2026-08-19 · 边界=责任*
+*GOAA · Applicability Boundary (author's statement) · Single version 1.0 · 2026-08-19 · boundaries = responsibility*

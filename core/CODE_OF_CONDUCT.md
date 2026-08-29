@@ -1,48 +1,46 @@
-﻿# 贡献者公约（Code of Conduct）
+﻿# Contributor Covenant Code of Conduct
 
-## 我们的承诺
+## Our Pledge
 
-为了营造一个开放、友善、包容的社区环境，我们承诺：无论年龄、体型、残障、族裔、性别认同与表达、经验水平、教育背景、社会经济地位、国籍、个人外貌、种族、宗教或性取向，所有参与者都能在不受骚扰的环境中参与本项目。
+We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
-## 我们的标准
+## Our Standards
 
-**有助于创造积极环境的行为包括**：
-- 使用友善和包容的语言
-- 尊重不同的观点和经验
-- 优雅地接受建设性批评
-- 关注对社区最有利的事项
-- 对其他社区成员表现出同理心
+**Behaviors that contribute to a positive environment include**:
+- Using welcoming and inclusive language
+- Respecting different viewpoints and experiences
+- Gracefully accepting constructive criticism
+- Focusing on what is best for the community
+- Showing empathy toward other community members
 
-**不可接受的行为包括**：
-- 使用性化的语言或图像，以及不受欢迎的性关注
-- 挑衅、侮辱或贬损性评论，以及人身或政治攻击
-- 公开或私下的骚扰
-- 未经明确许可发布他人的私人信息（如地址、邮箱）
-- 其他在专业环境中合理认为不恰当的行为
+**Unacceptable behaviors include**:
+- Sexualized language or imagery, and sexual attention or advances
+- Trolling, insulting or derogatory comments, and personal or political attacks
+- Public or private harassment
+- Publishing others' private information without explicit permission
+- Other conduct which could reasonably be considered inappropriate in a professional setting
 
-## 我们的责任
+## Our Responsibilities
 
-项目维护者有责任明确和澄清可接受行为的标准，并对任何不可接受行为采取适当且公正的纠正措施。
+Project maintainers are responsible for clarifying and enforcing standards of acceptable behavior and taking appropriate and fair corrective action in response to any behavior deemed inappropriate, threatening, offensive, or harmful.
 
-项目维护者有权利和责任删除、编辑或拒绝与本行为准则不符的评论、提交、代码、wiki 编辑、issue 及其他贡献，并针对任何他们认定为不恰当、威胁、冒犯或有害的行为，采取临时或永久性封禁。
+## Scope
 
-## 适用范围
+This Code of Conduct applies within all community spaces and when an individual officially represents the community in public spaces.
 
-本行为准则适用于所有项目空间，以及代表项目或社区在公共场合的言行。
+## Enforcement
 
-## 执行
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the project team via:
 
-如遇到辱骂、骚扰或其他不可接受行为，请通过以下方式向项目团队举报：
+- An Issue with the `[CONDUCT]` prefix
+- Direct message to the maintainer (GitHub account `roebin87`)
 
-- 在 Issue 中标注 `[CONDUCT]` 前缀
-- 或私信项目维护者（GitHub 账号 `roebin87`）
+The project team will review and investigate all complaints and respond in a way that is appropriate to the circumstances. The project team has a duty to maintain confidentiality regarding the reporter of an incident.
 
-项目团队将审查并调查所有投诉，并以对情况必要且适当的方式作出回应。项目团队对事件举报人有保密义务。
+## Attribution
 
-## 依据
-
-本公约改编自 Contributor Covenant 2.1 版（通用社区行为准则），中文版翻译参考社区通用译本。
+This Code of Conduct is adapted from the Contributor Covenant, version 2.1 (a widely adopted community code of conduct).
 
 ---
 
-*GOAA · 贡献者公约 · 唯一版本 1.0 · 2026-08-19*
+*GOAA · Code of Conduct · Single version 1.0 · 2026-08-19*

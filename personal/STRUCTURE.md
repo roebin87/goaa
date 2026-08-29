@@ -1,128 +1,128 @@
-﻿# GOAA 开源项目 · 项目结构说明（定稿 · 外部审议入口）
+﻿# GOAA Open-Source Project · Project Structure Guide (Final · External Review Entry)
 
-> **🔴 本文件定位（2026-08-19 定稿）**：本文件=开源项目**整个项目结构说明**——**外部审议的第一入口**。外部审议者（人/AI）只需读本文件，即可对项目结构做判断，无需钻入内部逐个研究。
-> **🔴 同步铁律**：本文件必须与项目实际结构**始终一致**——每落地一步，同步更新本文件状态列（✅已落地/🟡待补）。结构落地以本文件为唯一对照基准。
-> **版本**：唯一版本 1.0｜**状态**：结构定稿·内容逐步补写中｜**权威**：与 README 同层，README=门面（薄），本文件=结构真相（厚）。
+> **🔴 Role (set by author, 2026-08-19)**: This file is the **whole-project structure guide** — the **first entry for external review**. External reviewers (human/AI) can judge the project structure from this single file, without digging into internals.
+> **🔴 Sync rule**: This file MUST always match the actual project structure — every step updates its status column (✅ done / 🟡 pending). The structure landing uses this file as the single comparison baseline.
+> **Version**: Single version 1.0 | **Status**: structure finalized, content being written chapter by chapter | **Authority**: same layer as README — README = facade (thin), this file = structural truth (thick).
 
 ---
 
-## 一、项目一句话定位
+## 1. One-Line Positioning
 
-GOAA 是 GOAA 治理型 Agent 架构的 2.0 工程化形态——**不解决"怎么让 AI 干活"，解决"怎么让 AI 干得可控"**：人保有 100% 决断权，文件=记忆与规则载体，三语义消解歧义。
+GOAA is the 2.0 engineering form of the GOAA governance-oriented agent architecture — **it does not solve "how to make AI work", it solves "how to make AI work controllably"**: humans hold 100% decision rights, files = memory & rules carrier, three-semantics disambiguates.
 
-## 二、完整结构树（与实际一一对应）
+## 2. Complete Structure Tree (one-to-one with actual)
 
 ```
 GOAA/
-├── README.md              # 门面：为什么/特性/快速入口（薄）          ✅
-├── README.en.md           # 英文门面                                 ✅
+├── README.md              # Facade: why/features/quick entry (thin)    ✅
+├── README.en.md           # English facade                            ✅
 ├── LICENSE                # Apache-2.0                                ✅
-├── DEPLOY.md              # ★ 自举部署指令（一键部署·复制发给任意 AI） ✅
-├── AGENTS.md              # AI 协作规范（对标 dsh AGENTS.md）         ✅
-├── CONTRIBUTING.md        # 贡献指南                                 ✅
-├── BENCHMARK.md           # 运转基准指标（架构成立=可测量）            ✅
-├── SECURITY.md            # 安全政策（漏洞保密报告/响应承诺）          ✅
-├── CODE_OF_CONDUCT.md     # 贡献者公约（社区行为准则）                ✅
-├── CITATION.cff           # 学术引用格式（论文引用标准入口）           ✅
-├── STRUCTURE.md           # 本文件=外部审议第一入口                    ✅
-├── STRUCTURE.en.md        # 本文件英文版                              ✅
+├── DEPLOY.md              # ★ Self-bootstrap deployment (copy to any AI) ✅
+├── AGENTS.md              # AI collaboration guidelines               ✅
+├── CONTRIBUTING.md        # Contribution guide                        ✅
+├── BENCHMARK.md           # Running benchmarks (architecture = measurable) ✅
+├── SECURITY.md            # Security policy (confidential disclosure) ✅
+├── CODE_OF_CONDUCT.md     # Community code of conduct                 ✅
+├── CITATION.cff           # Citation format (academic entry)          ✅
+├── STRUCTURE.md           # This file = external review first entry  ✅
+├── STRUCTURE.en.md        # This file (English)                      ✅
 │
-├── constitution/          # L0 宪法层（先立规矩·对应五级分类 L0）
-│   ├── basic_law.md        # 基本法（母公理/存亡级/运转级/代际演进）        ✅
-│   └── design-principles.md # 设计原理（Why+How 一体·公理解释+落地方法） ✅
+├── constitution/          # L0 Constitution layer (L0 of five-level)
+│   ├── basic_law.md        # Basic Law (mother axiom/survival/operational/generations) ✅
+│   └── design-principles.md # Design principles (Why+How merged · axiom rationale + method) ✅
 │
-├── rules/                 # 规则层（写什么·规则↔机制分置之"规则"）
-│   ├── classification.md   # 五级分类                               ✅
-│   ├── validation.md       # Rule Effect-Gate（写出≠生效）           ✅
-│   └── rules.yaml          # ★ 编程语义实例（规则数据化·validator 可校验）✅
+├── rules/                 # Rules layer (what to write · rules side of rules-mechanisms separation)
+│   ├── classification.md   # Five-level classification                ✅
+│   ├── validation.md       # Rule Effect-Gate (written ≠ effective)   ✅
+│   └── rules.yaml          # ★ Programming-semantics instance (validator-checkable) ✅
 │
-├── mechanisms/            # 机制层（怎么验·规则↔机制分置之"机制"）
-│   ├── startup.md          # 启动序列                                ✅
-│   ├── shutdown.md         # 收摊五钩                                ✅
-│   ├── onboarding.md       # 首次激活引导                            ✅
-│   ├── problem-gate.md     # 立项判定（真问题闸门）                   ✅
-│   ├── ambiguity-governance.md  # 歧义治理                          ✅
-│   ├── memory-loading.md        # 记忆装载规则（加载/召回/阈值/归档/防篡改）✅
-│   ├── reuse.md            # 复用机制                                ✅
-│   └── dynamic-rates.md    # 动态率监测                              ✅
+├── mechanisms/            # Mechanisms layer (how to verify · mechanisms side of separation)
+│   ├── startup.md          # Startup sequence                         ✅
+│   ├── shutdown.md         # Wrap-up five-hooks                       ✅
+│   ├── onboarding.md       # First activation onboarding              ✅
+│   ├── problem-gate.md     # Problem gate (true-problem entry)        ✅
+│   ├── ambiguity-governance.md  # Ambiguity governance                ✅
+│   ├── memory-loading.md   # Memory loading rules (load/recall/threshold/archive/anti-tamper) ✅
+│   ├── reuse.md            # Reuse mechanism                          ✅
+│   └── dynamic-rates.md    # Dynamic rates monitoring                 ✅
 │
-├── methodologies/         # 方法论（可复用资产·机制的方法要点+指针）
-│   ├── methodology-01-true-problem.md        # 真问题判定（指针→problem-gate）      ✅
-│   ├── methodology-02-ambiguity-resolution.md # 歧义消解（指针→ambiguity-governance）✅
-│   └── methodology-03-dynamic-rates.md       # 动态率设计（指针→dynamic-rates）      ✅
+├── methodologies/         # Methodologies (reusable assets · method points + mechanism pointers)
+│   ├── methodology-01-true-problem.md        # True-problem judgment (pointer → problem-gate) ✅
+│   ├── methodology-02-ambiguity-resolution.md # Ambiguity resolution (pointer → ambiguity-governance) ✅
+│   └── methodology-03-dynamic-rates.md       # Dynamic rates design (pointer → dynamic-rates) ✅
 │
-├── templates/             # ★ 运行时模板（部署时复制·自举缺口）
-│   ├── workspace-structure.md   # 工作区目录总览（部署后身体结构）     ✅
-│   ├── identity/                # 身份模板（系统三文件+档案）
-│   │   ├── Agent_Profile.md     # 身份档案模板                        ✅
-│   │   ├── SOUL.md              # 行为底线模板（三文件之一）           ✅
-│   │   ├── IDENTITY.md          # 架构地图模板（三文件之二）           ✅
-│   │   └── USER.md              # 用户档案模板（三文件之三·待填）      ✅
-│   └── memory/                  # 记忆格式模板（装载分层·四层契约）
-│       ├── distill.md           # 蒸馏模板                            ✅
-│       ├── soul-backup.md           # 收摊产物格式                        ✅
-│       ├── dialogue-record.md           # A5 逐字格式                         ✅
-│       ├── daily-log.md               # 日志格式                            ✅
-│       └── sayings.md               # 论语格式                            ✅
+├── templates/             # ★ Runtime templates (copied at deployment · bootstrap gap)
+│   ├── workspace-structure.md   # Workspace directory overview       ✅
+│   ├── identity/                # Identity templates (system three files + profile)
+│   │   ├── Agent_Profile.md     # Identity profile template           ✅
+│   │   ├── SOUL.md              # Behavior baseline (three-file one)  ✅
+│   │   ├── IDENTITY.md          # Architecture map (three-file two)   ✅
+│   │   └── USER.md              # Owner profile (three-file three)    ✅
+│   └── memory/                  # Memory format templates (four-layer contract)
+│       ├── distill.md           # Distillation template               ✅
+│       ├── soul-backup.md           # Soul backup format                  ✅
+│       ├── dialogue-record.md           # Conversation record (A5 verbatim)   ✅
+│       ├── daily-log.md               # Log format                          ✅
+│       └── sayings.md               # Sayings format                      ✅
 │
-├── docs/                  # 深度文档（薄门户厚体系·L4 参考级）
-│   ├── concepts/           # 核心概念逐篇解释（母公理/问答对偶/熵治理/三语义/证伪器/防漂移双法则）
-│   │                       #   （每篇一个文件·审议者按需取读）          ✅ 6 篇
-│   ├── lightweight-guide.md # 轻量化裁剪指引（标准档/极简档）          ✅
-│   ├── applicability.md     # 适用边界说明（作者声明·责任）          ✅
-│   ├── project-introduction.md # 项目介绍补充（外部评价/首创性自审/架构画像）✅
-│   ├── comparison.md       # 与 LangGraph/AutoGen/dsh 对比（治理层独有性）✅
-│   └── adr/                # 架构决策记录（决策留痕）                 ✅ ADR-0001
+├── docs/                  # Deep docs (thin facade thick system · L4 reference)
+│   ├── concepts/           # Core concepts one by one (mother axiom/QA duality/entropy governance/three-semantics/falsifier/anti-drift)
+│   │                       #   (one file per concept · on-demand read) ✅ 6 pieces
+│   ├── lightweight-guide.md # Lightweight trimming guide (standard/minimal) ✅
+│   ├── applicability.md     # Applicability boundaries (author statement) ✅
+│   ├── project-introduction.md # Project intro supplement (external reviews/originality/portrait) ✅
+│   ├── comparison.md       # vs LangGraph/AutoGen/dsh (governance-layer uniqueness) ✅
+│   └── adr/                # Architecture decision records           ✅ ADR-0001
 │
-├── examples/              # 示例
-│   ├── project-template.md # 项目体四件套                              ✅
-│   └── activation/         # 首次激活引导（README+py+yaml）            ✅
+├── examples/              # Examples
+│   ├── project-template.md # Project body four-piece set               ✅
+│   └── activation/         # First-activation tool (README+py+yaml)    ✅
 │
-├── tools/                 # 工具（编程语义·校验/执行）
-│   └── validator.py        # 一致性校验器（部署自检·唯一工具）          ✅
+├── tools/                 # Tools (programming semantics · validation/execution)
+│   └── validator.py        # Consistency validator (deployment self-check · only tool) ✅
 │
-└── .github/               # CI/Issue 模板
-    ├── workflows/validate.yml  # CI 校验                             ✅
-    └── ISSUE_TEMPLATE/          # Issue 模板                          ✅
+└── .github/               # CI/Issue templates
+    ├── workflows/validate.yml  # CI validation                        ✅
+    └── ISSUE_TEMPLATE/          # Issue templates                     ✅
 ```
 
-## 三、结构-原理对照（为什么这样分）
+## 3. Structure-Principle Mapping (why structured this way)
 
-| 结构 | 2.0 原理依据 | 解决的问题 |
-|------|------------|-----------|
-| `constitution/` | 五级分类 L0·强制读取层 | 先立规矩 |
-| `rules/`+`mechanisms/` | 规则↔机制分置（写什么 vs 怎么验） | 规则数据化可校验 |
-| `rules.yaml` | 三语义之编程语义 | 规则可校验（非纯文档） |
-| `templates/identity/` | L1 身份级·自举 | 系统三文件模板（自举致命缺口） |
-| `templates/memory/` | 装载分层·四层契约 | 蒸馏/收摊格式（自举致命缺口） |
-| `docs/adr/` | 决策留痕·防文档态自嗨 | 对标 dsh 的 ADR 仪式 |
-| `BENCHMARK.md` | 验证生效原则（写出≠生效） | 架构成立=可测量 |
-| `docs/concepts/` | 三语义之人语义 | 解决"别人理解不了" |
-| `SECURITY.md` | 非自主公理·防利用 | 设计缺陷保密报告通道 |
-| `CITATION.cff` | 学术研究命中 | 论文引用标准入口 |
+| Structure | 2.0 principle basis | Problem solved |
+|-----------|--------------------|----------------|
+| `constitution/` | Five-level L0 · mandatory read layer | Rules before work |
+| `rules/`+`mechanisms/` | Rules↔mechanisms separation (what to write vs how to verify) | Rules data-driven, checkable |
+| `rules.yaml` | Programming semantics of three-semantics | Rules checkable (not pure docs) |
+| `templates/identity/` | L1 identity · self-bootstrap | System three-file templates (fatal bootstrap gap) |
+| `templates/memory/` | Layered loading · four-layer contract | Distillation/wrap-up formats (fatal bootstrap gap) |
+| `docs/adr/` | Decision traces · anti-doc-mode self-congratulation | ADR ritual (aligned with dsh) |
+| `BENCHMARK.md` | Verification-effective principle (written≠effective) | Architecture standing = measurable |
+| `docs/concepts/` | Human semantics of three-semantics | Solves "others cannot understand" |
+| `SECURITY.md` | Non-autonomy axiom · anti-exploitation | Confidential design-defect reporting channel |
+| `CITATION.cff` | Academic hit | Standard paper-citation entry |
 
-## 四、外部审议指引（审议者怎么用本文件）
+## 4. External Review Guide (how reviewers use this file)
 
-1. **看结构**：读本文件第二节结构树——判断层级是否清晰、职责是否分离、是否缺必要件；
-2. **看状态**：读状态列（✅/🟡）——判断项目成熟度（🟡 均为"已定结构、内容待补"）；
-3. **看原理**：读第三节结构-原理对照——判断每个结构是否有理论依据（无依据=冗余）；
-4. **深挖按需**：需要深入某个结构时，按第二节路径取读对应文件，无需全库通读；
-5. **审议输出**：给出"结构是否合理/哪些冗余/哪些缺失"的判断即可，无需研究实现细节。
+1. **See structure**: read Section 2 tree — judge whether layers are clear, responsibilities separated, essentials missing;
+2. **See status**: read status column (✅/🟡) — judge maturity (🟡 = structure defined, content pending);
+3. **See rationale**: read Section 3 mapping — judge whether each structure has a theoretical basis (no basis = redundancy);
+4. **Dig on demand**: to go deep into a structure, read the corresponding file per Section 2 paths — no whole-library read needed;
+5. **Review output**: give "structure reasonable/which redundant/which missing" — no implementation details needed.
 
-## 五、补写顺序（书稿式·一章一节·每步可审议）
+## 5. Writing Order (book-style · chapter by chapter · each step reviewable)
 
-1. ✅ 根级仪式件（SECURITY/CODE_OF_CONDUCT/CITATION·2026-08-19）
-2. ✅ templates/identity（Agent_Profile + 系统三文件·4 件·2026-08-19）
-3. ✅ templates/workspace-structure + memory（6 件·2026-08-19）
-4. ✅ docs/concepts（6 篇核心概念）+ lightweight-guide（2026-08-19）
-5. ✅ rules.yaml（编程语义实例·2026-08-19·YAML 校验实跑 PASS）
-6. ✅ docs/comparison.md（治理层独有性对照·2026-08-19）
-7. ✅ docs/adr/ADR-0001-project-structure·2026-08-19）
-8. ✅ AGENTS.md + BENCHMARK.md（2026-08-19）
-9. ✅ 英文版全量（README.en/STRUCTURE.en/SECURITY.en/CONDUCT.en/CONTRIBUTING.en/BENCHMARK.en·2026-08-19·术语表统一）
+1. ✅ Root-level ritual files (SECURITY/CODE_OF_CONDUCT/CITATION · 2026-08-19)
+2. ✅ templates/identity (Agent_Profile + system three files · 4 pieces · 2026-08-19)
+3. ✅ templates/workspace-structure + memory (6 pieces · 2026-08-19)
+4. ✅ docs/concepts (6 core concepts) + lightweight-guide (2026-08-19)
+5. ✅ rules.yaml (programming-semantics instance · YAML check PASS · 2026-08-19)
+6. ✅ docs/comparison.md (governance-layer uniqueness · 2026-08-19)
+7. ✅ docs/adr/ADR-0001 (project structure finalized · 2026-08-19)
+8. ✅ AGENTS.md + BENCHMARK.md (2026-08-19)
+9. 🟡 English versions (README/DEPLOY/AGENTS/others in progress — publish gate)
 
-> **根级文件已全部齐备且中英双版**（README/LICENSE/DEPLOY/CONTRIBUTING/AGENTS/BENCHMARK/SECURITY/CODE_OF_CONDUCT/CITATION/STRUCTURE，各含 .en 副版）——达发布标准。
+> **Root-level files all ready** (README/LICENSE/DEPLOY/CONTRIBUTING/AGENTS/BENCHMARK/SECURITY/CODE_OF_CONDUCT/CITATION/Project Structure Guide) — English batch 1 done, remaining to complete before release.
 
 ---
 
-*GOAA 开源项目 · 项目结构说明 · 唯一版本 1.0 · 2026-08-19 · 本文件=外部审议第一入口·结构落地唯一对照基准*
+*GOAA Open-Source Project · Project Structure Guide · Single version 1.0 · 2026-08-19 · This file = external review first entry · single baseline for structure landing*

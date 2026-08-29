@@ -1,37 +1,37 @@
-# 安全政策（Security Policy）
+# Security Policy
 
-## 支持范围（Supported Versions）
+## Supported Versions
 
-| 版本 | 支持状态 |
-|------|:---:|
-| 1.0（当前唯一版本） | ✅ 支持中 |
+| Version | Status |
+|---------|:---:|
+| 1.0 (current single version) | ✅ Supported |
 
-本项目采用**核心稳定+外围迭代**双轨策略：架构核心（宪法/规则/核心机制）保持大版本稳定，外围生态快速迭代（详见 README「版本策略」）。安全修复会以补丁形式合入 1.0 分支。
+This project adopts a **core stable + periphery iterative** dual-track strategy: the architecture core (constitution/rules/core mechanisms) maintains major version stability, while the periphery ecosystem iterates rapidly (see README "Version Strategy"). Security fixes are merged into the 1.0 branch as patches.
 
-## 漏洞报告（Reporting a Vulnerability）
+## Reporting a Vulnerability
 
-本架构为**治理型 Agent 架构母本**——它不是可执行程序，本身不运行代码、不处理数据。但它的设计文件（规则/机制/部署指令）若被恶意利用，可能诱导部署者执行不安全操作（如越权文件读写、绕过决断权）。
+This architecture is a **governance-oriented agent architecture template** — it is not an executable program; it does not run code or process data itself. However, its design files (rules/mechanisms/deployment instructions) could be maliciously exploited to induce deployers into unsafe operations (e.g., unauthorized file reads/writes, bypassing decision rights).
 
-发现此类设计层面的安全问题时，请**不要**公开讨论，通过以下方式报告：
+If you find such design-level security issues, **do not discuss publicly**. Report via:
 
-1. **私信作者**：GitHub 账号 `roebin87`
-2. **议题保密**：在 Issue 中标注 `[SECURITY]` 前缀并说明"敏感问题"，作者会转为私密处理
+1. **Direct message to the author**: GitHub account `roebin87`
+2. **Confidential issue**: open an Issue with `[SECURITY]` prefix and note "sensitive" — the author will handle it privately
 
-**报告内容建议包含**：
-- 涉及的文件/机制（如 DEPLOY.md 某步、rules 某条）
-- 被诱导执行的危险操作是什么
-- 可能的利用路径与影响范围
+**Suggested report content**:
+- Affected file/mechanism (e.g., a DEPLOY.md step, a rule in rules/)
+- What dangerous operation could be induced
+- Possible exploitation path and impact
 
-## 响应承诺
+## Response Commitment
 
-- 48 小时内确认收到报告
-- 7 天内给出评估结论（接受/拒绝/需补充信息）
-- 修复合入后，在本文件「安全更新记录」登记
+- Acknowledge receipt within 48 hours
+- Give an assessment (accepted/rejected/needs more info) within 7 days
+- After a fix is merged, log it in "Security Update Record" below
 
-## 安全更新记录
+## Security Update Record
 
-- 暂无
+- None yet
 
 ---
 
-*GOAA · 安全政策 · 唯一版本 1.0 · 2026-08-19*
+*GOAA · Security Policy · Single version 1.0 · 2026-08-19*

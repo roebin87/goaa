@@ -1,98 +1,98 @@
-﻿# 项目介绍补充（Project Introduction Supplement）
+﻿# Project Introduction Supplement
 
-> **定位**：本文件=开源项目对外介绍的补充材料，含三部分：**外部审议评价集锦**（第三方背书）/ **首创性验证自审报告**（方法+证据）/ **架构设计画像报告**（价值锚定）。
-> **版本**：唯一版本 1.0｜**日期**：2026-08-19
+> **Position**: this file is supplementary material for the open-source project's external introduction, in three parts: **external-review highlights** (third-party endorsement) / **first-mover verification self-audit report** (method + evidence) / **architecture design profile report** (value anchoring).
+> **Version**: Single version 1.0 ｜ **Date**: 2026-08-19
 
 ---
 
-## 第一部分 · 外部审议评价集锦
+## Part 1 · External Review Highlights
 
-GOAA 开源项目全部 54 个文件经 17 轮外部 AI 审议，全部正向通过。核心评价摘录：
+All 54 files of the GOAA open-source project passed 17 rounds of external AI review. Core evaluation excerpts:
 
-| 审议对象 | 外部结论 |
+| Reviewed object | External conclusion |
 |---------|---------|
-| 项目结构 | 「定位清晰、分层自洽、设计克制、落地性强」「没有冗余的炫技模块，层级职责清晰」 |
-| 身份层四文件 | 「构成完整的身份层治理闭环，完全支撑文件驱动型治理」 |
-| 工作区+记忆体系 | 「从规则理念落地为可运行实体的核心骨架」「彻底把运行时状态从黑盒变白盒」 |
-| 规则层三文件 | 「构成完整规则治理闭环，完美落地三语义设计」「从文档规范走向可运行体系的核心支柱」 |
-| 核心概念六篇 | 「层层支撑、完全自洽，每个理论点都对应工程结构与机制文件」 |
-| 对比文档 | 「形式同形、对象异层，互补而非竞争——可挂载不替代」 |
-| 机制层八件 | 「权责清晰、环环相扣，从启动到收摊全链路有标准、有校验、有兜底」 |
-| 整体价值 | 「国内开源圈首个成体系的治理优先型 Agent 架构规范」「定位精准、时机准确、落地性强」 |
+| Project structure | "Clear positioning, self-consistent layering, restrained design, strong implementability" "no redundant show-off modules; layered responsibilities are clear" |
+| Identity layer (four files) | "Forms a complete identity-layer governance loop, fully supports file-driven governance" |
+| Workspace + memory system | "The core skeleton that lands rules philosophy into a runnable entity" "turns runtime state from a black box to a white box" |
+| Rules layer (three files) | "Forms a complete rule-governance loop, perfectly landing the three-semantics design" "the core pillar from doc-spec to a runnable system" |
+| Six core concepts | "Mutually supporting, fully self-consistent; every theoretical point maps to an engineering structure and mechanism file" |
+| Comparison doc | "Same form, different object layer; complementary rather than competing — mountable, not a replacement" |
+| Mechanism layer (eight files) | "Clear rights & responsibilities, interlocking; from startup to wrap-up the full chain has standards, verification, and fallbacks" |
+| Overall value | "The first systematic governance-first Agent architecture specification in the Chinese open-source circle" "precise positioning, timely timing, strong implementability" |
 
-## 第二部分 · GOAA 架构搭建设计的治理体首创性验证自审报告
+## Part 2 · Self-Audit Report on the Governance-Paradigm First-Mover Verification of GOAA
 
-### 验证方法（多角度·多关键词）
+### Verification method (multi-angle · multi-keyword)
 
-1. **GitHub 官方 Search API 实查**（30 组关键词，star 降序）：
-   - 英文治理类 6 组（governance-oriented agent / agent governance architecture / agent sovereignty decision rights / constitutional agent rules / agent negentropy governance 等）
-   - 中文治理类 8 组（Agent治理架构 / 智能体治理 / Agent宪法 / 智能体决断权 / Agent熵治理 等）
-   - GOAA 独有概念组合 8 组（files-as-memory / human decision rights / constitution basic law + design principles / rules+mechanisms separation / drift prevention single source / verification falsification loop / distillation startup shutdown 等）
-2. **国内团队实查**：字节（deer-flow 8 万★）/ DeepSeek（harness 16 万★）/ 月之暗面 / 智谱 / InternLM
-3. **全网补充检索**：Gitee + 掘金 + 中文社区
+1. **GitHub official Search API live queries** (30 keyword sets, star-descending):
+   - English governance sets (6): governance-oriented agent / agent governance architecture / agent sovereignty decision rights / constitutional agent rules / agent negentropy governance, etc.
+   - Chinese governance sets (8): Agent治理架构 / 智能体治理 / Agent宪法 / 智能体决断权 / Agent熵治理, etc.
+   - GOAA-unique concept combos (8): files-as-memory / human decision rights / constitution basic law + design principles / rules+mechanisms separation / drift prevention single source / verification falsification loop / distillation startup shutdown, etc.
+2. **Domestic team checks**: ByteDance (deer-flow 80k★) / DeepSeek (harness 160k★) / Moonshot / Zhipu / InternLM
+3. **Full-web supplementary search**: Gitee + Juejin + Chinese communities
 
-### 验证结果
+### Verification results
 
-| 检索项 | 结果 |
+| Search item | Result |
 |--------|------|
-| governance-oriented agent | 3 个，全 0★ |
+| governance-oriented agent | 3 results, all 0★ |
 | agent sovereignty decision rights | 0 |
-| GOAA 概念组合（8 组） | 全部 0 或个位数 |
-| 中文治理类（8 组） | 全部 0 |
-| 国内团队 Agent 项目 | 全为增强型/harness，无一治理型 |
+| GOAA concept combos (8 sets) | all 0 or single digits |
+| Chinese governance sets (8) | all 0 |
+| domestic teams' agent projects | all enhancement/harness, none governance-oriented |
 
-**已存在的"治理"类项目**（2025-26 涌现，全在工程实现层）：ECC（19 万★·harness 性能优化）/ AutoHarness（constitution 合规模板）/ OpenSymphony（运行框架）/ Agent Assembly（策略拦截平台）——它们是治理**工具**（给 Agent 上锁），不是治理**范式**（定义锁的理论、规则、验证与自举）。
+**Existing "governance" projects** (emerging 2025-26, all at the engineering-implementation layer): ECC (190k★ · harness performance optimization) / AutoHarness (constitution compliance template) / OpenSymphony (runtime framework) / Agent Assembly (policy interception platform) — they are governance **tools** (locking agents up), not a governance **paradigm** (defining the theory, rules, verification, and self-bootstrap of the lock).
 
-### 自审结论（三层精确判定）
+### Self-audit conclusion (three-level precise judgment)
 
-| 层 | 判定 |
+| Layer | Judgment |
 |----|------|
-| 「治理优先型 Agent 架构规范」（非框架·理论-工程闭环·文件驱动·可自举） | ✅ 首创成立（未检索到同构） |
-| 「Agent 治理」概念本身 | ⚠️ 非首创（ECC 等已存在） |
-| GOAA 独有概念组合（宪法两件套/母公理决断权/熵治理/证伪器/问答对偶/文件记忆四层/自举部署） | ✅ 零命中·首创成立 |
+| "Governance-first Agent architecture specification" (not a framework · theory-engineering loop · file-driven · self-bootstrappable) | ✅ first-mover established (no isomorphic result found) |
+| The "agent governance" concept itself | ⚠️ not a first (ECC etc. already exist) |
+| GOAA-unique concept combos (constitution pair / Mother-Axiom decision rights / entropy governance / falsifier / QA duality / four memory layers / self-bootstrap deployment) | ✅ zero hits · first-mover established |
 
-**对外精确口径**：GOAA 是**「首个成体系的治理优先型 Agent 架构规范」**——治理工具已有，治理范式在此。
+**Precise external wording**: GOAA is **"the first systematic governance-first Agent architecture specification"** — governance tools already exist; the governance paradigm is here.
 
-## 第三部分 · 架构设计画像报告
+## Part 3 · Architecture Design Profile Report
 
-### 核心定性
+### Core characterization
 
-GOAA 不参与「怎么让 AI 更能干活」的军备竞赛，瞄准全行业共性空白：**当 AI 能力已经足够干活，怎么让它干得可控、可审、可追溯、不漂移**。行业正从「拼能力上限」转向「拼落地下限」——治理的价值随落地深入而凸显（先有能力、后有治理）。
+GOAA does not join the arms race of "making AI do more work"; it targets a common industry blank: **when AI capability is already enough to do the work, how to make it reliably governable, auditable, traceable, and drift-free.** The industry is shifting from "competing on the capability ceiling" to "competing on the deployment floor" — governance's value surfaces as deployment deepens (capability first, governance after).
 
-### 价值层级
+### Value tiers
 
-| 层级 | 受众 | 核心价值 |
+| Tier | Audience | Core value |
 |------|------|---------|
-| L1 工具 | 个人/独立创作者 | 解决单体 Agent 记忆断层、越权操作，让聊天助手变可持续工作体 |
-| L2 团队 | 10 人内小团队 | 统一规则、沉淀知识资产、权限分级管控 |
-| L3 企业 | 中小企业/合规部门 | 补全审计、权责、合规治理骨架 |
-| L4 行业 | 开源社区/学术 | 「治理型 Agent」完整范式，行业参考框架 |
+| L1 tool | individuals / independent creators | solving single-agent memory gaps and overreach; turning a chat assistant into a sustainable working body |
+| L2 team | small teams within 10 | unified rules, sedimented knowledge assets, tiered permission control |
+| L3 enterprise | SMEs / compliance departments | completing the audit, accountability, compliance governance skeleton |
+| L4 industry | open-source community / academia | a complete "governance-oriented Agent" paradigm — an industry reference framework |
 
-### 客观局限（诚实边界）
+### Objective limitations (honest boundaries)
 
-1. 定位非执行框架——须挂载外部模型/执行框架，只负责"干得可控"
-2. 自动化强度有限——软约束为主，硬拦截待强化（证伪器工程化方向）
-3. 多主体场景待补——当前适配单用户/单团队（3.0 方向）
-
----
-
-## 第四部分 · 设计者画像
-
-> 外部审议画像（治理型系统工程师）摘录：治理思维>能力思维／熵增思维（默认体系会自然腐化）／权责思维（AI 不担责，后果人承担）／对偶思维（持续对抗演进而非绝对正确）——"更像制度设计者，而非程序员，核心竞争力在分寸感"。
-> 以下为基于设计者背景的画像补充（作者=非计算机专业·长期读者与写作者）。
-
-### 写作者基因：治理=秩序的语言化
-
-- **写书先定章节目录再写正文** → 项目"先定结构再一章一节填"（书稿式落地=写作本能）；
-- **写书永远想读者（零上下文的人怎么读懂）** → 结构说明=外部审议唯一入口、白盒化、警惕知识诅咒（读者视角迁移）；
-- **写书留白让读者参与** → 决策留痕、审议机制、"评判他们的评判"（留白手艺迁移成开放结构）；
-- **文字练出的分寸感** → 架构的分寸感：全仓库只一个校验器，不造一个多余能力；
-- **长期阅读与思考（含传统哲学经典）** → 秩序、对偶、熵等概念是消化过的世界观，非学术引用堆砌。
-
-### 为什么工程师做不出（反面印证）
-
-工程师的训练是"造"，写作者的训练是"写"——**造的人天然想加功能，写的人天然想删废话**。治理型架构的核心动作是"删"：删掉不需要的能力、模糊的规则、多余的文件。这条路径只有写作训练过的人走得惯。作者本人在 README 中的主张——"治理型架构的理解门槛属于普通人"——由"非工程师作者"这个事实直接点亮。
+1. Not positioned as an execution framework — it must mount external models/execution frameworks; it is only responsible for "reliably governable"
+2. Limited automation strength — soft constraints dominate; hard interception awaits strengthening (the falsifier's engineering direction)
+3. Multi-actor scenarios pending — currently adapted to single-user/single-team (the 3.0 direction)
 
 ---
 
-*GOAA · 项目介绍补充 · 唯一版本 1.0 · 2026-08-19 · 外部审议 17 轮全过 + 首创性自审（30 组检索证据）+ 架构画像 + 设计者画像*
+## Part 4 · The Designer's Profile
+
+> External review profile (governance-oriented systems engineer) excerpts: governance thinking > capability thinking ／ entropy-growth thinking (assumes systems naturally decay) ／ rights-responsibility thinking (AI does not bear responsibility; humans bear consequences) ／ duality thinking (continuous confrontation and evolution rather than absolute correctness) — "more like an institution designer than a programmer; the core competency lies in a sense of proportion."
+> The following profile supplements are based on the designer's background (author = non-CS background, a lifelong reader and writer).
+
+### The writer's genes: governance = the linguisticization of order
+
+- **Set the book's table of contents first, then write the body** → the project "sets the structure first, then fills chapter by chapter" (book-style landing = a writing instinct);
+- **Always writes for the reader (how would a zero-context person understand)** → the structure spec = the single entry for external review, white-boxed, wary of the curse of knowledge (reader-perspective shift);
+- **Leaves blanks in writing for readers to participate** → decision traces, review mechanisms, "judging their judgment" (the blank-space craft migrated into an open structure);
+- **A sense of proportion honed by writing** → the architecture's sense of proportion: the whole repo has exactly one validator, not one superfluous capability;
+- **Long-term reading and thinking (including traditional philosophy classics)** → concepts like order, duality, and entropy are digested worldviews, not academic citation stacking.
+
+### Why engineers could not have made it (negative proof)
+
+Engineers are trained to "build"; writers are trained to "write" — **builders naturally want to add features; writers naturally want to cut excess words.** The core action of a governance-oriented architecture is "deleting": deleting unneeded capabilities, ambiguous rules, and redundant files. This path is only walkable by someone trained in writing. The author's claim in the README — "the understanding threshold of governance-oriented architecture belongs to ordinary people" — is directly illuminated by the fact that the author is not an engineer.
+
+---
+
+*GOAA · Project Introduction Supplement · Single version 1.0 · 2026-08-19 · 17 rounds of external review all passed + first-mover self-audit (30-set search evidence) + architecture profile + designer profile*

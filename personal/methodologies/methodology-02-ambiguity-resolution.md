@@ -1,16 +1,16 @@
-# 方法论 02 · 人机语义歧义消解（方法要点）
+# Methodology 02 · Human-Machine Semantic Ambiguity Resolution (Method Points)
 
-> **定位**：本方法论=歧义消解的**方法要点**（可复用认知）；**机制权威详述见 `mechanisms/ambiguity-governance.md`**（规则面/五层消解/治理循环的完整定义）——两者同源，机制为权威，本文件提供方法要点与使用场景。
+> **Role**: this methodology provides the reusable **method points** for ambiguity resolution; the **authoritative mechanism detail is in `mechanisms/ambiguity-governance.md`** — same source, mechanism is authoritative, this file offers method points and use cases.
 
-## 方法要点（何时用 / 怎么想）
+## Method points (when to use / how to think)
 
-- **适用**：歧义不可消除（母公理④），但从"容忍缺陷"变"显影治理对象"时
-- **三原则**：可控消解（不追求消灭）· 显影优先（先让歧义可见）· 判定权在人（最终裁定永远在人）
-- **五层消解**（显影→定位→裁决→固化→退役）：L1 意图 / L2 翻译 / L3 执行 / L4 未裁 / L5 编号
-- **三类流失**（人语义→机语义的损失）：措辞弱化 / 解释压缩 / 约束消失——对策=单权威源+归一化同步检测+补全名
+- **When**: ambiguity cannot be eliminated (Mother Axiom ④) but can be turned from "tolerated defect" into "surfaced governance object"
+- **Three principles**: controllable resolution (not pursuing elimination) · surfacing first (make ambiguity visible before governing) · ruling authority in the human (final ruling is always human)
+- **Five-layer resolution** (surface → locate → rule → solidify → retire): L1 intent / L2 translation / L3 execution / L4 unrulled backlog / L5 numbering
+- **Three loss modes** (human semantics → machine semantics): weakened wording / compressed explanation / vanished constraints — countermeasures: single authoritative source + normalized sync check + full names
 
-## 使用场景
+## Use cases
 
-- 规则语义重载前 · 跨文件术语同步 · 裁决留痕与定论固化
+- Before semantic reloading of rules · cross-file terminology sync · ruling trace and conclusion solidification
 
-> 完整定义（五层显影信号/治理循环/运转挂点/率项反馈）见 `mechanisms/ambiguity-governance.md`——以机制件为权威。
+> Full definition (five-layer surfacing signals / governance loop / runtime hooks / rate feedback) see `mechanisms/ambiguity-governance.md` — the mechanism file is authoritative.

@@ -1,39 +1,39 @@
-# 轻量化裁剪指引（Lightweight Guide）
+# Lightweight Guide (trimming guide)
 
-> **用途**：完整结构面向全量治理；本指引说明哪些目录/文件可按需精简，让架构既能支撑完整治理，也能适配个人极简/小型项目场景。
-> **原则**：宪法层/身份层/记忆层史书=不可裁剪（治理底线）；其余按场景裁剪。
-> **路径视图**：本文=**身体区视图**（本工作区即身体·单轨 2026-08-27）——`constitution/` `_Memory/` 等均相对身体根（zh/ 或 en/）·仓库内即身体。
-> **版本**：唯一版本 1.0
+> **Purpose**: the full structure serves full governance; this guide explains which directories/files can be trimmed on demand, so the architecture can both support full governance and adapt to personal-minimal/small-project scenarios.
+> **Principle**: constitutional layer / identity layer / memory chronicle = not trimmable (governance bottom line); everything else trims by scenario.
+> **Path view**: this document = **body view** (this workspace IS the body · single-track 2026-08-27) — `constitution/` `_Memory/` etc. are all relative to the body root (en/ or zh/) · the repo IS the body.
+> **Version**: Single version 1.0
 
 ---
 
-## 一、三档配置
+## 1. Three-tier config
 
-| 档位 | 适用 | 保留 | 可裁剪 |
+| Tier | Applies to | Keep | Trimmable |
 |------|------|------|--------|
-| **完整档** | 全量治理·长期运行 | 全部 | 无 |
-| **标准档**（推荐） | 个人主力使用 | 宪法/身份/规则/机制/记忆/项目/生产 | `docs/` 深度文档、`examples/`、`_Temp` 可省 |
-| **极简档** | 小型项目·快速上手 | 宪法（基本法）/身份（三文件）/记忆（蒸馏+史书） | `rules/` 机制层合并进 IDENTITY 说明、`methodologies/` 可后补 |
+| **Full tier** | full governance · long-term running | everything | none |
+| **Standard tier** (recommended) | personal primary use | constitution/identity/rules/mechanisms/memory/projects/production | `docs/` deep docs, `examples/`, `_Temp` can be omitted |
+| **Minimal tier** | small projects · quick start | constitution (Basic Law) / identity (three files) / memory (distillation + chronicle) | `rules/` mechanism layer merged into IDENTITY notes, `methodologies/` can be added later |
 
-## 二、极简档最小集（10 个文件内可跑）
+## 2. Minimal-tier minimum set (runnable within ~10 files)
 
 ```
-工作区/
-├── identity/（SOUL + IDENTITY + USER + Agent_Profile）
+workspace/
+├── identity/ (SOUL + IDENTITY + USER + Agent_Profile)
 ├── constitution/basic_law.md
 ├── _Memory/distill/ + history/
-└── mechanisms/（startup + shutdown 两件即可）
+└── mechanisms/ (startup + shutdown is enough)
 ```
 
-- 蒸馏/史书格式沿用 templates/memory 模板；
-- 规则与机制先写进 IDENTITY 的说明节，随体系长大再拆出。
+- distillation/chronicle formats follow the templates/memory templates;
+- rules and mechanisms are first written into IDENTITY's notes section, then split out as the system grows.
 
-## 三、裁剪纪律
+## 3. Trimming discipline
 
-1. **先跑通再裁剪**：首次部署用标准档，跑顺后再按需裁剪；
-2. **裁剪不删底线**：宪法、史书（只追加）永不裁剪；
-3. **裁剪留痕**：裁剪了什么记入变更记录，便于日后还原。
+1. **Run it through before trimming**: first deployment uses the standard tier; trim on demand only after it runs smoothly;
+2. **Trimming never removes the bottom line**: constitution and the chronicle (append-only) are never trimmed;
+3. **Trimming leaves a trace**: record what was trimmed in the change log so it can be restored later.
 
 ---
 
-*【体系名】· 轻量化裁剪指引 · 唯一版本 1.0*
+*【System name】 · Lightweight Guide · Single version 1.0*

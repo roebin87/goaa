@@ -1,65 +1,67 @@
-# GOAA Lite · 启蒙版
+# GOAA Lite · Beginner Edition
 
+> **Make AI governable. Keep your memory yours.**
 > **让 AI 干得可控，让你的记忆属于你。**
-> *Make AI governable. Keep your memory yours.*
 
-GOAA 是**治理型 AI 架构**：主流工具解决"怎么让 AI 干活"，GOAA 解决"怎么让 AI 干得可控、且你的东西始终是你的"。
+[中文版](https://github.com/roebin87/goaa/tree/main/lite-zh)
 
-本文件夹（`lite/`）是最小可用版本——**不需要任何技术背景**，5 分钟就能拥有一套"记忆完全属于自己"的 AI 工作伙伴。
+GOAA is a **governance-oriented AI architecture**: mainstream tools solve "how to make AI work"; GOAA solves "how to make AI reliably governable — and how to keep what's yours always yours."
+
+This folder (`lite/`) is the minimal usable version — **no technical background needed**. In 5 minutes you can have an AI work companion whose memory belongs entirely to you.
 
 ---
 
-## 代际（GOAA 是什么、往哪走 · 一行版）
+## Generations (What GOAA Is & Where It's Going · One-Line Version)
 
 ```
-1.0 所有权（记忆属于谁）→ 2.0 决断权（分歧听谁的）→ 3.0 社会验证（大家一起验证）→ 4.0 元序
-★ 现行：2.0 · 完整理论见学术论文（DOI 见文末）
+1.0 Ownership (whose memory) → 2.0 Decision Authority (who decides) → 3.0 Social Validation (verify together) → 4.0 Meta-Order
+★ Current: 2.0 · Full theory in the academic paper (DOI at the bottom)
 ```
 
-## 怎么开始（三步）
+## How to Start (Three Steps)
 
-1. **下载**：把本 `lite/` 文件夹整个下载到你的电脑（随便放哪都行）；
-2. **打开**：在 AI 助手（如 WorkBuddy / Claude / Cursor 等本地工具）中，**把 `lite/` 文件夹设为工作区**——就是含本 README 的这一层；
-3. **说话**：对 AI 说 **"你好"**——它会自动开始引导，5 分钟创建你的专属 AI 伙伴。
-   - 如果 AI 没有自动开始，请对它说：**"读取 mechanisms/onboarding-lite.md 并按其中的指示开始"**。
+1. **Download**: download this entire `lite/` folder to your computer (anywhere is fine);
+2. **Open**: in your AI assistant (e.g. WorkBuddy / Claude / Cursor or other local tool), **set the `lite/` folder as the workspace** — the level that contains this README;
+3. **Speak**: say **"hello"** to the AI — it automatically starts the onboarding, creating your dedicated AI companion in ~5 minutes.
+   - If the AI doesn't start automatically, tell it: **"Read mechanisms/onboarding-lite.md and follow its instructions."**
 
-> ✅ **自检**：工作区第一层应该能看到 `README.md`、`constitution/`、`templates/` 这些文件夹。如果看到的是 `goaa-lite` 之类外层目录名——锚错层了，请把工作区改成本文件夹。
+> ✅ **Self-check**: the first level of your workspace should show `README.md`, `constitution/`, `templates/` folders. If you see an outer directory name like `goaa-lite`, you anchored at the wrong level — set the workspace to this folder instead.
 
-## 本文件夹里有什么（每件做什么）
+## What's in This Folder (What Each Piece Does)
 
-| 路径 | 作用 |
-|------|------|
-| `constitution/basic_law.md` | **核心原则**——你和 AI 协作的最高约定（5 分钟可读完） |
-| `templates/identity/` | 你的专属设定模板：SOUL（行为约定）/ IDENTITY（结构地图）/ USER（你的档案）/ Agent_Profile（AI 画像）——激活时 AI 会带你填 |
-| `templates/memory/` | 记忆模板：蒸馏（跨天接续的精华）/ 对话记录（逐字留存）——**你的记忆文件** |
-| `mechanisms/startup.md` | 启动流程：每次打开工作区 AI 怎么装载 |
-| `mechanisms/shutdown.md` | 收摊流程：关对话前 AI 必须做的五件事（记忆落盘） |
-| `mechanisms/onboarding-lite.md` | 首次激活引导台词本（AI 用） |
-| `tools/verify-ownership.py` | **所有权验证**：一键证明"你的记忆 100% 属于你"（见下） |
-| `docs/ownership.md` | 所有权说明：五条检查逐条解释 + 退出迁移指引 |
+| Path | Purpose |
+|------|---------|
+| `constitution/basic_law.md` | **Core principles** — the highest agreement between you and your AI (readable in 5 minutes) |
+| `templates/identity/` | Your dedicated profiles: SOUL (behavior covenant) / IDENTITY (structure map) / USER (your profile) / Agent_Profile (AI portrait) — the AI walks you through them at activation |
+| `templates/memory/` | Memory templates: distillation (cross-day essence) / dialogue record (verbatim retention) — **your memory files** |
+| `mechanisms/startup.md` | Startup flow: how the AI loads every time you open the workspace |
+| `mechanisms/shutdown.md` | Wrap-up flow: the five things the AI must do before closing a conversation (memory persistence) |
+| `mechanisms/onboarding-lite.md` | First-activation onboarding script (for the AI) |
+| `tools/verify-ownership.py` | **Ownership verification**: one command proving "your memory is 100% yours" (see below) |
+| `docs/ownership.md` | Ownership guide: the five checks explained + exit/migration guide |
 
-## 核心证明动作：验证"记忆属于你"（60 秒）
+## Core Proof Action: Verify "Memory Belongs to You" (60 seconds)
 
 ```bash
 python3 tools/verify-ownership.py
 ```
 
-运行后你会看到 **5 个 ✅**（本地/纯文本/无云端/可迁移/无锁定）+ 2 项人工验证指引。**这 5 条全部成立，意味着：你的 AI 记忆存在你自己的文件夹里，纯文本、断网可读、可复制带走、不绑定任何厂商——没有任何大模型或 AI 应用能扣留它。**
+You'll see **5 ✅** (local / plain text / no cloud / portable / no lock-in) plus 2 manual verification guides. These 5 conditions all holding means: your AI memory lives in your own folder — plain text, readable offline, copyable, bound to no vendor. No LLM or AI application can withhold it.
 
-> 发现任何一条不成立？欢迎告诉我们——GOAA 不求你相信，只求你来证伪（反馈入口见文末）。
+> Found any check failing? Tell us — GOAA doesn't ask you to believe, it asks you to falsify (feedback entry at the bottom).
 
-## 退出自由（来去自由）
+## Freedom to Leave (Come and Go Freely)
 
-想不用了？**直接删掉这个文件夹即可**——你的所有记忆就在里面，随时可以复制到另一台电脑、交给另一个 AI 助手继续用。没有任何云端账号、没有任何锁定。
+Done with it? **Just delete this folder** — all your memory is inside it; copy it to another computer or hand it to another AI assistant anytime. No cloud accounts, no lock-in.
 
-## 验证者姿态
+## Verifier's Posture
 
-GOAA 由一个**非 AI 工程师、非计算机专业**的设计者创建——治理型架构的理解门槛，属于普通人。本项目的完整理论以学术论文形式发布，任何观点都可以被质疑和验证。
+GOAA was created by a **non-AI-engineer, non-CS designer** — the comprehension threshold of governance-oriented architecture belongs to ordinary people. The project's full theory is published as an academic paper; any claim can be questioned and verified.
 
-- 学术论文 DOI：`10.5281/zenodo.22165301`（GOAA 架构设计原理）
-- 许可证：[Apache-2.0](LICENSE) · 引用：[CITATION.cff](CITATION.cff)
-- 反馈/证伪：GitHub Issues（`github.com/roebin87/goaa`）
+- Academic paper DOI: `10.5281/zenodo.22165301` (GOAA Architecture Design Principles)
+- License: [Apache-2.0](LICENSE) · Citation: [CITATION.cff](CITATION.cff)
+- Feedback/falsification: GitHub Issues (`github.com/roebin87/goaa`)
 
 ---
 
-*GOAA Lite v0.1.0 · 2026-08-28 · 通用化转译版*
+*GOAA Lite v0.1.0 · 2026-08-28 · Generic translation*

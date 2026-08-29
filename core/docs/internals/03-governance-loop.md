@@ -1,133 +1,60 @@
-# 03 · GOAA 常态化裁决闭环工作原理
+# 03 · GOAA Normalized Adjudication Loop Working Principles
 
-> 本文档公开 GOAA 常态化裁决闭环的设计原理与工作流程。完整实现细节暂未开源，但设计原理完全公开。
+> This document publishes the design principles and workflows of GOAA's normalized adjudication loop.
 
-## 一、为什么需要常态化裁决
+## 1. Why Normalized Adjudication
 
-主流人机协作模式中，人类是"异常兜底"——只有 AI 出问题了人才介入。GOAA 认为这是错误的：**人类裁决应该是治理循环的固定环节，不是救火队。**
+In mainstream human-machine collaboration, humans are "exception fallbacks" — only intervene when AI goes wrong. GOAA believes this is wrong: **human adjudication should be a fixed环节 of the governance loop, not a fire brigade.**
 
-**核心洞察**：AI 的执行飘忽（语义歧义）、规则的衰减与冲突、认知的滞后（人的认知更新跟不上体系演化），这些问题不能靠 AI 自我修复，必须通过人类的常态化裁决来治理。
+**Core insight**: AI execution drift (semantic ambiguity), rule decay/conflict, and cognitive lag (human cognition can't keep up with system evolution) cannot be self-repaired by AI. They must be governed through normalized human adjudication.
 
-## 二、裁决闭环完整流程
+## 2. Complete Adjudication Loop Flow
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    常态化裁决闭环                             │
-│                                                             │
-│  ① 歧义显影 ──→ ② 定位 ──→ ③ 人裁 ──→ ④ 固化 ──→ ⑤ 退役 │
-│      ↑                                            │         │
-│      └────────────────────────────────────────────┘         │
-│                    （持续循环）                               │
-└─────────────────────────────────────────────────────────────┘
+① Ambiguity Revelation → ② Localization → ③ Human Adjudication → ④ Consolidation → ⑤ Retirement
+     ↑                                                                      │
+     └──────────────────────────────────────────────────────────────────────┘
+                              (continuous loop)
 ```
 
-### 2.1 ① 歧义显影（Ambiguity Revelation）
+### 2.1 ① Ambiguity Revelation
+Make hidden ambiguity, conflict, and lag visible rather than masked.
+**Mechanisms**: Instruction dual-check (human intent vs machine execution), rule conflict detection, memory decay detection, cognitive lag revelation.
+**Principle**: Revelation precedes resolution — make the problem seen first, then decide how to handle.
 
-**目标**：让隐藏的歧义、冲突、滞后显影出来，而不是被掩盖。
+### 2.2 ② Localization
+Locate the root and layer of ambiguity/conflict/lag.
+**Routing**: Vocabulary ambiguity → human semantic layer; syntactic ambiguity → machine semantic layer; pragmatic ambiguity → context layer; execution ambiguity → mechanism layer; rule conflict → rules layer; cognitive lag → governance layer.
 
-**显影机制**：
-- **指令双检**：每条指令执行人语义（意图）和机语义（执行）双检，不一致则显影
-- **规则冲突检测**：扫描 rules/ 下的规则，检测相同触发条件、互斥指令
-- **记忆衰减检测**：对比蒸馏层和史书层，检测被遗忘的规则和约定
-- **认知滞后显影**：当体系演化超出人的认知时，显影为"待裁决事项"
+### 2.3 ③ Human Adjudication
+Final decision made by human (owner); AI only provides analysis and suggestions.
+**Principles**: Human holds 100% final decision rights (mother axiom); adjudication targets rules layer (rule effect/consensus consolidation/version iteration), not action layer; adjudication frequency bound to rule change frequency (far below action execution frequency, magnitude difference can be 100x+).
 
-**显影优先原则**：显影优于解决——先让问题被看见，再决定怎么处理。
+### 2.4 ④ Consolidation
+Solidify adjudication results as system assets, ensuring no repeat adjudication.
+**Paths**: New rules → rules/ (after effect gate four checks); rule modifications → rules/ (old archived, new validated); decision consensus → _Memory/distill/; important decisions → _Memory/history/analects/; constitution updates → constitution/ (after design review).
 
-### 2.2 ② 定位（Localization）
+**Rule Effect Gate (Four Checks)**: 1) Existence check (file exists, format correct); 2) Semantic sync check (rules consistent with basic law/design principles key concepts); 3) Reference check ([Rxxx] references defined, no dead links); 4) YAML Schema compliance (rules.yaml required sections complete, rule IDs unique).
 
-**目标**：定位歧义/冲突/滞后的根源和层级。
+> **Internal implementation note**: Open-source validator.py provides generic version of above four checks. Internal full version additionally includes directory read-only permission enforcement and deep semantic rule checks, not yet open-sourced.
 
-**定位路由**：
+### 2.5 ⑤ Retirement
+Obsolete rules, consensus, and memory need retirement to avoid rule obesity.
+**Triggers**: Rule no longer referenced (reference count 0); rule conflicts with new rule, human adjudicates retirement; rule's scenario no longer exists; rule explicitly marked "pending retirement."
+**Process**: Detect pending retirement → human confirmation → old rule archived to _Memory/history/rule-archive/ → index updated, marked retired → distill updated, remove retired rules.
 
-| 显影类型 | 定位层级 | 处理方式 |
-|---------|---------|---------|
-| 词汇歧义 | 人语义层 | 澄清意图，更新主人档案 |
-| 句法歧义 | 机语义层 | 重写指令，明确执行语义 |
-| 语用歧义 | 上下文层 | 补充上下文，更新蒸馏层 |
-| 执行层歧义 | 机制层 | 更新机制文档，明确执行流程 |
-| 规则冲突 | 规则层 | 提交人裁，决定保留/修改/退役 |
-| 认知滞后 | 治理层 | 提交人裁，更新宪法/设计原理 |
+**Non-Additive Principle**: More rules isn't better. New rules must prove "problems will occur without adding," otherwise don't add. This is the core principle against rule obesity.
 
-### 2.3 ③ 人裁（Human Adjudication）
+## 3. Governance Intensity Grading (BCG Four-Level Mapping)
 
-**目标**：由人（主人）做最终裁决，AI 只提供分析和建议。
+GOAA's governance intensity is not one-size-fits-all, but graded by task risk:
+- **B (Baseline)**: Daily conversation, info query, low-risk tasks → Light governance (startup loading + shutdown)
+- **C (Controlled)**: Document generation, code writing, medium-risk tasks → Medium governance (+ rule check + ambiguity detection)
+- **G (Governed)**: Architecture changes, rule modifications, high-risk tasks → Strong governance (+ human adjudication confirmation + effect gate)
+- **S (Sovereign)**: Constitution modifications, core principle changes → Strongest governance (+ design review + major version update)
 
-**裁决原则**：
-- **人保有 100% 最终决断权**（母公理）：AI 可以分析、建议，但最终决定由人做出
-- **裁决对象是规则层，不是动作层**：人裁的是"规则生效、共识固化、版本迭代"这类低频高价值事项，不是每个动作
-- **裁决频次与规则变更频率绑定**：远低于动作执行频次（量级差可达百倍以上）
-
-**裁决流程**：
-1. AI 提交待裁决事项（含分析、选项、建议）
-2. 人审阅、决策
-3. 决策结果落盘（写入规则/蒸馏/论语）
-4. AI 执行决策
-
-### 2.4 ④ 固化（Consolidation）
-
-**目标**：将裁决结果固化为体系资产，确保下次不再重复裁决。
-
-**固化路径**：
-
-| 裁决结果 | 固化位置 | 生效方式 |
-|---------|---------|---------|
-| 新规则 | rules/ 对应分类文件 | 经生效闸门四道校验后生效 |
-| 规则修改 | rules/ 对应文件 | 旧版本归档，新版本经校验生效 |
-| 决策共识 | _Memory/distill/ 蒸馏层 | 下次启动时轻装载 |
-| 重要决策 | _Memory/history/论语/ | 永久记录，只追加 |
-| 宪法/原理更新 | constitution/ | 经设计评审，大版本更新 |
-
-**规则生效闸门（四道校验）**：
-1. **存在性校验**：规则文件存在，格式正确
-2. **语义同步校验**：规则与基本法/设计原理关键概念一致
-3. **引用校验**：规则引用的 [Rxxx] 有定义，无死链
-4. **YAML Schema 合规**：rules.yaml 必填节完整，规则 id 唯一
-
-> **内部实现说明**：开源版 validator.py 提供上述四道校验的通用版本。内部完整版额外包含目录只读权限强制、规则语义深度校验等，暂未开源。
-
-### 2.5 ⑤ 退役（Retirement）
-
-**目标**：过时的规则、共识、记忆需要被退役，避免规则肥胖症。
-
-**退役触发**：
-- 规则不再被引用（引用计数为 0）
-- 规则与新规则冲突，经人裁决定退役旧规则
-- 规则对应的场景不再存在
-- 规则被显式标记为"待退役"
-
-**退役流程**：
-1. 检测到待退役规则
-2. 提交人裁确认
-3. 旧规则归档到 _Memory/history/规则归档/
-4. 索引层更新，标记为已退役
-5. 蒸馏层更新，移除已退役规则
-
-**非加不可原则**：规则不是越多越好。新增规则必须证明"不加会出问题"，否则不加。这是对抗规则肥胖症的核心原则。
-
-## 三、治理强度分级（BCG 四级映射）
-
-GOAA 的治理强度不是一刀切，而是按任务风险分级：
-
-| 级别 | 名称 | 适用场景 | 治理强度 |
-|------|------|---------|---------|
-| B 级 | 基准治理（Baseline） | 日常对话、信息查询、低风险任务 | 轻治理（启动装载+收摊） |
-| C 级 | 受控治理（Controlled） | 文档生成、代码编写、中等风险任务 | 中治理（+规则校验+歧义检测） |
-| G 级 | 强治理（Governed） | 架构变更、规则修改、高风险任务 | 强治理（+人裁确认+生效闸门） |
-| 特殊 | 主权级（Sovereign） | 宪法修改、核心原理变更 | 最强治理（+设计评审+大版本更新） |
-
-**动态率设计**：治理强度可以根据任务风险动态调整，不是固定不变。
-
-## 四、设计原理与学术对应
-
-| 裁决设计 | 学术论文对应 | 核心概念 |
-|---------|------------|---------|
-| 常态化裁决 | 常态化裁决闭环（论文 §4.5） | 人裁是规则层固定环节，不是异常兜底 |
-| 歧义显影 | 语义歧义三语义消解（论文 §4.3） | 显影优于解决，先让问题被看见 |
-| 规则生效闸门 | 生效闸门四道校验（论文 §4.4） | 规则写入必须经过校验，不是随便写 |
-| 非加不可原则 | 体系七大治理原则（论文 §3） | 对抗规则肥胖症，规则不是越多越好 |
-| 治理强度分级 | BCG 四级映射（论文 §4.5） | 治理强度按任务风险分级，不是一刀切 |
-| 人裁低频高价值 | 裁决频次与规则变更绑定（论文 §4.5） | 人裁是规则层事项，不是动作层审批 |
+**Dynamic rate design**: Governance intensity dynamically adjusts based on task risk, not fixed.
 
 ---
 
-*GOAA · 常态化裁决闭环工作原理 · 基于学术论文 DOI:10.5281/zenodo.22165301 整理 · 2026-08-28*
+*GOAA · Normalized Adjudication Loop · Based on academic paper DOI:10.5281/zenodo.22165301 · 2026-08-28*

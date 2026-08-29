@@ -1,81 +1,81 @@
-# 记忆管理指南（用户向 · 文件既是记忆）
+# Memory Management Guide (user-facing · files are memory)
 
-> **核心**：GOAA 的记忆=你自己文件夹里的文件——管理记忆=管理文件。本指南教你：记什么、存哪、怎么备份、怎么迁移、丢了怎么恢复。
-> **版本**：唯一版本 1.0 · 2026-08-26
+> **Core**: GOAA's memory = files in your own folder — managing memory = managing files. This guide teaches you: what to record, where it lives, how to back up, how to migrate, and how to recover when lost.
+> **Version**: Single version 1.0 · 2026-08-26
 
 ---
 
-## 一、记忆文件地图（哪个文件存什么）
+## 1. Memory File Map (which file stores what)
 
-| 文件/目录 | 存什么 | 何时写 | 能改吗 |
+| File/directory | What it stores | When written | Can it be changed? |
 |-----------|--------|--------|--------|
-| `identity/主人档案.md` | 你的称呼/偏好/边界（你的专属档案） | 首次激活生成·持续补采 | 🔒 机侧只读·仅你可改 |
-| `_Memory/distill/蒸馏_当前.md` | 最近最重要的几件事（跨对话接续核心） | 每次收摊覆盖更新 | 只追加风格·覆盖由收摊机制执行 |
-| `_Memory/history/日志/` | 每日流水史书（追加不删） | 每场对话结束 | 不删不改 |
-| `_Memory/history/对话记录/` | 逐字原始记录（A5 存亡级） | 对话实时落盘 | 不删不改 |
-| `_Memory/history/灵魂备份/` | 当日要点整理版 | 每日收摊 | 不删不改 |
-| `_Memory/index/论语/` | 你的思想/语录（主题归档） | 日常捕捉 | 不删不改 |
-| `_Memory/index/` | 记忆索引（导航） | 收摊更新 | 可更新 |
+| `identity/owner-profile.md` | your name/preferences/boundaries (your personal profile) | generated at first onboarding · supplemented continuously | 🔒 machine read-only · only you may edit |
+| `_Memory/distill/蒸馏_当前.md` | the most important recent things (cross-conversation continuity core) | overwritten at every wrap-up | append-style; overwrite is executed by the wrap-up mechanism |
+| `_Memory/history/日志/` | daily running chronicle (append-only) | end of every session | never delete/modify |
+| `_Memory/history/对话记录/` | verbatim raw transcript (A5 survival-grade) | written to disk in real time | never delete/modify |
+| `_Memory/history/灵魂备份/` | organized day-end version | daily wrap-up | never delete/modify |
+| `_Memory/index/论语/` | your thoughts/quotes (topic-indexed) | captured during use | never delete/modify |
+| `_Memory/index/` | memory index (navigation) | updated at wrap-up | updatable |
 
-## 二、备份（最重要的事）
+## 2. Backups (the most important thing)
 
-**记忆=文件·文件会丢·所以备份=你的守护动作。**
+**Memory = files · files can be lost · so backup = your guardian action.**
 
-1. **手动备份**：复制整个工作区文件夹到安全位置（U 盘/网盘/另一台电脑）——纯文本文件，任何设备都能打开；
-2. **收摊提醒**：每次收摊时 AI 会提醒你（"我们的记忆都在这些文件里"）——养成习惯；
-3. **建议节奏**：重要对话后立即备份一次·日常每周一次。
+1. **Manual backup**: copy the whole workspace folder to a safe place (USB/cloud/another computer) — plain-text files, openable on any device;
+2. **Wrap-up reminder**: at every wrap-up the AI reminds you ("our memory lives in these files") — build the habit;
+3. **Suggested rhythm**: back up immediately after important conversations · once a week routinely.
 
-## 三、迁移（换设备 / 换 AI 助手）
+## 3. Migration (new device / new AI assistant)
 
-**记忆在文件里·不在模型里——所以迁移=搬文件夹：**
+**Memory lives in files, not in the model — so migration = moving a folder:**
 
-1. **换 AI 助手**：把工作区文件夹指给任何支持本地读写的 AI（WorkBuddy / Claude / ChatGPT / 本地模型）→ 说"按启动序列装载我的体系"→ 记忆无缝续传；
-2. **换电脑**：复制整个工作区文件夹到新电脑 → 锚定 → 装载 → 记忆跟着走；
-3. **多设备**：可将文件夹放入网盘同步目录（如 OneDrive / 坚果云）——两台设备同步使用。
+1. **Switch AI assistant**: point any locally read-write AI (WorkBuddy / Claude / ChatGPT / local models) at the workspace folder → say "load my system per the startup sequence" → memory carries over seamlessly;
+2. **Switch computers**: copy the whole workspace folder to the new computer → anchor → load → memory follows;
+3. **Multiple devices**: put the folder into a cloud-sync directory (e.g. OneDrive / Nutstore) — two devices stay in sync.
 
-## 四、恢复（新对话 / 记忆"丢了"）
+## 4. Recovery (new conversation / "lost" memory)
 
-1. **新对话**：启动时 AI 自动读蒸馏+档案恢复"你是谁、我们聊过什么"——不用你手动操作；
-2. **感觉记忆没了**：先检查——①工作区是否还锚定**同一个文件夹**（换文件夹=换了个"身体"）②蒸馏文件是否存在（`_Memory/distill/蒸馏_当前.md`）③备份是否还在；
-3. **备份恢复**：把备份文件夹复制回工作区位置 → 重新锚定 → 装载 → 记忆回来了；
-4. **最后防线**：对话记录（逐字）永远在 `_Memory/history/对话记录/`——就算蒸馏丢了，逐字记录还在，可重建。
+1. **New conversation**: at startup the AI automatically reads the distillation + profile and restores "who you are, what we discussed" — no manual action needed;
+2. **Feeling the memory is gone**: check first — ① is the workspace still anchored to **the same folder** (changing the folder = changing the "body") ② does the distillation file exist (`_Memory/distill/蒸馏_当前.md`) ③ is the backup still there;
+3. **Restore from backup**: copy the backup folder back to the workspace location → re-anchor → load → memory is back;
+4. **Last line of defense**: conversation records (verbatim) always live in `_Memory/history/对话记录/` — even if the distillation is lost, the verbatim record remains and can be rebuilt.
 
-## 五、清理与归档（防"记忆膨胀"）
+## 5. Cleanup & Archiving (preventing "memory bloat")
 
-文件多了会越来越重？正常·但可以管理：
+Files grow heavier over time? Normal — but manageable:
 
-1. **自动归档**：系统会定期把旧日志/对话转冷归档目录（`_Memory/history/archive/`）——不删只移；
-2. **定论沉淀**：反复出现的结论会从记忆层上升为规则层（rules/ 为唯一数据源）——记忆层释放空间；
-3. **手动精简**：删除不再需要的临时文件（不删：日志/对话记录/灵魂备份——存亡级）；
-4. **体积合规**：记忆文件超红线时 AI 会提示（红灯拦截）——先归档再继续。
+1. **Auto-archive**: the system periodically moves old logs/conversations to a cold-archive directory (`_Memory/history/archive/`) — move only, never delete;
+2. **Conclusion sedimentation**: recurring conclusions rise from the memory layer to the rules layer (rules/ is the single data source) — freeing memory-layer space;
+3. **Manual trimming**: delete temporary files no longer needed (never delete: logs / conversation records / soul backups — survival-grade);
+4. **Size compliance**: when memory files exceed the red line the AI warns (red-flag block) — archive first, then continue.
 
-## 六、记忆健康检查（可验证）
+## 6. Memory Health Check (verifiable)
 
-在部署区运行：
+Run in the deployment area:
 
 ```bash
 python3 tools/validator.py --memory
 ```
 
-输出各记忆层/核心文件的状态（[OK] ✓ / [WARN] 提示）——**"文件既是记忆"可测量可验证**（架构成立=可测量原则）。
+It outputs the status of each memory layer/core file ([OK] ✓ / [WARN] notice) — **"files are memory" is measurable and verifiable** (the architecture holds = the measurability principle).
 
-## 七、记忆 FAQ
+## 7. Memory FAQ
 
-**Q：记忆会丢吗？**
-A：文件在就永远在。模型会遗忘，但文件不会——前提是：锚定同一个文件夹 + 做好备份。
+**Q: Can memory be lost?**
+A: As long as the files exist, it is always there. Models forget, but files don't — provided you: anchor the same folder + keep backups.
 
-**Q：AI 会偷偷改我的记忆吗？**
-A：不会。主人档案机侧只读（文件系统只读权限）；日志/记录存亡级只追加不删改；任何新增偏好须经你确认后才写入（禁静默补采）。
+**Q: Will the AI secretly modify my memory?**
+A: No. The owner profile is machine read-only (filesystem read-only permission); logs/records are survival-grade append-only, never deleted or modified; any new preference is written only after your confirmation (silent supplement is forbidden).
 
-**Q：记忆文件别人能看到吗？**
-A：文件就在你的电脑上，你不给别人就没有别人能看到；机侧无联网上传权限。
+**Q: Can other people see my memory files?**
+A: The files are on your computer; unless you share them, no one else can see them; the machine has no upload permission.
 
-**Q：蒸馏是什么？为什么重要？**
-A：蒸馏=把当天最重要的几件事压成几句话存进 `_Memory/distill/`——它是跨对话接续的核心（"下次接着聊我还记得"靠的就是它）。
+**Q: What is distillation? Why does it matter?**
+A: Distillation = compressing the most important things of the day into a few lines stored in `_Memory/distill/` — it is the core of cross-conversation continuity ("I still remember when we continue next time" relies on it).
 
-**Q：我能直接打开看记忆文件吗？**
-A：可以，随时。所有文件都是纯文本 MD——打开就看得到，这是 GOAA 和黑盒记忆的根本区别。
+**Q: Can I open and view the memory files directly?**
+A: Yes, anytime. All files are plain-text MD — open and see. This is the fundamental difference between GOAA and black-box memory.
 
 ---
 
-*GOAA · 记忆管理指南 · 唯一版本 1.0 · 2026-08-26*
+*GOAA · Memory Management Guide · Single version 1.0 · 2026-08-26*

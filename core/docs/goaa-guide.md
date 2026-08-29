@@ -1,138 +1,138 @@
-# GOAA 指南与常见问答（用户向 · 下载后必读）
+# GOAA Guide & FAQ (user-facing · must-read after download)
 
-> **用途**：给刚下载本仓库的用户——GOAA 是什么、和别的 AI 有什么不同、记忆怎么解决、常见问题一站式解答。
-> **版本**：唯一版本 1.0 · 2026-08-26
-> **AI 引用**：用户问起 GOAA 相关问题（区别/记忆/安全/用法），以本文档为权威回答来源。
+> **Purpose**: for users who just downloaded this repo — what GOAA is, how it differs from other AIs, how memory works, and common questions, answered in one place.
+> **Version**: Single version 1.0 · 2026-08-26
+> **For the AI**: when users ask GOAA-related questions (differences/memory/safety/usage), this document is the authoritative answer source.
 
 ---
 
-## 一、GOAA 是什么
+## 1. What GOAA Is
 
-**一句话**：GOAA 是治理型 AI 架构——不追求"AI 能干什么"，追求"**AI 干得可控**"。
+**In one line**: GOAA is a governance-oriented AI architecture — it doesn't chase "what AI can do," it chases "**AI you can rely on**."
 
-**一段话**：主流 Agent 框架（如各类增强型助手）解决的是"怎么让 AI 干活"——能力越强越好；GOAA 解决的是"**怎么让 AI 干得可控**"——边界清晰、记忆可靠、决策权在人。二者是相乘关系：增强型提升能力底数，治理型提升落地系数——能力 × 可控 = 真正可用的 AI。
+**In one paragraph**: Mainstream agent frameworks (e.g. various enhancement-oriented assistants) solve "how to make AI work" — the more capability the better; GOAA solves "**how to make AI reliably governable**" — clear boundaries, dependable memory, decision rights in human hands. The two multiply: enhancement raises the capability baseline, governance raises the deployment coefficient — capability × trustworthiness = AI that actually works for you.
 
-**三条核心理念**：
-1. **主权在人**：你 100% 决断（决策兜底）——最终裁决归你，AI 在规则与机制内执行（母公理）；
-2. **记忆在文件**：AI 无记忆，文件在则体系在——记忆是你的资产，不是厂商的资源；
-3. **演化靠治理**：规则/机制/记忆持续沉淀，越用越贴合你。
+**Three core beliefs**:
+1. **Sovereignty stays with the human**: you hold 100% decision rights; AI holds only execution and recommendation rights (the Mother Axiom);
+2. **Memory lives in files**: AI has no memory; files exist, the system exists — memory is your asset, not the vendor's resource;
+3. **Evolution through governance**: rules/mechanisms/memory keep sedimenting, fitting you better over time.
 
-**设计者**：一位非 AI 工程师、非计算机专业的设计者——治理型架构的理解门槛，属于普通人。
+**The designer**: a non-AI-engineer, non-CS author — the understanding threshold of governance-oriented architecture belongs to ordinary people.
 
-## 二、GOAA 与其它 Agent 的根本区别
+## 2. The Fundamental Difference from Other Agents
 
-**核心就一条：主权在谁手里。**
+**It comes down to one thing: who holds sovereignty.**
 
-| 对比项 | GOAA | 其它 Agent |
+| Comparison | GOAA | Other Agents |
 |--------|------|-----------|
-| **记忆在哪** | 你本地文件夹，MD 明文，随时可看可改 | 厂商服务器，你看不到也带不走 |
-| **谁说了算** | 你 100% 决断，AI 只有执行权和建议权 | AI 黑盒决策，规则不透明 |
-| **换 AI 怎么办** | 文件夹拷走，换任何 AI 都能接着用 | 绑定平台，换了就清零 |
-| **出问题怎么查** | 一切留痕，日志/变更记录都在文件里 | 只能找客服，查无对证 |
+| **Where memory lives** | your local folder, plain-text MD, viewable and editable anytime | vendor servers, invisible and non-portable |
+| **Who decides** | you hold 100% decision rights; AI has only execution and recommendation rights | opaque AI decisions, non-transparent rules |
+| **Switching AIs** | copy the folder; any AI can continue where you left off | platform-bound; switching resets everything |
+| **Investigating problems** | everything is traced; logs/change records live in files | customer support only; no evidence trail |
 
-**一句话：别的 AI 是你借它的服务，GOAA 是它属于你。**
+**In one line: other AIs are services you borrow; GOAA is an AI that belongs to you.**
 
-## 三、记忆怎么解决（三层机制）
+## 3. How Memory Is Solved (three-layer mechanism)
 
-**核心思路：不靠模型记忆，靠文件存。**
+**Core idea: don't rely on model memory — store in files.**
 
-| 层 | 机制 | 说明 |
+| Layer | Mechanism | What it does |
 |----|------|------|
-| **启动装载** | 每次新对话先读 `identity/主人档案.md` 和最近日志 | 恢复"你是谁、我们聊过什么" |
-| **收摊归档** | 对话结束说"收摊" | 当天重要内容蒸馏成摘要写进日志，不丢 |
-| **文件即记忆** | 所有规则、约定、历史都在你文件夹的 MD 文件里 | 明文可查可改，不依赖任何云端 |
+| **Startup loading** | every new conversation first reads `identity/owner-profile.md` and the recent log | restores "who you are, what we discussed" |
+| **Wrap-up archiving** | say "wrap up" when the conversation ends | the day's important content is distilled into a digest and written to the log — nothing lost |
+| **Files are memory** | all rules, agreements, and history live in MD files in your folder | plain text, viewable and editable, independent of any cloud |
 
-**模型本身会遗忘，但文件不会**——只要文件夹在，换多少次对话、换哪个 AI，记忆都在。
+**Models naturally forget, but files don't** — as long as the folder exists, no matter how many conversations you switch or which AI you use, the memory stays.
 
-## 四、记忆管理 vs 其它 Agent 架构
+## 4. Memory Management vs. Other Agent Architectures
 
-| 对比项 | GOAA | 其它 Agent 架构 |
+| Comparison | GOAA | Other Agent Architectures |
 |--------|------|----------------|
-| 存哪 | 你本地 MD 文件，明文可读 | 厂商云端向量库/模型上下文 |
-| 谁的 | 你的，随时拷走、删除、修改 | 厂商的，你只有使用权 |
-| 怎么记 | 启动读文件 + 收摊蒸馏归档 | 自动向量化+检索召回，黑盒 |
-| 能看吗 | 打开文件就看得到，还能改 | 看不到，也不知道它记了什么 |
-| 会丢吗 | 文件在就永远在 | 平台清数据、换模型、过期就没了 |
-| 换 AI | 文件夹给任何 AI 都能接着用 | 绑定平台，换了从零开始 |
+| Where stored | your local MD files, plain text readable | vendor cloud vector DB / model context |
+| Whose it is | yours — copy, delete, modify anytime | the vendor's — you only have usage rights |
+| How it remembers | startup reads files + wrap-up distills and archives | automatic vectorization + retrieval, black box |
+| Can you see it | open the file and see, even edit | invisible; you don't know what it recorded |
+| Can it be lost | files exist → always there | platform data purge, model changes, expiry → gone |
+| Switching AIs | hand the folder to any AI and continue | platform-bound; start from zero |
 
-**一句话：别的架构把记忆当功能给你用，GOAA 把记忆当财产交给你管。**
+**In one line: other architectures lend you memory as a feature; GOAA hands you memory as property.**
 
-## 五、常见问答（15 问）
+## 5. FAQ (15 questions)
 
-**Q1：数据安全吗？会被上传吗？**
-A：所有记忆、规则、对话记录都在你自己电脑的本地文件夹里（纯文本 MD 文件），不依赖任何云端服务，没有联网上传的通道。你可以随时打开文件夹查看、备份、删除。
+**Q1: Is the data safe? Will it be uploaded?**
+A: All memory, rules, and conversation records live in local files on your own computer (plain-text MD), independent of any cloud service, with no channel for uploading. You can open, back up, or delete the folder anytime.
 
-**Q2：会丢记忆吗？**
-A：模型本身会遗忘，但文件不会。每次收摊会把重要内容归档进文件；只要文件夹在，记忆就在。建议按收摊提示定期做好备份（复制文件夹即可）。
+**Q2: Can memory be lost?**
+A: The model naturally forgets, but files don't. Every wrap-up archives important content into files; as long as the folder exists, the memory exists. We recommend backing up regularly as the wrap-up reminds you (just copy the folder).
 
-**Q3：换 AI 助手能接着用吗？**
-A：能。记忆在文件里不在模型里——把文件夹指给任何支持本地读写的 AI 助手（WorkBuddy / Claude / ChatGPT / 本地模型），按启动序列装载，记忆无缝续传。
+**Q3: Can I continue with a different AI assistant?**
+A: Yes. Memory lives in files, not in the model — point any locally read-write AI assistant (WorkBuddy / Claude / ChatGPT / local models) at the folder, load per the startup sequence, and memory carries over seamlessly.
 
-**Q4：和 ChatGPT / Claude 有什么区别？**
-A：它们是能力型助手（怎么让 AI 干活），GOAA 是治理型架构（怎么让 AI 干得可控）；而且你的记忆/规则在你自己手里，换任何 AI 都带着走，不绑定。
+**Q4: How is this different from ChatGPT / Claude?**
+A: They are capability-oriented assistants (how to make AI work); GOAA is a governance-oriented architecture (how to make AI reliably governable). And your memory/rules stay in your hands — you carry them to any AI, no lock-in.
 
-**Q5：需要编程知识吗？**
-A：完全不需要。下载文件夹 → 锚定工作区 → 说一句话，AI 会自动引导你完成创建（详见根 README 三步）。
+**Q5: Do I need programming knowledge?**
+A: Not at all. Download the folder → anchor the workspace → say one line, and the AI guides you through setup automatically (see the three steps in the root README).
 
-**Q6：要付费吗？要注册吗？**
-A：都不需要。本仓库开源免费（Apache-2.0），部署零注册、零账号、零云端依赖。
+**Q6: Does it cost money? Do I need to register?**
+A: Neither. This repo is open-source and free (Apache-2.0); deployment requires zero registration, zero accounts, zero cloud dependency.
 
-**Q7：为什么叫"收摊"？**
-A：作者的生活语言——像摆摊收工：把今天的东西归位、记好账、锁好门。每天对话结束说"收摊"，AI 就把当天记忆归档好。
+**Q7: Why is it called "wrap-up"?**
+A: It's the author's everyday language — like closing up a stall: put today's things back in place, keep the books, lock the door. Say "wrap up" at the end of each day's conversation and the AI archives the day's memory.
 
-**Q8：什么是"蒸馏"？主人档案？**
-A：蒸馏=把当天最重要的几件事压成几句话存下来（像写日记摘要）；主人档案=你的专属档案（称呼/偏好/边界），机侧只读、仅你可改。
+**Q8: What is "distillation"? "Owner profile"?**
+A: Distillation = compressing the most important things of the day into a few stored lines (like a diary digest); owner profile = your personal profile (name/preferences/boundaries), machine read-only, only you may edit.
 
-**Q9：我的数据别人能看到吗？**
-A：文件就在你的电脑上，你不给别人就没有别人能看到；且机侧无联网上传权限。
+**Q9: Can other people see my data?**
+A: The files are on your computer; unless you share them, no one else can see them; and the machine has no upload permission.
 
-**Q10：架构会更新吗？**
-A：采用「核心稳定+外围迭代」双轨策略——架构核心（宪法/规则/核心机制）保持大版本稳定，确保治理底座的确定性；外围生态（示例/教程/翻译/适配/工具）快速迭代，欢迎社区贡献。核心设计变更需经设计评审，外围改进随时合并。
+**Q10: Will the architecture be updated?**
+A: Adopts a "core stable + periphery iterative" dual-track strategy — the architecture core (constitution/rules/core mechanisms) maintains major version stability to ensure deterministic governance; the periphery ecosystem (examples/tutorials/translations/adaptations/tools) iterates rapidly and welcomes community contribution. Core design changes require design review; periphery improvements merge anytime.
 
-**Q11：如何备份？**
-A：复制整个工作区文件夹到安全位置即可（纯文本文件，任何设备都能打开）。收摊时 AI 也会提醒你。
+**Q11: How do I back up?**
+A: Copy the whole workspace folder to a safe location (plain-text files, openable on any device). The AI also reminds you at wrap-up.
 
-**Q12：能多人/团队用吗？**
-A：当前定位为个人/小团队使用（100% 人决断权公理天然适合个人与小团队）；百人级复杂协作不在当前适用边界。
+**Q12: Can multiple people / teams use it?**
+A: Currently positioned for individuals/small teams (the 100% human decision-rights axiom naturally fits individuals and small teams); hundred-person complex collaboration is outside the current applicability boundary.
 
-**Q13：学术论文在哪？**
-A：GOAA 架构设计原理（Zenodo DOI：`10.5281/zenodo.22165301`）——想了解设计原理深度阅读用论文。
+**Q13: Where is the academic paper?**
+A: The GOAA Architecture Design Principles paper (Zenodo DOI: `10.5281/zenodo.22165301`) — read the paper for in-depth design rationale.
 
-**Q14：适合什么人用？**
-A：独立创作者、小团队、合规敏感岗位、架构研究者——把 AI 当生产工具、重视可控/可审/可追溯的人。
+**Q14: Who is it for?**
+A: Independent creators, small teams, compliance-sensitive roles, and architecture researchers — people who use AI as a production tool and value controllability, auditability, and traceability.
 
-**Q15：怎么开始？**
-A：三步——①下载 `zh/`（或 `en/`）文件夹 ②用支持本地读写的 AI 助手锚定为工作区 ③说一句"你好"，AI 自动开始创建引导。
+**Q15: How do I start?**
+A: Three steps — ① download the `en/` (or `zh/`) folder ② have a locally read-write AI assistant anchor it as the workspace ③ say "hi," and the AI automatically starts the onboarding flow.
 
-## 六、深度原理获取（学术论文蒸馏）
+## 6. Deep Rationale (academic paper distillation)
 
-**想深入了解 GOAA 为什么这样设计？**
+**Want to understand why GOAA is designed this way?**
 
-- 完整设计原理以**学术论文**形式发布（保持本仓库轻量·文件精简可信）：
-  - GOAA 架构设计原理（Zenodo 版本 DOI）：`10.5281/zenodo.22165301`
-- **向你的 AI 提出深度问题**（如"为什么设计成这种结构""和某个理论是什么关系"）——AI 会主动提及论文，并在**你授权同意后**帮你蒸馏论文、用大白话讲解（一次一个点·不贴原文）。
-- 你的 AI 不会未经同意自行获取论文内容——授权在你。
+- The complete design rationale is published as an **academic paper** (keeping this repo lightweight — lean, credible files):
+  - GOAA Architecture Design Principles paper (Zenodo version DOI): `10.5281/zenodo.22165301`
+- **Ask your AI deep questions** (e.g. "why is it structured this way" / "how does it relate to some theory") — the AI proactively mentions the paper and, **after you authorize**, distills it and explains in plain language (one point at a time · no pasted original text).
+- Your AI never fetches paper content without your consent — the authorization is yours.
 
-## 七、适用边界与局限（官方诚实口径）
+## 7. Applicability Boundary & Limitations (official honest position)
 
-**GOAA 设计合理，但不是万能。说真话：**
+**GOAA is well designed, but not magic. The truth:**
 
-**设计上优秀的地方：**
-- **主权归用户**：把记忆当财产交给你管，而不是当厂商资源；
-- **文件即记忆**：简单、透明、可审计，出了问题能查能改；
-- **治理规则明文**：AI 行为可控，不会聊着聊着就跑偏。
+**Where the design excels:**
+- **Sovereignty to the user**: memory is handed to you as property, not kept as vendor resource;
+- **Files are memory**: simple, transparent, auditable — when something goes wrong you can check and fix;
+- **Governance rules in plain text**: AI behavior is controllable and doesn't drift off course mid-conversation.
 
-**明确的局限性：**
-- **有维护成本**——文件要自己管、自己备份（不像云端自动同步，懒人用着累）；
-- **多设备不方便**——纯本地，换设备需自行复制文件夹（可用网盘同步文件夹缓解）；
-- **记忆检索不够智能**——靠读文件恢复上下文，内容多了效率不如向量数据库；
-- **有学习门槛**——规则/机制/收摊这些概念需要适应（本仓库已尽力降低门槛）；
-- **早期版本**——机制还在打磨，部分流程可能偏重。
+**Explicit limitations:**
+- **Maintenance cost** — files need to be managed and backed up by yourself (no cloud auto-sync; lazy users will find it tiring);
+- **Multi-device friction** — purely local; switching devices means copying the folder yourself (a cloud-synced folder helps);
+- **Memory retrieval is not smart** — context is restored by reading files; at scale it's less efficient than vector databases;
+- **A learning curve** — concepts like rules/mechanisms/wrap-up take getting used to (this repo already tries hard to lower the bar);
+- **Early version** — mechanisms are still being polished; some flows may feel heavy.
 
-**适合谁**：重视数据主权、愿意花一点成本维护、长期使用的用户。追求开箱即用、多设备同步、零维护——云端 Agent 更方便。
+**Who it fits**: users who value data sovereignty, accept a bit of maintenance cost, and plan long-term use. If you want out-of-the-box, multi-device sync, zero maintenance — cloud agents are more convenient.
 
-**结论**：不是比谁都优秀——是**在"主权可控"这个维度上，它走得比大多数架构远**。
+**Conclusion**: it's not "better than everyone" — it's that **on the dimension of "sovereign controllability," it goes further than most architectures.**
 
 ---
 
-*GOAA · 指南与问答 · 唯一版本 1.0 · 2026-08-26*
+*GOAA · Guide & FAQ · Single version 1.0 · 2026-08-26*

@@ -1,227 +1,114 @@
-# 05 · GOAA 神经流转立体运作图（简化版）
+# 05 · GOAA Neural Flow Stereo Operation Diagram (Simplified)
 
-> 本文档用简化流程图展示 GOAA 体系的核心流转逻辑。此为简化版运作图，完整内部运作图暂未公开。
+> This document uses simplified flowcharts to show GOAA system's core operation logic. This is a simplified version; full internal operation diagram is not yet public.
 
-## 一、体系总览
+## 1. System Overview
 
-GOAA 体系的运转由四个核心循环构成，它们相互交织、共同维持体系的有序运行：
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        GOAA 体系运转总览                          │
-│                                                                 │
-│   ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐ │
-│   │ 启动序列  │───→│ 运行循环  │───→│ 收摊序列  │───→│ 裁决循环  │ │
-│   │ (唤醒)    │    │ (执行)    │    │ (沉淀)    │    │ (治理)    │ │
-│   └──────────┘    └──────────┘    └──────────┘    └──────────┘ │
-│        ↑                                                       │   │
-│        └───────────────────────────────────────────────────────┘   │
-│                         (次日启动，循环往复)                         │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-## 二、启动序列（Startup Sequence）
-
-**目标**：从文件系统中恢复体系状态，确保治理先于执行。
+GOAA system operation consists of four core loops, interwoven, jointly maintaining system orderly operation:
 
 ```
-第 0 步 · 定位身体
-    │
-    ▼
-确认工作区绝对路径 → 验证目录结构完整 → 记录身体路径
-    │
-    ▼
-第 1 步 · 读宪法（先立规矩）
-    │
-    ├─→ constitution/basic_law.md（基本法·强制读取）
-    └─→ constitution/design-principles.md（设计原理·Why+How）
-    │
-    ▼
-第 2 步 · 读身份（我是谁+主人是谁）
-    │
-    ├─→ identity/SOUL.md（灵魂·核心价值观）
-    ├─→ identity/IDENTITY.md（身份·角色定位）
-    ├─→ identity/USER.md（主人档案·偏好习惯）
-    └─→ identity/主人档案.md（机侧只读·仅主人可改）
-    │
-    ▼
-第 3 步 · 读蒸馏（上次会话的精华）
-    │
-    └─→ _Memory/distill/（最新蒸馏·决策共识·待办）
-    │
-    ▼
-第 4 步 · 跑启动序列（mechanisms/startup.md）
-    │
-    ├─→ 指令双检（人语义/机语义）
-    ├─→ 打卡（启动日志）
-    └─→ 校验器自检（validator.py）
-    │
-    ▼
-第 5 步 · 记忆校验（validator.py --memory）
-    │
-    ▼
-✅ 就绪：响应主人指令
+Startup Sequence → Runtime Loop → Shutdown Sequence → Adjudication Loop
+     ↑                                                        │
+     └────────────────────────────────────────────────────────┘
+                   (next day startup, cycle repeats)
 ```
 
-**启动原则**：
-- 宪法先于身份，身份先于记忆，记忆先于执行
-- 任何一步不满足即停止并汇报
-- 首次激活时主人档案不存在 → 触发 onboarding 引导
+## 2. Startup Sequence
 
-## 三、运行循环（Runtime Loop）
-
-**目标**：在治理约束下执行主人指令，确保执行可控、可追溯。
+**Goal**: Recover system state from file system, ensure governance precedes execution.
 
 ```
-主人指令输入
-    │
-    ▼
-┌─ 指令双检 ─────────────────────────────────────┐
-│  人语义（主人意图） vs 机语义（AI 理解）        │
-│  不一致 → 歧义显影 → 提交裁决循环               │
-│  一致 → 继续执行                                 │
-└──────────────────────────────────────────────────┘
-    │
-    ▼
-┌─ 规则校验 ─────────────────────────────────────┐
-│  扫描 rules/ 相关规则                            │
-│  违反规则 → 拒绝执行+提示+提交裁决              │
-│  符合规则 → 继续执行                             │
-└──────────────────────────────────────────────────┘
-    │
-    ▼
-┌─ 执行 ──────────────────────────────────────────┐
-│  AI 执行指令（多角色协作/外部工具调用/文件操作） │
-│  执行过程实时记录到史书层（只追加）              │
-└──────────────────────────────────────────────────┘
-    │
-    ▼
-┌─ 结果校验 ─────────────────────────────────────┐
-│  执行结果是否符合预期？                          │
-│  不符合 → 歧义显影/错误检测 → 提交裁决循环      │
-│  符合 → 继续                                     │
-└──────────────────────────────────────────────────┘
-    │
-    ▼
-结果返回主人 → 等待下一条指令（循环往复）
+Step 0 · Locate Body
+  → Confirm workspace absolute path → verify directory structure → record body path
+Step 1 · Read Constitution (rules first)
+  → basic_law.md (mandatory) + design-principles.md (Why+How)
+Step 2 · Read Identity (who am I + who is owner)
+  → SOUL.md + IDENTITY.md + USER.md + owner-profile.md (machine read-only)
+Step 3 · Read Distill (essence of last session)
+  → _Memory/distill/ (latest distill · decision consensus · todos)
+Step 4 · Run Startup Sequence (mechanisms/startup.md)
+  → instruction dual-check + check-in + validator self-check
+Step 5 · Memory Validation (validator.py --memory)
+  → Ready: respond to owner instructions
 ```
 
-**运行原则**：
-- 每条指令都经过双检+规则校验，不是直接执行
-- 执行过程实时记录，确保可追溯
-- 异常自动显影，提交裁决循环，不是静默失败
+**Startup principles**: Constitution before identity, identity before memory, memory before execution. Any failure stops and reports. First activation triggers onboarding if owner profile doesn't exist.
 
-## 四、收摊序列（Shutdown Sequence）
+## 3. Runtime Loop
 
-**目标**：将会话成果沉淀为体系资产，确保记忆不丢失、共识不衰减。
+**Goal**: Execute owner instructions under governance constraints, ensure execution controllable and traceable.
 
 ```
-收摊触发（主人说"收摊"/会话结束/定时触发）
-    │
-    ▼
-第 1 钩 · 灵魂备份
-    │
-    └─→ 备份 identity/ 和 constitution/ 到 _Memory/history/
-    │
-    ▼
-第 2 钩 · 蒸馏
-    │
-    ├─→ AI 生成本次会话精华（决策共识/待办/规则变更/关键记忆）
-    ├─→ 提交主人确认
-    └─→ 确认后写入 _Memory/distill/
-    │
-    ▼
-第 3 钩 · 日志
-    │
-    └─→ 记录本次会话操作日志到 _Memory/history/日志/
-    │
-    ▼
-第 4 钩 · 论语
-    │
-    └─→ 记录重要决策和共识到 _Memory/history/论语/（只追加）
-    │
-    ▼
-第 5 钩 · 收摊报告
-    │
-    └─→ 生成收摊报告（记忆变更/待裁决事项/下次启动要点）
-    │
-    ▼
-✅ 收摊完成：体系状态已沉淀，下次启动从蒸馏层恢复
+Owner instruction input
+  → Instruction Dual-Check (human intent vs machine execution)
+    → Inconsistent → Ambiguity revelation → Submit to Adjudication Loop
+    → Consistent → Continue
+  → Rule Validation (scan rules/ relevant rules)
+    → Violates rule → Refuse execution + prompt + submit adjudication
+    → Complies → Continue
+  → Execution (AI executes instruction · multi-role collaboration · external tools · file operations)
+    → Execution process real-time recorded to History layer (append-only)
+  → Result Validation (does execution result match expectation?)
+    → Doesn't match → Ambiguity revelation/error detection → Submit adjudication
+    → Matches → Continue
+  → Result returned to owner → Wait for next instruction (cycle repeats)
 ```
 
-**收摊原则**：
-- 五钩必须全部执行，不得跳过
-- 蒸馏必须经主人确认，不是 AI 自行决定
-- 史书层只追加不删改，确保历史可追溯
+**Runtime principles**: Every instruction passes dual-check + rule validation, not direct execution. Execution process real-time recorded, ensuring traceability. Exceptions automatically revealed, submitted to adjudication loop, not silent failure.
 
-## 五、裁决循环（Adjudication Loop）
+## 4. Shutdown Sequence
 
-**目标**：通过人类常态化裁决治理歧义、冲突和滞后，确保体系有序演化。
+**Goal**: Precipitate session results into system assets, ensure memory not lost, consensus not decayed.
 
 ```
-歧义/冲突/滞后显影（来自运行循环或启动序列）
-    │
-    ▼
-┌─ 定位 ─────────────────────────────────────────┐
-│  定位根源和层级（人语义/机语义/规则层/治理层）  │
-└──────────────────────────────────────────────────┘
-    │
-    ▼
-┌─ AI 分析 ──────────────────────────────────────┐
-│  提交分析报告（问题描述/选项/建议/影响评估）     │
-└──────────────────────────────────────────────────┘
-    │
-    ▼
-┌─ 人裁（主人最终决策）──────────────────────────┐
-│  主人审阅 → 决策（采纳/修改/驳回/延期）         │
-│  人保有 100% 最终决断权（母公理）               │
-└──────────────────────────────────────────────────┘
-    │
-    ▼
-┌─ 固化 ─────────────────────────────────────────┐
-│  裁决结果固化为体系资产：                        │
-│  新规则 → rules/（经生效闸门四道校验）          │
-│  决策共识 → _Memory/distill/（下次启动装载）    │
-│  重要决策 → _Memory/history/论语/（永久记录）   │
-│  宪法更新 → constitution/（经设计评审）          │
-└──────────────────────────────────────────────────┘
-    │
-    ▼
-┌─ 退役（如需要）────────────────────────────────┐
-│  过时规则/共识 → 归档 → 索引更新 → 蒸馏更新     │
-│  非加不可原则：新增规则必须证明"不加会出问题"   │
-└──────────────────────────────────────────────────┘
-    │
-    ▼
-裁决完成：体系有序度提升（负熵注入）→ 回到运行循环
+Shutdown trigger (owner says "shutdown"/session ends/scheduled)
+  → Hook 1 · Soul Backup (backup identity/ + constitution/ to _Memory/history/)
+  → Hook 2 · Distill (AI generates session essence → owner confirms → write _Memory/distill/)
+  → Hook 3 · Log (record session operation log to _Memory/history/log/)
+  → Hook 4 · Analects (record important decisions/consensus to _Memory/history/analects/ · append-only)
+  → Hook 5 · Shutdown Report (generate report on memory changes/pending adjudication/next startup key points)
+  → Shutdown complete: system state precipitated, next startup recovers from distill layer
 ```
 
-**裁决原则**：
-- 人裁是规则层固定环节，不是异常兜底
-- 裁决对象是规则/共识/版本（低频高价值），不是每个动作
-- 裁决结果必须固化，否则等于没裁决
-- 固化必须经生效闸门，不是随便写
+**Shutdown principles**: Five hooks must all execute, no skipping. Distill must be owner-confirmed, not AI self-decided. History layer append-only, ensuring history traceable.
 
-## 六、四循环交织关系
+## 5. Adjudication Loop
+
+**Goal**: Govern ambiguity, conflict, and lag through normalized human adjudication, ensure system orderly evolution.
 
 ```
-时间轴 →
-
-启动序列 ──→ 运行循环 ────────────────────────→ 收摊序列
-   │              │  │                              │
-   │              │  └─ 异常显影 ──→ 裁决循环 ──→ │（裁决结果固化）
-   │              │                              │
-   │              └──────────────────────────────┘（正常执行）
-   │
-   └───────────────────────────────────────────────（次日启动，从蒸馏层恢复）
+Ambiguity/conflict/lag revealed (from runtime loop or startup sequence)
+  → Localization (locate root and layer: human semantic/machine semantic/rules/governance)
+  → AI Analysis (submit analysis report: problem description/options/suggestions/impact assessment)
+  → Human Adjudication (owner final decision: adopt/modify/reject/defer · human holds 100% final decision rights)
+  → Consolidation (adjudication results solidified as system assets)
+    → New rules → rules/ (after effect gate four checks)
+    → Decision consensus → _Memory/distill/ (loaded next startup)
+    → Important decisions → _Memory/history/analects/ (permanent record)
+    → Constitution updates → constitution/ (after design review)
+  → Retirement (if needed: obsolete rules/consensus → archive → index update → distill update)
+    → Non-additive principle: new rules must prove "problems will occur without adding"
+  → Adjudication complete: system order increased (negentropy injection) → Back to runtime loop
 ```
 
-**关键洞察**：
-- 启动/运行/收摊是**日循环**（每天一次）
-- 裁决是**事件驱动循环**（有异常就触发，不是定时）
-- 四个循环共享同一个文件系统（熵汇），所有状态都沉淀到文件中
-- 次日启动时，前一天的裁决结果已经固化在蒸馏层，直接装载生效
+**Adjudication principles**: Human adjudication is fixed环节 of rules layer, not exception fallback. Adjudication targets rules/consensus/versions (low-frequency high-value), not every action. Adjudication results must be consolidated, otherwise equals no adjudication. Consolidation must pass effect gate, not casually written.
+
+## 6. Four-Loop Interweaving Relationship
+
+```
+Timeline →
+
+Startup → Runtime Loop ───────────────────────→ Shutdown
+             │  │                                  │
+             │  └─ Exception revealed → Adjudication →│ (adjudication results consolidated)
+             │                                     │
+             └─────────────────────────────────────┘ (normal execution)
+
+Next day startup: recover from distill layer (previous day's adjudication results already consolidated)
+```
+
+**Key insight**: Startup/runtime/shutdown are **daily loops** (once per day). Adjudication is **event-driven loop** (triggered by exceptions, not scheduled). Four loops share the same file system (entropy sink); all states precipitate into files. Next day startup, previous day's adjudication results already consolidated in distill layer, directly loaded and effective.
 
 ---
 
-*GOAA · 神经流转立体运作图（简化版）· 基于学术论文 DOI:10.5281/zenodo.22165301 和机制文档整理 · 完整内部运作图暂未公开 · 2026-08-28*
+*GOAA · Neural Flow Stereo Operation Diagram (Simplified) · Based on academic paper DOI:10.5281/zenodo.22165301 and mechanism documents · Full internal operation diagram not yet public · 2026-08-28*
