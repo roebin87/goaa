@@ -117,12 +117,12 @@ GOAA's evolution follows one main line: **data ownership → human-machine autho
 
 Each generation does not chase "solving" a problem once and for all, but **pushes the boundary of human-machine collaboration** — evolution itself matters more than the endpoint.
 
-### Current Stable Version: GOAA 2.0 (GOSAA · Two-Pole Art) — Key Features & Mechanisms
+### Current Stable Version: GOAA 2.0 (GOSAA) — Key Features & Mechanisms
 
 - **Governance-oriented architecture**: define the governance boundary first, then carry execution capabilities — governance is the foundation, execution is the add-on (base × coefficient);
 - **100% human decision authority (decision fallback)**: sovereignty stays with the human, execution is delegable — key nodes (rule activation/consensus solidification/version iteration) are adjudicated by the human, routine matters are authorized for AI to execute within mechanisms; the human-machine collaboration iterates itself, continuously lowering human-side decision cost;
 - **File-system-level governance carrier**: rules and memory are anchored to physical file properties (permissions/traces/persistence), carried in Markdown — human-readable, machine-parseable, broadly accessible;
-- **Routine human-adjudication loop**: fixed adjudication stages in the rule layer and consensus layer (not exception fallback);
+- **Regular human-adjudication loop**: fixed adjudication stages in the rule layer and consensus layer (not exception fallback);
 - **Dual-source entropy governance**: a unified governance framework for technical entropy and cognitive entropy;
 - **Full-hierarchy adaptation**: individual → micro-team → enterprise (sovereignty tiers).
 

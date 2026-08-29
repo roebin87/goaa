@@ -25,7 +25,7 @@ All three releases include Chinese-English bilingual content (`en/` mirrors); up
 - **Governance-oriented architecture**: define the governance boundary first, then carry execution capabilities;
 - **100% human decision authority (decision fallback)**: sovereignty stays with the human, execution is delegable — key nodes (rule activation/consensus solidification/version iteration) are adjudicated by the human, routine matters are authorized for AI to execute within mechanisms; the human-machine collaboration iterates itself, continuously lowering human-side decision cost;
 - **File-system-level governance carrier**: rules and memory are anchored to physical file properties (permissions/traces/persistence), carried in Markdown — human-readable, machine-parseable, broadly accessible;
-- **Routine human-adjudication loop**: fixed adjudication stages in the rule layer and consensus layer (not exception fallback);
+- **Regular human-adjudication loop**: fixed adjudication stages in the rule layer and consensus layer (not exception fallback);
 - **Dual-source entropy governance**: a unified governance framework for technical entropy and cognitive entropy;
 - **Structural cost advantage** (token × request dual benchmark): full-window cache hit rate 98.26% (Aug-period/peak-day 98.5-98.6%; industry typical 60-80%) · zero orchestration overhead · context bloat banned by design · lowest-tier model works. Methodology: 39 days of production (2026-07-16 to 08-29), WorkBuddy platform · deepseek models · consumer-grade PC (no GPU) — see paper §8.2 (DOI: 10.5281/zenodo.22165301).
 
