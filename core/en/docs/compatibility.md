@@ -22,7 +22,7 @@ GOAA (governance substrate) + mainstream frameworks (capability plugins) = a coe
 |---|---|---|
 | Rule decay | Rules decay with interaction (73%→33%, SRD 2026 evidence) | Rules anchored in files, mandatory startup loading |
 | Volatile memory | Context is temporary; memory disappears when the dialogue closes | File-based four-layer memory (persist = survive) |
-| Ownerless decisions | Key decisions made autonomously by the model, no trace, no accountability | Routine human-adjudication loop (human-side final decision) |
+| Ownerless decisions | Key decisions made autonomously by the model, no trace, no accountability | Regular human-adjudication loop (human-side final decision) |
 | Uncontrolled entropy | Long-run behavior drift, system bloat | Dual-source entropy governance (entropy sink + negentropy injection) |
 
 > Execution frameworks solve the "capability" problem; GOAA solves the "order" problem — they are orthogonal and can coexist.

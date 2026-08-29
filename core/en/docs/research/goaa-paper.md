@@ -25,7 +25,7 @@ This paper proposes the Governance-Oriented Agent Architecture (GOAA) — an ent
 
 - **Four axioms frame the governance boundary**: Decision Authority (AI is not a legal subject; responsibility rests with the natural person), File Ontology (the file system is the authoritative carrier of memory and rules), Inherent Ambiguity (human-machine semantic divergence cannot be eliminated, only surfaced and governed), Entropy Increase (disorder is a structural feature of long-running operation);
 - **Physical files replace the logical control plane** as the governance substrate, carrying authority, history, and entropy export (authority-as-sovereignty, trace-as-evidence, persistence-as-entropy-sink);
-- **Routine human adjudication + file-based four-layer memory** form the governance loop for cognitive entropy — human adjudication is not exception fallback but a fixed stage of the rule layer and consensus layer;
+- **Regular human adjudication + file-based four-layer memory** form the governance loop for cognitive entropy — human adjudication is not exception fallback but a fixed stage of the rule layer and consensus layer;
 - **Full-hierarchy deployment path**: from individual to enterprise, the governance paradigm adapts smoothly (GOAA Lite → Personal → Core corresponding to increasing governance intensity).
 
 To our knowledge, as of August 2026, no published research systematically demonstrates natural-person adjudication as a routine core stage of the rule and consensus layers, the physical file system as the governance carrier, and single-sovereignty authority-responsibility-unified governance.

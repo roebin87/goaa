@@ -12,8 +12,8 @@ GOAA（治理导向型 Agent 架构）v0.1.0 正式发布——治理基座 + �
 
 - **三发行版架构**（严格真子集 Lite ⊂ Personal ⊂ Core·0 缺失）：
   - **Lite（启蒙版）**· 15 件——5 分钟验证「你的记忆属于你」·所有权验证五✅
-  - **Personal（个人生产力版）**· 151 件（zh 80 + en 71）——多角色协作机制 + memory-vector 记忆向量插件 + 端到端示例×3
-  - **Core（全成果开源版）**· 192 件（zh 107 + en 85）——学术论文入口 + 双链导航完整版 + 框架集成示例（LangChain/CrewAI/AutoGen）+ 治理产出案例集 + 证伪登记册 + 预注册自曝清单 + 兼容性证明 + 版本策略声明
+  - **Personal（个人生产力版）**· 154 件（含 en 双语）——多角色协作机制 + memory-vector 记忆向量插件 + 端到端示例×3
+  - **Core（全成果开源版）**· 181 件（含 en 双语）——学术论文入口 + 双链导航完整版 + 框架集成示例（LangChain/CrewAI/AutoGen）+ 治理产出案例集 + 证伪登记册 + 预注册自曝清单 + 兼容性证明 + 版本策略声明
 - **en/ 英文镜像**：核心文档中英双语（concepts/constitution/mechanisms/docs 核心件）
 - **证伪机制**：`docs/falsification-log.md`（9 字段登记册）+ `docs/known-limits.md`（5 维度预注册自曝清单）
 - **诚实性设计**：verify-ownership.py 5 项自动 + 2 项人工验证 · memory-vector 插件零依赖双索引·无端点自动降级
