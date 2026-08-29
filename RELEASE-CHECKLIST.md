@@ -116,6 +116,11 @@
 - [x] CHANGELOG.md（v0.1.0 记录）
 - [x] RELEASE-CHECKLIST.md（本文件）
 - [x] release notes（`RELEASE-NOTES-v0.1.0.md` 草稿已备·2026-08-29·发布时定稿）
+- [x] CONTRIBUTING.md（根层贡献指南·2026-08-30 A 档新增）
+- [x] .github/（Issue 模板 ×2 + config + PR 模板 + workflows/ci.yml·2026-08-30 A 档新增）
+- [x] assets/images/（两仪机制 SVG·2026-08-30 A 档新增）
+
+> **2026-08-30 开源收尾 A 档增量更新（母体交接包 2026-08-30·A1-A5 全部 ✅）**：① README「快速开始」补三版可运行代码片段（Lite verify-ownership 真实输出 / Personal 端到端示例路径+效果一句话 / Core langchain 集成 4 行）② README 成本段「口径说明」升级为实测口径（39 天·98.26%·WorkBuddy+deepseek+无 GPU·论文 §8.2）③ 两仪机制 SVG 架构图嵌入（assets/images/·只图示已公开内容）④ 根 CONTRIBUTING.md + Issue 模板（bug/证伪）+ PR 模板（对齐三发行版+证伪导向）⑤ .github/workflows/ci.yml（三版自检·working-directory 限定 cwd）——复验三件套全 PASS（真子集 15/154/181 · 死链 514 条 0 断 · personal/core validator PASS）·推送走 MCP 通道（git 502 已知）·另修正 D-4 漏网残留（core/en case-studies 标题 Master Paper→Architecture Design Principles·2 件）·CHECKLIST 内部人名改为「作者」表述（发布准备件自证污染纪律）
 
 > **2026-08-29 21:2X 增量更新 ②**：README「演进方向（代际脉络）」扩写为「演进方向（当前 & 前方）」——补「当前稳定版 GOAA 2.0 主要功能与机制」清单 + 「正在探索（下版方向·预告）」节（治理型智能体基座·方向展示非承诺·核心机制不公开边界声明·作者裁 1）·core/README + core/docs/applicability「全自动」精确化为「无授权机制的全自动」（作者裁 2·与新口径一致）·RELEASE-NOTES-v0.1.0.md 草稿产出（作者裁 4）
 
