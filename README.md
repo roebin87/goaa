@@ -7,6 +7,11 @@
 > **AI 干得可控，记忆属于你，协作自有其序。**  
 > *Make AI governable. Keep memory yours. Order in collaboration.*
 
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22165301-blue)](https://doi.org/10.5281/zenodo.22165301)
+[![Version](https://img.shields.io/badge/version-v0.1.0-blue)]()
+[![Language](https://img.shields.io/badge/language-Python-blue)]()
+
 GOAA（Governance-Oriented Agent Architecture）是一套治理导向型 Agent 架构——不是让 AI 更聪明，而是让 AI 更听话、更可控、更属于你。
 
 它的核心主张：**治理基座 + 能力外挂 = 最优 Agent 架构基座方向。**
@@ -49,7 +54,7 @@ GOAA 的架构设计本身带来**结构性成本优势**——不是省出来�
 
 | 维度 | GOAA 实测 | 行业公开基准（2026） |
 |---|---|---|
-| **缓存命中率** | **98.5-98.6%**（架构天然·无需优化） | 生产典型 60-80%·最高记录 93%（需人为保持字节稳定） |
+| **缓存命中率（08 期/峰值日口径）** | **98.5-98.6%**（架构天然·无需优化） | 生产典型 60-80%·最高记录 93%（需人为保持字节稳定） |
 | **编排开销** | **0**（单 agent 串行·无管理调用） | 多 agent 编排 +12%~+18%·多 agent 倍率 2-6x |
 | **上下文膨胀** | **设计上禁止**（蒸馏+指针+分层·无膨胀记录） | 无管理时 80-120K tokens/2-3 周（行业痛点） |
 | **模型档位** | 最低档模型（公开最低价档） | 旗舰模型可达数倍至数十倍单价 |
@@ -164,7 +169,7 @@ GOAA 围绕三条原则展开——它们不是「宣称」，而是**你随时�
 ### 🟢 Lite（5 分钟上手）
 
 1. 下载 `lite/` 文件夹
-2. 在 AI 助手中设为工作区
+2. 在 AI 助手中设为工作区——以 DeepSeek/WorkBuddy 助手为例：新建一个空文件夹 → 将 `lite/` 内容放入 → 在助手设置中把该文件夹设为工作区
 3. 说"你好"，完成激活引导
 4. 运行所有权验证脚本：
 
@@ -208,15 +213,44 @@ GOAA · 所有权验证（Ownership Verification）
 3. 跑一个框架集成示例：`integrations/langchain/minimal-example.py`（规则前置 + 记忆后置）
 
 ```python
+from pathlib import Path
 from langchain.agents import AgentExecutor, create_react_agent
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.tools import tool
+from langchain_openai import ChatOpenAI
 
-system_prompt = load_goaa_rules(goaa_root)      # ① 规则前置：把 GOAA 基本法 + 规则装进系统提示词
-agent = create_react_agent(llm, tools, prompt)  # ② 用 GOAA 规则约束的 LangChain Agent
-result = agent_executor.invoke({"input": task}) # ③ 在规则约束下执行任务
-save_to_goaa_memory(goaa_root, task, output)    # ④ 记忆后置：结果写入本地记忆文件
+def load_goaa_rules(goaa_root):
+    """① 规则前置：把 GOAA 基本法 + 规则装进系统提示词"""
+    p = Path(goaa_root)
+    prompt = "你是一个受 GOAA 治理约束的 AI 助手。\n\n"
+    prompt += p.joinpath("constitution/basic_law.md").read_text(encoding="utf-8") + "\n\n"
+    prompt += p.joinpath("rules/rules.yaml").read_text(encoding="utf-8") + "\n"
+    prompt += "\n请在上述规则约束下执行任务。关键决定请提交人侧决断。"
+    return prompt
+
+goaa_root = Path(".").resolve()          # 在 core/ 目录内运行时指向本目录
+system_prompt = load_goaa_rules(goaa_root)
+llm = ChatOpenAI(model="gpt-4", temperature=0)
+
+@tool
+def search_information(query: str) -> str:
+    """搜索信息"""
+    return f"关于 '{query}' 的搜索结果（示例）"
+
+tools = [search_information]
+prompt = ChatPromptTemplate.from_messages([
+    ("system", system_prompt),
+    ("user", "{input}"),
+    ("agent_scratchpad", "{agent_scratchpad}"),
+])
+
+agent = create_react_agent(llm, tools, prompt)
+agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
+result = agent_executor.invoke({"input": "请帮我写一篇关于 GOAA 架构的简介"})
+print(result["output"])
 ```
 
-运行说明：`pip install langchain langchain-openai` 后执行 `python3 integrations/langchain/minimal-example.py`——你的 Agent 会被 GOAA 的宪法与规则约束，关键决定交由人侧决断，产出落回本地记忆。
+运行说明：`pip install langchain langchain-openai` 并配置模型 API 密钥后，**在 `core/` 目录内**运行以上代码（或直接跑完整版 `python3 integrations/langchain/minimal-example.py`·含记忆后置）——你的 Agent 会被 GOAA 的宪法与规则约束，关键决定交由人侧决断，产出落回本地记忆。
 
 ---
 
