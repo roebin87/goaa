@@ -60,10 +60,10 @@ GOAA/
 │   │   └── USER.md              # Owner profile (three-file three)    ✅
 │   └── memory/                  # Memory format templates (four-layer contract)
 │       ├── distill.md           # Distillation template               ✅
-│       ├── 灵魂备份.md           # Soul backup format                  ✅
-│       ├── 对话记录.md           # Conversation record (A5 verbatim)   ✅
-│       ├── 日志.md               # Log format                          ✅
-│       └── 论语.md               # Sayings format                      ✅
+│       ├── soul-backup.md           # Soul backup format                  ✅
+│       ├── dialogue-record.md           # Conversation record (A5 verbatim)   ✅
+│       ├── daily-log.md               # Log format                          ✅
+│       └── sayings.md               # Sayings format                      ✅
 │
 ├── docs/                  # Deep docs (thin facade thick system · L4 reference)
 │   ├── concepts/           # Core concepts one by one (mother axiom/QA duality/entropy governance/three-semantics/falsifier/anti-drift)

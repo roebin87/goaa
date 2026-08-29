@@ -1,6 +1,6 @@
 ﻿# GOAA 规则 · 机可校验实例（YAML·编程语义）
 # 权威：rules/classification.md（规则层·人语义）；本文件为其数据化实例（编程语义），由 tools/validator.py 校验
-# 对应：rules/validation.md（规则生效闸门：写出≠生效）；docs/concepts/三语义-人机编程.md
+# 对应：rules/validation.md（规则生效闸门：写出≠生效）；docs/concepts/three-semantics.md
 # 修改：以 rules/ 为唯一数据源，本文件=编程语义投影；修改须同步 classification.md 并留痕
 # 版本：唯一版本 1.0
 

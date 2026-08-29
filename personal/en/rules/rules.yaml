@@ -1,6 +1,6 @@
 ﻿# GOAA Rules · Machine-verifiable instance (YAML · programming semantics)
 # Authority: rules/classification.md (rule layer · human semantics); this file is its data instance (programming semantics), validated by tools/validator.py
-# Corresponds to: rules/validation.md (rule effect gate: written ≠ effective); docs/concepts/三语义-人机编程.md
+# Corresponds to: rules/validation.md (rule effect gate: written ≠ effective); docs/concepts/three-semantics.md
 # Modification: rules/ is the single data source, this file is the programming-semantics projection; changes must be synced to classification.md with trace
 # Version: single version 1.0
 # NOTE (pending external review): structure/keys mirror the zh original for validator-schema compatibility; key naming policy under review

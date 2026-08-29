@@ -60,10 +60,10 @@ GOAA/
 │   │   └── USER.md              # 用户档案模板（三文件之三·待填）      ✅
 │   └── memory/                  # 记忆格式模板（装载分层·四层契约）
 │       ├── distill.md           # 蒸馏模板                            ✅
-│       ├── 灵魂备份.md           # 收摊产物格式                        ✅
-│       ├── 对话记录.md           # A5 逐字格式                         ✅
-│       ├── 日志.md               # 日志格式                            ✅
-│       └── 论语.md               # 论语格式                            ✅
+│       ├── soul-backup.md           # 收摊产物格式                        ✅
+│       ├── dialogue-record.md           # A5 逐字格式                         ✅
+│       ├── daily-log.md               # 日志格式                            ✅
+│       └── sayings.md               # 论语格式                            ✅
 │
 ├── docs/                  # 深度文档（薄门户厚体系·L4 参考级）
 │   ├── concepts/           # 核心概念逐篇解释（母公理/问答对偶/熵治理/三语义/证伪器/防漂移双法则）
@@ -117,7 +117,7 @@ GOAA/
 4. ✅ docs/concepts（6 篇核心概念）+ lightweight-guide（2026-08-19）
 5. ✅ rules.yaml（编程语义实例·2026-08-19·YAML 校验实跑 PASS）
 6. ✅ docs/comparison.md（治理层独有性对照·2026-08-19）
-7. ✅ docs/adr/ADR-0001（项目结构定稿·2026-08-19）
+7. ✅ docs/adr/ADR-0001-project-structure·2026-08-19）
 8. ✅ AGENTS.md + BENCHMARK.md（2026-08-19）
 9. ✅ 英文版全量（README.en/STRUCTURE.en/SECURITY.en/CONDUCT.en/CONTRIBUTING.en/BENCHMARK.en·2026-08-19·术语表统一）
 

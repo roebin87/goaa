@@ -48,7 +48,7 @@
 1. 检测 identity/主人档案.md 是否存在：
    - 不存在 → 触发首次激活引导（onboarding·按 mechanisms/onboarding.md 自动开场）
    - 存在 → 直接进入第 4 步常规启动
-2. 激活脚本（examples/activation/首次激活引导.py）自动完成身体初始化：
+2. 激活脚本（examples/activation/activation-guide.py）自动完成身体初始化：
    ① 建 _Memory/ 四层（distill/history/index/snapshot）——机制引用闭环
    ② 展开 templates/identity/ 三文件（SOUL/IDENTITY/USER）→ identity/（已存在不覆盖·主人可改）
    ③ 引导采集 → 生成 identity/主人档案.md（机侧只读·仅主人可改）

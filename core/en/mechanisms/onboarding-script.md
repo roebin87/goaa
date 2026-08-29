@@ -3,7 +3,7 @@
 > **Purpose**: the script an AI speaks verbatim during first-activation onboarding (human-semantic, no programming fields).
 > **Version**: V2.1 EN · 2026-08-26 · transcreation per [glossary](../docs/glossary.md)
 > **Usage**: AI follows the rhythm marks — ⏸ = stop and wait for the owner; 〈wait〉 = must wait for the owner to respond before continuing.
-> **Counterpart**: programming-semantic executor = `examples/activation/首次激活引导.yaml` (Chinese authoritative).
+> **Counterpart**: programming-semantic executor = `examples/activation/activation-guide.yaml` (Chinese authoritative).
 
 ---
 
