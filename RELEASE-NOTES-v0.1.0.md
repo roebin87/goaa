@@ -2,59 +2,55 @@
   <img src="assets/logos/GOAA.png" alt="GOAA" width="260">
 </p>
 
-# GOAA v0.1.0 发布公告（草稿·发布时定稿）
+# GOAA v0.1.0 — Governance-Oriented Agent Architecture, First Open-Source Release
 
-> **状态**：草稿（2026-08-29 预写·待学术 DOI 就位 + 作者发布令后定稿发布）
-> **发布方式**：GitHub Releases · v0.1.0 tag · 三发行版同发
+**Make AI governable. Keep memory yours. Order in collaboration.**
 
----
+GOAA (Governance-Oriented Agent Architecture) is a governance-oriented agent architecture — not about making AI *smarter*, but about making AI *more governable, more controllable, and more yours*. Mainstream agent frameworks solve "how to make AI work"; GOAA solves "how to make AI reliably governable": governance is the foundation, execution is the add-on.
 
-## GOAA v0.1.0 —— 治理型 Agent 架构，开源首版
+This release is the **generic open-source master copy v0.1.0** of GOAA 2.0 (GOSAA), shipping three releases simultaneously — from beginner to research.
 
-**AI 干得可控，记忆属于你，协作自有其序。**
+## Three Releases (Strict Subset: Lite ⊂ Personal ⊂ Core)
 
-GOAA（Governance-Oriented Agent Architecture）是一套治理导向型 Agent 架构——不是让 AI 更聪明，而是让 AI 更听话、更可控、更属于你。主流 Agent 框架解决「怎么让 AI 干活」，GOAA 解决「怎么让 AI 干得可控」：治理是基座，执行是加挂。
+| Release | Position | Files | For whom | Core proof action |
+|---|---|---|---|---|
+| 🟢 Lite | Beginner (15 files) | 15 | Complete non-technical beginners | 5-minute verification "your memory belongs to you" |
+| 🟡 Personal | Personal productivity (154 files · incl. bilingual) | 154 | AI-experienced creators/small teams | Multi-role collaboration + memory plugin + end-to-end evidence |
+| 🔴 Core | All-outcomes open source (181 files · incl. bilingual) | 181 | Developers/architecture researchers/industry | Academic paper + case studies + framework integrations + falsification mechanism |
 
-本版为 GOAA 2.0（GOSAA）架构的**通用开源母本 v0.1.0**，三发行版同时发布，从启蒙到研究全覆盖。
+All three releases include Chinese-English bilingual content (`en/` mirrors); upgrading means enabling more functional layers, not starting over.
 
-## 三个发行版（严格真子集：Lite ⊂ Personal ⊂ Core）
+## Core Mechanisms
 
-| 发行版 | 定位 | 适合谁 | 核心证明动作 |
-|---|---|---|---|
-| 🟢 Lite | 启蒙版（15 文件） | 完全不懂技术的小白 | 5 分钟验证「你的记忆属于你」 |
-| 🟡 Personal | 个人生产力版（151 文件·含双语） | 有 AI 经验的创作者/小团队 | 多角色协作 + 记忆插件 + 端到端实证 |
-| 🔴 Core | 全成果开源版（192 文件·含双语） | 开发者/架构研究者/行业 | 学术论文 + 案例集 + 框架集成 + 证伪机制 |
+- **Governance-oriented architecture**: define the governance boundary first, then carry execution capabilities;
+- **100% human decision authority (decision fallback)**: sovereignty stays with the human, execution is delegable — key nodes (rule activation/consensus solidification/version iteration) are adjudicated by the human, routine matters are authorized for AI to execute within mechanisms; the human-machine collaboration iterates itself, continuously lowering human-side decision cost;
+- **File-system-level governance carrier**: rules and memory are anchored to physical file properties (permissions/traces/persistence), carried in Markdown — human-readable, machine-parseable, broadly accessible;
+- **Routine human-adjudication loop**: fixed adjudication stages in the rule layer and consensus layer (not exception fallback);
+- **Dual-source entropy governance**: a unified governance framework for technical entropy and cognitive entropy;
+- **Structural cost advantage** (token × request dual benchmark): full-window cache hit rate 98.26% (Aug-period/peak-day 98.5-98.6%; industry typical 60-80%) · zero orchestration overhead · context bloat banned by design · lowest-tier model works. Methodology: 39 days of production (2026-07-16 to 08-29), WorkBuddy platform · deepseek models · consumer-grade PC (no GPU) — see paper §8.2 (DOI: 10.5281/zenodo.22165301).
 
-三版均含中英双语（`en/` 镜像）；升级只需开启更多功能层，不需要重新开始。
+## Quick Start
 
-## 核心机制
+1. Download the `lite/` (or `personal/` / `core/`) folder
+2. Set it as the workspace in your AI assistant (WorkBuddy / Claude Code / Cursor or other local substrate)
+3. Say "hello" — the AI enters activation onboarding automatically, creating your dedicated AI companion in ~5 minutes
+4. Run `python3 tools/verify-ownership.py` and see 5 ✅ — your memory belongs to you, verifiable
 
-- **治理导向架构**：先框治理边界、再承载执行能力；
-- **人握 100% 决断权（决策兜底）**：主权在人、执行可让渡——关键节点（规则生效/共识固化/版本迭代）由人裁决，常规事务授权 AI 在机制内执行；人机协作自迭代持续降低人侧决策成本；
-- **文件系统级治理载体**：规则与记忆锚定文件物理属性（权限/留痕/持久），以 Markdown 格式承载——人可读、机可解析、受众广；
-- **常态化人裁闭环**：规则层与共识层的固定裁决环节（非异常兜底）；
-- **双源熵治理**：技术熵与认知熵的统一治理框架；
-- **结构性成本优势**（token × 请求双基准）：缓存命中率 98.6%（行业典型 60-80%）·零编排开销·上下文膨胀设计上禁止·最低档模型可用。
+## Falsification Entry
 
-## 快速开始
+**We don't ask you to believe; we ask you to falsify.** A pre-registered disclosure list (known limitations and unverified claims) is public; any fact-based objection will be recorded and publicly responded to.
 
-1. 下载 `lite/`（或 `personal/` / `core/`）文件夹
-2. 在 AI 助手（WorkBuddy / Claude Code / Cursor 等本地基座）中设为工作区
-3. 说「你好」——AI 会自动进入激活引导，5 分钟创建你的专属 AI 伙伴
-4. 运行 `python tools/verify-ownership.py`，看到 5 个 ✅——你的记忆属于你，可验证
+## Citation
 
-## 证伪入口
+Use `CITATION.cff` (DOI: `10.5281/zenodo.22165301`) · License Apache-2.0.
 
-**我们不求你相信，只求你来证伪。** 预注册自曝清单（已知局限与未验证主张）已公开；任何基于事实的质疑都会被记录并公开回应。
+## Version Commitment
 
-## 引用
-
-学术引用请使用 CITATION.cff（DOI: `10.5281/zenodo.22165301`）· 许可证 Apache-2.0。
-
-## 版本承诺
-
-架构版本 1.0 冻结至 50,000 Star（作者唯一版本声明）·核心机制不公开（本仓库=通用开源母本·无个人配置/运行记忆/项目资产）·外围生态开放贡献（见 CONTRIBUTING）。
+- **Open & principled (finalized 2026-08-29 · Option 3)**: the code is fully open and evolves with social verification; the three core principles (data sovereignty / 100% human decision / governance first) are prudently upheld — any future change requires a change proposal + the author's final adjudication with full argumentation. See [version policy](core/docs/version-policy.md).
+- **Core mechanisms stay undisclosed** (this repo = generic open-source master copy · no personal config / runtime memory / project assets).
+- **Peripheral ecosystem open for contribution** (see CONTRIBUTING).
 
 ---
 
-*GOAA v0.1.0 · 2026-08-29 草稿 · 发布时定稿（含 release date / 链接回填）*
+*GOAA v0.1.0 · Released 2026-08-30*  
+*Make AI governable. Keep memory yours. Order in collaboration.*
