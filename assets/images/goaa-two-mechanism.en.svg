@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" width="100%" height="auto" role="img" aria-label="GOAA Two-Pole Mechanism Diagram: Production Pole, Inspection Pole, Adjudication Pole">
-  <!-- GOAA Two-Pole Mechanism: only visualizes content already public in the README -->
+  <!-- GOAA Two-Pole Mechanism (EN) · text lengths verified to fit within boxes -->
   <defs>
     <marker id="arrowR" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
       <path d="M0,0 L9,3 L0,6 Z" fill="#3b4252"/>
@@ -9,23 +9,23 @@
     </marker>
   </defs>
 
-  <!-- Production Pole -->
+  <!-- Production Pole (box: x=20..200, usable width ~170) -->
   <rect x="20" y="60" width="180" height="96" rx="10" fill="#f4f6f8" stroke="#3b4252" stroke-width="2"/>
-  <text x="110" y="95" text-anchor="middle" font-size="18" font-weight="bold" fill="#3b4252" font-family="sans-serif">Production</text>
-  <text x="110" y="120" text-anchor="middle" font-size="13" fill="#5c6470" font-family="sans-serif">AI production</text>
-  <text x="110" y="142" text-anchor="middle" font-size="11.5" fill="#8a919c" font-family="sans-serif">under rule constraints</text>
+  <text x="110" y="97" text-anchor="middle" font-size="18" font-weight="bold" fill="#3b4252" font-family="sans-serif">Production</text>
+  <text x="110" y="121" text-anchor="middle" font-size="12.5" fill="#5c6470" font-family="sans-serif">AI production</text>
+  <text x="110" y="141" text-anchor="middle" font-size="11" fill="#8a919c" font-family="sans-serif">under rule constraints</text>
 
-  <!-- Inspection Pole -->
+  <!-- Inspection Pole (box: x=250..430, usable width ~170) -->
   <rect x="250" y="60" width="180" height="96" rx="10" fill="#f4f6f8" stroke="#3b4252" stroke-width="2"/>
-  <text x="340" y="95" text-anchor="middle" font-size="18" font-weight="bold" fill="#3b4252" font-family="sans-serif">Inspection</text>
-  <text x="340" y="120" text-anchor="middle" font-size="13" fill="#5c6470" font-family="sans-serif">Rules / validation</text>
-  <text x="340" y="142" text-anchor="middle" font-size="11.5" fill="#8a919c" font-family="sans-serif">inspect-only, no verdict</text>
+  <text x="340" y="97" text-anchor="middle" font-size="18" font-weight="bold" fill="#3b4252" font-family="sans-serif">Inspection</text>
+  <text x="340" y="121" text-anchor="middle" font-size="12.5" fill="#5c6470" font-family="sans-serif">Rules / validation</text>
+  <text x="340" y="141" text-anchor="middle" font-size="11" fill="#8a919c" font-family="sans-serif">inspect-only, no verdict</text>
 
-  <!-- Adjudication Pole -->
+  <!-- Adjudication Pole (box: x=480..660, usable width ~170) -->
   <rect x="480" y="60" width="180" height="96" rx="10" fill="#f4f6f8" stroke="#3b4252" stroke-width="2"/>
-  <text x="570" y="95" text-anchor="middle" font-size="18" font-weight="bold" fill="#3b4252" font-family="sans-serif">Adjudication</text>
-  <text x="570" y="120" text-anchor="middle" font-size="13" fill="#5c6470" font-family="sans-serif">Human (final decision-maker)</text>
-  <text x="570" y="142" text-anchor="middle" font-size="11.5" fill="#8a919c" font-family="sans-serif">ambiguity · disputes · approval</text>
+  <text x="570" y="97" text-anchor="middle" font-size="18" font-weight="bold" fill="#3b4252" font-family="sans-serif">Adjudication</text>
+  <text x="570" y="121" text-anchor="middle" font-size="12.5" fill="#5c6470" font-family="sans-serif">Human (decision-maker)</text>
+  <text x="570" y="141" text-anchor="middle" font-size="11" fill="#8a919c" font-family="sans-serif">ambiguity · disputes · approval</text>
 
   <!-- Bidirectional arrows: Production ↔ Inspection -->
   <line x1="200" y1="95" x2="250" y2="95" stroke="#3b4252" stroke-width="2.5" marker-end="url(#arrowR)"/>
@@ -37,9 +37,9 @@
   <line x1="430" y1="108" x2="480" y2="108" stroke="#3b4252" stroke-width="2.5" marker-end="url(#arrowR)"/>
   <text x="455" y="98" text-anchor="middle" font-size="11" fill="#5c6470" font-family="sans-serif">escalate</text>
 
-  <!-- Core semantics -->
+  <!-- Core semantics (bar: x=20..660, usable width ~636) -->
   <rect x="20" y="196" width="640" height="76" rx="8" fill="#eef2f7" stroke="#3b4252" stroke-width="1.5"/>
-  <text x="340" y="222" text-anchor="middle" font-size="13.5" fill="#3b4252" font-family="sans-serif">Core semantics: neither "AI calls the shots" nor "humans do everything"</text>
-  <text x="340" y="244" text-anchor="middle" font-size="13" fill="#5c6470" font-family="sans-serif">Humans and machines jointly answer to public knowledge (objective laws &amp; public facts) — whoever's claim matches the facts prevails</text>
-  <text x="340" y="264" text-anchor="middle" font-size="11.5" fill="#8a919c" font-family="sans-serif">Rules derive authority from "verifiability," not from "AI's self-discipline"</text>
+  <text x="340" y="222" text-anchor="middle" font-size="13.5" fill="#3b4252" font-family="sans-serif">Core semantics: not "AI calls the shots," not "humans do everything"</text>
+  <text x="340" y="244" text-anchor="middle" font-size="12.5" fill="#5c6470" font-family="sans-serif">Humans and machines jointly answer to public knowledge — facts prevail</text>
+  <text x="340" y="260" text-anchor="middle" font-size="11.5" fill="#8a919c" font-family="sans-serif">Rules derive authority from "verifiability," not "AI self-discipline"</text>
 </svg>
