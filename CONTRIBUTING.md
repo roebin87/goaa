@@ -1,99 +1,99 @@
-# 贡献指南（CONTRIBUTING）
+# Contributing to GOAA
 
-> **核心稳定，外围迭代**——架构核心（宪法/规则/核心机制）保持大版本稳定，确保治理底座的确定性；外围生态快速迭代，欢迎社区贡献。感谢任何让 GOAA 更容易被用起来的贡献。
+> **Core stable, periphery iterates** — the architecture core (constitution/rules/core mechanisms) stays stable at the major version to ensure the governance substrate's determinism; the peripheral ecosystem iterates quickly, and community contributions are welcome. Thanks for any contribution that makes GOAA easier to use.
 
-GOAA 仓库由**三个发行版**组成，贡献请先明确落位：
+The GOAA repository consists of **three releases** — please identify your target before contributing:
 
-| 发行版 | 定位 | 说明 |
+| Release | Position | Note |
 |------|------|------|
-| 🟢 `lite/` | 启蒙版 | 最小可用·所有权验证（5 分钟上手）·面向完全不懂技术的小白 |
-| 🟡 `personal/` | 个人生产力版 | 多角色协作 + 记忆插件 + 端到端实证·面向创作者/小团队 |
-| 🔴 `core/` | 全成果开源版 | 学术论文入口 + 案例集 + 框架集成 + 证伪机制·面向开发者/研究者 |
-| 📄 根层 | 仓库门面 | README / CONTRIBUTING / CI / 模板 / 许可证等全仓公共件 |
+| 🟢 `lite/` | Beginner | Minimal usable · ownership verification (5-minute start) · for complete non-technical beginners |
+| 🟡 `personal/` | Personal productivity | Multi-role collaboration + memory plugin + end-to-end evidence · for creators/small teams |
+| 🔴 `core/` | All-outcomes open source | Academic paper entry + case studies + framework integrations + falsification mechanism · for developers/researchers |
+| 📄 Root layer | Repository facade | README / CONTRIBUTING / CI / templates / license and other repo-wide public files |
 
-> 三版是**严格真子集**关系（Lite ⊂ Personal ⊂ Core）：贡献到低层级的改进天然惠及高层级，反之需注意一致性。
+> The three releases are **strict subsets** (Lite ⊂ Personal ⊂ Core): improvements contributed to a lower level naturally benefit higher levels; the reverse requires consistency care.
 
-## 贡献分类与接受范围
+## Contribution Categories & Acceptance Scope
 
-| 级别 | 类型 | 说明 | 处理方式 |
+| Level | Type | Note | Handling |
 |------|------|------|---------|
-| ✅ **欢迎** | 文档纠错/补充 | 错别字、表述优化、文档补充、FAQ 更新 | 随时合并 |
-| ✅ **欢迎** | 示例/案例 | 各场景落地示例、端到端案例、最佳实践 | 随时合并 |
-| ✅ **欢迎** | 翻译 | 英文版/其他语言版补充、翻译优化 | 随时合并 |
-| ✅ **欢迎** | 模板优化 | 身份/记忆/工作区模板的改进 | 评审后合并 |
-| ✅ **欢迎** | 工具脚本 | 校验器、初始化脚本、辅助工具的改进 | 评审后合并 |
-| ✅ **欢迎** | Bug 修复 | 工具脚本、文档链接、配置错误的修复 | 随时合并 |
-| ⚠️ **需评审** | 外围机制改进 | mechanisms/ 下非核心机制的优化 | 需设计评审，附改进说明 |
-| ⚠️ **需评审** | 核心机制变更 | constitution/、核心 mechanisms/ 的变更 | 需走设计评审流程，附设计文档 |
-| ⚠️ **需评审** | 宪法/公理修改 | basic_law.md、design-principles.md 的变更 | 需作者终审，附完整论证 |
-| ❌ **不接受** | 违背核心设计原则 | 违背"数据主权/100% 人决断/治理优先"的变更 | 直接关闭 |
-| ❌ **不接受** | 自动合并规则 | 任何 CI 自动合并配置 | 直接关闭（合并须人工终审） |
+| ✅ **Welcome** | Doc fixes/supplements | typos, wording polish, doc supplements, FAQ updates | merge anytime |
+| ✅ **Welcome** | Examples/case studies | scenario examples, end-to-end cases, best practices | merge anytime |
+| ✅ **Welcome** | Translations | EN/other-language supplements, translation polish | merge anytime |
+| ✅ **Welcome** | Template improvements | identity/memory/workspace template improvements | merge after review |
+| ✅ **Welcome** | Tooling scripts | validator, init script, auxiliary tool improvements | merge after review |
+| ✅ **Welcome** | Bug fixes | tool scripts, doc links, config errors | merge anytime |
+| ⚠️ **Review needed** | Peripheral mechanism improvements | non-core mechanism optimizations under `mechanisms/` | design review + improvement note |
+| ⚠️ **Review needed** | Core mechanism changes | changes to `constitution/`, core `mechanisms/` | design review process + design doc |
+| ⚠️ **Review needed** | Constitution/axiom changes | changes to `basic_law.md`, `design-principles.md` | author final review + full argumentation |
+| ❌ **Not accepted** | Violating core design principles | changes violating "data sovereignty / 100% human decision / governance first" | closed directly |
+| ❌ **Not accepted** | Auto-merge rules | any CI auto-merge configuration | closed directly (merges require human final review) |
 
-## 证伪入口（GOAA 最重视的贡献）
+## Falsification Entry (The Contribution GOAA Values Most)
 
-**我们不求你相信，只求你来证伪。** 如果你认为 GOAA 的理论或主张有问题，请使用 [证伪/质疑模板](.github/ISSUE_TEMPLATE/falsification.md) 提交 Issue：
+**We don't ask you to believe; we ask you to falsify.** If you believe GOAA's theory or claims are problematic, submit an Issue using the [falsification/question template](.github/ISSUE_TEMPLATE/falsification.md):
 
-1. 先看 [预注册自曝清单](core/docs/known-limits.md)——我们已经公开了已知局限和未验证主张
-2. 提交 Issue，描述你的质疑（**请附事实依据**）
-3. 你的质疑会被记录到 [证伪登记册](core/docs/falsification-log.md)，并得到公开回应
+1. First read the [pre-registered disclosure list](core/docs/known-limits.md) — known limitations and unverified claims are already public
+2. Submit an Issue describing your objection (**please attach factual evidence**)
+3. Your objection will be recorded in the [falsification log](core/docs/falsification-log.md) and publicly responded to
 
-**每一条有事实依据的质疑，都是 GOAA 理论进步的机会。**
+**Every fact-based objection is an opportunity for GOAA's theory to advance.**
 
-## Issue
+## Issues
 
-- 标题：`[类别] 简述`（类别：concept / bug / doc / question / enhancement / falsification）
-- 正文请包含：
-  - 你的使用场景（是否实际运行过 GOAA）
-  - 问题描述/概念讨论点
-  - 你的预期与实际情况
-- **好第一个 Issue（good first issue）**：标注此标签的 Issue 适合新贡献者入手，通常是文档纠错、示例补充、小工具优化等低门槛任务。
-- Bug 报告请使用 [bug 报告模板](.github/ISSUE_TEMPLATE/bug_report.md)。
+- Title: `[category] brief summary` (category: concept / bug / doc / question / enhancement / falsification)
+- Body should include:
+  - Your use scenario (whether you actually ran GOAA)
+  - Problem description / concept discussion point
+  - Your expectation vs. what actually happened
+- **Good first issue**: issues with this label suit new contributors — usually low-barrier tasks like doc fixes, example supplements, small tool improvements.
+- Bug reports: use the [bug report template](.github/ISSUE_TEMPLATE/bug_report.md).
 
-## PR
+## Pull Requests
 
-- 分支命名：`fix/` `docs/` `feat/` 前缀
-- 变更说明请描述：改了什么、为什么改、如何验证
-- 核心设计变更（constitution/、核心 mechanisms/）请先开 Issue 讨论，附设计文档后再提 PR
-- 所有 PR 须通过 CI 校验（三版自检：`verify-ownership.py` + `validator.py`），并经作者人工终审后合并——**禁止任何自动合并规则**
+- Branch naming: `fix/` `docs/` `feat/` prefix
+- Change description should cover: what changed, why, how it was verified
+- Core design changes (`constitution/`, core `mechanisms/`): open an Issue to discuss first, attach a design doc, then submit the PR
+- All PRs must pass CI validation (three-release self-check: `verify-ownership.py` + `validator.py`) and the author's human final review before merging — **no auto-merge rules are allowed**
 
-### 外围贡献开放清单（欢迎 PR）
+### Open List of Peripheral Contributions (PRs Welcome)
 
-| 类别 | 内容 | 例子 |
+| Category | Content | Examples |
 |------|------|------|
-| 示例 | 各场景落地示例 | 个人创作者/小团队/合规场景示例 |
-| 适配 | 对接不同模型/平台的启动脚本 | 本地模型部署脚本、框架挂载示例 |
-| 教程 | 使用教程/最佳实践 | Obsidian/VS Code 使用指南 |
-| 翻译 | 文件英文版/其他语言版 | `.en.md` 补充 |
-| 集成 | 挂载外部执行框架的方案 | LangChain/AutoGen/CrewAI 挂载示例 |
-| 文档 | 文档修正/补充 | 错别字/示例修正 |
+| Examples | scenario landing examples | creator/small-team/compliance scenario examples |
+| Adaptations | startup scripts for different models/platforms | local-model deployment scripts, framework mounting examples |
+| Tutorials | usage guides/best practices | Obsidian/VS Code guides |
+| Translations | EN/other-language versions of files | `-en` counterparts |
+| Integrations | mounting external execution frameworks | LangChain/AutoGen/CrewAI mounting examples |
+| Docs | doc fixes/supplements | typo/example corrections |
 
-> 外围贡献不触碰架构核心，不违反核心设计原则——任何让 GOAA 更好用的外围件都欢迎。
+> Peripheral contributions don't touch the architecture core and don't violate core design principles — any peripheral that makes GOAA more usable is welcome.
 
-### 贡献者成长路径
+### Contributor Growth Path
 
-1. **文档贡献者** → 纠错、补充文档、翻译
-2. **示例贡献者** → 提交落地示例、最佳实践
-3. **工具贡献者** → 优化校验器、开发辅助脚本
-4. **机制贡献者** → 参与外围机制改进（需评审）
-5. **核心维护者** → 参与核心设计评审（作者邀请制）
+1. **Doc contributor** → fixes, doc supplements, translations
+2. **Example contributor** → landing examples, best practices
+3. **Tooling contributor** → validator optimizations, auxiliary scripts
+4. **Mechanism contributor** → peripheral mechanism improvements (review required)
+5. **Core maintainer** → core design review (author invitation)
 
-### 贡献者荣誉
+### Contributor Recognition
 
-- 所有合并的 PR 贡献者将列入 README 贡献者名单
-- 重大贡献（新机制、完整示例系列、重要工具）将在贡献者名单中单独标注贡献内容
-- 年度活跃贡献者将在项目年度总结中鸣谢
+- All merged PR contributors are listed in the README contributor list
+- Significant contributions (new mechanisms, full example series, important tools) get individually noted in the contributor list
+- Annual active contributors are acknowledged in the project's yearly summary
 
-## 社区治理条款
+## Community Governance Terms
 
-1. **合并须人工终审**：所有代码与文档合并均须作者人工终审——**禁止任何自动合并规则**（CI 仅做校验·不自动合并）；
-2. **第三方衍生标注**：基于本项目的衍生项目须标注「非官方版本」·**不得使用官方标识/名称**（避免与官方仓库混淆）；"GOAA"名称归属作者 Jianlong Yin，违背核心原则（数据主权/100% 人决断/治理优先）的修改版不得沿用 GOAA 之名；
-3. **DCO 原创声明**：所有贡献者提交即确认内容为原创（Developer Certificate of Origin）·贡献需与核心设计原则保持一致（不违背宪法层/规则层/核心机制的设计精神）。
+1. **Merges require human final review**: all code and doc merges require the author's human final review — **no auto-merge rules are allowed** (CI only validates; it never auto-merges);
+2. **Third-party derivation labeling**: derived projects must be labeled "unofficial" · **must not use official logos/names** (to avoid confusion with the official repo); the "GOAA" name belongs to the author Jianlong Yin — modified versions violating core principles (data sovereignty / 100% human decision / governance first) may not use the GOAA name;
+3. **DCO originality declaration**: all contributors confirm their content is original when submitting (Developer Certificate of Origin) · contributions must align with core design principles (not violating the design spirit of the constitution/rule/core-mechanism layers).
 
-## 概念讨论
+## Concept Discussions
 
-- 请在 Discussion 发起，标注 `concept` 标签
-- 作者会回复，核心设计变更需经设计评审流程
+- Start them in Discussions with the `concept` label
+- The author responds; core design changes require the design-review process
 
 ---
 
-*GOAA · 贡献指南（根层）· 2026-08-30 建立 · 对齐三发行版结构与证伪导向*
+*GOAA · Contribution Guide (Root Layer) · 2026-08-30 · aligned with the three-release structure and the falsification orientation*

@@ -15,7 +15,7 @@ GOAA is the 2.0 engineering form of the GOAA governance-oriented agent architect
 ```
 GOAA/
 ├── README.md              # Facade: why/features/quick entry (thin)    ✅
-├── README.en.md           # English facade                            ✅
+├── README.md           # English facade                            ✅
 ├── LICENSE                # Apache-2.0                                ✅
 ├── DEPLOY.md              # ★ Self-bootstrap deployment (copy to any AI) ✅
 ├── AGENTS.md              # AI collaboration guidelines               ✅
@@ -25,7 +25,7 @@ GOAA/
 ├── CODE_OF_CONDUCT.md     # Community code of conduct                 ✅
 ├── CITATION.cff           # Citation format (academic entry)          ✅
 ├── STRUCTURE.md           # This file = external review first entry  ✅
-├── STRUCTURE.en.md        # This file (English)                      ✅
+├── STRUCTURE.md        # This file (English)                      ✅
 │
 ├── constitution/          # L0 Constitution layer (L0 of five-level)
 │   ├── basic_law.md        # Basic Law (mother axiom/survival/operational/generations) ✅

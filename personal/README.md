@@ -121,7 +121,7 @@ GOAA is an open community project. Everyone interested in governance-oriented AI
 | Discord | TBD | International user channel (invite link to be published at official launch) |
 | [GitHub Issues](https://github.com/roebin87/goaa/issues) | Available | Bug reports, feature requests |
 
-**Code of Conduct**: All community participants must follow [CODE_OF_CONDUCT.en.md](CODE_OF_CONDUCT.md). We advocate respectful, open, constructive communication.
+**Code of Conduct**: All community participants must follow [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md). We advocate respectful, open, constructive communication.
 
 **Before asking**: [FAQ.md](docs/FAQ.md) covers 25 common questions — your answer may already be there.
 

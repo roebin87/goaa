@@ -2,7 +2,7 @@
 
 > **Purpose**: the full structure serves full governance; this guide explains which directories/files can be trimmed on demand, so the architecture can both support full governance and adapt to personal-minimal/small-project scenarios.
 > **Principle**: constitutional layer / identity layer / memory chronicle = not trimmable (governance bottom line); everything else trims by scenario.
-> **Path view**: this document = **body view** (this workspace IS the body · single-track 2026-08-27) — `constitution/` `_Memory/` etc. are all relative to the body root (en/ or zh/) · the repo IS the body.
+> **Path view**: this document = **body view** (this workspace IS the body · single-track 2026-08-27) — `constitution/` `_Memory/` etc. are all relative to the body root (EN or ZH folder) · the repo IS the body.
 > **Version**: Single version 1.0
 
 ---

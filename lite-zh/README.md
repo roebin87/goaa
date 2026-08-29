@@ -3,6 +3,8 @@
 > **让 AI 干得可控，让你的记忆属于你。**
 > *Make AI governable. Keep your memory yours.*
 
+[English](../lite/README.md)
+
 GOAA 是**治理型 AI 架构**：主流工具解决"怎么让 AI 干活"，GOAA 解决"怎么让 AI 干得可控、且你的东西始终是你的"。
 
 本文件夹（`lite/`）是最小可用版本——**不需要任何技术背景**，5 分钟就能拥有一套"记忆完全属于自己"的 AI 工作伙伴。
