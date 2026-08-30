@@ -62,8 +62,8 @@ GOAA 是**治理型 AI 架构**：主流工具解决"怎么让 AI 干活"，GOAA
 
 ## 怎么开始（三步·小白路径）
 
-1. **下载本文件夹**（`core/`）到本地（若下载的是整个仓库 zip，请找到解压后的 `core/` 文件夹）；
-2. **锚定工作区**：在 AI 助手（推荐 **WorkBuddy / Claude Code / Cursor** 等本地 agent 基座）中，**把 `core/` 文件夹本身设为工作区**——注意是**含本 README.md 的那一层**；
+1. **下载本文件夹**（`docs/core/zh/`）到本地（若下载的是整个仓库 zip，请找到解压后的 `docs/core/zh/` 文件夹）；
+2. **锚定工作区**：在 AI 助手（推荐 **WorkBuddy / Claude Code / Cursor** 等本地 agent 基座）中，**把本文件夹（`docs/core/zh/`）设为工作区**——注意是**含本 README.md 的那一层**；
 3. **说话**：随便说一句，比如 **"你好"** 或 **"你是谁"**——AI 会自动进入创建引导，5 分钟创建你的专属 AI 伙伴。
    - 如果 AI 没有自动开始引导，请对它说：**"读取 README.md 并按其中的指示开始"**——一句话即可唤醒。
 
@@ -140,7 +140,7 @@ GOAA 由一位**非 AI 工程师、非计算机专业**的作者设计——它�
 ```bash
 # 1. 克隆本仓库
 git clone https://github.com/roebin87/goaa.git
-cd goaa/core
+cd goaa/docs/core/zh
 
 # 2. 按启动序列装载（详见 mechanisms/startup.md）
 #    宪法 → 身份 → 蒸馏 → 启动序列 → 校验
@@ -161,23 +161,20 @@ python3 tools/validator.py
 ## 项目结构
 
 ```
-core/
-├── README.md           # 本文件（Core 中文门面）
-├── en/                 # English mirror（英文完整版）
-├── DEPLOY.md           # ★ 自举部署指令（复制发给任意 AI 即完成部署）
-├── LICENSE             # Apache-2.0 License
-├── VERSION             # 版本三轨说明（架构/发行/论文）
-├── constitution/       # 宪法层：基本法 + 设计原理（Why+How 一体）
-├── rules/              # 规则层：五级分类 + Rule Effect-Gate + rules.yaml
-├── mechanisms/         # 机制层：启动/收摊/激活/歧义/复用/动态率/记忆装载/多角色（10 件）
-├── methodologies/      # 方法论三件套
-├── templates/          # 运行时模板（身份/记忆/工作区）
-├── docs/               # 概念/对比/ADR/介绍/适用边界/所有权/论文/案例/证伪/兼容/版本策略
-├── examples/           # 示例（项目模板/激活引导/端到端×3）
-├── integrations/       # 框架集成示例（LangChain/CrewAI/AutoGen·Core 全开）
-├── plugins/            # 可选插件（memory-vector 记忆向量索引）
-└── tools/              # 工具（validator / verify-ownership 等）
+docs/core/zh/
+├── README.md            # 本文件（Core 中文门面）
+├── AGENTS.md            # AI 助手说明（读取指引）
+├── BENCHMARK.md         # 开源母本自包含结构完整度基准
+├── DEPLOY.md            # 自举部署指令（复制发给任意 AI 即完成部署）
+├── case-studies/        # 治理产出案例集（书稿/论文/开源生产史·Core 新增）
+├── compatibility.md     # 兼容性证明（治理底座·不替代任何框架）
+├── falsification-log.md # 证伪登记册（社会验证证据链）
+├── known-limits.md      # 预注册自曝清单（已知局限与未验证主张）
+├── internals/           # 06 双链导航（文件即本体·Core 全开）
+├── research/            # 学术论文入口（GOAA Architecture Design Principles）
+└── version-policy.md    # 版本策略（核心稳定+外围迭代）
 ```
+> 与 Personal 共享的内容位于 `../personal/zh/`（constitution/rules/mechanisms/methodologies/templates 等）·代码位于仓库根（tools/integrations/examples/plugins）·完整结构见根级 STRUCTURE.md。
 
 > 完整结构见 [STRUCTURE.md](../../../STRUCTURE.md)（外部审议唯一入口）
 

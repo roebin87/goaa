@@ -170,13 +170,13 @@ New visitors don't need to open subdirectories — first see "what it looks like
 
 ### 🟢 Lite (5-minute start)
 
-1. Download the `lite/` folder
-2. Set it as the workspace in your AI assistant — e.g. DeepSeek/WorkBuddy: create a new empty folder → put the `lite/` contents in → set that folder as the workspace in assistant settings
+1. Download the Lite release folder (`docs/lite/`)
+2. Set it as the workspace in your AI assistant — e.g. DeepSeek/WorkBuddy: create a new empty folder → put the `docs/lite/` contents in → set that folder as the workspace in assistant settings
 3. Say "hello" to complete the activation onboarding
 4. Run the ownership verification script:
 
 ```bash
-cd lite
+# at the repository root
 python3 tools/verify-ownership.py
 ```
 

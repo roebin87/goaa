@@ -17,7 +17,6 @@ This folder (`lite/`) is the minimal usable version — **no technical backgroun
 ```
 1.0 Ownership (whose memory) → 2.0 Decision Authority (who decides) → 3.0 Social Validation (verify together) → 4.0 Meta-Order
 ★ Current: 2.0 · Full theory in the academic paper (DOI at the bottom)
-```
 
 ## How to Start (Three Steps)
 
@@ -44,7 +43,7 @@ This folder (`lite/`) is the minimal usable version — **no technical backgroun
 ## Core Proof Action: Verify "Memory Belongs to You" (60 seconds)
 
 ```bash
-python3 tools/verify-ownership.py
+python3 tools/verify-ownership.py   # script lives at the repo root `tools/` · run at the repo root
 ```
 
 You'll see **5 ✅** (local / plain text / no cloud / portable / no lock-in) plus 2 manual verification guides. These 5 conditions all holding means: your AI memory lives in your own folder — plain text, readable offline, copyable, bound to no vendor. No LLM or AI application can withhold it.

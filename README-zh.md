@@ -170,13 +170,13 @@ GOAA 围绕三条原则展开——它们不是「宣称」，而是**你随时�
 
 ### 🟢 Lite（5 分钟上手）
 
-1. 下载 `lite/` 文件夹
-2. 在 AI 助手中设为工作区——以 DeepSeek/WorkBuddy 助手为例：新建一个空文件夹 → 将 `lite/` 内容放入 → 在助手设置中把该文件夹设为工作区
+1. 下载 Lite 版文档区（`docs/lite/zh/`）
+2. 在 AI 助手中设为工作区——以 DeepSeek/WorkBuddy 助手为例：新建一个空文件夹 → 将 `docs/lite/zh/` 内容放入 → 在助手设置中把该文件夹设为工作区
 3. 说"你好"，完成激活引导
 4. 运行所有权验证脚本：
 
 ```bash
-cd lite
+# 在仓库根目录运行
 python3 tools/verify-ownership.py
 ```
 
@@ -202,7 +202,7 @@ GOAA · 所有权验证（Ownership Verification）
 
 ### 🟡 Personal（个人级生产力治理解决方案）
 
-1. 下载 `personal/` 文件夹
+1. 下载 Personal 版文档区（`docs/personal/`）
 2. 设为工作区，完成激活
 3. 跑一个端到端示例：[`examples/end-to-end/01-book-production.md`](./examples/end-to-end/01-book-production.md)
 
@@ -210,8 +210,8 @@ GOAA · 所有权验证（Ownership Verification）
 
 ### 🔴 Core（研究/集成）
 
-1. 下载 `core/` 文件夹
-2. 阅读学术论文和设计原理（`docs/research/` + `docs/internals/`）
+1. 下载 Core 版文档区（`docs/core/` + 根级共享代码）
+2. 阅读学术论文和设计原理（`docs/core/zh/research/` + `docs/personal/zh/internals/`）
 3. 跑一个框架集成示例：`integrations/langchain/minimal-example.py`（规则前置 + 记忆后置）
 
 ```python
@@ -252,7 +252,7 @@ result = agent_executor.invoke({"input": "请帮我写一篇关于 GOAA 架构�
 print(result["output"])
 ```
 
-运行说明：`pip install langchain langchain-openai` 并配置模型 API 密钥后，**在 `core/` 目录内**运行以上代码（或直接跑完整版 `python3 integrations/langchain/minimal-example.py`·含记忆后置）——你的 Agent 会被 GOAA 的宪法与规则约束，关键决定交由人侧决断，产出落回本地记忆。
+运行说明：`pip install langchain langchain-openai` 并配置模型 API 密钥后，**在仓库根目录**运行以上代码（或直接跑完整版 `python3 integrations/langchain/minimal-example.py`·含记忆后置）——你的 Agent 会被 GOAA 的宪法与规则约束，关键决定交由人侧决断，产出落回本地记忆。
 
 ---
 

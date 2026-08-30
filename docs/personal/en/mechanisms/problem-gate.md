@@ -1,4 +1,4 @@
-﻿# Mechanism · Problem Gate (Generic · V1.0 EN)
+# Mechanism · Problem Gate (Generic · V1.0 EN)
 
 > Every task passes the problem gate before work starts — is this a real problem worth investing in, or a fake one to intercept?
 
