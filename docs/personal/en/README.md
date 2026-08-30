@@ -2,7 +2,7 @@
 > **Semantics**: Human (intent/concept layer · reading)
 
 > A governance-oriented agent architecture — makes AI **reliable**, not just capable. Your AI's memory lives in files that **belong to you**.
-> *Make AI governable. Keep your memory yours.*
+> *A governance-first agent substrate — governance as the base, capabilities as add-ons, sovereignty in your hands.*
 
 [中文版](../zh/README.md)
 
@@ -76,7 +76,7 @@ Begin the first-activation onboarding **immediately** (do not wait for more inst
 
 **Other AIs' memory lives on the vendor's server; yours lives in your hands.**
 
-- **You hold 100% decision rights (master axiom)** — sovereignty stays with you (final adjudication is yours) while execution is delegated to the AI within your rules and mechanisms. It is decision backstop, not human execution: key nodes (rule activation, consensus solidification, version iteration) are adjudicated by you, while routine work runs within covered rules
+- **You hold 100% decision rights (Mother Axiom)** — sovereignty stays with you (final adjudication is yours) while execution is delegated to the AI within your rules and mechanisms. It is decision backstop, not human execution: key nodes (rule activation, consensus solidification, version iteration) are adjudicated by you, while routine work runs within covered rules
 - **Files are memory** — files exist, the system exists. Your memory is plain-text, openable, portable — yours
 - **Governance over capability** — mainstream frameworks make AI *do more*; GOAA makes AI *trustworthy*. Capability × trustworthiness = AI that actually works for you
 
