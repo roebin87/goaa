@@ -31,11 +31,11 @@ The GOAA repository consists of **three releases** — please identify your targ
 
 ## Falsification Entry (The Contribution GOAA Values Most)
 
-**We don't ask you to believe; we ask you to falsify.** If you believe GOAA's theory or claims are problematic, submit an Issue using the [falsification/question template](.github/ISSUE_TEMPLATE/falsification.md):
+**We don't ask you to believe; we ask you to falsify.** If you believe GOAA's theory or claims are problematic, submit an Issue using the [falsification/question template](./.github/ISSUE_TEMPLATE/falsification.md):
 
-1. First read the [pre-registered disclosure list](core/docs/known-limits.md) — known limitations and unverified claims are already public
+1. First read the [pre-registered disclosure list](docs/core/en/known-limits.md) — known limitations and unverified claims are already public
 2. Submit an Issue describing your objection (**please attach factual evidence**)
-3. Your objection will be recorded in the [falsification log](core/docs/falsification-log.md) and publicly responded to
+3. Your objection will be recorded in the [falsification log](docs/core/en/falsification-log.md) and publicly responded to
 
 **Every fact-based objection is an opportunity for GOAA's theory to advance.**
 
@@ -47,7 +47,7 @@ The GOAA repository consists of **three releases** — please identify your targ
   - Problem description / concept discussion point
   - Your expectation vs. what actually happened
 - **Good first issue**: issues with this label suit new contributors — usually low-barrier tasks like doc fixes, example supplements, small tool improvements.
-- Bug reports: use the [bug report template](.github/ISSUE_TEMPLATE/bug_report.md).
+- Bug reports: use the [bug report template](./.github/ISSUE_TEMPLATE/bug_report.md).
 
 ## Pull Requests
 

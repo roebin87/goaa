@@ -7,7 +7,7 @@
 > **Make AI governable. Keep memory yours. Order in collaboration.**  
 > **让 AI 可治理，让记忆归己，让协作有序。**
 
-[中文版本](README-zh.md)
+[中文版本](./README-zh.md)
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22165301-blue)](https://doi.org/10.5281/zenodo.22165301)
@@ -30,7 +30,7 @@ GOAA's daily operation is not "AI autonomous decision-making" — it is a **two-
 Production Pole (AI) ↔ Inspection Pole (rules/validation · inspect-only) → Adjudication Pole (human-closed-loop)
 ```
 
-![Two-Pole Mechanism Diagram](assets/images/goaa-two-mechanism.en.svg)
+![Two-Pole Mechanism Diagram](./assets/images/goaa-two-mechanism.en.svg)
 
 - **Production Pole**: AI executes production under rule constraints — writing, verifying, persisting, revising;
 - **Inspection Pole**: rules and validators check the output (dead links/residue/consistency) — **inspect-only, no verdict**, never deciding for a human;
@@ -81,11 +81,11 @@ GOAA ships as three releases, from simple to complete, covering different user n
 
 | Release | Position | Files | For whom | Core proof action |
 |---|---|---|---|---|
-| 🟢 **[Lite](lite/)** | Beginner | 15 | Complete non-technical beginners | 5-minute verification "your memory belongs to you" |
-| 🟡 **[Personal](personal/)** | Personal productivity | 154 (incl. en mirror) | AI-experienced creators/small teams | Multi-role collaboration + memory plugin + end-to-end evidence |
-| 🔴 **[Core](core/)** | All-outcomes open source | 181 (incl. en mirror) | Developers/architecture researchers/industry | Academic paper + case studies + framework integrations + falsification mechanism |
+| 🟢 **[Lite](docs/lite/en/)** | Beginner | 15 | Complete non-technical beginners | 5-minute verification "your memory belongs to you" |
+| 🟡 **[Personal](docs/personal/en/)** | Personal productivity | 154 | AI-experienced creators/small teams | Multi-role collaboration + memory plugin + end-to-end evidence |
+| 🔴 **[Core](docs/core/en/)** | All-outcomes open source | 181 | Developers/architecture researchers/industry | Academic paper + case studies + framework integrations + falsification mechanism |
 
-> All three releases include Chinese-English bilingual content (`en/` mirrors). Core concept documents (constitution/mechanisms/docs/concepts, etc.) all have English versions.
+> All documents are bilingual: every release has `en/` (English) and `zh/` (Chinese) copies under `docs/<release>/`. Shared code lives at the repo root (`tools/` · `integrations/` · `examples/` · `plugins/`). See [STRUCTURE.md](./STRUCTURE.md) for the full layout.
 
 ---
 
@@ -131,7 +131,7 @@ Each generation does not chase "solving" a problem once and for all, but **pushe
 - **Governance-type agent substrate** (current exploration line): pushing "file-system-level governance" toward a "runnable governance substrate" — governance independent of any specific AI platform, runnable by anyone, ownership on the user side.
 - **Direction shown, not promised**: this section states public direction (not internal implementation disclosure) · progress will be announced via academic papers and future releases · the boundary of non-disclosed core mechanisms stays unchanged.
 
-> Deep theory: [GOAA Academic Paper](core/docs/research/goaa-paper.md) (DOI: 10.5281/zenodo.22165301).
+> Deep theory: [GOAA Academic Paper](docs/core/en/research/goaa-paper.md) (DOI: 10.5281/zenodo.22165301).
 
 ---
 
@@ -144,7 +144,7 @@ GOAA is built around three principles — not "claims," but **promises you can v
    > **Correct understanding (sovereignty vs. execution separation)**: 100% human decision = **sovereignty in human hands** (authority and responsibility unified · final adjudication belongs to the human) · **execution delegable** (AI executes autonomously within rules and mechanisms) — not "every little thing waits for a human," but "within rule coverage AI acts freely · outside coverage or at key nodes the human adjudicates." This preserves the human's final authority without drowning people in trivial approvals.
 3. **Governance first** — establish rules before doing work: rules are written in files and verifiable, not dependent on AI's improvised judgment.
 
-> How principles evolve: see [version policy](core/docs/version-policy.md) — we hope to keep improving and welcome any fact-based discussion.
+> How principles evolve: see [version policy](docs/core/en/version-policy.md) — we hope to keep improving and welcome any fact-based discussion.
 
 ---
 
@@ -154,9 +154,9 @@ GOAA is built around three principles — not "claims," but **promises you can v
 
 If you believe GOAA's theory or claims are problematic:
 
-1. First read the [pre-registered disclosure list](core/docs/known-limits.md) — we have already disclosed known limitations and unverified claims
+1. First read the [pre-registered disclosure list](docs/core/en/known-limits.md) — we have already disclosed known limitations and unverified claims
 2. Open an Issue describing your objection (please attach factual evidence)
-3. Your objection will be recorded in the [falsification log](core/docs/falsification-log.md) and publicly responded to (fact anchoring + public-knowledge reference + AI analysis + human-side adjudication + solidified result)
+3. Your objection will be recorded in the [falsification log](docs/core/en/falsification-log.md) and publicly responded to (fact anchoring + public-knowledge reference + AI analysis + human-side adjudication + solidified result)
 
 **Every fact-based objection is an opportunity for GOAA's theory to advance.**
 
@@ -202,16 +202,16 @@ Conclusion: your AI memory is 100% yours.
 
 ### 🟡 Personal (Personal Productivity Governance)
 
-1. Download the `personal/` folder
+1. Download the Personal release folder (`docs/personal/`)
 2. Set as workspace and complete activation
-3. Run one end-to-end example: [`examples/end-to-end/01-book-production.md`](personal/examples/end-to-end/01-book-production.md)
+3. Run one end-to-end example: [`examples/end-to-end/01-book-production.md`](./examples/end-to-end/01-book-production.md)
 
 > **In one sentence**: this case shows GOAA's multi-role collaboration system going from 0 to 1, producing a 450K-word beginner book in ~30 days — a non-AI-engineer with zero programming background, relying only on the governance system (constitution/rules/memory/multi-role) to deliver high-quality long-cycle output.
 
 ### 🔴 Core (Research/Integration)
 
-1. Download the `core/` folder
-2. Read the academic paper and design principles (`docs/research/` + `docs/internals/`)
+1. Download the Core release folder (`docs/core/` + shared code at root)
+2. Read the academic paper and design principles (`docs/core/en/research/` + `docs/core/en/internals/` + `docs/personal/en/internals/`)
 3. Run a framework integration example: `integrations/langchain/minimal-example.py` (rules-first + memory-last)
 
 ```python
@@ -225,12 +225,12 @@ def load_goaa_rules(goaa_root):
     """① Rules-first: load GOAA basic law + rules into the system prompt"""
     p = Path(goaa_root)
     prompt = "You are an AI assistant governed by GOAA constraints.\n\n"
-    prompt += p.joinpath("constitution/basic_law.md").read_text(encoding="utf-8") + "\n\n"
-    prompt += p.joinpath("rules/rules.yaml").read_text(encoding="utf-8") + "\n"
+    prompt += p.joinpath("docs/personal/en/constitution/basic_law.md").read_text(encoding="utf-8") + "\n\n"
+    prompt += p.joinpath("docs/personal/en/rules/rules.yaml").read_text(encoding="utf-8") + "\n"
     prompt += "\nExecute the task under the above rules. Submit key decisions to the human side."
     return prompt
 
-goaa_root = Path(".").resolve()          # points to this directory when run inside core/
+goaa_root = Path(".").resolve()          # repository root (run this script at the repo root)
 system_prompt = load_goaa_rules(goaa_root)
 llm = ChatOpenAI(model="gpt-4", temperature=0)
 
@@ -252,7 +252,7 @@ result = agent_executor.invoke({"input": "Please write a brief introduction to t
 print(result["output"])
 ```
 
-How to run: `pip install langchain langchain-openai` and configure your model API key, then run the code above **inside the `core/` directory** (or run the full version directly: `python3 integrations/langchain/minimal-example.py` · includes memory-last) — your Agent is constrained by GOAA's constitution and rules, key decisions go to the human side, and output lands back in local memory.
+How to run: `pip install langchain langchain-openai` and configure your model API key, then run the code above **at the repository root** (or run the full version directly: `python3 integrations/langchain/minimal-example.py` · includes memory-last) — your Agent is constrained by GOAA's constitution and rules, key decisions go to the human side, and output lands back in local memory.
 
 ---
 
@@ -275,7 +275,7 @@ If you use GOAA in your research, please cite:
 
 ## License
 
-Apache-2.0 (see [LICENSE](LICENSE))
+Apache-2.0 (see [LICENSE](./LICENSE))
 
 ---
 
@@ -287,7 +287,7 @@ The name "GOAA" belongs to the author, Jianlong Yin. Modified versions that viol
   <img src="assets/logos/GOAA-logo.png" alt="GOAA Official Logo" width="150">
 </p>
 
-See [version policy](core/docs/version-policy.md).
+See [version policy](docs/core/en/version-policy.md).
 
 ---
 

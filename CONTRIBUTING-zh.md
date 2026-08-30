@@ -31,11 +31,11 @@ GOAA 仓库由**三个发行版**组成，贡献请先明确落位：
 
 ## 证伪入口（GOAA 最重视的贡献）
 
-**我们不求你相信，只求你来证伪。** 如果你认为 GOAA 的理论或主张有问题，请使用 [证伪/质疑模板](.github/ISSUE_TEMPLATE/falsification.md) 提交 Issue：
+**我们不求你相信，只求你来证伪。** 如果你认为 GOAA 的理论或主张有问题，请使用 [证伪/质疑模板](./.github/ISSUE_TEMPLATE/falsification.md) 提交 Issue：
 
-1. 先看 [预注册自曝清单](core/docs/known-limits.md)——我们已经公开了已知局限和未验证主张
+1. 先看 [预注册自曝清单](docs/core/zh/known-limits.md)——我们已经公开了已知局限和未验证主张
 2. 提交 Issue，描述你的质疑（**请附事实依据**）
-3. 你的质疑会被记录到 [证伪登记册](core/docs/falsification-log.md)，并得到公开回应
+3. 你的质疑会被记录到 [证伪登记册](docs/core/zh/falsification-log.md)，并得到公开回应
 
 **每一条有事实依据的质疑，都是 GOAA 理论进步的机会。**
 
@@ -47,7 +47,7 @@ GOAA 仓库由**三个发行版**组成，贡献请先明确落位：
   - 问题描述/概念讨论点
   - 你的预期与实际情况
 - **好第一个 Issue（good first issue）**：标注此标签的 Issue 适合新贡献者入手，通常是文档纠错、示例补充、小工具优化等低门槛任务。
-- Bug 报告请使用 [bug 报告模板](.github/ISSUE_TEMPLATE/bug_report.md)。
+- Bug 报告请使用 [bug 报告模板](./.github/ISSUE_TEMPLATE/bug_report.md)。
 
 ## PR
 

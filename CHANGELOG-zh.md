@@ -2,6 +2,17 @@
 
 所有显著变更均记录于本文件。格式基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，版本遵循语义化版本（SemVer）。
 
+## [未发布]
+
+### 变更 · 目录结构规范化（文档中心化 · 2026-08-31）
+
+- **文档集中到 `docs/`**——三发行版 × 双语言：`docs/lite/{en,zh}/` · `docs/personal/{en,zh}/` · `docs/core/{en,zh}/`（取代原六个平铺目录 `core/`·`core-zh/`·`personal/`·`personal-zh/`·`lite/`·`lite-zh/`）；
+- **语言去伪装**：`-zh` 伪版本取消——语言改为子目录（`en/` / `zh/`），不再伪装成版本；
+- **代码与文档分离**：`tools/` · `integrations/` · `examples/` · `plugins/` 统一放仓库根级（不再各版复制）；
+- **内容去重**：Personal 与 Core 共享文档只存一份（Core 仅保留扩展件：论文/案例集/证伪/已知局限/兼容性/版本策略）；仓库文件数 362 → 212；
+- **根级元文件统一**：单一 `LICENSE` · `CITATION.cff` · `VERSION` · `CONTRIBUTING` · `CODE_OF_CONDUCT.md` · `SECURITY.md`；新增 `STRUCTURE.md` 说明结构；
+- **脚本/CI 适配**：`tools/validator.py` 与 `tools/verify-ownership.py` 路径更新（在仓库根运行）· CI 自检改为根级跑两脚本。
+
 ## [v0.1.0] - 2026-08-29
 
 ### 首次发布 · GOAA 三发行版
@@ -25,7 +36,7 @@ GOAA（治理导向型 Agent 架构）v0.1.0 正式发布——治理基座 + �
 
 #### 已知局限
 
-完整清单见 [docs/known-limits.md](core/docs/known-limits.md)。要点：
+完整清单见 [docs/known-limits.md](docs/core/zh/known-limits.md)。要点：
 
 - 核心主张（100% 人决断降低总成本等）以理论论证 + 案例为主，严格对照实验待学术线推进
 - 框架集成示例为最小可运行演示（证明可集成·非生产级性能对比）

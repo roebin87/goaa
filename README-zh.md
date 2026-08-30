@@ -7,7 +7,7 @@
 > **让 AI 可治理，让记忆归己，让协作有序。**  
 > *Make AI governable. Keep memory yours. Order in collaboration.*
 
-[English](README.md)
+[English](./README.md)
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22165301-blue)](https://doi.org/10.5281/zenodo.22165301)
@@ -30,7 +30,7 @@ GOAA 的日常运转不是「AI 自主决策」，而是一个**两仪机制**�
 生成端（AI 生产）↔ 检验端（规则/校验·只检不判）→ 裁决端（人裁闭环）
 ```
 
-![两仪机制架构图](assets/images/goaa-two-mechanism.svg)
+![两仪机制架构图](./assets/images/goaa-two-mechanism.svg)
 
 - **生成端**：AI 在规则约束下执行生产——写稿、查证、落盘、修改；
 - **检验端**：规则与校验器检查产出（死链/残留/一致性）——**只检不判**，不代替人下结论；
@@ -81,9 +81,9 @@ GOAA 提供三个发行版，从简到繁，满足不同用户的需求：
 
 | 发行版 | 定位 | 文件数 | 适合谁 | 核心证明动作 |
 |---|---|---|---|---|
-| 🟢 **[Lite](lite/)** | 启蒙版 | 15 | 完全不懂技术的小白 | 5 分钟验证「你的记忆属于你」 |
-| 🟡 **[Personal](personal/)** | 个人生产力版 | 154（含 en 双语） | 有 AI 经验的创作者/小团队 | 多角色协作 + 记忆插件 + 端到端实证 |
-| 🔴 **[Core](core/)** | 全成果开源版 | 181（含 en 双语） | 开发者/架构研究者/行业 | 学术论文 + 案例集 + 框架集成 + 证伪机制 |
+| 🟢 **[Lite](docs/lite/zh/)** | 启蒙版 | 15 | 完全不懂技术的小白 | 5 分钟验证「你的记忆属于你」 |
+| 🟡 **[Personal](docs/personal/zh/)** | 个人生产力版 | 154（含 en 双语） | 有 AI 经验的创作者/小团队 | 多角色协作 + 记忆插件 + 端到端实证 |
+| 🔴 **[Core](docs/core/zh/)** | 全成果开源版 | 181（含 en 双语） | 开发者/架构研究者/行业 | 学术论文 + 案例集 + 框架集成 + 证伪机制 |
 
 > 三版均含中英双语（`en/` 镜像）。核心概念文档（constitution/mechanisms/docs/concepts 等）已全部提供英文版。
 
@@ -131,7 +131,7 @@ GOAA 的演进沿一条主线展开：**从数据归属 → 人机权责 → 多
 - **治理型智能体基座**（当前探索主线）：把「文件系统级治理」向「可运行的治理型基座」推进——治理不依赖特定 AI 平台、人人可跑、所有权在使用者侧。
 - **方向展示 · 非承诺**：本板块=方向公开（非内部实现披露）·探索进展以学术论文与后续发布为准·核心机制不公开边界不变。
 
-> 深度理论见 [GOAA 学术论文](core/docs/research/goaa-paper.md)（DOI: 10.5281/zenodo.22165301）。
+> 深度理论见 [GOAA 学术论文](docs/core/zh/research/goaa-paper.md)（DOI: 10.5281/zenodo.22165301）。
 
 ---
 
@@ -144,7 +144,7 @@ GOAA 围绕三条原则展开——它们不是「宣称」，而是**你随时�
    > **正确理解（主权与执行分离）**：100% 人决断 = **主权在人**（权责合一·最终裁决归人）·**执行可让渡**（AI 在规则与机制内自主执行）——不是「每一件事都等人拍板」，而是「规则覆盖内 AI 放手干·规则未覆盖或关键节点由人裁决」。这样既保证人的最终权责，又不把人累死在琐碎审批上。
 3. **治理优先**——先立规矩再干活：规则写在文件里、可被校验，而不是依赖 AI 的即兴判断。
 
-> 原则的演进方式见 [版本策略](core/docs/version-policy.md)——我们希望能持续改进，也欢迎任何基于事实的讨论。
+> 原则的演进方式见 [版本策略](docs/core/zh/version-policy.md)——我们希望能持续改进，也欢迎任何基于事实的讨论。
 
 ---
 
@@ -154,9 +154,9 @@ GOAA 围绕三条原则展开——它们不是「宣称」，而是**你随时�
 
 如果你认为 GOAA 的理论或主张有问题：
 
-1. 先看 [预注册自曝清单](core/docs/known-limits.md)——我们已经公开了已知局限和未验证主张
+1. 先看 [预注册自曝清单](docs/core/zh/known-limits.md)——我们已经公开了已知局限和未验证主张
 2. 提交 Issue，描述你的质疑（请附事实依据）
-3. 你的质疑会被记录到 [证伪登记册](core/docs/falsification-log.md)，并得到公开回应（锚定事实 + 公知参照 + AI 分析 + 人侧决断 + 固化结果）
+3. 你的质疑会被记录到 [证伪登记册](docs/core/zh/falsification-log.md)，并得到公开回应（锚定事实 + 公知参照 + AI 分析 + 人侧决断 + 固化结果）
 
 **每一条有事实依据的质疑，都是 GOAA 理论进步的机会。**
 
@@ -204,7 +204,7 @@ GOAA · 所有权验证（Ownership Verification）
 
 1. 下载 `personal/` 文件夹
 2. 设为工作区，完成激活
-3. 跑一个端到端示例：[`examples/end-to-end/01-book-production.md`](personal/examples/end-to-end/01-book-production.md)
+3. 跑一个端到端示例：[`examples/end-to-end/01-book-production.md`](./examples/end-to-end/01-book-production.md)
 
 > **效果一句话**：这份案例展示了 GOAA 多角色协作体系从 0 到 1、在约 30 天里完成一本 45 万字入门书的真实生产过程——非 AI 工程师、零编程背景，仅靠治理体系（宪法/规则/记忆/多角色）完成长周期高质量产出。
 
@@ -225,12 +225,12 @@ def load_goaa_rules(goaa_root):
     """① 规则前置：把 GOAA 基本法 + 规则装进系统提示词"""
     p = Path(goaa_root)
     prompt = "你是一个受 GOAA 治理约束的 AI 助手。\n\n"
-    prompt += p.joinpath("constitution/basic_law.md").read_text(encoding="utf-8") + "\n\n"
-    prompt += p.joinpath("rules/rules.yaml").read_text(encoding="utf-8") + "\n"
+    prompt += p.joinpath("docs/personal/zh/constitution/basic_law.md").read_text(encoding="utf-8") + "\n\n"
+    prompt += p.joinpath("docs/personal/zh/rules/rules.yaml").read_text(encoding="utf-8") + "\n"
     prompt += "\n请在上述规则约束下执行任务。关键决定请提交人侧决断。"
     return prompt
 
-goaa_root = Path(".").resolve()          # 在 core/ 目录内运行时指向本目录
+goaa_root = Path(".").resolve()          # 仓库根目录（在仓库根运行本脚本）
 system_prompt = load_goaa_rules(goaa_root)
 llm = ChatOpenAI(model="gpt-4", temperature=0)
 
@@ -275,7 +275,7 @@ print(result["output"])
 
 ## 许可证
 
-Apache-2.0（详见 [LICENSE](LICENSE)）
+Apache-2.0（详见 [LICENSE](./LICENSE)）
 
 ---
 
@@ -287,7 +287,7 @@ Apache-2.0（详见 [LICENSE](LICENSE)）
   <img src="assets/logos/GOAA-logo.png" alt="GOAA 官方徽标" width="150">
 </p>
 
-详见 [版本策略](core/docs/version-policy.md)。
+详见 [版本策略](docs/core/zh/version-policy.md)。
 
 ---
 

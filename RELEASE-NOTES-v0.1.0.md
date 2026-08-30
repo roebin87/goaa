@@ -46,7 +46,7 @@ Use `CITATION.cff` (DOI: `10.5281/zenodo.22165301`) · License Apache-2.0.
 
 ## Version Commitment
 
-- **Open & principled (finalized 2026-08-29 · Option 3)**: the code is fully open and evolves with social verification; the three core principles (data sovereignty / 100% human decision / governance first) are prudently upheld — any future change requires a change proposal + the author's final adjudication with full argumentation. See [version policy](core/docs/version-policy.md).
+- **Open & principled (finalized 2026-08-29 · Option 3)**: the code is fully open and evolves with social verification; the three core principles (data sovereignty / 100% human decision / governance first) are prudently upheld — any future change requires a change proposal + the author's final adjudication with full argumentation. See [version policy](docs/core/en/version-policy.md).
 - **Core mechanisms stay undisclosed** (this repo = generic open-source master copy · no personal config / runtime memory / project assets).
 - **Peripheral ecosystem open for contribution** (see CONTRIBUTING).
 

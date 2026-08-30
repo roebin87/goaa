@@ -7,7 +7,7 @@ on:
 
 jobs:
   self-check:
-    name: 三版自检（verify-ownership + validator）
+    name: 自检（verify-ownership + validator）
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -18,14 +18,8 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Lite · 所有权验证（verify-ownership.py）
-        working-directory: lite
+      - name: 所有权验证（Lite 发行版核心·verify-ownership.py）
         run: python tools/verify-ownership.py
 
-      - name: Personal · validator
-        working-directory: personal
-        run: python tools/validator.py
-
-      - name: Core · validator
-        working-directory: core
+      - name: 一致性校验（Personal/Core 文档标准区·validator.py）
         run: python tools/validator.py
