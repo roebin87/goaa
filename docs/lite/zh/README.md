@@ -22,7 +22,7 @@ GOAA 是**治理型 AI 架构**：主流工具解决"怎么让 AI 干活"，GOAA
 ## 怎么开始（三步）
 
 1. **下载**：把本 `lite/` 文件夹整个下载到你的电脑（随便放哪都行）；
-2. **打开**：在 AI 助手（如 WorkBuddy / Claude / Cursor 等本地工具）中，**把 `lite/` 文件夹设为工作区**——就是含本 README 的这一层；
+2. **打开**：在 AI 助手（如 WorkBuddy / Claude / Cursor 等本地工具）中，**把本文件夹（`docs/lite/zh/`）设为工作区**——就是含本 README 的这一层；
 3. **说话**：对 AI 说 **"你好"**——它会自动开始引导，5 分钟创建你的专属 AI 伙伴。
    - 如果 AI 没有自动开始，请对它说：**"读取 mechanisms/onboarding-lite.md 并按其中的指示开始"**。
 
