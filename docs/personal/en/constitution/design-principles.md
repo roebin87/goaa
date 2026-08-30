@@ -59,7 +59,7 @@ Axiom layer (four axioms · stable kernel)
   → Scenario application layer (individual → micro team)
 ```
 
-- **Governance as foundation, execution as add-on**: contrary to "execution first, governance later", GOAA builds the governance foundation first, with execution capability carried on top as a replaceable add-on — governance mechanisms are not bound to any specific model or framework
+- **Governance as foundation, execution as add-on**: contrary to "execution first, governance later", GOAA builds the governance substrate first, with execution capability carried on top as a replaceable add-on — governance mechanisms are not bound to any specific model or framework
 - **Bottom-up dependency**: upper layers depend on the lower layers' determinism; lower layers do not depend on upper-layer implementation details — as long as the file system exists, the governance loop runs
 - **Rule tiers**: constitutional → mechanism → methodology → instance — generic rules accumulate for reuse, one-off tasks are used and discarded, one-off tasks never pollute generic rules
 
