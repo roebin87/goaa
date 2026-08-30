@@ -1,9 +1,11 @@
 ﻿# Mechanism · Startup Sequence (Generic · V1.0 EN)
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > Like opening-up checks before the shop opens — every new conversation, the instance loads its identity and memory, then responds.
 > **Single version 1.0** · transcreation.
 
 ## Loading order (on every new conversation)
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 1. **Constitution** (rules first): `constitution/basic_law.md` — the highest rules
 2. **Identity**: `identity/` — who am I, whose assistant

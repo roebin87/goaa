@@ -1,4 +1,5 @@
 # distill.md · Template (Cross-Day Continuation Essence)
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 > **Purpose**: every wrap-up the AI condenses "what mattered most this session" here — next time you open, the AI continues from your last session using it.
 > **Style**: overwrite (update to the latest version at each wrap-up).

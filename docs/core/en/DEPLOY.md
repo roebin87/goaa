@@ -1,4 +1,5 @@
 ﻿# GOAA · Self-Bootstrap Deployment Instructions (DEPLOY · Single-Track V2.0)
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > Copy the full "Deployment Instructions" below and paste to any AI assistant with local file read/write capability (Claude / ChatGPT / local models).
 > The AI will automatically complete the local deployment of the GOAA architecture. **Single-track principle (2026-08-27 ruling): this workspace IS the body — no second directory structure is created.**

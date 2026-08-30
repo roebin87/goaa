@@ -3,6 +3,7 @@
 > Meta-mechanism — ambiguity cannot be eliminated (Mother Axiom ④), but it moves from "tolerated defect" to "surfaced and governed object".
 
 ## Five-layer resolution (surface → locate → rule → solidify → retire)
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 | Layer | Ambiguity | Surface signal | Action |
 |-------|-----------|---------------|--------|

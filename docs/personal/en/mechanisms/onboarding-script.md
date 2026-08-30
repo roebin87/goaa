@@ -1,4 +1,5 @@
 # First-Activation Script (Human-Semantic · AI follows this verbatim)
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > **Purpose**: the script an AI speaks verbatim during first-activation onboarding (human-semantic, no programming fields).
 > **Version**: V2.1 EN · 2026-08-26 · transcreation per [glossary](../glossary.md)

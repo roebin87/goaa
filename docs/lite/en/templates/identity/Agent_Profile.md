@@ -1,4 +1,5 @@
 # Agent_Profile.md · Template (Your AI Companion Portrait)
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 > **Purpose**: the AI's own "identity card" — what it's called, what role it plays, where its boundaries are.
 

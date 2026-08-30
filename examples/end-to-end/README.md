@@ -1,4 +1,5 @@
 # GOAA End-to-End Real-World Examples
+> **语义形态**：人语义（意图锚·概念解释·阅读）
 
 > This directory contains real landing cases of GOAA architecture, each based on the designer's actual practice, showing how GOAA is used in real scenarios, key steps, final results, and review points.
 

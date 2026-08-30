@@ -1,4 +1,5 @@
 # Methodology 02 · Human-Machine Semantic Ambiguity Resolution (Method Points)
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > **Role**: this methodology provides the reusable **method points** for ambiguity resolution; the **authoritative mechanism detail is in `mechanisms/ambiguity-governance.md`** — same source, mechanism is authoritative, this file offers method points and use cases.
 

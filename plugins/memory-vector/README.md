@@ -1,4 +1,5 @@
 # memory-vector · Memory Vector Index Plugin (optional)
+> **语义形态**：人语义（意图锚·概念解释·阅读）
 
 > **Purpose**: An **optional enhancement plugin** for the Personal edition — adds "dual indexing" to memory retrieval: a zero-dependency keyword inverted index by default, plus an optional local vector index.
 > **Core promise**: Index files **all stay local** — no cloud service calls, no API key needed — **the ownership five checks still pass** (running `tools/verify-ownership.py` remains all-green).

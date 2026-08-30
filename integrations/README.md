@@ -1,4 +1,5 @@
 # GOAA Framework Integration Examples
+> **语义形态**：人语义（意图锚·概念解释·阅读）
 
 > Integration examples showing GOAA as a governance substrate coexisting with mainstream enhanced-agent frameworks.
 

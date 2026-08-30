@@ -1,4 +1,5 @@
 # 05 · GOAA Neural Flow Stereo Operation Diagram (Simplified)
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > This document uses simplified flowcharts to show GOAA system's core operation logic. This is a simplified version; full internal operation diagram is not yet public.
 

@@ -1,4 +1,5 @@
 # Governance Case Studies
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Position**: Case-based evidence for the GOAA governance paradigm — using the author's **real production history** as proof: book → paper → open-source three editions, all produced by the GOAA system itself. Case-based argumentation (instead of comparative experiments) demonstrates that governance is not theory but **reproducible practice**.
 

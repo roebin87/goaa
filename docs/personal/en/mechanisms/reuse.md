@@ -3,6 +3,7 @@
 > Reuse = physical exponentiation of the index — methodologies/rules "produced" are inventory; only when loaded and invoked again are they assets.
 
 ## The three-stage loop
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 ```
 Production · asset registration → Consumption · reuse retrieval → Value · reuse-rate monitoring

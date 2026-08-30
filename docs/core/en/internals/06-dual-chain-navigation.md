@@ -1,4 +1,5 @@
 # 06 · Dual-Chain Navigation: The Connection Scheme of File-as-Ontology (Full Version)
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > This document is the **navigation-dimension full version** of GOAA's neural flow — complementary to document 05 (runtime-loop panorama, time dimension), this one focuses on the **file-connection space** (space dimension). Core idea in one sentence: **files are the ontology, dual-chains are the navigation** — the system's cognition and consensus live in files; dual-chains only do navigation's proper work (pointing, visualizing, searching), never replacing any execution subject.
 >

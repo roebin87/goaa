@@ -1,4 +1,5 @@
 # Distillation Template (distill.md)
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 > **Purpose**: Distillation is the core of cross-conversation continuity (overwrite on write). At wrap-up, compress the most critical information of the session into a condensed file that is "a must-read for the next startup."
 > **Iron rule**: Distillation ≠ verbatim record (verbatim goes to conversation records); distillation keeps "key points and thread"; leave blank what the machine cannot understand for the owner to decide; distillation never replaces the original (full backup = absolute insurance against loss).

@@ -1,4 +1,5 @@
 ﻿# Core Concept · The Falsifier (a strong order gate)
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Series**: docs/concepts core-concept series ｜ **Version**: Single version 1.0
 

@@ -1,4 +1,5 @@
 # Case 02 · Paper Production: Architecture Design Principles · Append-Only Augmentation Mechanism
+> **Semantics**: Human (intent/concept layer · reading)
 
 > This case demonstrates the application of the GOAA governance paradigm to an **academic theoretical carrier** — the production of the *Governance-Oriented Agent Architecture (GOAA)* Architecture Design Principles paper (V1.0 → V2.5). Core evidence: the **append-only authority-source** anti-entropy mechanism + per-change traceability + the entropy-repositioning principle.
 

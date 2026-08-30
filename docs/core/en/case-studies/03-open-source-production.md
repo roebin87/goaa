@@ -1,4 +1,5 @@
 # Case 03 · Open-Source Production: Three Editions · Governance-Driven Public Release
+> **Semantics**: Human (intent/concept layer · reading)
 
 > This case demonstrates the application of the GOAA governance paradigm to **open-source public release** — the production and validation of this very project (GOAA three editions: Lite / Personal / Core). Core evidence: **full validation, not sampling** + **wording discipline** + **proper-subset monotonicity** + **five-check ownership verification**.
 

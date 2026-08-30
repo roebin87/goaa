@@ -1,4 +1,5 @@
 # GOAA + CrewAI Integration Example
+> **语义形态**：人语义（意图锚·概念解释·阅读）
 
 > Integration example of GOAA's multi-role mechanism with the CrewAI multi-role collaboration framework.
 

@@ -1,4 +1,5 @@
 # Mechanism · First-Activation Onboarding (Script · Lite Edition)
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > **Purpose**: the onboarding flow when the AI meets its principal for the first time — done in 5 minutes, zero jargon.
 > **Trigger**: the startup three steps find `identity/USER.md` absent → run this flow.

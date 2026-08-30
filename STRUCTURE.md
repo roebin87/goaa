@@ -1,4 +1,5 @@
 # STRUCTURE.md · GOAA Repository Structure
+> **语义形态**：人语义（意图锚·概念解释·阅读）
 
 > **One look tells you where things live.** GOAA separates documentation from code, and versions from languages — no `-zh` pseudo-versions, no docs scattered inside code directories.
 

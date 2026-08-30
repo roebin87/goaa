@@ -1,4 +1,5 @@
 # Version Policy
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Status**: **Effective** (2026-08-29 author final decision · Scheme 3: full open + carefully upheld core principles) — code fully open and evolving with social validation; three core principles carefully upheld, change requires full justification.
 

@@ -1,4 +1,5 @@
 # Changelog
+> **语义形态**：人语义（意图锚·概念解释·阅读）
 
 All notable changes are recorded in this file. Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow Semantic Versioning.
 

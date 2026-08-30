@@ -1,4 +1,5 @@
 ﻿# Comparison: GOAA vs. LangGraph / AutoGen / dsh (governance-layer uniqueness)
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Position**: GOAA versus mainstream agent engineering frameworks — **same form, different object layer**: they manage "engineering correctness," GOAA manages "ownership / decision rights / entropy growth."
 > **Evidence source**: 2026-08-19 GitHub source-file-level verification (LangGraph/AutoGen/dsh) + live star counts.

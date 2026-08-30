@@ -3,6 +3,7 @@
 > **Written ≠ effective.** A rule takes effect only after passing validation — the effect gate is the mechanism that makes "writing" meaningful.
 
 ## The gate (three checks)
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 1. **Structure check**: the rule file is in place, named per naming rules, located in the right layer;
 2. **Semantic sync check**: consistent with the constitution/design-principles wording (no drift);

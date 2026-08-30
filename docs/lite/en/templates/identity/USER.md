@@ -1,4 +1,5 @@
 # USER.md · Template (Your Profile)
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 > **Purpose**: records "who you are, how you like to work together" — the AI reads it at every startup to make sure it remembers you.
 

@@ -1,4 +1,5 @@
 # Core Concept · Priority Rules & Single Source of Truth (the two anti-drift laws)
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Series**: docs/concepts core-concept series ｜ **Version**: Single version 1.0
 

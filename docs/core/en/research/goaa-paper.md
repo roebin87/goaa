@@ -1,4 +1,5 @@
 # The GOAA Academic Paper (Formal Verification Vehicle)
+> **Semantics**: Machine (architecture principle paper · How)
 
 > This document is the **academic theory entry point** of the GOAA architecture — the full paper is archived open-access on Zenodo. This page provides the paper's identity, core claims, and the three-boundary declaration. This document is the theoretical anchor within this repository; design rationale and implementation details live in `docs/internals/` and the mechanism documents.
 

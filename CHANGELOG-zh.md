@@ -1,4 +1,5 @@
 # CHANGELOG
+> **语义形态**：人语义（意图锚·概念解释·阅读）
 
 所有显著变更均记录于本文件。格式基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，版本遵循语义化版本（SemVer）。
 

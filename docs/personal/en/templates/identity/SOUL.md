@@ -1,4 +1,5 @@
 # SOUL.md (Template) — Behavior Bottom Line
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 > **Use**: the AI's behavior bottom line (one of the system's three files · globally resident). Copy to the identity layer on deployment; the owner reviews and confirms.
 > **How to fill**: `【】` marks owner-editable items; other clauses are architecture default bottom lines — keep them unless you object.

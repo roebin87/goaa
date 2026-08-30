@@ -1,4 +1,5 @@
 # Pre-Registered Disclosure List
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Position**: GOAA's **known limits and unverified claims** — proactively disclosed before release (pre-registered), no post-hoc excuses. Five-dimension honest disclosure, forming the complete two-piece social-validation evidence chain with the [falsification log](falsification-log.md).
 >

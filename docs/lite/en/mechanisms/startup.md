@@ -1,4 +1,5 @@
 # Mechanism · Startup (Three Steps)
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > Every time you open the workspace, the AI loads in three steps below — set rules first, recognize identity, then pick up memory.
 

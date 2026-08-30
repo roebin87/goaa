@@ -1,4 +1,5 @@
 ﻿# Exit Guide · Come and Go Freely
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **We already live in your folder** — this is the most fundamental difference between GOAA and cloud/proprietary products: all your memories, rules, and profiles are plain-text files on your own computer — viewable, portable, and migratable anytime.
 

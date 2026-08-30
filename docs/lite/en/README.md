@@ -1,4 +1,5 @@
 # GOAA Lite · Beginner Edition
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Make AI governable. Keep your memory yours.**
 > **让 AI 可治理，让记忆归己。**

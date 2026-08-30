@@ -1,4 +1,5 @@
 # dialogue-record.md · Template (Verbatim Retention)
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 > **Purpose**: every wrap-up stores this session's conversation **verbatim** here — your complete collaboration history, append-only, never edited or deleted.
 > **Style**: append (never delete any line).

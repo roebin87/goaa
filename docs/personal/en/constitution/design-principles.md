@@ -1,4 +1,5 @@
 # GOSAA Design Principles (Generic · V1.0 EN)
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > **Role**: this file answers two questions — **why** it is designed this way (rationale · Why) and **how** the architecture is built (method · How). Design Philosophy and Design Principles are merged here: both the rationale and the method.
 > **Authoritative counterpart**: aligned with the GOAA architecture design principles academic paper (the master draft) — axiom system, file foundation, five-layer architecture, rule governance, normalized adjudication, and generation evolution all follow the paper's wording.

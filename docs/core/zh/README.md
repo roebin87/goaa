@@ -1,4 +1,5 @@
 # GOAA · 全成果开源版（Core）
+> **语义形态**：人语义（意图锚·概念解释·阅读）
 
 > **研究治理型架构，自举自证——向行业证明「治理基座 + 能力外挂」是最优 Agent 架构方向。**
 > *Research the governance-first architecture. Self-bootstrap, self-prove.*

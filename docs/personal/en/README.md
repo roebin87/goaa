@@ -1,4 +1,5 @@
 # GOAA · Personal Edition
+> **Semantics**: Human (intent/concept layer · reading)
 
 > A governance-oriented agent architecture — makes AI **reliable**, not just capable. Your AI's memory lives in files that **belong to you**.
 > *Make AI governable. Keep your memory yours.*

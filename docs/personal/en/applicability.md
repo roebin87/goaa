@@ -1,4 +1,5 @@
 ﻿# Applicability Boundary (author's statement)
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Position**: this file is the author's **responsible boundary statement** to users — GOAA cannot do everything, and the author is obliged to tell users "what it fits and what it does not."
 > **Version**: Single version 1.0 ｜ **Date**: 2026-08-19

@@ -1,4 +1,5 @@
 # 03 · GOAA Normalized Adjudication Loop Working Principles
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > This document publishes the design principles and workflows of GOAA's normalized adjudication loop.
 

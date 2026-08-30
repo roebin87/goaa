@@ -1,4 +1,5 @@
 # Collected Sayings Template (Sayings)
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 > **Purpose**: Collected sayings = daily extraction and archiving of the owner's thoughts/quotes (topic-indexed) — the concrete embodiment of "recording and distilling is the only way to make AI remember a human." Capture the owner's exact words and insights from conversation into topic files.
 > **Iron rule**: Keep the owner's exact words verbatim first (no condensing, no paraphrasing); take statements as statements (do not break them into proposition analyses); do not force answers to rhetorical questions.

@@ -1,4 +1,5 @@
 ﻿# Workspace Directory Overview (template) — Single-Track Body Structure (V2.0)
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 > **Purpose**: this file is the directory-structure overview of the body (this workspace) — **single-track principle (2026-08-27 ruling): this workspace IS the body** · `constitution/` `rules/` `mechanisms/` etc. are the body layers; no second deployment copy.
 > **vs V1.0**: V1.0 showed the dual-track "create a new second directory + copy components" layout — deprecated; single-track = the repo IS the body, and the onboarding script auto-creates `_Memory/` and `identity/`.

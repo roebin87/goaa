@@ -3,6 +3,7 @@
 > Every task passes the problem gate before work starts — is this a real problem worth investing in, or a fake one to intercept?
 
 ## The gate
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 1. True problem (fillable cognitive gap) → initiate
 2. Fake problem (false gap) → intercept, no investment

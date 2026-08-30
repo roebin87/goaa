@@ -1,4 +1,5 @@
 ﻿# Core Concept · Entropy Governance (negative entropy against entropy growth)
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Series**: docs/concepts core-concept series ｜ **Version**: Single version 1.0
 

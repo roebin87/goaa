@@ -1,4 +1,5 @@
 # Multi-Role Collaboration Mechanism (multi-role)
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > **Purpose**: A multi-role division mechanism for personal productivity scenarios — one AI plays different roles under different rule constraints, completing complex production (books/reports/code/research and other deliverables that require "division + review") through **file flow**.
 > **Principle**: Multi-role is execution-level division; **adjudication always belongs to the human** (the 100% human decision-rights mother axiom is unchanged).

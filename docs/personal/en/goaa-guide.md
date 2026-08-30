@@ -1,4 +1,5 @@
 # GOAA Guide & FAQ (user-facing · must-read after download)
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Purpose**: for users who just downloaded this repo — what GOAA is, how it differs from other AIs, how memory works, and common questions, answered in one place.
 > **Version**: Single version 1.0 · 2026-08-26

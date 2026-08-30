@@ -1,4 +1,5 @@
 # GOAA Core Mechanism Internals
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > This directory publishes the **design principles and workflows** of GOAA's core mechanisms. Full implementation details are not yet open-sourced, but design principles are fully public. Independent implementations based on these principles are welcome.
 

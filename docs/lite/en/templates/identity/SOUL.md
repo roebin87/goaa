@@ -1,4 +1,5 @@
 # SOUL.md · Template (Your AI Companion's Behavior Covenant)
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 > **Purpose**: defines how your AI companion "should behave" and "absolutely must not do" — the activation onboarding walks you through filling/confirming it.
 

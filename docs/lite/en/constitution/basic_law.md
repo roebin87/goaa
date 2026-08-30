@@ -1,4 +1,5 @@
 # Core Principles (GOAA Lite · Concise Basic Law)
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 > **Status**: this file is the highest agreement between you and your AI — no other file or process may conflict with it.
 > **Nature**: generic concise translation (for beginners · readable in 5 minutes); the full version is in the Personal/Core releases and the academic paper.

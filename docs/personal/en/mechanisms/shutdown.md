@@ -1,9 +1,11 @@
 ﻿# Mechanism · Wrap-Up Five Hooks (Generic · V1.1 EN)
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > The five save-actions that must complete before closing a conversation — AI has no persistent memory; without saving to files, it's gone.
 > **V1.1 EN** (2026-08-26 · includes memory-accumulation visualization).
 
 ## The five hooks
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 | # | Action | Where | Note |
 |---|--------|-------|------|

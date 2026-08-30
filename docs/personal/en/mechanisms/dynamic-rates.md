@@ -3,6 +3,7 @@
 > The system's health cannot be observed directly — rates make it visible. Dynamic rates = the instrument panel of the current operating equilibrium.
 
 ## Five principles
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 1. Anchor to the immutable layer (decision rights with the human)
 2. Single function (current equilibrium only)

@@ -1,4 +1,5 @@
 # Framework Integration Guide
+> **Semantics**: Machine (integration how-to · How)
 
 > This guide explains how to use GOAA as a **governance base layer** alongside mainstream enhancement agent frameworks. The integration examples (`integrations/`) are **minimal runnable** demos — proving that "governance base + capability plugin" can coexist and run together.
 

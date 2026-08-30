@@ -1,4 +1,5 @@
 # Agent_Profile.md (Template) — Identity File
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 > **Use**: the AI's identity file (L1 identity-level) — "who this instance is, what it does, where its permission boundaries are". Copied to the identity layer on deployment, used with the three system files.
 > **How to fill**: `【】` = owner/deployer fill-ins.

@@ -1,4 +1,5 @@
 ﻿# AGENTS.md (English Version) · AI Collaboration Guidelines
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > **Purpose**: Behavioral guidelines for AI assistants collaborating in this repository (aligned with AGENTS.md conventions in dsh/LangChain). Any AI participating (contributing / reviewing / deploying / using) reads this file first.
 > **Version**: Single version 1.0 (2026-08-26 · wake-up hook & deep-question rule added)

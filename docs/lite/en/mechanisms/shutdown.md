@@ -1,4 +1,5 @@
 # Mechanism · Wrap-Up (Five Actions)
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > Five save actions that must complete before ending a conversation — **the AI has no memory; if it's not persisted, it's gone**.
 

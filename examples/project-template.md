@@ -1,4 +1,5 @@
 ﻿# Example · Project Workspace Template (EN)
+> **Semantics**: Programming (fillable template · fixed structure)
 
 > 2.0 project orientation: one project folder = a four-part structure. This example shows how to set up a project workspace (generic example).
 

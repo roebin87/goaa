@@ -1,4 +1,5 @@
 # Falsification Log
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Position**: GOAA's social-validation evidence chain — every objection to GOAA's claims, its analysis, adjudication, and consolidated result, registered here line by line. **We don't ask you to believe; we ask you to falsify.**
 >

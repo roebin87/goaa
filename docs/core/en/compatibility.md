@@ -1,4 +1,5 @@
 # Compatibility Proof: GOAA Is a Substrate, Not a Replacement
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Position**: GOAA's substrate thesis — **GOAA does not replace any augmented Agent framework; it coexists with them as a governance substrate**. This document proves that "governance substrate + capability plugin" is compatible and gives the coexistence interfaces and the evidence chain.
 

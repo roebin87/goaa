@@ -1,4 +1,5 @@
 # Ownership · Why your AI memory is 100% yours
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Purpose**: A line-by-line explanation of the five checks in `verify-ownership.py`, the two manual verifications, and the exit/migration guide.
 

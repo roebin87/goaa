@@ -1,4 +1,5 @@
 ﻿# Project Introduction Supplement
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Position**: this file is supplementary material for the open-source project's external introduction, in three parts: **external-review highlights** (third-party endorsement) / **first-mover verification self-audit report** (method + evidence) / **architecture design profile report** (value anchoring).
 > **Version**: Single version 1.0 ｜ **Date**: 2026-08-19

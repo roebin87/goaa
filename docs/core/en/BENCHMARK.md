@@ -1,4 +1,5 @@
 ﻿# BENCHMARK.md · Running Benchmarks
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > **Purpose**: measurable baseline for architecture standing / running quality — **architecture standing = measurable** (verification-effective principle: written ≠ effective; effective must be measurable).
 > **Theory basis**: dynamic rates (result four rates) + meta-tool = falsifier (detectable + judgeable).

@@ -1,4 +1,5 @@
 # Lightweight Guide (trimming guide)
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Purpose**: the full structure serves full governance; this guide explains which directories/files can be trimmed on demand, so the architecture can both support full governance and adapt to personal-minimal/small-project scenarios.
 > **Principle**: constitutional layer / identity layer / memory chronicle = not trimmable (governance bottom line); everything else trims by scenario.

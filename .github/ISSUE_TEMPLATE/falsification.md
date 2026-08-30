@@ -6,6 +6,7 @@ labels: falsification, concept
 ---
 
 ## 你质疑的主张
+> **Semantics**: Human (contribution/community layer · reading)
 <!-- 请明确引用 GOAA 中你认为有问题的表述（章节/文件/链接） -->
 - 主张出处：
 

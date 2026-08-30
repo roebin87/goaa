@@ -1,4 +1,5 @@
 # ADR-0001 · Project Structure Finalized (governance-first · file-driven)
+> **Semantics**: Human (architecture decision record · reading)
 
 > **Status**: Accepted ｜ **Date**: 2026-08-19 ｜ **Decision-maker**: author adjudicates · AI executes
 > **Series**: docs/adr/ architecture decision records (decision trace · audit trail origin)

@@ -6,6 +6,7 @@ labels: bug
 ---
 
 ## 使用场景
+> **Semantics**: Human (contribution/community layer · reading)
 <!-- 你是在哪个发行版（lite / personal / core）下遇到问题的？是否实际运行过？ -->
 
 - 发行版：lite / personal / core / 根层

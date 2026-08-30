@@ -1,4 +1,5 @@
 # Case 03 · Governance Incident Stress Test (8.21 Rule Conflict Event)
+> **Semantics**: Machine (how-to example · operational demonstration)
 
 > Based on the designer's real practice, recording a governance incident and its complete resolution. An incident is not a failure — it's a stress test of the governance system.
 

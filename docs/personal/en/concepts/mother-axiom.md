@@ -1,4 +1,5 @@
 ﻿# Core Concept · The Mother Axiom: Human-Machine Collaboration (100% Human Decision Rights)
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Series**: docs/concepts core-concept series (solving "why others can't understand it") ｜ **Version**: Single version 1.0
 

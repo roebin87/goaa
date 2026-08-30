@@ -1,4 +1,5 @@
 # Soul Backup Template
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 > **Purpose**: Soul backup = organized/condensed record of the day's key matters (top-level survival-grade), fully covering key decisions, rule changes, learnings, and conversation highlights.
 > **Iron rule**: Record daily ／ append new files without overwriting old ones ／ once written, never modify. **Complete records, no omissions, no condensing.**

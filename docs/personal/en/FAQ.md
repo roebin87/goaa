@@ -1,4 +1,5 @@
 # GOAA Frequently Asked Questions (FAQ)
+> **Semantics**: Human (intent/concept layer · reading)
 
 > This document covers the most common questions about GOAA architecture. If your question isn't here, ask in GitHub Discussions.
 

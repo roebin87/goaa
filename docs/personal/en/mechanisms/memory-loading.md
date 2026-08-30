@@ -1,9 +1,11 @@
 ﻿# Mechanism · Memory Loading & Recovery (Generic · V1.1 EN)
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > The complete rules for layered memory loading — "what to load at startup, how to recall during work, what happens when context fills up".
 > **V1.1 EN** (2026-08-26 · includes memory recovery flow & layered management).
 
 ## 1. Default loading at startup (resident)
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 | # | Content | Source |
 |---|---------|--------|

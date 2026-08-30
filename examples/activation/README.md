@@ -1,4 +1,5 @@
 ﻿# Example · First Onboarding Tool (Onboarding Tool)
+> **语义形态**：人语义（意图锚·概念解释·阅读）
 
 > **Authoritative flow**: The **process spec for first onboarding lives in [mechanisms/onboarding.md](../../docs/personal/en/mechanisms/onboarding.md)** — this directory is only that flow's **executable tool implementation** (CLI executor), not the flow definition.
 > This example is for users who want to run onboarding from the command line; for conversational onboarding, just follow the deployment instructions in DEPLOY.md.

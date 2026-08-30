@@ -1,4 +1,5 @@
 # Daily Log Template
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 > **Purpose**: The daily log is the complete chronicle of system operation (one file per day · append-only, never delete). Distinction from soul backup: soul backup = organized day-end version (first & last of the day), log = continuous stream (appended every session).
 > **Iron rule**: **Append-only, never delete**; every entry is knowledge capital; do not record transient information (search records / temporary paths), only content of lasting value.

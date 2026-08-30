@@ -1,4 +1,5 @@
 # GOAA Lite · 启蒙版
+> **语义形态**：人语义（意图锚·概念解释·阅读）
 
 > **让 AI 可治理，让记忆归己。**
 > *Make AI governable. Keep your memory yours.*

@@ -1,4 +1,5 @@
 # IDENTITY.md · Template (Workspace Structure Map)
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 > **Purpose**: tells the AI what each folder in your workspace does — structure is the manual.
 

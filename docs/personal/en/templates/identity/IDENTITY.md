@@ -1,4 +1,5 @@
 ﻿# IDENTITY.md (Template) — Architecture Map
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 > **Use**: the AI's architecture map (one of the system's three files · globally resident) — "who I am, where I work, how memory is managed, how we collaborate". Copy to the identity layer on deployment; fill in per this system's reality.
 > **How to fill**: `【】` = owner/deployer fill-ins; square brackets = directory descriptions.

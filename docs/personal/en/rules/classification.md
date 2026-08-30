@@ -3,6 +3,7 @@
 > Classification determines how strictly a rule must be verified and who approves it. Level 1 is the most sensitive; Level 5 the most ordinary.
 
 ## The five levels
+> **Semantics**: Human (rule-layer intent anchor) + Programming (enforceable data)
 
 | Level | Scope | Approval | Verification |
 |-------|-------|----------|--------------|

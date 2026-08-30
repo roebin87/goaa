@@ -1,4 +1,5 @@
 # Conversation Record Template (A5 Verbatim Raw Transcript)
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 > **Purpose**: Conversation records are the **verbatim raw transcript** of each session (top-level survival-grade); never distill, never omit, never condense.
 > **Iron rule**: **Verbatim** — no shrinking, no shifting responsibility (expressions like "per the chat platform" are prohibited; responsibility lies with the Agent, not the platform); the file header MUST carry the phrase "Verbatim raw transcript (A5 top-level survival-grade)"; content is presented turn by turn verbatim as "Owner: exact words / Agent: reply"; **write to disk progressively as the conversation happens** — never backfill all at once at wrap-up.

@@ -1,4 +1,5 @@
 # English–Chinese Glossary (translation authority · aligned with the paper)
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Purpose**: the only term basis for the zh/ ↔ en/ correspondence — every file's renderings must match this table to avoid one term, many translations.
 > **Principle**: architecture terms = standard renderings (aligned with the paper's authority); script/emotional copy = transcreation (preserve emotional tension · native-English feel).

@@ -1,4 +1,5 @@
 # Contributing to GOAA
+> **语义形态**：人语义（意图锚·概念解释·阅读）
 
 > **Core stable, periphery iterates** — the architecture core (constitution/rules/core mechanisms) stays stable at the major version to ensure the governance substrate's determinism; the peripheral ecosystem iterates quickly, and community contributions are welcome. Thanks for any contribution that makes GOAA easier to use.
 

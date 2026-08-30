@@ -1,4 +1,5 @@
 ﻿# Mechanism · First-Activation Onboarding (Generic · V2.1 EN)
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > Like the setup guide of a new phone — on the first launch, a guided flow lets the instance "get to know you enough".
 > **This mechanism = knowledge transfer, not form-filling** — after onboarding, the owner should understand: it listens to me, it remembers me, my things are in my hands.

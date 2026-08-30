@@ -1,4 +1,5 @@
 # 04 · GOAA Dual-Source Entropy Governance Working Principles
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > This document publishes the design principles and workflows of GOAA's dual-source entropy governance framework.
 

@@ -3,6 +3,7 @@
 </p>
 
 # GOAA v0.1.0 — Governance-Oriented Agent Architecture, First Open-Source Release
+> **语义形态**：人语义（意图锚·概念解释·阅读）
 
 **Make AI governable. Keep memory yours. Order in collaboration.**
 

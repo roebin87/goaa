@@ -1,4 +1,5 @@
 ## 变更说明
+> **Semantics**: Human (contribution/community layer · reading)
 <!-- 改了什么、为什么改——请描述清楚 -->
 
 ## 关联 Issue

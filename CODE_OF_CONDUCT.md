@@ -1,4 +1,5 @@
 ﻿# Contributor Covenant Code of Conduct
+> **语义形态**：人语义（意图锚·概念解释·阅读）
 
 ## Our Pledge
 

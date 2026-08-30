@@ -1,4 +1,5 @@
 # tools/ · Utilities
+> **语义形态**：人语义（意图锚·概念解释·阅读）
 
 > Generic open-source utilities. Internal custom capabilities are not yet open-sourced (core stable version 1.0).
 

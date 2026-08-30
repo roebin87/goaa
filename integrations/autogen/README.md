@@ -1,4 +1,5 @@
 # GOAA + AutoGen Integration Example
+> **语义形态**：人语义（意图锚·概念解释·阅读）
 
 > Integration example of the GOAA governance substrate with Microsoft's AutoGen multi-agent dialogue framework.
 

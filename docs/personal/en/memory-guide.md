@@ -1,4 +1,5 @@
 # Memory Management Guide (user-facing · files are memory)
+> **Semantics**: Human (intent/concept layer · reading)
 
 > **Core**: GOAA's memory = files in your own folder — managing memory = managing files. This guide teaches you: what to record, where it lives, how to back up, how to migrate, and how to recover when lost.
 > **Version**: Single version 1.0 · 2026-08-26

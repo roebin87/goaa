@@ -1,4 +1,5 @@
 # 01 · GOAA Architecture Core Working Principles
+> **Semantics**: Machine (mechanism/translation layer · How)
 
 > This document publishes the design principles and workflows of GOAA's architecture core. Full implementation details are not yet open-sourced.
 

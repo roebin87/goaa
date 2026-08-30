@@ -1,4 +1,5 @@
 ﻿# GOAA Basic Law (Generic · V1.0 EN)
+> **Semantics**: Programming (enforceable rules · machine-checkable execution layer)
 
 > **Effect**: constitution-level · mandatory-reading · modifiable only through Section 5 procedure.
 > **Status**: the highest rules of GOAA — no rule, mechanism, or methodology may conflict with it.

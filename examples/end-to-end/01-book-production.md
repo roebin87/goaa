@@ -1,4 +1,5 @@
 # Case 01 · 450k-word Book Production with GOAA
+> **Semantics**: Machine (how-to example · operational demonstration)
 
 > This case is based on the designer's real practice, showing GOAA's multi-role collaboration system from 0 to 1, completing a 450k-word beginner's book on AI agents.
 

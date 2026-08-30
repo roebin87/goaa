@@ -1,4 +1,5 @@
 # Case 02 · GOAA Architecture Self-Bootstrapping
+> **Semantics**: Machine (how-to example · operational demonstration)
 
 > This case is based on the designer's real practice, showing how GOAA uses its own governance system as the governance object to complete the development and iteration of GOAA 2.0 architecture — the "governor governed by itself" self-bootstrapping process.
 
