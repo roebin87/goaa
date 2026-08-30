@@ -76,7 +76,7 @@ Begin the first-activation onboarding **immediately** (do not wait for more inst
 
 **Other AIs' memory lives on the vendor's server; yours lives in your hands.**
 
-- **You hold 100% decision rights (master axiom)** — sovereignty stays with you (final adjudication is yours) while execution is delegated to the AI within your rules and mechanisms. It is decision backstop, not human execution: key nodes (rule activation, consensus solidification, version iteration) are adjudicated by you, while routine work runs within covered rules
+- **You hold 100% decision rights (Mother Axiom)** — sovereignty stays with you (final adjudication is yours) while execution is delegated to the AI within your rules and mechanisms. It is decision backstop, not human execution: key nodes (rule activation, consensus solidification, version iteration) are adjudicated by you, while routine work runs within covered rules
 - **Files are memory** — files exist, the system exists. Your memory is plain-text, openable, portable — yours
 - **Governance over capability** — mainstream frameworks make AI *do more*; GOAA makes AI *trustworthy*. Capability × trustworthiness = AI that actually works for you
 

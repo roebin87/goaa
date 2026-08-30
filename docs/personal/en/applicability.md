@@ -8,7 +8,7 @@
 
 ## 1. The one-line boundary
 
-**GOAA is "broad-spectrum adaptation of a governance base," not "all-scenario coverage of an all-capable framework."** It does not solve "AI execution efficiency" — it solves "AI you can rely on": whoever uses AI as a production tool and values controllability, auditability, and traceability gets high adaptation value; whoever wants full automation and zero constraints gets low adaptation value.
+**GOAA is "broad-spectrum adaptation of a governance substrate," not "all-scenario coverage of an all-capable framework."** It does not solve "AI execution efficiency" — it solves "AI you can rely on": whoever uses AI as a production tool and values controllability, auditability, and traceability gets high adaptation value; whoever wants full automation and zero constraints gets low adaptation value.
 
 ## 2. Who it fits (author's judgment)
 

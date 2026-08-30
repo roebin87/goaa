@@ -9,7 +9,7 @@
 2. Fake problem (false gap) → intercept, no investment
 3. Undecided → pending bucket, re-review when clearer
 
-**Judgment belongs to the human** — the machine surfaces, the human rules (dual anchor: meta-rule + common knowledge).
+**Judgment belongs to the human** — the machine surfaces, the human rules (dual anchor: meta-rule + public knowledge).
 
 ## Purpose
 

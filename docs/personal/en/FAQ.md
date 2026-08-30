@@ -74,7 +74,7 @@ First-activation onboarding is jargon-free — AI talks to you in natural langua
 
 ### Q8: What can GOAA be used for?
 
-GOAA is a general governance foundation for any scenario requiring long-term AI collaboration:
+GOAA is a general governance substrate for any scenario requiring long-term AI collaboration:
 - **Personal knowledge management**: organize notes, build knowledge base, accumulate continuously
 - **Content creation**: write books/articles, multi-role collaborative production
 - **Project management**: track progress, manage todos, precipitate experience
@@ -165,9 +165,9 @@ GOAA solves "how AI is governed and belongs to you" — through file system, rul
 
 Different layers:
 - RAG is **knowledge acquisition layer** technology (enhancement)
-- GOAA is **governance foundation layer** architecture (governance)
+- GOAA is **governance substrate layer** architecture (governance)
 
-GOAA can work with RAG: use GOAA as governance foundation, RAG for knowledge retrieval. No conflict.
+GOAA can work with RAG: use GOAA as governance substrate, RAG for knowledge retrieval. No conflict.
 
 ### Q16: What's the difference between GOAA and AI memory plugins (Mem0, Zep)?
 
@@ -186,7 +186,7 @@ In short: memory plugins only solve "does AI remember," GOAA solves the complete
 
 Depends on your needs:
 - If you only need AI to "do things" without long-term governance and data ownership, LangChain/AutoGPT is enough
-- If you need AI for "long-term collaboration, remembers you, listens to you, data belongs to you," GOAA can serve as governance foundation, working with LangChain/AutoGPT
+- If you need AI for "long-term collaboration, remembers you, listens to you, data belongs to you," GOAA can serve as governance substrate, working with LangChain/AutoGPT
 
 GOAA and enhancement frameworks are **complementary**, not competitive. Enhancement frameworks provide capability (base), GOAA provides controllability (coefficient). Base × coefficient = truly usable AI collaboration.
 
