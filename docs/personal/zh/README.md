@@ -1,8 +1,8 @@
 # GOAA · 个人生产力版（Personal）
 > **语义形态**：人语义（意图锚·概念解释·阅读）
 
-> **让 AI 可治理，让记忆归己。**
-> *Make AI governable. Keep your memory yours.*
+> **原生治理导向的智能体运行基座 — 治理为底，能力为加，主权在人。**
+> *A governance-first agent substrate — governance as the base, capabilities as add-ons, sovereignty in your hands.*
 
 GOAA 是**治理型 AI 架构**：主流工具解决"怎么让 AI 干活"，GOAA 解决"怎么让 AI 干得可控、且你的东西始终是你的"。
 
@@ -58,8 +58,8 @@ GOAA 是**治理型 AI 架构**：主流工具解决"怎么让 AI 干活"，GOAA
 
 ## 怎么开始（三步·小白路径）
 
-1. **下载本文件夹**（`personal/`）到本地（若下载的是整个仓库 zip，请找到解压后的 `personal/` 文件夹）；
-2. **锚定工作区**：在 AI 助手（推荐 **WorkBuddy / Claude Code / Cursor** 等本地 agent 基座）中，**把 `personal/` 文件夹本身设为工作区**——注意是**含本 README.md 的那一层**；
+1. **下载本文件夹**（`docs/personal/zh/`）到本地（若下载的是整个仓库 zip，请找到解压后的 `docs/personal/zh/` 文件夹）；
+2. **锚定工作区**：在 AI 助手（推荐 **WorkBuddy / Claude Code / Cursor** 等本地 agent 基座）中，**把本文件夹（`docs/personal/zh/`）设为工作区**——注意是**含本 README.md 的那一层**；
 3. **说话**：随便说一句，比如 **"你好"** 或 **"你是谁"**——AI 会自动进入创建引导，5 分钟创建你的专属 AI 伙伴。
    - 如果 AI 没有自动开始引导，请对它说：**"读取 README.md 并按其中的指示开始"**——一句话即可唤醒。
 
@@ -130,7 +130,7 @@ GOAA 由一位**非 AI 工程师、非计算机专业**的作者设计——它�
 ```bash
 # 1. 克隆本仓库
 git clone https://github.com/roebin87/goaa.git
-cd goaa/personal
+cd goaa/docs/personal/zh
 
 # 2. 按启动序列装载（详见 mechanisms/startup.md）
 #    宪法 → 身份 → 蒸馏 → 启动序列 → 校验
@@ -151,22 +151,24 @@ python3 tools/validator.py
 ## 项目结构
 
 ```
-personal/
-├── README.md           # 本文件（Personal 中文门面）
-├── en/                 # English mirror（英文完整版·57 件）
-├── DEPLOY.md           # ★ 自举部署指令（复制发给任意 AI 即完成部署）
-├── LICENSE             # Apache-2.0 License
-├── VERSION             # 版本三轨说明（架构/发行/论文）
-├── constitution/       # 宪法层：基本法 + 设计原理（Why+How 一体）
-├── rules/              # 规则层：五级分类 + Rule Effect-Gate + rules.yaml
-├── mechanisms/         # 机制层：启动/收摊/激活/歧义/复用/动态率/记忆装载/多角色（10 件）
-├── methodologies/      # 方法论三件套
-├── templates/          # 运行时模板（身份/记忆/工作区）
-├── docs/               # 概念 / 对比 / ADR / 介绍 / 适用边界 / 所有权说明
-├── examples/           # 示例（项目模板/激活引导/端到端×3）
-├── plugins/            # 可选插件（memory-vector 记忆向量索引）
-└── tools/              # 工具（validator / verify-ownership 等）
+docs/personal/zh/
+├── README.md            # 本文件（Personal 中文门面）
+├── AGENTS.md            # AI 助手说明（读取指引）
+├── BENCHMARK.md         # 开源母本自包含结构完整度基准
+├── DEPLOY.md            # 自举部署指令（复制发给任意 AI 即完成部署）
+├── constitution/        # 宪法层：基本法 + 设计原理（Why+How 一体）
+├── rules/               # 规则层：五级分类 + 生效闸门 + rules.yaml
+├── mechanisms/          # 机制层：启动/收摊/激活/歧义/复用/动态率/记忆装载/多角色（11 件）
+├── methodologies/       # 方法论三件套
+├── templates/           # 运行时模板（身份/记忆/工作区）
+├── concepts/            # 核心概念逐篇（母公理/熵治理/证伪者/问答对偶/三语义等）
+├── internals/           # 核心机制原理（架构核心/记忆体系/裁决闭环/熵治理/运作图）
+├── adr/                 # 架构决策记录（决策留痕）
+├── FAQ.md / glossary.md / goaa-guide.md / ownership.md / exit-guide.md
+├── applicability.md / comparison.md / lightweight-guide.md / memory-guide.md
+└── project-introduction.md
 ```
+> 英文版见 `../en/`（docs/personal/en/）·代码位于仓库根（tools/integrations/examples/plugins）·完整结构见根级 STRUCTURE.md。
 
 > 完整结构见 [STRUCTURE.md](../../../STRUCTURE.md)（外部审议唯一入口）
 
