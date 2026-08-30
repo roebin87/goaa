@@ -4,8 +4,8 @@
 
 # GOAA: Governance-Oriented Agent Architecture
 
-> **Make AI governable. Keep memory yours. Order in collaboration.**  
-> **让 AI 可治理，让记忆归己，让协作有序。**
+> **A governance-first agent substrate — governance as the base, capabilities as add-ons, sovereignty in your hands.**  
+> **原生治理导向的智能体运行基座 — 治理为底，能力为加，主权在人。**
 
 [中文版本](./README-zh.md)
 
@@ -170,13 +170,13 @@ New visitors don't need to open subdirectories — first see "what it looks like
 
 ### 🟢 Lite (5-minute start)
 
-1. Download the `lite/` folder
-2. Set it as the workspace in your AI assistant — e.g. DeepSeek/WorkBuddy: create a new empty folder → put the `lite/` contents in → set that folder as the workspace in assistant settings
+1. Download the Lite release folder (`docs/lite/`)
+2. Set it as the workspace in your AI assistant — e.g. DeepSeek/WorkBuddy: create a new empty folder → put the `docs/lite/` contents in → set that folder as the workspace in assistant settings
 3. Say "hello" to complete the activation onboarding
 4. Run the ownership verification script:
 
 ```bash
-cd lite
+# at the repository root
 python3 tools/verify-ownership.py
 ```
 
@@ -292,4 +292,4 @@ See [version policy](docs/core/en/version-policy.md).
 ---
 
 *GOAA · Governance-Oriented Agent Architecture · v0.1.0 · 2026-08-29*  
-*Make AI governable. Keep memory yours. Order in collaboration.*
+*A governance-first agent substrate — governance as the base, capabilities as add-ons, sovereignty in your hands.*
