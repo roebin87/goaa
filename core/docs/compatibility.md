@@ -57,7 +57,7 @@ GOAA (governance substrate) + mainstream frameworks (capability plugins) = a coe
 | Concept | Relationship | Boundary |
 |---|---|---|
 | Constitutional routes (CAI/Model Spec) | Not a replacement | Rules in-model vs GOAA file-system-level (paper §2.3) |
-| Machine-governance school (ArbiterOS/Entropy Principle) | Not a replacement | Machine as governance subject vs GOAA routine human adjudication (paper §2.2) |
+| Machine-governance school (ArbiterOS/Entropy Principle) | Not a replacement | Machine as governance subject vs GOAA regular human adjudication (paper §2.2) |
 | HITL (human-in-the-loop) | Not a replacement | Exception fallback vs routine rule-layer stage (paper §2.5) |
 | Execution frameworks (LangChain/AutoGen/CrewAI) | **Coexistence** | Capability plugins vs governance substrate (this document) |
 
