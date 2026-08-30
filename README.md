@@ -5,7 +5,7 @@
 # GOAA: Governance-Oriented Agent Architecture
 
 > **Make AI governable. Keep memory yours. Order in collaboration.**  
-> **AI 干得可控，记忆属于你，协作自有其序。**
+> **让 AI 可治理，让记忆归己，让协作有序。**
 
 [中文版本](README-zh.md)
 

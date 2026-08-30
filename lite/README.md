@@ -1,7 +1,7 @@
 # GOAA Lite · Beginner Edition
 
 > **Make AI governable. Keep your memory yours.**
-> **让 AI 干得可控，让你的记忆属于你。**
+> **让 AI 可治理，让记忆归己。**
 
 [中文版](https://github.com/roebin87/goaa/tree/main/lite-zh)
 

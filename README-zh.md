@@ -4,7 +4,7 @@
 
 # GOAA：治理导向型 Agent 架构
 
-> **AI 干得可控，记忆属于你，协作自有其序。**  
+> **让 AI 可治理，让记忆归己，让协作有序。**  
 > *Make AI governable. Keep memory yours. Order in collaboration.*
 
 [English](README.md)
@@ -292,4 +292,4 @@ Apache-2.0（详见 [LICENSE](LICENSE)）
 ---
 
 *GOAA · 治理导向型 Agent 架构 · v0.1.0 · 2026-08-29*  
-*AI 干得可控，记忆属于你，协作自有其序。*
+*让 AI 可治理，让记忆归己，让协作有序。*
