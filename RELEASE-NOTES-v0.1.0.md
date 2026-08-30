@@ -24,7 +24,7 @@ All three releases include Chinese-English bilingual content (`en/` mirrors); up
 ## Core Mechanisms
 
 - **Governance-oriented architecture**: define the governance boundary first, then carry execution capabilities;
-- **100% human decision authority (decision fallback)**: sovereignty stays with the human, execution is delegable — key nodes (rule activation/consensus solidification/version iteration) are adjudicated by the human, routine matters are authorized for AI to execute within mechanisms; the human-machine collaboration iterates itself, continuously lowering human-side decision cost;
+- **100% human decision authority (decision backstop)**: sovereignty stays with the human, execution is delegable — key nodes (rule activation/consensus solidification/version iteration) are adjudicated by the human, routine matters are authorized for AI to execute within mechanisms; the human-machine collaboration iterates itself, continuously lowering human-side decision cost;
 - **File-system-level governance carrier**: rules and memory are anchored to physical file properties (permissions/traces/persistence), carried in Markdown — human-readable, machine-parseable, broadly accessible;
 - **Regular human-adjudication loop**: fixed adjudication stages in the rule layer and consensus layer (not exception fallback);
 - **Dual-source entropy governance**: a unified governance framework for technical entropy and cognitive entropy;
