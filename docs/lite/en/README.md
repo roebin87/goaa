@@ -1,8 +1,8 @@
 # GOAA Lite · Beginner Edition
 > **Semantics**: Human (intent/concept layer · reading)
 
-> **Make AI governable. Keep your memory yours.**
-> **让 AI 可治理，让记忆归己。**
+> **A governance-first agent substrate — governance as the base, capabilities as add-ons, sovereignty in your hands.**
+> **原生治理导向的智能体运行基座 — 治理为底，能力为加，主权在人。**
 
 [中文版](https://github.com/roebin87/goaa/tree/main/docs/lite/zh)
 

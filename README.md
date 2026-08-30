@@ -4,8 +4,8 @@
 
 # GOAA: Governance-Oriented Agent Architecture
 
-> **Make AI governable. Keep memory yours. Order in collaboration.**  
-> **让 AI 可治理，让记忆归己，让协作有序。**
+> **A governance-first agent substrate — governance as the base, capabilities as add-ons, sovereignty in your hands.**  
+> **原生治理导向的智能体运行基座 — 治理为底，能力为加，主权在人。**
 
 [中文版本](./README-zh.md)
 
@@ -292,4 +292,4 @@ See [version policy](docs/core/en/version-policy.md).
 ---
 
 *GOAA · Governance-Oriented Agent Architecture · v0.1.0 · 2026-08-29*  
-*Make AI governable. Keep memory yours. Order in collaboration.*
+*A governance-first agent substrate — governance as the base, capabilities as add-ons, sovereignty in your hands.*

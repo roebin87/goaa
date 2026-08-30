@@ -2,7 +2,7 @@
 > **Semantics**: Human (intent/concept layer · reading)
 
 > A governance-oriented agent architecture — makes AI **reliable**, not just capable. Your AI's memory lives in files that **belong to you**.
-> *Make AI governable. Keep your memory yours.*
+> *A governance-first agent substrate — governance as the base, capabilities as add-ons, sovereignty in your hands.*
 
 [中文版](../zh/README.md)
 
