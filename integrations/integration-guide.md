@@ -1,7 +1,7 @@
 # Framework Integration Guide
 > **Semantics**: Machine (integration how-to · How)
 
-> This guide explains how to use GOAA as a **governance base layer** alongside mainstream enhancement agent frameworks. The integration examples (`integrations/`) are **minimal runnable** demos — proving that "governance base + capability plugin" can coexist and run together.
+> This guide explains how to use GOAA as a **governance substrate layer** alongside mainstream enhancement agent frameworks. The integration examples (`integrations/`) are **minimal runnable** demos — proving that "governance base + capability plugin" can coexist and run together.
 
 ---
 
@@ -45,7 +45,7 @@ python minimal-example.py
 #    - Decision callback works (pauses at points not covered by rules, waits for human adjudication)
 ```
 
-> **Minimal integration = argument**: a successfully running example proves the GOAA governance layer can coexist with the framework — deep coupling is not required. The governance base's value lies in **constraint, traceability, and adjudication** — not in replacing execution capability.
+> **Minimal integration = argument**: a successfully running example proves the GOAA governance layer can coexist with the framework — deep coupling is not required. The governance substrate's value lies in **constraint, traceability, and adjudication** — not in replacing execution capability.
 
 ---
 
@@ -53,7 +53,7 @@ python minimal-example.py
 
 | Question | Answer |
 |----------|--------|
-| **Will GOAA replace my framework?** | No. GOAA is a governance base layer; it does not replace any enhancement framework (see [compatibility proof](../docs/core/en/compatibility.md)) |
+| **Will GOAA replace my framework?** | No. GOAA is a governance substrate layer; it does not replace any enhancement framework (see [compatibility proof](../docs/core/en/compatibility.md)) |
 | **Do I need to modify framework code?** | No. Integration happens only at three interface points: "read rules + write memory + callback for adjudication" |
 | **Why are the examples so small?** | Minimal integration focuses on proving "it runs"; business capability comes from the framework itself |
 | **How do roles map?** | GOAA's four roles (controller/editor/executor/reviewer) can map to a framework's multi-agent definitions (e.g. CrewAI agent roles) |
