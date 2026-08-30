@@ -1,8 +1,8 @@
 # GOAA Lite · 启蒙版
 > **语义形态**：人语义（意图锚·概念解释·阅读）
 
-> **让 AI 可治理，让记忆归己。**
-> *Make AI governable. Keep your memory yours.*
+> **原生治理导向的智能体运行基座 — 治理为底，能力为加，主权在人。**
+> *A governance-first agent substrate — governance as the base, capabilities as add-ons, sovereignty in your hands.*
 
 [English](../en/README.md)
 
@@ -44,7 +44,7 @@ GOAA 是**治理型 AI 架构**：主流工具解决"怎么让 AI 干活"，GOAA
 ## 核心证明动作：验证"记忆属于你"（60 秒）
 
 ```bash
-python3 tools/verify-ownership.py
+python3 tools/verify-ownership.py   # 脚本位于仓库根 `tools/`·在仓库根运行
 ```
 
 运行后你会看到 **5 个 ✅**（本地/纯文本/无云端/可迁移/无锁定）+ 2 项人工验证指引。**这 5 条全部成立，意味着：你的 AI 记忆存在你自己的文件夹里，纯文本、断网可读、可复制带走、不绑定任何厂商——没有任何大模型或 AI 应用能扣留它。**
