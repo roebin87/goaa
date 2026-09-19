@@ -105,7 +105,7 @@ Axiom layer (four axioms · stable kernel)
   - Criterion ①: shell + loading runs (startup self-check passes)
   - Criterion ②: wrap-up → new conversation → distillation continuity succeeds (cross-conversation memory continuity)
   - Criterion ③: validator all green = consistency passed
-- **Applicability boundary**: this architecture targets **individual and micro-team use cases** — the degree of engineering sophistication is constrained by the scenario, by design (scenarios pursuing full automation / zero constraints / large-scale multi-agent are not applicable; see `docs/applicability.md`)
+- **Applicability boundary**: this architecture targets **individual and micro-team use cases** — the degree of engineering sophistication is constrained by the scenario, by design (scenarios pursuing full automation / zero constraints / large-scale multi-agent are not applicable; see `../applicability.md`)
 
 ---
 

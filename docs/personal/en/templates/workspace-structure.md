@@ -33,7 +33,7 @@
     └── snapshot/                 # Snapshot (optional · body-level snapshot) ✍️overwritable
 ```
 
-> **Identity/Memory auto-initialization**: created automatically at first onboarding by `examples/activation/first-activation-guide.py` (`identity/` three files expanded from `templates/identity/` + `_Memory/` four layers) — no manual creation needed.
+> **Identity/Memory auto-initialization**: created automatically at first onboarding by `examples/activation/activation-guide.py` (`identity/` three files expanded from `templates/identity/` + `_Memory/` four layers) — no manual creation needed.
 
 ### Directory permission mapping (aligned with validator)
 

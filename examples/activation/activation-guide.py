@@ -3,11 +3,11 @@
 """
 GOAA First Onboarding Executor
 ===============================
-Reads first-activation-guide.yaml → body initialization (single-track: workspace IS the body · creates _Memory/ four layers + expands identity/ three files) → guides step by step (CLI interaction) → generates identity/owner-profile.md (machine read-only)
+Reads activation-guide.yaml → body initialization (single-track: workspace IS the body · creates _Memory/ four layers + expands identity/ three files) → guides step by step (CLI interaction) → generates identity/owner-profile.md (machine read-only)
 
 Usage:
-    python3 first-activation-guide.py                    # default onboarding flow
-    python3 first-activation-guide.py --dry-run          # show the flow without interacting
+    python3 activation-guide.py                    # default onboarding flow
+    python3 activation-guide.py --dry-run          # show the flow without interacting
 
 Design:
     - Single-track body (2026-08-27 ruling): the workspace IS the body — onboarding bootstraps memory/identity layers so mechanism references close the loop
@@ -27,7 +27,7 @@ except ImportError:
     sys.exit(1)
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-CONFIG_PATH = os.path.join(SCRIPT_DIR, "first-activation-guide.yaml")
+CONFIG_PATH = os.path.join(SCRIPT_DIR, "activation-guide.yaml")
 DEFAULT_TARGET = os.path.join(SCRIPT_DIR, "..", "..", "identity", "owner-profile.md")
 
 

@@ -47,7 +47,7 @@
 - 三发行版仓库（Lite/Personal/Core 同仓发布）；
 - 所有权验证脚本（`tools/verify-ownership.py`·5 项自动 + 2 项人工）；
 - 校验器（`tools/validator.py`·死链/口径/一致性）；
-- 证伪登记册与预注册自曝清单（`docs/falsification-log.md` + `docs/known-limits.md`）。
+- 证伪登记册与预注册自曝清单（`../falsification-log.md` + `../known-limits.md`）。
 
 ---
 

@@ -8,7 +8,7 @@
 
 GOAA is a **governance-oriented AI architecture**: mainstream tools solve "how to make AI work"; GOAA solves "how to make AI reliably governable — and how to keep what's yours always yours."
 
-This folder (`lite/`) is the minimal usable version — **no technical background needed**. In 5 minutes you can have an AI work companion whose memory belongs entirely to you.
+This folder (`docs/lite/en/`) is the minimal usable version — **no technical background needed**. In 5 minutes you can have an AI work companion whose memory belongs entirely to you.
 
 ---
 
@@ -20,8 +20,8 @@ This folder (`lite/`) is the minimal usable version — **no technical backgroun
 
 ## How to Start (Three Steps)
 
-1. **Download**: download this entire `lite/` folder to your computer (anywhere is fine);
-2. **Open**: in your AI assistant (e.g. WorkBuddy / Claude / Cursor or other local tool), **set the `lite/` folder as the workspace** — the level that contains this README;
+1. **Download**: download this entire `docs/lite/en/` folder to your computer (anywhere is fine);
+2. **Open**: in your AI assistant (e.g. WorkBuddy / Claude / Cursor or other local tool), **set the `docs/lite/en/` folder as the workspace** — the level that contains this README;
 3. **Speak**: say **"hello"** to the AI — it automatically starts the onboarding, creating your dedicated AI companion in ~5 minutes.
    - If the AI doesn't start automatically, tell it: **"Read mechanisms/onboarding-lite.md and follow its instructions."**
 
@@ -38,7 +38,7 @@ This folder (`lite/`) is the minimal usable version — **no technical backgroun
 | `mechanisms/shutdown.md` | Wrap-up flow: the five things the AI must do before closing a conversation (memory persistence) |
 | `mechanisms/onboarding-lite.md` | First-activation onboarding script (for the AI) |
 | `tools/verify-ownership.py` | **Ownership verification**: one command proving "your memory is 100% yours" (see below) |
-| `docs/ownership.md` | Ownership guide: the five checks explained + exit/migration guide |
+| `ownership.md` | Ownership guide: the five checks explained + exit/migration guide |
 
 ## Core Proof Action: Verify "Memory Belongs to You" (60 seconds)
 

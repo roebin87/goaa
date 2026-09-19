@@ -50,7 +50,7 @@ The script can only verify the file properties themselves; two things must be tr
 
 Done with it, or switching tools? Three steps:
 
-1. **Copy**: copy the entire `lite/` folder (including `_Memory/`, `identity/`) to a new location;
+1. **Copy**: copy the entire `docs/lite/en/` folder (including `_Memory/`, `identity/`) to a new location;
 2. **Open**: set that folder as the workspace in your new computer / AI assistant;
 3. **Speak**: say "hello" — the AI reads your profiles and distillation and continues where you left off.
 

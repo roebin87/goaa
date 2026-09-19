@@ -49,7 +49,7 @@ On pass → report "structure complete" to the owner, proceed to onboarding.
 1. Check whether identity/owner-profile.md exists:
    - Not exists → trigger first onboarding (per mechanisms/onboarding.md auto-opening)
    - Exists → proceed directly to Step 4 (normal startup)
-2. The onboarding script (examples/activation/first-activation-guide.py) auto-completes body initialization:
+2. The onboarding script (examples/activation/activation-guide.py) auto-completes body initialization:
    ① Create _Memory/ four layers (distill/history/index/snapshot) — mechanism references close the loop
    ② Expand templates/identity/ three files (SOUL/IDENTITY/USER) → identity/ (no overwrite if exists · owner-editable)
    ③ Guide the conversation → generate identity/owner-profile.md (machine read-only · owner-only editable)

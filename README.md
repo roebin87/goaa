@@ -133,6 +133,16 @@ Each generation does not chase "solving" a problem once and for all, but **pushe
 
 > Deep theory: [GOAA Academic Paper](docs/core/en/research/goaa-paper.md) (DOI: 10.5281/zenodo.22165301).
 
+### Version Notes (Three Tracks · Explicitly Distinguished)
+
+| Track | Number | Meaning |
+|---|---|---|
+| **Architecture version** | 1.0 | Core stable version (constitution / rules / core mechanisms) — major versions stay stable |
+| **Release version** | v0.1.x | Repository release iteration (bug fixes / UX polish = v0.1.x · new peripheral components = v0.2.x · formal stable = v1.0) |
+| **Paper version** | V2.x | Academic line (independent iteration) |
+
+> **Release number ≠ architecture version**: `v0.1.0` is only the repository release number — it does not indicate an architecture version change. Authoritative source: [VERSION](VERSION) · policy details: [version policy](docs/core/en/version-policy.md).
+
 ---
 
 ## Core Principles

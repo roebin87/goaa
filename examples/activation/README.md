@@ -27,8 +27,8 @@ The instance follows the 8-step flow in [mechanisms/onboarding.md](../../docs/pe
 
 ```bash
 pip install pyyaml
-python3 first-activation-guide.py            # interactive onboarding (collects the 8 required items)
-python3 first-activation-guide.py --dry-run  # preview the flow
+python3 activation-guide.py            # interactive onboarding (collects the 8 required items)
+python3 activation-guide.py --dry-run  # preview the flow
 ```
 
 > ⚠️ The CLI executor covers only the "info collection" segment (steps ③-⑦ of the flow); mechanism knowledge transfer and returning initiative are conversational steps handled by conversational onboarding.
@@ -37,8 +37,8 @@ python3 first-activation-guide.py --dry-run  # preview the flow
 
 | File | Purpose |
 |------|------|
-| `first-activation-guide.yaml` | Collection flow definition (required items) |
-| `first-activation-guide.py` | CLI executor (reads yaml → asks item by item → generates the owner profile) |
+| `activation-guide.yaml` | Collection flow definition (required items) |
+| `activation-guide.py` | CLI executor (reads yaml → asks item by item → generates the owner profile) |
 | `../../docs/personal/en/mechanisms/onboarding.md` | **Authoritative onboarding flow** (full 8-step process) |
 
 ## Output

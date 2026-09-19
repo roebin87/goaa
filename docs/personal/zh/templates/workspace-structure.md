@@ -33,7 +33,7 @@
     └── snapshot/              # 快照（可选·身体级快照）✍️可覆盖
 ```
 
-> **身份层/记忆层自动初始化**：首次激活时由 `examples/activation/首次激活引导.py` 自动创建（`identity/` 三文件从 `templates/identity/` 展开 + `_Memory/` 四层）·无需手工建。
+> **身份层/记忆层自动初始化**：首次激活时由 `examples/activation/activation-guide.py` 自动创建（`identity/` 三文件从 `templates/identity/` 展开 + `_Memory/` 四层）·无需手工建。
 
 ### 目录权限映射（对接 validator 自动校验）
 

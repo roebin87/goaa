@@ -30,7 +30,7 @@
 
 - **No exaggeration**: does not promise "fully automated, hands-free labor" — only "reliably governable, auditable, traceable";
 - **No lock-in**: pure file specification, not bound to any model/language/platform — migratable and exitable anytime;
-- **Growable**: start from the minimal tier and upgrade as scale grows (see the three-tier config in `docs/lightweight-guide.md`);
+- **Growable**: start from the minimal tier and upgrade as scale grows (see the three-tier config in `lightweight-guide.md`);
 - **Auditable**: all rules, decisions, and changes are traced; users can go back at any time.
 
 ---

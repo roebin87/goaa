@@ -50,7 +50,7 @@ The script can only verify properties of "the files themselves". Two things must
 
 Don't want to use it anymore, or want to switch tools? Three steps:
 
-1. **Copy**: copy the whole `lite/` folder (including `_Memory/`, `identity/`) to the new location;
+1. **Copy**: copy the whole `docs/personal/en/` folder (including `_Memory/`, `identity/`) to the new location;
 2. **Open**: set the folder as the workspace in the new computer / new AI assistant;
 3. **Talk**: say "hello" — the AI reads your profile and distill, and continues where you left off.
 

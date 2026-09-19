@@ -47,7 +47,7 @@ Relationship: **proper-subset monotonicity** Lite ⊂ Personal ⊂ Core (upgrade
 - Three-edition repository (Lite/Personal/Core in one repo);
 - Ownership verification script (`tools/verify-ownership.py` · 5 automated + 2 manual checks);
 - Validator (`tools/validator.py` · dead links / wording / consistency);
-- Falsification log & pre-registered disclosure list (`docs/falsification-log.md` + `docs/known-limits.md`).
+- Falsification log & pre-registered disclosure list (`../falsification-log.md` + `../known-limits.md`).
 
 ---
 
